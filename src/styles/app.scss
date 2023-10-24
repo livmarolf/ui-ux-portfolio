@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;700&display=swap");
+@import "variables.scss";
+@import "./layouts/navbar.scss";
+@import "./pages/landing.scss";
+
+#root {
+  font-family: "Inter";
+  color: #e0e0e0;
+}
+
+body {
+  background-color: $darkest-gray;
+  margin: 0;
+}

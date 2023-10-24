@@ -1,0 +1,26 @@
+.navbar {
+  margin: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+
+  h6 {
+    margin: 0;
+    font-weight: $main-weight;
+    font-size: $small-font;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+
+    li {
+      font-size: $small-font;
+    }
+  }
+}

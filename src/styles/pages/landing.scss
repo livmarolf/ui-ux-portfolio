@@ -1,0 +1,27 @@
+.landing-page {
+  overflow: hidden;
+
+  .main-section {
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+
+    .title-content {
+      width: 430px;
+
+      h1 {
+        font-weight: $main-weight;
+
+        span {
+          font-family: $decorative-font;
+        }
+      }
+    }
+
+    svg {
+      z-index: -1;
+      margin-right: -300px;
+      margin-top: 200px;
+    }
+  }
+}
