@@ -3,12 +3,9 @@
 @import "./layouts/navbar.scss";
 @import "./pages/landing.scss";
 
-#root {
-  font-family: "Inter";
-  color: #e0e0e0;
-}
-
 body {
   background-color: $darkest-gray;
   margin: 0;
+  font-family: "Inter";
+  color: #e0e0e0;
 }

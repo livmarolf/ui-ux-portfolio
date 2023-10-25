@@ -44,6 +44,7 @@
       display: flex;
       justify-content: space-between;
       width: 90px;
+
       .github {
         height: 23.61px;
         width: 24.22px;
@@ -56,6 +57,75 @@
 
       .pdf {
         height: 21px;
+      }
+    }
+  }
+
+  .landing-content {
+    .introduction {
+      h1 {
+        font-weight: $main-weight;
+        color: $header-gray;
+        font-size: $large-header;
+      }
+
+      .introduction-container {
+        margin-top: 120px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+          object-fit: cover;
+          width: 550px;
+          height: 350px;
+          border-radius: 20px;
+        }
+
+        .introduction-content {
+          width: 590px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          h6 {
+            font-weight: $main-weight;
+            font-size: $small-header;
+            color: $header-gray;
+            margin: 0;
+          }
+
+          p {
+            font-weight: $main-weight;
+            font-size: $body-text;
+          }
+
+          button {
+            width: 130px;
+            height: 60px;
+            border-radius: 20px;
+            background-color: transparent;
+            border: 2px solid #dddddd;
+            color: $body-color;
+            font-size: $small-header;
+          }
+
+          .read-more-btn {
+            margin-right: 30px;
+          }
+        }
+      }
+
+      .arrow-down-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .arrow-down {
+          height: 25px;
+          margin-right: 55px;
+        }
       }
     }
   }

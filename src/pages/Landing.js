@@ -47,25 +47,30 @@ export default function Landing() {
         <div className="introduction">
           <h1>GET TO KNOW ME</h1>
           <div className="introduction-container">
-            <div className="image">
-              <img src={headshot} alt="headshot" />
-            </div>
-            <div>
-              <h6>INTRODUCTION &mdash;</h6>
-              <p>
-                As a <strong>UX/UI designer</strong> with a{" "}
-                <strong>software development background</strong>, I combine my{" "}
-                <strong>eye for clean design</strong> with practical expertise
-                to create intuitive digital experiences. My journey from
-                software development to design enriches my ability to{" "}
-                <strong>bridge user needs</strong> with elegant,{" "}
-                <strong>functional solutions</strong>.
-              </p>
-              <button>Read More</button>
-              <button>Contact</button>
+            <img src={headshot} alt="headshot" />
+
+            <div className="introduction-content">
+              <div>
+                <h6>INTRODUCTION &mdash;</h6>
+                <p>
+                  As a <strong>UX/UI designer</strong> with a{" "}
+                  <strong>software development background</strong>, I combine my{" "}
+                  <strong>eye for clean design</strong> with practical expertise
+                  to create intuitive digital experiences. My journey from
+                  software development to design enriches my ability to{" "}
+                  <strong>bridge user needs</strong> with elegant,{" "}
+                  <strong>functional solutions</strong>.
+                </p>
+              </div>
+              <div>
+                <button className="read-more-btn">Read More</button>
+                <button>Contact</button>
+              </div>
             </div>
           </div>
-          <FontAwesomeIcon icon={faArrowDown} />
+          <div className="arrow-down-container">
+            <FontAwesomeIcon icon={faArrowDown} className="arrow-down" />
+          </div>
         </div>
         <div className="process-container">
           <div>
