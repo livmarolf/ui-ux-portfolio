@@ -1,5 +1,5 @@
 .landing-page {
-  overflow: hidden;
+  margin: $outer-margin;
 
   .main-section {
     height: 500px;
@@ -8,6 +8,7 @@
 
     .title-content {
       width: 430px;
+      align-self: center;
 
       h1 {
         font-weight: $main-weight;
@@ -18,10 +19,44 @@
       }
     }
 
-    svg {
+    .top-shapes {
       z-index: -1;
       margin-right: -300px;
       margin-top: 200px;
+    }
+  }
+
+  .icon-strip {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: $small-font;
+    }
+
+    .arrow-down {
+      height: 25px;
+    }
+
+    .icons-right {
+      display: flex;
+      justify-content: space-between;
+      width: 90px;
+      .github {
+        height: 23.61px;
+        width: 24.22px;
+      }
+
+      .linkedin {
+        width: 21.88px;
+        height: 21.87px;
+      }
+
+      .pdf {
+        height: 21px;
+      }
     }
   }
 }

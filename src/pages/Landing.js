@@ -13,6 +13,7 @@ export default function Landing() {
           </h1>
         </div>
         <svg
+          className="top-shapes"
           width="881"
           height="851"
           viewBox="0 0 881 851"
@@ -33,13 +34,13 @@ export default function Landing() {
           />
         </svg>
       </div>
-      <div className="icon-srtip">
+      <div className="icon-strip">
         <p>YEAR</p>
-        <FontAwesomeIcon icon={faArrowDown} />
-        <div>
-          <FontAwesomeIcon icon={faGithub} />
-          <FontAwesomeIcon icon={faFilePdf} />
-          <FontAwesomeIcon icon={faLinkedin} />
+        <FontAwesomeIcon icon={faArrowDown} className="arrow-down" />
+        <div className="icons-right">
+          <FontAwesomeIcon icon={faGithub} className="github" />
+          <FontAwesomeIcon icon={faLinkedin} className="linkedin" />
+          <FontAwesomeIcon icon={faFilePdf} className="pdf" />
         </div>
       </div>
       <div className="landing-content">
