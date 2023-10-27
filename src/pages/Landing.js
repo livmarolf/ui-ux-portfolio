@@ -2,6 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import headshot from "../assets/headshot.jpeg";
+import designProcess from "../assets/design-process.png";
+import curriculum from "../assets/curriculum.png";
+import huddleup from "../assets/huddleup.png";
+import rpre from "../assets/rpre.png";
+
 export default function Landing() {
   return (
     <div className="landing-page">
@@ -93,58 +98,52 @@ export default function Landing() {
                 fill="#2A2A2C"
               />
             </svg>
-            {/* <div className="arrow-down-transition">
-              <FontAwesomeIcon icon={faArrowDown} className="arrow-down" />
-            </div> */}
           </div>
         </div>
-        <div className="process-container">
-          <div>
-            <h6>ABOUT MY PROCESS &mdash;</h6>
-            <h2>My Design Process</h2>
-            <p>
-              The outline and in-depth walkthrough of my design process from
-              start to finish.
-            </p>
+        <div className="projects-container">
+          <div className="project-container">
+            <div>
+              <h6>ABOUT MY PROCESS &mdash;</h6>
+              <h2>My Design Process</h2>
+              <p>
+                The outline and in-depth walkthrough of my design process from
+                start to finish.
+              </p>
+            </div>
+            <img src={designProcess} alt="design-process" />
           </div>
-          <div>
-            <div>image placeholder</div>
+
+          <div className="project-container">
+            <div>
+              <h6>CURRICULUM DESIGN &mdash;</h6>
+              <h2>JavaScript Curriculum Design</h2>
+              <p>A blurb about curriculum design.</p>
+            </div>
+            <img src={curriculum} alt="curriculum" />
           </div>
-        </div>
-        <div className="curriculum-container">
-          <div>
-            <h6>CURRICULUM DESIGN &mdash;</h6>
-            <h2>JavaScript Curriculum Design</h2>
-            <p>A blurb about curriculum design.</p>
+
+          <div className="project-container">
+            <div>
+              <h6>UI/UX CASE STUDY 01 &mdash;</h6>
+              <h2>HuddleUp</h2>
+              <p>
+                An application designed to enhance sports team management and
+                promote greater involvement.
+              </p>
+            </div>
+            <img src={huddleup} alt="huddleup" />
           </div>
-          <div>
-            <div>image placeholder</div>
-          </div>
-        </div>
-        <div className="huddleup-container">
-          <div>
-            <h6>UI/UX CASE STUDY 01 &mdash;</h6>
-            <h2>HuddleUp</h2>
-            <p>
-              An application designed to enhance sports team management and
-              promote greater involvement.
-            </p>
-          </div>
-          <div>
-            <div>image placeholder</div>
-          </div>
-        </div>
-        <div className="rpre-container">
-          <div>
-            <h6>UI/UX CASE STUDY 02 &mdash;</h6>
-            <h2>Revamping Real Estate</h2>
-            <p>
-              A tailored adaptive website design created for a real estate
-              professional.
-            </p>
-          </div>
-          <div>
-            <div>image placeholder</div>
+
+          <div className="project-container">
+            <div>
+              <h6>UI/UX CASE STUDY 02 &mdash;</h6>
+              <h2>Revamping Real Estate</h2>
+              <p>
+                A tailored adaptive website design created for a real estate
+                professional.
+              </p>
+            </div>
+            <img src={rpre} alt="rpre" />
           </div>
         </div>
       </div>

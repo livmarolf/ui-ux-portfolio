@@ -1,0 +1,6 @@
+@mixin header-style($font-size: $small-header) {
+  font-weight: $main-weight;
+  font-size: $font-size;
+  color: $header-gray;
+  margin: 0;
+}

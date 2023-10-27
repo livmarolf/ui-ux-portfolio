@@ -65,9 +65,7 @@
   .landing-content {
     .introduction {
       h1 {
-        font-weight: $main-weight;
-        color: $header-gray;
-        font-size: $large-header;
+        @include header-style($large-header);
       }
 
       .introduction-container {
@@ -77,7 +75,6 @@
         justify-content: space-between;
 
         img {
-          // z-index: 1;
           object-fit: cover;
           width: 550px;
           height: 350px;
@@ -91,10 +88,7 @@
           justify-content: space-between;
 
           h6 {
-            font-weight: $main-weight;
-            font-size: $small-header;
-            color: $header-gray;
-            margin: 0;
+            @include header-style;
           }
 
           p {
@@ -107,7 +101,7 @@
             height: 60px;
             border-radius: 20px;
             background-color: transparent;
-            border: 2px solid #dddddd;
+            border: $white-border;
             color: $body-color;
             font-size: $small-header;
           }
@@ -120,6 +114,7 @@
 
       .arrow-down-container {
         width: 100%;
+        height: 30px;
 
         .middle-shapes {
           z-index: -1;
@@ -135,6 +130,43 @@
           .arrow-down {
             height: 25px;
           }
+        }
+      }
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-rows: auto;
+      h6 {
+        @include header-style;
+      }
+
+      h2 {
+        font-family: $decorative-font;
+        font-size: $large-font;
+      }
+
+      p {
+        font-size: $body-text;
+        font-weight: $main-weight;
+      }
+
+      img {
+        object-fit: cover;
+        width: 500px;
+        height: 320px;
+        border-radius: 20px;
+        border: $white-border;
+      }
+
+      .project-container {
+        display: grid;
+        column-gap: 130px;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 150px;
+
+        img {
+          justify-self: end;
         }
       }
     }
