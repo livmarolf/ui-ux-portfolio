@@ -4,3 +4,19 @@
   color: $header-gray;
   margin: 0;
 }
+
+@mixin process-container-grid {
+  display: grid;
+  grid-template-rows: auto;
+  margin-top: 40px;
+}
+
+@mixin arrow-right-header {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+@mixin arrow-left-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

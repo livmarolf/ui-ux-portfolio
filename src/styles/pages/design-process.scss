@@ -36,6 +36,7 @@
         .title-content {
           margin-top: -20px;
           width: 50%;
+
           h6 {
             @include header-style;
           }
@@ -48,13 +49,10 @@
     }
 
     .process-overview {
-      display: grid;
-      grid-template-rows: auto;
-      margin-top: 40px;
+      @include process-container-grid;
 
       .arrow-heading {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr;
+        @include arrow-right-header;
 
         h6 {
           @include header-style;
@@ -71,13 +69,10 @@
     }
 
     .research {
-      display: grid;
-      grid-template-rows: auto;
-      margin-top: 40px;
+      @include process-container-grid;
 
       .arrow-heading {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @include arrow-left-header;
 
         svg {
           justify-self: end;
@@ -102,6 +97,7 @@
           list-style-type: none;
           padding-left: 20px;
           margin-top: 0;
+
           span {
             font-weight: bold;
           }
@@ -109,6 +105,7 @@
 
         ol {
           margin-top: 0;
+
           span {
             font-weight: bold;
           }
@@ -117,13 +114,10 @@
     }
 
     .strategize {
-      display: grid;
-      grid-template-rows: auto;
-      margin-top: 40px;
+      @include process-container-grid;
 
       .arrow-heading {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr;
+        @include arrow-right-header;
 
         h6 {
           @include header-style;
@@ -147,6 +141,7 @@
 
         .output-list {
           margin-top: 20px;
+
           ul {
             list-style-type: none;
             padding-left: 20px;
@@ -160,13 +155,10 @@
     }
 
     .design {
-      display: grid;
-      grid-template-rows: auto;
-      margin-top: 40px;
+      @include process-container-grid;
 
       .arrow-heading {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @include arrow-left-header;
 
         svg {
           justify-self: end;
@@ -191,6 +183,7 @@
           list-style-type: none;
           padding-left: 20px;
           margin-top: 0;
+
           span {
             font-weight: bold;
           }
@@ -199,9 +192,7 @@
     }
 
     .test {
-      display: grid;
-      grid-template-rows: auto;
-      margin-top: 40px;
+      @include process-container-grid;
 
       .arrow-heading {
         display: grid;
@@ -220,6 +211,7 @@
           list-style-type: none;
           padding-left: 20px;
           margin-top: 0;
+
           span {
             font-weight: bold;
           }
