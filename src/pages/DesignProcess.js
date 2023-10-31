@@ -10,7 +10,9 @@ export default function DesignProcess() {
       <div className="page-content">
         <div className="title-container">
           <div className="title">
-            <h1>This is My Design Process</h1>
+            <h1>
+              This is <span>My Design Process</span>
+            </h1>
 
             <svg
               width="233"
@@ -27,21 +29,34 @@ export default function DesignProcess() {
           </div>
 
           <div className="title-paragraph">
-            <h6>INTRODUCTION</h6>
+            <div className="title-content">
+              <h6>INTRODUCTION</h6>
 
-            <p>
-              User experience (UX) design is far from a single-step task,
-              extending well beyond the act of simply opening a laptop and
-              creating wireframes! The forthcoming process embodies my
-              individual approach to UX design, one that I consistently apply to
-              each UX project I take on. This design methodology has evolved and
-              matured over time through my experience in the field.{" "}
-            </p>
+              <div className="paragraph-container">
+                <p>
+                  User experience (UX) design is far from a single-step task,
+                  extending well beyond the act of simply opening a laptop and
+                  creating wireframes!
+                </p>
+
+                <p>
+                  The forthcoming process embodies my individual approach to UX
+                  design, one that I consistently apply to each UX project I
+                  take on.
+                </p>
+
+                <p>
+                  This design methodology has evolved and matured over time
+                  through my experience in the field.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="process-overview">
-          <div>
+          <div className="arrow-heading">
+            <h6>MY DESIGN PROCESS OVERVIEW</h6>
             <svg
               width="269"
               height="201"
@@ -57,13 +72,12 @@ export default function DesignProcess() {
           </div>
 
           <div className="process-image">
-            <h6>MY DESIGN PROCESS OVERVIEW</h6>
             <img src={designGraphic} alt="design-graphic" />
           </div>
         </div>
 
         <div className="research">
-          <div>
+          <div className="arrow-heading">
             <svg
               width="337"
               height="138"
@@ -76,54 +90,60 @@ export default function DesignProcess() {
                 fill="#D9D9D9"
               />
             </svg>
+            <h6>01 RESEARCH</h6>
           </div>
 
-          <div>
-            <h6>01 RESEARCH</h6>
+          <div className="research-content">
+            <p>
+              The Research stage is where you dive deep into learning everything
+              about:
+            </p>
 
-            <div>
-              <p>
-                The Research stage is where you dive deep into learning
-                everything about:
-              </p>
+            <ol type="A">
+              <li>
+                <span>The business</span> you're creating a product for
+              </li>
+              <li>
+                <span>The people</span> who will use the product, also known as
+                the users
+              </li>
+            </ol>
 
-              <ol type="A">
-                <li>The business you’re creating a product for</li>
-                <li>
-                  The people who will use the product, also known as the users
-                </li>
-              </ol>
+            <p>On the Business side:</p>
 
-              <p>On the Business side:</p>
+            <ul>
+              <li>
+                <span>Stakeholder Interviews</span> - interviews with the
+                client(s)
+              </li>
+              <li>
+                <span>Competitive Benchmarking</span> - reviewing best practices
+                from the competition
+              </li>
+            </ul>
 
-              <ul>
-                <li>Stakeholder Interviews - interviews with the client(s)</li>
-                <li>
-                  Competitive Benchmarking - reviewing best practices from the
-                  competition
-                </li>
-              </ul>
+            <p>On the User side:</p>
 
-              <p>On the User side:</p>
-
-              <ul>
-                <li>
-                  User Interviews - Interview with the product’s users/audience
-                </li>
-                <li>
-                  Surveys - Questionnaires that help gather qualitative data{" "}
-                </li>
-                <li>
-                  Personas - Fictional characters that represent subsets of
-                  users
-                </li>
-              </ul>
-            </div>
+            <ul>
+              <li>
+                <span>User Interviews</span> - Interview with the product’s
+                users/audience
+              </li>
+              <li>
+                <span>Surveys</span> - Questionnaires that help gather
+                qualitative data{" "}
+              </li>
+              <li>
+                <span>Personas</span> - Fictional characters that represent
+                subsets of users
+              </li>
+            </ul>
           </div>
         </div>
 
         <div className="strategize">
-          <div>
+          <div className="arrow-heading">
+            <h6>02 STRATEGIZE</h6>
             <svg
               width="270"
               height="201"
@@ -138,8 +158,7 @@ export default function DesignProcess() {
             </svg>
           </div>
 
-          <div>
-            <h6>02 STRATEGIZE</h6>
+          <div className="strat-content">
             <p>Strategizing prior to the design stage is crucial because it:</p>
 
             <ul>
@@ -147,27 +166,28 @@ export default function DesignProcess() {
               <li>Identifies potential challenges early on</li>
               <li>Minimizes the risk of costly revisions</li>
             </ul>
-
-            <p>The output of the Strategize phase includes:</p>
-            <ul>
-              <li>
-                Product Goals - An outline defining specific objectives and
-                targets
-              </li>
-              <li>
-                Product Roadmap - A visual plan outlining product development
-                goals, features, and timeline
-              </li>
-              <li>
-                Site Map - A visual depiction of the product's hierarchical
-                content structure
-              </li>
-            </ul>
+            <div className="output-list">
+              <p>The output of the Strategize phase includes:</p>
+              <ul>
+                <li>
+                  <span>Product Goals</span> - An outline defining specific
+                  objectives and targets
+                </li>
+                <li>
+                  <span>Product Roadmap</span> - A visual plan outlining product
+                  development goals, features, and timeline
+                </li>
+                <li>
+                  <span>Site Map</span> - A visual depiction of the product's
+                  hierarchical content structure
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div className="design">
-          <div>
+          <div className="arrow-heading">
             <svg
               width="337"
               height="138"
@@ -180,10 +200,10 @@ export default function DesignProcess() {
                 fill="#D9D9D9"
               />
             </svg>
+            <h6>03 DESIGN</h6>
           </div>
 
-          <div>
-            <h6>03 DESIGN</h6>
+          <div className="design-content">
             <p>
               One of the most gratifying phases in the journey, the design
               stage, truly breathes life into the product. It's the juncture
@@ -197,23 +217,39 @@ export default function DesignProcess() {
             </p>
 
             <ul>
-              <li>User Flow - A visual representation of a user's journey</li>
               <li>
-                Wireframes - Basic, visual blueprints outlining a website or
-                app's structure
+                <span>User Flow</span> - A visual representation of a user's
+                journey
               </li>
               <li>
-                Prototype - A preliminary, interactive model showcasing the user
-                interface and functionality of a product
+                <span>Wireframes</span> - Basic, visual blueprints outlining a
+                website or app's structure
+              </li>
+              <li>
+                <span>Prototype</span> - A preliminary, interactive model
+                showcasing the user interface and functionality of a product
               </li>
             </ul>
           </div>
         </div>
 
         <div className="test">
-          <div>
+          <div className="arrow-heading">
             <h6>04 TEST</h6>
-
+            <svg
+              width="270"
+              height="201"
+              viewBox="0 0 270 201"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.01788 188.899C0.432095 189.485 0.432094 190.434 1.01788 191.02L10.5638 200.566C11.1496 201.152 12.0993 201.152 12.6851 200.566C13.2709 199.98 13.2709 199.031 12.6851 198.445L4.19986 189.96L12.6852 181.474C13.2709 180.889 13.2709 179.939 12.6852 179.353C12.0994 178.767 11.1496 178.767 10.5638 179.353L1.01788 188.899ZM269.08 1.99976C269.08 1.17132 268.408 0.499752 267.58 0.499758C266.751 0.499764 266.08 1.17134 266.08 1.99975L269.08 1.99976ZM2.07854 191.46C104.678 191.46 171.476 174.467 212.631 142.16C253.883 109.776 269.08 62.2474 269.08 1.99976L266.08 1.99975C266.08 61.7523 251.026 108.204 210.778 139.8C170.432 171.473 104.48 188.46 2.07854 188.46L2.07854 191.46Z"
+                fill="#D9D9D9"
+              />
+            </svg>
+          </div>
+          <div className="test-content">
             <p>
               The Test stage in UX design is an essential step in the iterative
               design process, ensuring that the final product is user-friendly,
@@ -228,25 +264,19 @@ export default function DesignProcess() {
             </p>
 
             <ul>
-              <li>Plan - Create a test plan</li>
-              <li>Conduct - Carry out the test</li>
-              <li>Report - Analyze and document results</li>
-              <li>Optimize - Refine the designs based on the outcomes</li>
+              <li>
+                <span>Plan</span> - Create a test plan
+              </li>
+              <li>
+                <span>Conduct</span> - Carry out the test
+              </li>
+              <li>
+                <span>Report</span> - Analyze and document results
+              </li>
+              <li>
+                <span>Optimize</span> - Refine the designs based on the outcomes
+              </li>
             </ul>
-          </div>
-          <div>
-            <svg
-              width="270"
-              height="201"
-              viewBox="0 0 270 201"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.01788 188.899C0.432095 189.485 0.432094 190.434 1.01788 191.02L10.5638 200.566C11.1496 201.152 12.0993 201.152 12.6851 200.566C13.2709 199.98 13.2709 199.031 12.6851 198.445L4.19986 189.96L12.6852 181.474C13.2709 180.889 13.2709 179.939 12.6852 179.353C12.0994 178.767 11.1496 178.767 10.5638 179.353L1.01788 188.899ZM269.08 1.99976C269.08 1.17132 268.408 0.499752 267.58 0.499758C266.751 0.499764 266.08 1.17134 266.08 1.99975L269.08 1.99976ZM2.07854 191.46C104.678 191.46 171.476 174.467 212.631 142.16C253.883 109.776 269.08 62.2474 269.08 1.99976L266.08 1.99975C266.08 61.7523 251.026 108.204 210.778 139.8C170.432 171.473 104.48 188.46 2.07854 188.46L2.07854 191.46Z"
-                fill="#D9D9D9"
-              />
-            </svg>
           </div>
         </div>
       </div>
