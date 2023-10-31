@@ -163,6 +163,7 @@
         }
 
         .project-container {
+          position: relative;
           display: grid;
           column-gap: 180px;
           grid-template-columns: 1fr 1fr;
@@ -175,9 +176,9 @@
 
         .bottom-shapes {
           z-index: -1;
-          position: relative;
-          top: -1200px;
-          right: -400px;
+          position: absolute;
+          top: -200px;
+          right: -500px;
           overflow: hidden;
         }
       }
