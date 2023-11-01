@@ -1,5 +1,6 @@
 import Navbar from "./layouts/Navbar";
-import DesignProcess from "./pages/DesignProcess";
+import HuddleUp from "./pages/case-studies/HuddleUp";
+// import DesignProcess from "./pages/DesignProcess";
 // import Landing from "./pages/Landing";
 import "./styles/app.scss";
 
@@ -8,7 +9,8 @@ function App() {
     <div className="App">
       <Navbar />
       {/* <Landing /> */}
-      <DesignProcess />
+      {/* <DesignProcess /> */}
+      <HuddleUp />
     </div>
   );
 }
