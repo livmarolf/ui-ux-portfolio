@@ -1,8 +1,8 @@
-@mixin header-style($font-size: $small-header) {
+@mixin header-style($font-size: $small-header, $margin: 0) {
   font-weight: $main-weight;
   font-size: $font-size;
   color: $header-gray;
-  margin: 0;
+  margin: $margin;
 }
 
 @mixin process-container-grid {
@@ -19,4 +19,15 @@
 @mixin arrow-left-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+@mixin no-style-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+@mixin dark-border {
+  border-left: 3px solid $dark-border;
+  padding-left: 45px;
 }
