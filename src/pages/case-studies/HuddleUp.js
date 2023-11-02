@@ -12,7 +12,9 @@ export default function HuddleUp() {
       <div className="content-container">
         <div className="title">
           <h2>UI/UX CASE STUDY 01 &mdash;</h2>
-          <h1>HuddleUp</h1>
+          <div className="content">
+            <h1>HuddleUp</h1>
+          </div>
         </div>
 
         <div className="project-overview">
