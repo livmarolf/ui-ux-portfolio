@@ -7,7 +7,7 @@
     h4 {
       font-family: $decorative-font;
       font-size: $small-header;
-      margin-top: 50px;
+      padding-top: 50px;
       margin-bottom: 10px;
     }
 
@@ -17,7 +17,7 @@
     }
 
     h6 {
-      @include header-style($small-header, 0 0 30px 0);
+      @include header-style($small-header, 30px 0 30px 0);
     }
 
     p {
@@ -36,6 +36,7 @@
     .content {
       border-left: 3px solid $dark-border;
       padding-left: 45px;
+      height: 100%;
     }
 
     .title {
@@ -50,16 +51,11 @@
       }
     }
 
-    .project-overview {
-      margin-bottom: 40px;
-    }
-
     .project-information {
       .content {
         display: grid;
         grid-template-rows: auto;
         row-gap: 40px;
-        margin-bottom: 60px;
 
         .sub-information {
           display: grid;
@@ -207,8 +203,12 @@
     }
 
     .final-thoughts {
-      p {
-        margin-bottom: 8px;
+      .content {
+        padding-top: 50px;
+
+        p {
+          margin-bottom: 8px;
+        }
       }
     }
   }
