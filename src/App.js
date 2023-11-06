@@ -1,19 +1,22 @@
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./layouts/Navbar";
-// import HuddleUp from "./pages/case-studies/HuddleUp";
+import Landing from "./pages/Landing";
 import Contact from "./pages/Contact";
-// import DesignProcess from "./pages/DesignProcess";
-// import Landing from "./pages/Landing";
+import HuddleUp from "./pages/case-studies/HuddleUp";
+import DesignProcess from "./pages/DesignProcess";
 import "./styles/app.scss";
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navbar />
-      {/* <Landing /> */}
-      {/* <DesignProcess /> */}
-      {/* <HuddleUp /> */}
-      <Contact />
-    </div>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/design-process" component={DesignProcess} />
+        <Route path="/huddleup" component={HuddleUp} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
