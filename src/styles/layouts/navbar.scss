@@ -18,9 +18,14 @@
     display: flex;
     justify-content: space-between;
     width: 280px;
+  }
 
-    li {
-      font-size: $small-font;
-    }
+  li {
+    font-size: $small-font;
+  }
+
+  a {
+    text-decoration: none;
+    color: $body-color;
   }
 }
