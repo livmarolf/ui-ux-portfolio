@@ -1,5 +1,6 @@
 import Navbar from "./layouts/Navbar";
-import HuddleUp from "./pages/case-studies/HuddleUp";
+// import HuddleUp from "./pages/case-studies/HuddleUp";
+import Contact from "./pages/Contact";
 // import DesignProcess from "./pages/DesignProcess";
 // import Landing from "./pages/Landing";
 import "./styles/app.scss";
@@ -10,7 +11,8 @@ function App() {
       <Navbar />
       {/* <Landing /> */}
       {/* <DesignProcess /> */}
-      <HuddleUp />
+      {/* <HuddleUp /> */}
+      <Contact />
     </div>
   );
 }
