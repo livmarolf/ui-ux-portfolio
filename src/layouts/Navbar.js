@@ -11,6 +11,12 @@ export default function Navbar() {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/contact">ABOUT</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact">CONTENTS</NavLink>
+        </li>
+        <li>
           <NavLink to="/contact">CONTACT</NavLink>
         </li>
       </ul>
