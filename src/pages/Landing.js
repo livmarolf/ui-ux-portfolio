@@ -1,3 +1,5 @@
+import { ReactComponent as ArrowCircleDown } from "../assets/icons/arrow-circle-down.svg";
+
 export default function Landing() {
   return (
     <div className="landing-page">
@@ -31,7 +33,9 @@ export default function Landing() {
           </div>
         </div>
 
-        <div className="arrow-row"></div>
+        <div className="arrow-row">
+          <ArrowCircleDown />
+        </div>
 
         <div className="case-row">
           <div>
@@ -49,7 +53,9 @@ export default function Landing() {
           </div>
         </div>
 
-        <div className="arrow-row"></div>
+        <div className="arrow-row">
+          <ArrowCircleDown />
+        </div>
 
         <div className="case-row">
           <div>
@@ -67,7 +73,9 @@ export default function Landing() {
           </div>
         </div>
 
-        <div className="arrow-row"></div>
+        <div className="arrow-row">
+          <ArrowCircleDown />
+        </div>
 
         <div className="case-row">
           <div>
@@ -85,7 +93,9 @@ export default function Landing() {
           </div>
         </div>
 
-        <div className="arrow-row"></div>
+        <div className="arrow-row">
+          <ArrowCircleDown />
+        </div>
 
         <div className="case-row">
           <div>

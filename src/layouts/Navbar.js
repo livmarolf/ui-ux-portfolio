@@ -11,10 +11,10 @@ export default function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact">ABOUT</NavLink>
+          <NavLink to="/about">ABOUT</NavLink>
         </li>
         <li>
-          <NavLink to="/contact">CONTENTS</NavLink>
+          <NavLink to="/contents">CONTENTS</NavLink>
         </li>
         <li>
           <NavLink to="/contact">CONTACT</NavLink>
