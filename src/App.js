@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./layouts/Navbar";
 import Landing from "./pages/Landing";
 import Contact from "./pages/Contact";
-import CurriculumDesign from "./pages/case-studies/CurriculumDesign";
+import CurriculumDesign from "./pages/CurriculumDesign";
 import DesignProcess from "./pages/DesignProcess";
 import "./styles/app.scss";
 
