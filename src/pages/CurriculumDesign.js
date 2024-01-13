@@ -1,6 +1,6 @@
 export default function CurriculumDesign() {
   return (
-    <div className="huddleup-container">
+    <div className="page-container">
       <div className="content-container">
         <div className="header-row">
           <h1>CURRICULUM DESIGN</h1>
