@@ -1,11 +1,11 @@
-// TODO: position sticky and fix drop shadow
-// TODO : fix font weight
-
 .navbar {
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0px 5px 40px 0px #0000001a;
+  background-color: $dark-grey;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   height: 62px;
   padding: 0 120px;
   font-size: $content;
@@ -26,7 +26,7 @@
       a {
         padding: 10px 20px;
         text-decoration: none;
-        color: inherit;
+        color: $body-content;
         transition: background-color 0.3s ease-in-out;
 
         &:hover {
