@@ -3,23 +3,26 @@ import { NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <div className="navbar">
-      <h6>VALUE</h6>
-      <ul>
-        <li>
+      <div className="title-wrapper">
+        <h6>VALUE</h6>
+      </div>
+
+      <div className="navlinks-wrapper">
+        <div className="navlink">
           <NavLink exact to="/">
             HOME
           </NavLink>
-        </li>
-        <li>
+        </div>
+        <div className="navlink">
           <NavLink to="/about">ABOUT</NavLink>
-        </li>
-        <li>
+        </div>
+        <div className="navlink">
           <NavLink to="/contents">CONTENTS</NavLink>
-        </li>
-        <li>
+        </div>
+        <div className="navlink">
           <NavLink to="/contact">CONTACT</NavLink>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   );
 }

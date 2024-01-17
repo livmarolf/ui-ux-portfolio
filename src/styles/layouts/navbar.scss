@@ -1,2 +1,35 @@
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 5px 40px 0px #0000001a;
+  height: 62px;
+  padding: 0 120px;
+  font-size: $content;
+  color: $header-white;
+
+  h6 {
+    margin: 0;
+    padding: 0;
+    font-size: $content;
+    font-weight: 400;
+  }
+
+  .navlinks-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .navlink {
+      a {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: inherit;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #292929;
+        }
+      }
+    }
+  }
 }
