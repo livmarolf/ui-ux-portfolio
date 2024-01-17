@@ -1,2 +1,94 @@
-.landing-page {
+.landing-container {
+  h3 {
+    font-size: $small-header;
+    font-weight: $light-weight;
+    color: $header-grey;
+    margin-top: 0;
+  }
+
+  h4 {
+    font-size: $large-content;
+    margin: 0;
+    color: $header-white;
+  }
+
+  p {
+    font-size: $content;
+  }
+
+  .arrow-row {
+    display: flex;
+    justify-content: center;
+    margin: 110px 0;
+  }
+
+  .case-description {
+    width: 40%;
+  }
+
+  .image-container {
+    width: 342px;
+    height: 239px;
+    border: $thin-border;
+
+    img {
+      object-fit: cover;
+      width: 342px;
+      height: 239px;
+    }
+  }
+
+  .header-row {
+    @include header-row-layout;
+
+    h1,
+    h2 {
+      font-family: $heading-font;
+      margin: 0;
+      font-size: 48px;
+    }
+
+    h1 {
+      line-height: 30px;
+    }
+
+    h2 {
+      color: $shadow-grey;
+    }
+  }
+
+  .intro-row {
+    display: flex;
+    justify-content: space-between;
+    @include content-row-layout;
+
+    .intro-content {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .btn-container {
+        width: 220px;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          background: none;
+          border: $thick-border;
+          color: $body-content;
+          font-size: 12px;
+          border-radius: 20px;
+          padding: 8px 30px;
+        }
+      }
+    }
+  }
+
+  .case-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    padding: 0 120px 45px 120px;
+  }
 }
