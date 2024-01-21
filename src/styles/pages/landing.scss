@@ -39,7 +39,7 @@
   }
 
   .header-row {
-    @include header-row-layout;
+    @include layout(190px, 0 120px 45px 120px, $border: $thin-border);
 
     h1 {
       @include title-header($height: 30px);
@@ -54,7 +54,7 @@
   .intro-row {
     display: flex;
     justify-content: space-between;
-    @include content-row-layout;
+    @include layout(150px, 0 120px 45px 120px);
 
     .intro-content {
       width: 40%;

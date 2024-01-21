@@ -56,9 +56,7 @@
     @include container-layout;
 
     .content-section {
-      display: grid;
-      grid-template-columns: 0.3fr 1fr;
-      column-gap: 130px;
+      @include columns(0.3fr 1fr, 130px);
     }
   }
 
@@ -66,9 +64,7 @@
     @include container-layout;
 
     .content-section {
-      display: grid;
-      grid-template-columns: 0.3fr 1fr;
-      column-gap: 130px;
+      @include columns(0.3fr 1fr, 130px);
 
       .content {
         display: grid;
@@ -93,9 +89,7 @@
     @include container-layout;
 
     .content-section {
-      display: grid;
-      grid-template-columns: 0.3fr 1fr;
-      column-gap: 130px;
+      @include columns(0.3fr 1fr, 130px);
 
       .content {
         display: grid;
@@ -114,9 +108,7 @@
     @include container-layout;
 
     .content-section {
-      display: grid;
-      grid-template-columns: 0.3fr 1fr;
-      column-gap: 130px;
+      @include columns(0.3fr 1fr, 130px);
 
       .content {
         display: grid;
@@ -162,9 +154,7 @@
     @include container-layout;
 
     .content-section {
-      display: grid;
-      grid-template-columns: 0.3fr 1fr;
-      column-gap: 130px;
+      @include columns(0.3fr 1fr, 130px);
 
       .content {
         display: grid;
@@ -183,9 +173,7 @@
     @include container-layout;
 
     .content-section {
-      display: grid;
-      grid-template-columns: 0.3fr 1fr;
-      column-gap: 130px;
+      @include columns(0.3fr 1fr, 130px);
 
       .content {
         display: grid;

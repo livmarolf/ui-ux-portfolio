@@ -1,5 +1,3 @@
-// TODO : make button mixin
-
 .content-container {
   h2 {
     margin: 0;
@@ -9,7 +7,7 @@
   }
 
   .header-row {
-    @include header-row-layout;
+    @include layout(190px, 0 120px 45px 120px, $border: $thin-border);
 
     h1 {
       @include title-header($height: 30px);
@@ -17,9 +15,8 @@
   }
 
   .section-one {
-    @include content-row-layout($bottom: 150px);
-    @include column-layout;
-    border-bottom: $thin-border;
+    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include columns(1fr 1fr, 6%);
 
     .intro-left {
       p {
@@ -36,9 +33,8 @@
   }
 
   .section-two {
-    @include content-row-layout($bottom: 150px);
-    @include column-layout;
-    border-bottom: $thin-border;
+    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include columns(1fr 1fr, 6%);
 
     p {
       font-size: $content;
@@ -57,9 +53,8 @@
   }
 
   .section-three {
-    @include content-row-layout($bottom: 150px);
-    @include row-section-layout;
-    border-bottom: $thin-border;
+    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include rows(auto, 100px);
 
     h3 {
       font-size: $large-content;
@@ -84,9 +79,8 @@
   }
 
   .section-four {
-    @include content-row-layout($bottom: 150px);
-    @include column-layout;
-    border-bottom: $thin-border;
+    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include columns(1fr 1fr, 6%);
 
     p {
       font-size: $content;
@@ -105,16 +99,15 @@
   }
 
   .section-five {
-    @include content-row-layout($bottom: 150px);
-    @include row-section-layout;
-    border-bottom: $thin-border;
+    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include rows(auto, 100px);
 
     p {
       font-size: $content;
     }
 
     .content-row-top {
-      @include column-layout;
+      @include columns(1fr 1fr, 6%);
     }
 
     .img-container {
@@ -126,9 +119,8 @@
   }
 
   .section-six {
-    @include content-row-layout($bottom: 150px);
-    @include row-section-layout;
-    border-bottom: $thin-border;
+    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include rows(auto, 100px);
 
     h3 {
       font-size: $large-content;
@@ -159,16 +151,15 @@
   }
 
   .section-seven {
-    @include content-row-layout($bottom: 150px);
-    @include row-section-layout;
-    border-bottom: $thin-border;
+    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include rows(auto, 100px);
 
     p {
       font-size: $content;
     }
 
     .content-row-top {
-      @include column-layout;
+      @include columns(1fr 1fr, 6%);
     }
 
     .feedback-steps {
@@ -198,9 +189,8 @@
   }
 
   .section-eight {
-    @include content-row-layout($bottom: 150px);
-    @include column-layout;
-    border-bottom: $thin-border;
+    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include columns(1fr 1fr, 6%);
 
     p {
       font-size: $large-content;
@@ -218,12 +208,7 @@
       }
 
       button {
-        background: none;
-        border: $thick-border;
-        color: $body-content;
-        font-size: 12px;
-        border-radius: 20px;
-        padding: 8px 30px;
+        @include button-style;
       }
     }
   }

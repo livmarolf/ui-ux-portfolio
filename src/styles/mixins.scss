@@ -1,15 +1,3 @@
-@mixin header-row-layout {
-  margin-top: 190px;
-  padding: 0 120px 45px 120px;
-  border-bottom: 0.5px solid $header-white;
-}
-
-@mixin content-row-layout($bottom: 0) {
-  margin-top: 150px;
-  padding: 0 120px 45px 120px;
-  padding-bottom: $bottom;
-}
-
 @mixin title-header($height: normal) {
   line-height: $height;
   font-family: $heading-font;
@@ -26,17 +14,22 @@
   padding: 8px 30px;
 }
 
-//curriculum design specific
-@mixin column-layout {
+@mixin columns($template, $gap) {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 6%;
+  grid-template-columns: $template;
+  column-gap: $gap;
 }
 
-@mixin row-section-layout {
+@mixin rows($template, $gap) {
   display: grid;
-  grid-template-rows: auto;
-  row-gap: 100px;
+  grid-template-rows: $template;
+  row-gap: $gap;
+}
+
+@mixin layout($top-margin, $padding, $border: none) {
+  margin-top: $top-margin;
+  padding: $padding;
+  border-bottom: $border;
 }
 
 // huddleup specific
