@@ -1,184 +1,197 @@
-// TODO : remove margin on h2 and fix spacing from there
-// TODO : make ul mixin that takes a style-type and margin param
-// TODO : come up with a solution for the ul issue
+.page-content {
+  margin-top: 90px;
+  padding: 0 120px 0 120px;
 
-.page-container {
-  .page-content {
-    margin-top: 90px;
-    padding: 0 120px 0 120px;
+  h2 {
+    font-weight: $heavy-weight;
+    font-size: $large-content;
+    color: $header-white;
+    margin: 10px 0;
+  }
+
+  h3 {
+    font-size: $content;
+    font-weight: $heavy-weight;
+    color: $header-white;
+  }
+
+  p {
+    font-size: $content;
+    margin: 10px 0 20px 0;
+  }
+
+  button {
+    @include button-style;
+  }
+
+  .grey-header {
+    padding: 20px 0;
 
     h2 {
-      font-weight: $heavy-weight;
+      color: $header-grey;
+      font-weight: $light-weight;
       font-size: $large-content;
+    }
+  }
+
+  .header-row {
+    h1 {
+      font-size: 28px;
+      color: $header-grey;
+      font-weight: $light-weight;
+    }
+  }
+
+  .title-container {
+    border-left: $thin-border;
+    padding: 30px 0 30px 68px;
+
+    h1 {
+      @include title-header;
       color: $header-white;
     }
+  }
 
-    p {
-      font-size: $content;
+  .overview-container {
+    @include container-layout;
+
+    .content-section {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      column-gap: 130px;
     }
+  }
 
-    .grey-header {
-      padding: 20px 0;
+  .information-container {
+    @include container-layout;
 
-      h2 {
-        color: $header-grey;
-        font-weight: $light-weight;
-        font-size: $large-content;
-      }
-    }
+    .content-section {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      column-gap: 130px;
 
-    .header-row {
-      h1 {
-        font-size: 28px;
-        color: $header-grey;
-        font-weight: $light-weight;
-      }
-    }
-
-    .title-container {
-      border-left: $thin-border;
-      padding: 30px 0 30px 68px;
-
-      h1 {
-        @include title-header;
-        color: $header-white;
-      }
-    }
-
-    .overview-container {
-      @include container-layout;
-
-      .content-section {
+      .content {
         display: grid;
-        grid-template-columns: 0.3fr 1fr;
-        column-gap: 130px;
+        grid-template-rows: auto;
+        row-gap: 32px;
       }
     }
 
-    .information-container {
-      @include container-layout;
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
 
-      .content-section {
-        display: grid;
-        grid-template-columns: 0.3fr 1fr;
-        column-gap: 130px;
-
-        .content {
-          display: grid;
-          grid-template-rows: auto;
-          row-gap: 32px;
-        }
-      }
-
-      h3 {
+      li {
         font-size: $content;
-        font-weight: $heavy-weight;
-        color: $header-white;
+        margin-top: 6px;
       }
+    }
+  }
 
-      ul {
-        list-style-type: none;
-        margin-left: 0;
-        padding-left: 0;
+  .process-container {
+    @include container-layout;
 
-        li {
-          font-size: $content;
-          margin-top: 6px;
+    .content-section {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      column-gap: 130px;
+
+      .content {
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 32px;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
         }
       }
     }
+  }
 
-    .process-container {
-      @include container-layout;
+  .research-container {
+    @include container-layout;
 
-      .content-section {
+    .content-section {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      column-gap: 130px;
+
+      .content {
         display: grid;
-        grid-template-columns: 0.3fr 1fr;
-        column-gap: 130px;
+        grid-template-rows: auto;
+        row-gap: 32px;
 
-        .content {
-          display: grid;
-          grid-template-rows: auto;
-          row-gap: 32px;
-
-          button {
-            background: none;
-            border: $thick-border;
-            color: $body-content;
-            font-size: 12px;
-            border-radius: 20px;
-            padding: 8px 30px;
-          }
-
-          img {
-            max-width: 100%;
-            max-height: 100%;
-          }
+        .scaled-down-img {
+          max-width: 80%;
+          max-height: 80%;
         }
-      }
-    }
 
-    .research-container {
-      @include container-layout;
+        .unstyled-list {
+          list-style-type: none;
+          margin-left: 0;
+          padding-left: 0;
 
-      .content-section {
-        display: grid;
-        grid-template-columns: 0.3fr 1fr;
-        column-gap: 130px;
-
-        .content {
-          display: grid;
-          grid-template-rows: auto;
-          row-gap: 32px;
-
-          h3 {
+          li {
             font-size: $content;
-            font-weight: $heavy-weight;
-            color: $header-white;
+            margin-top: 6px;
           }
+        }
 
-          ul {
-            list-style-type: disc;
-            margin-left: 10px;
-            padding-left: 0;
+        ul {
+          list-style-type: disc;
+          margin-left: 10px;
+          padding-left: 0;
 
-            li {
-              font-size: $content;
-              margin-top: 6px;
-            }
+          li {
+            font-size: $content;
+            margin-top: 6px;
           }
+        }
 
-          img {
-            max-width: 100%;
-            max-height: 100%;
-          }
+        img {
+          max-width: 100%;
+          max-height: 100%;
         }
       }
     }
+  }
 
-    .design-container {
-      @include container-layout;
+  .design-container {
+    @include container-layout;
 
-      .content-section {
+    .content-section {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      column-gap: 130px;
+
+      .content {
         display: grid;
-        grid-template-columns: 0.3fr 1fr;
-        column-gap: 130px;
+        grid-template-rows: auto;
+        row-gap: 32px;
 
-        .content {
-          display: grid;
-          grid-template-rows: auto;
-          row-gap: 32px;
-
-          img {
-            max-width: 100%;
-            max-height: 100%;
-          }
+        img {
+          max-width: 100%;
+          max-height: 100%;
         }
       }
     }
+  }
 
-    .thoughts-container {
-      @include container-layout;
+  .thoughts-container {
+    @include container-layout;
+
+    .content-section {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      column-gap: 130px;
+
+      .content {
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 32px;
+      }
     }
   }
 }
