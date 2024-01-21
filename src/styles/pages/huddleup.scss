@@ -67,9 +67,7 @@
       @include columns(0.3fr 1fr, 130px);
 
       .content {
-        display: grid;
-        grid-template-rows: auto;
-        row-gap: 32px;
+        @include rows(auto, 32px);
       }
     }
 
@@ -92,9 +90,7 @@
       @include columns(0.3fr 1fr, 130px);
 
       .content {
-        display: grid;
-        grid-template-rows: auto;
-        row-gap: 32px;
+        @include rows(auto, 32px);
 
         img {
           max-width: 100%;
@@ -111,9 +107,7 @@
       @include columns(0.3fr 1fr, 130px);
 
       .content {
-        display: grid;
-        grid-template-rows: auto;
-        row-gap: 32px;
+        @include rows(auto, 32px);
 
         .scaled-down-img {
           max-width: 80%;
@@ -157,9 +151,7 @@
       @include columns(0.3fr 1fr, 130px);
 
       .content {
-        display: grid;
-        grid-template-rows: auto;
-        row-gap: 32px;
+        @include rows(auto, 32px);
 
         img {
           max-width: 100%;
@@ -176,9 +168,7 @@
       @include columns(0.3fr 1fr, 130px);
 
       .content {
-        display: grid;
-        grid-template-rows: auto;
-        row-gap: 32px;
+        @include rows(auto, 32px);
       }
     }
   }
