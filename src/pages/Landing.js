@@ -1,5 +1,5 @@
 import { ReactComponent as ArrowCircleDown } from "../assets/icons/arrow-circle-down.svg";
-import liv from "../assets/liv.JPG";
+import olivia from "../assets/olivia.jpeg";
 
 export default function Landing() {
   return (
@@ -11,7 +11,7 @@ export default function Landing() {
 
       <div className="intro-row">
         <div className="image-container">
-          <img src={liv} alt="personal" />
+          <img src={olivia} alt="personal" />
         </div>
 
         <div className="intro-content">
