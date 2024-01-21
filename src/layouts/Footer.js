@@ -4,12 +4,14 @@ export default function Footer() {
   return (
     <div className="footer">
       <div>
-        <p>Created by Olivia Marolf ©2024</p>
+        <p>
+          Created by <strong>Olivia Marolf</strong> ©2024
+        </p>
       </div>
 
-      <div>
+      <div className="links-container">
         <div>
-          <div>
+          <div className="link-title">
             <h3>SITEMAP</h3>
           </div>
           <ul>
@@ -31,7 +33,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <div>
+          <div className="link-title">
             <h3>SOCIAL</h3>
           </div>
 

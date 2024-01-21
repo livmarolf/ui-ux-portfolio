@@ -1,0 +1,51 @@
+.footer {
+  @include layout(0, 45px 120px);
+  display: flex;
+  justify-content: space-between;
+  background-color: $darkest-grey;
+  color: $header-grey;
+  border-top: $thin-border;
+
+  p {
+    font-size: $content;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      font-size: $content;
+      margin-top: 6px;
+    }
+  }
+
+  .link-title {
+    padding: 8px 0;
+    border-bottom: $thin-border;
+    margin-bottom: 10px;
+    width: 120px;
+
+    h3 {
+      margin: 0;
+      padding: 0;
+      font-size: $content;
+      font-weight: 400;
+    }
+  }
+
+  .links-container {
+    @include columns(1fr 1fr, 40px);
+
+    a {
+      text-decoration: none;
+      color: $body-content;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        color: $header-white;
+      }
+    }
+  }
+}

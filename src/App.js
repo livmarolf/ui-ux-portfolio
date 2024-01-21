@@ -6,6 +6,7 @@ import CurriculumDesign from "./pages/CurriculumDesign";
 import DesignProcess from "./pages/DesignProcess";
 import "./styles/app.scss";
 import HuddleUp from "./pages/case-studies/HuddleUp";
+import Footer from "./layouts/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/curriculum-design" component={CurriculumDesign} />
         <Route path="/huddleup" component={HuddleUp} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
