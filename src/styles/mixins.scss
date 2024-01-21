@@ -29,3 +29,12 @@
   grid-template-rows: auto;
   row-gap: 100px;
 }
+
+// huddleup specific
+@mixin container-layout {
+  border-left: $thin-border;
+  padding: 30px 0 30px 68px;
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 120px;
+}

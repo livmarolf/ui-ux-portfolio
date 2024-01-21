@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import CurriculumDesign from "./pages/CurriculumDesign";
 import DesignProcess from "./pages/DesignProcess";
 import "./styles/app.scss";
+import HuddleUp from "./pages/case-studies/HuddleUp";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/design-process" component={DesignProcess} />
         <Route path="/curriculum-design" component={CurriculumDesign} />
+        <Route path="/huddleup" component={HuddleUp} />
       </Switch>
     </BrowserRouter>
   );
