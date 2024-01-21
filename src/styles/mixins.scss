@@ -9,3 +9,23 @@
   padding: 0 120px 45px 120px;
   padding-bottom: $bottom;
 }
+
+@mixin title-header($height: normal) {
+  line-height: $height;
+  font-family: $heading-font;
+  margin: 0;
+  font-size: 48px;
+}
+
+//curriculum design specific
+@mixin column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6%;
+}
+
+@mixin row-section-layout {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 100px;
+}

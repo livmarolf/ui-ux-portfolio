@@ -1,6 +1,5 @@
-// TODO : make mixin for h1
-// TODO : make mixin for h2
-// TODO : make h2 style global in this file
+// TODO : make button mixin
+
 .content-container {
   h2 {
     margin: 0;
@@ -13,19 +12,14 @@
     @include header-row-layout;
 
     h1 {
-      line-height: 30px;
-      font-family: $heading-font;
-      margin: 0;
-      font-size: 48px;
+      @include title-header($height: 30px);
     }
   }
 
   .section-one {
     @include content-row-layout($bottom: 150px);
+    @include column-layout;
     border-bottom: $thin-border;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 6%;
 
     .intro-left {
       p {
@@ -43,10 +37,8 @@
 
   .section-two {
     @include content-row-layout($bottom: 150px);
+    @include column-layout;
     border-bottom: $thin-border;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 6%;
 
     p {
       font-size: $content;
@@ -66,10 +58,8 @@
 
   .section-three {
     @include content-row-layout($bottom: 150px);
+    @include row-section-layout;
     border-bottom: $thin-border;
-    display: grid;
-    grid-template-rows: auto;
-    row-gap: 100px;
 
     h3 {
       font-size: $large-content;
@@ -95,10 +85,8 @@
 
   .section-four {
     @include content-row-layout($bottom: 150px);
+    @include column-layout;
     border-bottom: $thin-border;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 6%;
 
     p {
       font-size: $content;
@@ -118,19 +106,15 @@
 
   .section-five {
     @include content-row-layout($bottom: 150px);
+    @include row-section-layout;
     border-bottom: $thin-border;
-    display: grid;
-    grid-template-rows: auto;
-    row-gap: 200px;
 
     p {
       font-size: $content;
     }
 
     .content-row-top {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 6%;
+      @include column-layout;
     }
 
     .img-container {
@@ -143,10 +127,8 @@
 
   .section-six {
     @include content-row-layout($bottom: 150px);
+    @include row-section-layout;
     border-bottom: $thin-border;
-    display: grid;
-    grid-template-rows: auto;
-    row-gap: 110px;
 
     h3 {
       font-size: $large-content;
@@ -178,19 +160,15 @@
 
   .section-seven {
     @include content-row-layout($bottom: 150px);
+    @include row-section-layout;
     border-bottom: $thin-border;
-    display: grid;
-    grid-template-rows: auto;
-    row-gap: 200px;
 
     p {
       font-size: $content;
     }
 
     .content-row-top {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 6%;
+      @include column-layout;
     }
 
     .feedback-steps {
@@ -221,10 +199,8 @@
 
   .section-eight {
     @include content-row-layout($bottom: 150px);
+    @include column-layout;
     border-bottom: $thin-border;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 6%;
 
     p {
       font-size: $large-content;

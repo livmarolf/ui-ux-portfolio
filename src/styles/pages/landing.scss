@@ -41,18 +41,12 @@
   .header-row {
     @include header-row-layout;
 
-    h1,
-    h2 {
-      font-family: $heading-font;
-      margin: 0;
-      font-size: 48px;
-    }
-
     h1 {
-      line-height: 30px;
+      @include title-header($height: 30px);
     }
 
     h2 {
+      @include title-header;
       color: $shadow-grey;
     }
   }
