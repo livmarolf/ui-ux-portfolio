@@ -69,12 +69,7 @@
         justify-content: space-between;
 
         button {
-          background: none;
-          border: $thick-border;
-          color: $body-content;
-          font-size: 12px;
-          border-radius: 20px;
-          padding: 8px 30px;
+          @include button-style;
         }
       }
     }

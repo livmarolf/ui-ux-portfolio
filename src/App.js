@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./layouts/Navbar";
 import Landing from "./pages/Landing";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 import CurriculumDesign from "./pages/CurriculumDesign";
 import DesignProcess from "./pages/DesignProcess";
 import "./styles/app.scss";
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Landing} />
+        <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/design-process" component={DesignProcess} />
         <Route path="/curriculum-design" component={CurriculumDesign} />

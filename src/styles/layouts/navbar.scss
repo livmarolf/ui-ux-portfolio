@@ -16,11 +16,25 @@
     padding: 0;
     font-size: $content;
     font-weight: 400;
+    text-transform: uppercase;
   }
 
   .navlinks-wrapper {
     display: flex;
     justify-content: space-between;
+
+    .dropdown-link {
+      .nav-link {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: $body-content;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #292929;
+        }
+      }
+    }
 
     .navlink {
       a {
