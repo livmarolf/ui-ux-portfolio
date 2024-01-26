@@ -1,2 +1,124 @@
-.design-process {
+.process-page {
+  .header-row {
+    @include layout(190px, 0 120px 45px 120px, $border: $thin-border);
+
+    h1 {
+      @include title-header($height: 30px);
+    }
+  }
+  .page-container {
+    margin-top: 90px;
+    padding: 0 120px 0 120px;
+
+    h2 {
+      font-size: $header;
+      color: $header-white;
+      font-weight: $heavy-weight;
+      font-family: $heading-font;
+      margin: 0;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: $large-content;
+      font-weight: $light-weight;
+      color: $header-grey;
+      font-family: $heading-font;
+    }
+
+    p {
+      font-size: $content;
+      color: $body-content;
+      font-weight: $light-weight;
+      color: $header-white;
+    }
+
+    // .header-row {
+    //   @include layout(190px, 0 0 45px 0, $border: $thin-border);
+    // }
+
+    .content-row {
+      @include columns(20% 60%, 20%);
+      margin-bottom: 220px;
+      height: 100%;
+
+      img {
+        width: 100%;
+      }
+
+      ul {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+
+        li {
+          font-size: $content;
+          margin: 28px 0;
+          @include rows(auto, 8px);
+
+          h4 {
+            font-size: 12px;
+            color: $header-white;
+            font-weight: $heavy-weight;
+            margin: 0;
+          }
+        }
+      }
+
+      p {
+        color: $body-content;
+        font-weight: $light-weight;
+        font-size: $content;
+        margin: 0;
+      }
+
+      .test-items {
+        @include columns(repeat(4, 1fr), 30px);
+
+        .item-container {
+          @include rows(auto 1fr, 12px);
+
+          .header {
+            border-bottom: 0.5px solid $shadow-grey;
+
+            .sub-heading {
+              color: $header-white;
+              font-size: $content;
+              font-weight: $heavy-weight;
+              margin-bottom: 12px;
+            }
+          }
+        }
+      }
+
+      .row-container {
+        @include rows(auto 1fr, 80px);
+        height: 100%;
+
+        .strategize-items {
+          @include columns(1fr 1fr 1fr, 20px);
+
+          h3 {
+            margin-top: 12px;
+          }
+        }
+
+        .design-items {
+          ul {
+            margin: 0;
+
+            li {
+              margin-top: 0;
+              margin-bottom: 28px;
+            }
+          }
+        }
+      }
+
+      .column-container {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
 }

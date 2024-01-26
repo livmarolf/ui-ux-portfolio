@@ -1,4 +1,5 @@
 // TODO: make sure links are being used in the proper places not navlinks.
+// TODO: make a click outside hook
 
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";

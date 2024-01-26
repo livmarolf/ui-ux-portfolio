@@ -1,2 +1,109 @@
-.page-container {
+// TODO : clean up input styles
+
+.contact-content {
+  .header-row {
+    @include layout(190px, 0 120px 45px 120px, $border: $thin-border);
+
+    h1 {
+      @include title-header($height: 30px);
+    }
+  }
+
+  .contact-container {
+    @include layout(90px, 0 120px 45px 120px);
+    @include columns(30% 60%, 10%);
+    height: 60vh;
+
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      p {
+        font-size: $content;
+        color: $body-content;
+        font-weight: $light-weight;
+        margin-top: 0;
+      }
+
+      ul {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 10px;
+
+        li {
+          font-size: $content;
+          display: grid;
+          grid-template-columns: 24px auto;
+          align-items: center;
+          column-gap: 10px;
+        }
+      }
+    }
+
+    .right-column {
+      form {
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 36px;
+
+        .top-inputs {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 36px;
+        }
+
+        .input {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            font-size: $large-content;
+            color: $header-white;
+            font-weight: $light-weight;
+            margin: 0;
+          }
+
+          input:-webkit-autofill,
+          input:-webkit-autofill:hover,
+          input:-webkit-autofill:focus {
+            -webkit-text-fill-color: $header-grey;
+            -webkit-box-shadow: none;
+            transition: background-color 5000s ease-in-out 0s;
+          }
+
+          input {
+            background-color: transparent;
+            border: none;
+            border-bottom: $thin-border;
+            padding: 12px 0;
+            color: $header-grey;
+
+            &::-webkit-input-placeholder {
+              color: $shadow-grey;
+            }
+
+            &:focus {
+              outline: none;
+              color: $header-grey;
+              background-color: transparent;
+            }
+          }
+        }
+
+        .btn-container {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+
+          button {
+            @include button-style;
+          }
+        }
+      }
+    }
+  }
 }

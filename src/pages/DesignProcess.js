@@ -1,13 +1,21 @@
+import designProcess from "../assets/dark/design-process.png";
+import { ReactComponent as ChartSuccess } from "../assets/icons/chart-success.svg";
+import { ReactComponent as FatRows } from "../assets/icons/fatrows.svg";
+import { ReactComponent as Routing } from "../assets/icons/routing.svg";
+
 export default function DesignProcess() {
   return (
-    <div className="page-container">
-      <div className="page-content">
+    <div className="process-page">
+      <div className="header-row">
+        <h1>DESIGN PROCESS</h1>
+      </div>
+      <div className="page-container">
         <div className="content-row">
           <div>
             <h2>INTRODUCTION</h2>
           </div>
 
-          <div>
+          <div className="row-container">
             <div>
               <h3>CONCEPT</h3>
               <p>
@@ -35,7 +43,7 @@ export default function DesignProcess() {
           </div>
 
           <div>
-            <img alt="design-process" />
+            <img src={designProcess} alt="design-process" />
           </div>
         </div>
 
@@ -44,13 +52,9 @@ export default function DesignProcess() {
             <h2>RESEARCH</h2>
           </div>
 
-          <div>
+          <div className="column-container">
             <div>
               <h3>PEOPLE/USERS</h3>
-
-              <p>
-                The people who will use the product, also known as the users.
-              </p>
 
               <ul>
                 <li>
@@ -73,8 +77,6 @@ export default function DesignProcess() {
             <div>
               <h3>BUSENESS</h3>
 
-              <p>The business you’re creating a product for.</p>
-
               <ul>
                 <li>
                   <h4>Stakeholder Interviews</h4>
@@ -95,7 +97,7 @@ export default function DesignProcess() {
             <h2>STRATEGIZE</h2>
           </div>
 
-          <div>
+          <div className="row-container">
             <p>
               Strategic design planning ensures efficiency by aligning tasks
               with clear objectives, incorporating user feedback, and
@@ -103,9 +105,9 @@ export default function DesignProcess() {
               helps in risk mitigation.
             </p>
 
-            <div>
+            <div className="strategize-items">
               <div>
-                <p>icon placeholder</p>
+                <ChartSuccess />
                 <h3>PRODUCT GOALS</h3>
                 <p>
                   An outline defining specific objectives and targets of the
@@ -114,16 +116,15 @@ export default function DesignProcess() {
               </div>
 
               <div>
-                <p>icon placeholder</p>
+                <Routing />
                 <h3>PRODUCT ROADMAP</h3>
                 <p>
-                  A visual plan outlining product development goals, features,
-                  and timeline
+                  A visual plan outlining product goals, features, and timeline
                 </p>
               </div>
 
               <div>
-                <p>icon placeholder</p>
+                <FatRows />
                 <h3>SITE MAP</h3>
                 <p>
                   A visual depiction of the product's hierarchical content
@@ -139,8 +140,8 @@ export default function DesignProcess() {
             <h2>DESIGN</h2>
           </div>
 
-          <div>
-            <div>
+          <div className="row-container">
+            <div className="design-intro">
               <p>
                 This is when wireframes and prototypes are created, aiming for
                 an intuitive and visually pleasing interface. Testing and
@@ -149,18 +150,26 @@ export default function DesignProcess() {
               </p>
             </div>
 
-            <div>
-              <h3>User Flow</h3>
-              <p>A visual representation of a user's journey</p>
+            <div className="design-items">
+              <ul>
+                <li>
+                  <h4>User Flow</h4>
+                  <p>A visual representation of a user's journey</p>
+                </li>
 
-              <h3>Wireframes</h3>
-              <p>Blueprints outlining a website or app's structure</p>
+                <li>
+                  <h4>Wireframes</h4>
+                  <p>Blueprints outlining a website or app's structure</p>
+                </li>
 
-              <h3>Prototype</h3>
-              <p>
-                An interactive model showing the user interface and
-                functionality of a product
-              </p>
+                <li>
+                  <h4>Prototype</h4>
+                  <p>
+                    An interactive model showing the user interface and
+                    functionality of a product
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -170,10 +179,12 @@ export default function DesignProcess() {
             <h2>TEST</h2>
           </div>
 
-          <div>
-            <div>
-              <h3>PLAN</h3>
-              <p>Create a test plan</p>
+          <div className="test-items">
+            <div className="item-container">
+              <div className="header">
+                <h3>PLAN</h3>
+                <p className="sub-heading">Create a test plan</p>
+              </div>
               <p>
                 Creating a testing plan is essential for a practical evaluation
                 of a UI/UX design. It sets clear goals, metrics, and resource
@@ -185,9 +196,11 @@ export default function DesignProcess() {
               </p>
             </div>
 
-            <div>
-              <h3>CONDUCT</h3>
-              <p>Carry out the test</p>
+            <div className="item-container">
+              <div className="header">
+                <h3>CONDUCT</h3>
+                <p className="sub-heading">Carry out the test</p>
+              </div>
               <p>
                 Conducting user tests in user design means getting feedback from
                 users to understand how well a product or interface works.
@@ -198,9 +211,11 @@ export default function DesignProcess() {
               </p>
             </div>
 
-            <div>
-              <h3>REPORT</h3>
-              <p>Analyze and document results</p>
+            <div className="item-container">
+              <div className="header">
+                <h3>REPORT</h3>
+                <p className="sub-heading">Analyze and record results</p>
+              </div>
               <p>
                 Reporting user testing findings means summarizing what users did
                 and said to provide insights and recommendations for design
@@ -210,9 +225,11 @@ export default function DesignProcess() {
               </p>
             </div>
 
-            <div>
-              <h3>OPTOMIZE</h3>
-              <p>Refine the designs</p>
+            <div className="item-container">
+              <div className="header">
+                <h3>OPTOMIZE</h3>
+                <p className="sub-heading">Refine the designs</p>
+              </div>
               <p>
                 After user testing, we tweak designs based on user feedback to
                 make them more user-friendly and effective. This involves
