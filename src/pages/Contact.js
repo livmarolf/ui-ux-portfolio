@@ -1,9 +1,34 @@
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 import { ReactComponent as File } from "../assets/icons/file.svg";
 import { ReactComponent as Phone } from "../assets/icons/phone.svg";
 import { ReactComponent as Envelope } from "../assets/icons/envelope.svg";
 import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
 
 export default function Contact() {
+  const form = useRef();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "personal_contact",
+        "contact_form",
+        form.current,
+        `${process.env.REACT_APP_PUBLIC_KEY}`
+      )
+      .then(
+        (result) => {
+          window.location.reload();
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
+
   return (
     <div className="contact-content">
       <div className="header-row">
@@ -34,22 +59,26 @@ export default function Contact() {
         </div>
 
         <div className="right-column">
-          <form>
+          <form ref={form} onSubmit={handleSubmit}>
             <div className="top-inputs">
               <div className="input">
-                <label for="name">Name</label>
-                <input type="text" placeholder="Jon Doe" />
+                <label>Name</label>
+                <input type="text" placeholder="Jon Doe" name="user_name" />
               </div>
 
               <div className="input">
-                <label for="name">Email</label>
-                <input type="text" placeholder="example@yourdomain.com" />
+                <label>Email</label>
+                <input
+                  type="text"
+                  placeholder="example@yourdomain.com"
+                  name="user_email"
+                />
               </div>
             </div>
 
             <div className="input">
-              <label for="message">Message</label>
-              <input type="text" placeholder="Hi there..." />
+              <label>Message</label>
+              <input type="text" placeholder="Hi there..." name="message" />
             </div>
 
             <div className="btn-container">
