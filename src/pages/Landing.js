@@ -1,115 +1,145 @@
-import { ReactComponent as ArrowCircleDown } from "../assets/icons/arrow-circle-down.svg";
-import olivia from "../assets/olivia.jpeg";
+import olivia from "../assets/images/olivia.jpeg";
+import curriculumPages from "../assets/images/curriuclum-pages.png";
+import processTablets from "../assets/prototypes/process-tablets.png";
+import huddleupPhones from "../assets/prototypes/huddleup-phones.png";
+import rprePrototypes from "../assets/prototypes/rpre-prototypes.png";
+import sLines from "../assets/dark/lines-s.png";
 
 export default function Landing() {
   return (
     <div className="landing-container">
       <div className="header-row">
-        <h1>I'M LIV</h1>
-        <h2>- UI/UX DESIGNER</h2>
-      </div>
-
-      <div className="intro-row">
-        <div className="image-container">
-          <img src={olivia} alt="personal" />
-        </div>
-
-        <div className="intro-content">
-          <div>
-            <h3>INTRODUCTION</h3>
-            <p>
-              As a UX/UI designer with a software development background, I
-              combine my eye for clean design with practical expertise to create
-              intuitive digital experiences. My journey from software
-              development to design enriches my ability to bridge user needs
-              with elegant, functional solutions.
-            </p>
+        <div className="title-container">
+          <div className="title">
+            <h1>I'M LIV</h1>
+            <h2>- UI/UX DESIGNER</h2>
           </div>
 
-          <div className="btn-container">
-            <button>About</button>
-            <button>Contact</button>
+          <p>2024</p>
+        </div>
+      </div>
+
+      <div className="landing-content">
+        <div className="left-lines">
+          <img src={sLines} alt="small-lines" />
+        </div>
+
+        <div className="landing-rows">
+          <div className="intro-row">
+            <div className="column-left">
+              <div className="info">
+                <div className="rotated-div">
+                  <h3>INTRODUCTION</h3>
+                </div>
+
+                <p>
+                  As a <strong>UX/UI designer</strong> with a{" "}
+                  <strong>software development background</strong>, I combine my
+                  eye for <strong>clean design</strong> with practical expertise
+                  to create intuitive digital experiences. My journey from
+                  software development to design enriches my ability to{" "}
+                  <strong>bridge user needs</strong> with elegant, functional
+                  solutions.
+                </p>
+              </div>
+
+              <div className="info">
+                <div className="rotated-div">
+                  <h3>DOWNLOAD MY RESUME</h3>
+                </div>
+                <div className="qr-code"></div>
+                {/* <img alt="qr-code" /> */}
+              </div>
+            </div>
+
+            <div className="image-container">
+              <img src={olivia} alt="personal" />
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div className="arrow-row">
-        <ArrowCircleDown />
-      </div>
+          <div className="case-row">
+            <div className="case-desc">
+              <div className="rotated-div">
+                <h3>CURRICULUM DESIGN</h3>
+              </div>
 
-      <div className="case-row">
-        <div className="case-description">
-          <h3>DESIGN PROCESS</h3>
-          <h4>DESIGN PROCESS</h4>
+              <div className="case-content">
+                <h4>WEB DEVELOPMENT CURRICULUM DESIGN</h4>
 
-          <p>
-            The outline and in-depth walkthrough of my design process from start
-            to finish.
-          </p>
-        </div>
+                <p>
+                  Creating a curriculum through practical design and planning
+                  for effective learning outcomes.
+                </p>
+              </div>
+            </div>
 
-        <div className="image-container">
-          <img alt="" />
-        </div>
-      </div>
+            <div className="image-container">
+              <img src={curriculumPages} alt="curriculum-pages" />
+            </div>
+          </div>
 
-      <div className="arrow-row">
-        <ArrowCircleDown />
-      </div>
+          <div className="case-row">
+            <div className="case-desc">
+              <div className="rotated-div">
+                <h3>DESIGN PROCESS</h3>
+              </div>
 
-      <div className="case-row">
-        <div className="case-description">
-          <h3>CURRICULUM DESIGN</h3>
-          <h4>CURRICULUM DESIGN</h4>
+              <div className="case-content">
+                <h4>THE CREATIVE JOURNEY</h4>
 
-          <p>
-            Creating a curriculum through practical design and planning for
-            effective learning outcomes.
-          </p>
-        </div>
+                <p>
+                  Creating a curriculum through practical design and planning
+                  for effective learning outcomes.
+                </p>
+              </div>
+            </div>
 
-        <div className="image-container">
-          <img alt="" />
-        </div>
-      </div>
+            <div className="image-container">
+              <img src={processTablets} alt="process-tablets" />
+            </div>
+          </div>
 
-      <div className="arrow-row">
-        <ArrowCircleDown />
-      </div>
+          <div className="case-row">
+            <div className="case-desc">
+              <div className="rotated-div">
+                <h3>CASE STUDY 01</h3>
+              </div>
 
-      <div className="case-row">
-        <div className="case-description">
-          <h3>CASE STUDY 01</h3>
-          <h4>HUDDLEUP</h4>
+              <div className="case-content">
+                <h4>HUDDLEUP</h4>
 
-          <p>
-            An application designed to enhance sports team management and
-            promote greater involvement.
-          </p>
-        </div>
+                <p>
+                  An application designed to enhance sports team management and
+                  promote greater involvement.
+                </p>
+              </div>
+            </div>
 
-        <div className="image-container">
-          <img alt="" />
-        </div>
-      </div>
+            <div className="image-container">
+              <img src={huddleupPhones} alt="huddleup-phones" />
+            </div>
+          </div>
 
-      <div className="arrow-row">
-        <ArrowCircleDown />
-      </div>
+          <div className="case-row">
+            <div className="case-desc">
+              <div className="rotated-div">
+                <h3>CASE STUDY 02</h3>
+              </div>
 
-      <div className="case-row">
-        <div className="case-description">
-          <h3>CASE STUDY 02</h3>
-          <h4>REAL ESTATE</h4>
+              <div className="case-content">
+                <h4>REAL ESTATE</h4>
 
-          <p>
-            A tailored adaptive website design created for a real estate
-            professional.
-          </p>
-        </div>
+                <p>
+                  A tailored adaptive website design created for a real estate
+                  professional.
+                </p>
+              </div>
+            </div>
 
-        <div className="image-container">
-          <img alt="" />
+            <div className="image-container">
+              <img src={rprePrototypes} alt="rpre-prototypes" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

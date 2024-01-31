@@ -4,12 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $dark-grey;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   height: 62px;
   padding: 0 120px;
   font-size: $content;
   color: $header-white;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 1;
 
   h6 {
     margin: 0;

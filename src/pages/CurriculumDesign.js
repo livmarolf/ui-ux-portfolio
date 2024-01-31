@@ -1,8 +1,6 @@
 import { ReactComponent as Line } from "../assets/icons/line.svg";
 import curriculumVsWeb from "../assets/dark/curriculum-vs-web.png";
 import fillGapsWorkflow from "../assets/dark/fill-gaps-workflow.png";
-import continuousImprovement from "../assets/dark/continuous-improvement.png";
-import userTestingFlow from "../assets/dark/user-testing-flow.png";
 
 export default function CurriculumDesign() {
   return (
@@ -121,7 +119,7 @@ export default function CurriculumDesign() {
         </div>
 
         <div className="img-container">
-          <img src={continuousImprovement} alt="continuous-improvement" />
+          <img alt="continuous-improvement" />
         </div>
       </div>
 
@@ -145,7 +143,7 @@ export default function CurriculumDesign() {
           </p>
         </div>
 
-        <img src={userTestingFlow} alt="feedback-loop" />
+        <img alt="feedback-loop" />
 
         <div className="steps-container">
           <div>

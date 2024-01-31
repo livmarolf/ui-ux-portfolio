@@ -1,7 +1,5 @@
 import designProcess from "../../assets/dark/design-process.png";
-import competitors from "../../assets/dark/competitors.png";
 import persona from "../../assets/dark/persona.png";
-import productGoals from "../../assets/dark/product-goals.png";
 import productMap from "../../assets/dark/product-map.png";
 import userTaskFlow from "../../assets/dark/user-task-flow.png";
 import huddleupWireframes from "../../assets/dark/huddleup-wireframes.png";
@@ -246,7 +244,7 @@ export default function HuddleUp() {
             </div>
 
             <div>
-              <img src={competitors} alt="competitors" />
+              <img alt="competitors" />
             </div>
           </div>
         </div>
@@ -366,7 +364,7 @@ export default function HuddleUp() {
               </p>
             </div>
 
-            <img src={productGoals} alt="product-goals" />
+            <img alt="product-goals" />
           </div>
         </div>
 

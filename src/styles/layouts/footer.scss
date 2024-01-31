@@ -2,9 +2,9 @@
   @include layout(0, 100px 120px);
   display: flex;
   justify-content: space-between;
-  background-color: $darkest-grey;
+  background-color: #000000;
   color: $header-grey;
-  border-top: $thin-border;
+  border-top: $dark-border;
 
   p {
     font-size: $small-header;
