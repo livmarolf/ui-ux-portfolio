@@ -7,14 +7,16 @@ function Dropdown() {
 
   const handleClick = () => setClick(!click);
 
+  const pages = MenuItems.filter((item) => item.subPage === true);
+
   return (
     <div
       onClick={handleClick}
       className={click ? "dropdown-menu clicked" : "dropdown-menu"}
     >
-      {MenuItems.map((item, index) => {
+      {pages.map((item, id) => {
         return (
-          <div key={index} className="link">
+          <div key={id} className="dropdown">
             <Link className={item.cName} to={item.path}>
               {item.title}
             </Link>

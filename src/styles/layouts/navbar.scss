@@ -23,29 +23,28 @@
   .navlinks-wrapper {
     display: flex;
     justify-content: space-between;
-
-    .dropdown-link {
-      .nav-link {
-        padding: 10px 20px;
-        text-decoration: none;
-        color: $body-content;
-        transition: background-color 0.3s ease-in-out;
-
-        &:hover {
-          background-color: #292929;
-        }
-      }
-    }
+    gap: 10px;
 
     .navlink {
       a {
         padding: 10px 20px;
         text-decoration: none;
         color: $body-content;
-        transition: background-color 0.3s ease-in-out;
+        transition: 0.4s ease-in-out all;
+        border-radius: 10px;
 
         &:hover {
-          background-color: #292929;
+          border-radius: 10px;
+          background: rgba(255, 255, 255, 0.4);
+          color: #000000;
+        }
+      }
+
+      svg {
+        margin-left: 5px;
+
+        path {
+          stroke: currentColor;
         }
       }
     }

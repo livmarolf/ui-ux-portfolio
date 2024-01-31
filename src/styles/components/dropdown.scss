@@ -1,18 +1,17 @@
 .dropdown-menu {
-  background-color: $dark-grey;
   position: absolute;
   top: 78%;
   display: grid;
   grid-template-rows: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
 
   &.clicked {
     display: none;
   }
 
-  .link {
-    background-color: $shadow-grey;
+  .dropdown {
+    background: rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
 

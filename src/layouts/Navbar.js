@@ -5,7 +5,6 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Dropdown from "../components/Dropdown";
 import { ReactComponent as ArrowDown } from "../assets/icons/arrow-down.svg";
-import { ReactComponent as ArrowUp } from "../assets/icons/arrow-up.svg";
 import { MenuItems } from "../data/MenuItems";
 
 function Navbar() {
@@ -21,12 +20,12 @@ function Navbar() {
           <Link to="/">HOME</Link>
         </div>
         <div
-          className="dropdown-link"
+          className="navlink"
           onMouseEnter={() => setDropdown(true)}
           onMouseLeave={() => setDropdown(false)}
         >
-          <Link to="/contents" className="nav-link">
-            CONTENTS {dropdown ? <ArrowUp /> : <ArrowDown />}
+          <Link to="/contents">
+            CONTENTS <ArrowDown />
           </Link>
           {dropdown && <Dropdown />}
         </div>
