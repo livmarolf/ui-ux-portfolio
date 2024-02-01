@@ -18,6 +18,19 @@ function Navbar() {
             HOME
           </Link>
         </div>
+
+        <div className="navlink">
+          <Link className="main-link" to="/about">
+            ABOUT
+          </Link>
+        </div>
+
+        <div className="navlink">
+          <Link className="main-link" to="/contact">
+            CONTACT
+          </Link>
+        </div>
+
         <div
           className="navlink"
           onMouseEnter={() => setDropdown(true)}
@@ -27,16 +40,6 @@ function Navbar() {
             CONTENTS <ArrowDown />
           </Link>
           {dropdown && <Dropdown />}
-        </div>
-        <div className="navlink">
-          <Link className="main-link" to="/contact">
-            CONTACT
-          </Link>
-        </div>
-        <div className="navlink">
-          <Link className="main-link" to="/about">
-            ABOUT
-          </Link>
         </div>
       </div>
     </nav>

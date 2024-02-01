@@ -1,12 +1,18 @@
 import { ReactComponent as Line } from "../assets/icons/line.svg";
 import curriculumVsWeb from "../assets/dark/curriculum-vs-web.png";
 import fillGapsWorkflow from "../assets/dark/fill-gaps-workflow.png";
+import continuousImprovement from "../assets/dark/continuous-improvement.png";
+import feedbackLoop from "../assets/dark/feedback-loop.png";
 
 export default function CurriculumDesign() {
   return (
     <div className="content-container">
       <div className="header-row">
-        <h1>CURRICULUM DESIGN</h1>
+        <div className="title-container">
+          <div className="title">
+            <h1>CURRICULUM DESIGN</h1>
+          </div>
+        </div>
       </div>
 
       <div className="section-one">
@@ -19,9 +25,9 @@ export default function CurriculumDesign() {
 
         <div className="intro-right">
           <p>
-            My design journey started as a curriculum designer leading the
-            design for a Web Development course. The goal was to empower
-            individuals with the skills to navigate coding from basics to
+            I started my design journey by working as a curriculum designer on a
+            team creating curriculum for a web development course. Our aim was
+            to give individuals the skills to navigate coding from basics to
             full-stack development.
           </p>
         </div>
@@ -119,7 +125,7 @@ export default function CurriculumDesign() {
         </div>
 
         <div className="img-container">
-          <img alt="continuous-improvement" />
+          <img src={continuousImprovement} alt="continuous-improvement" />
         </div>
       </div>
 
@@ -143,7 +149,7 @@ export default function CurriculumDesign() {
           </p>
         </div>
 
-        <img alt="feedback-loop" />
+        <img src={feedbackLoop} alt="feedback-loop" />
 
         <div className="steps-container">
           <div>
@@ -307,20 +313,8 @@ export default function CurriculumDesign() {
           comments, don't hesitate to reach out—I'm here to connect!
         </p>
 
-        <div className="cta-right">
-          <p>
-            Design is not just a profession for me; it's a passion. As you
-            navigate through these pages, you'll find real-world experiences and
-            a genuine commitment to enhancing user experiences. Whether you're
-            an educator, administrator, or fellow enthusiast, let's continue
-            this conversation. Share your thoughts, challenges, or ideas, and
-            let's collaborate to create meaningful educational experiences
-            together!
-          </p>
-
-          <div>
-            <button>Let's Talk</button>
-          </div>
+        <div>
+          <button>Let's Talk</button>
         </div>
       </div>
     </div>

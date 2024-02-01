@@ -101,14 +101,45 @@
           }
         }
 
-        .image-container {
-          width: 367px;
-          height: 256px;
-          overflow: hidden;
+        .link-wrapper {
           justify-self: center;
+          color: transparent;
 
-          img {
-            width: 100%;
+          .image-container {
+            width: 367px;
+            height: 256px;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+              border: $dark-border;
+
+              p {
+                opacity: 0.5;
+              }
+
+              img {
+                filter: blur(10px);
+              }
+            }
+
+            img {
+              width: 100%;
+              transition: all 0.4s ease-in-out;
+            }
+
+            p {
+              transition: all 0.4s ease-in-out;
+              color: #000000;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              opacity: 0;
+            }
           }
         }
       }
@@ -155,15 +186,44 @@
           }
         }
 
-        .image-container {
-          width: 429px;
-          height: 100%;
-          overflow: hidden;
+        .link-wrapper {
           justify-self: center;
-          align-self: center;
+          color: transparent;
 
-          img {
-            width: 100%;
+          .image-container {
+            width: 367px;
+            height: auto;
+            position: relative;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+              border: $dark-border;
+
+              p {
+                opacity: 0.5;
+              }
+
+              img {
+                filter: blur(10px);
+              }
+            }
+
+            img {
+              width: 100%;
+              transition: all 0.4s ease-in-out;
+            }
+
+            p {
+              transition: all 0.4s ease-in-out;
+              color: #000000;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              opacity: 0;
+            }
           }
         }
       }

@@ -8,10 +8,12 @@ import DesignProcess from "./pages/DesignProcess";
 import HuddleUp from "./pages/case-studies/HuddleUp";
 import Footer from "./layouts/Footer";
 import "./styles/app.scss";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Switch>
         <Route exact path="/" component={Landing} />

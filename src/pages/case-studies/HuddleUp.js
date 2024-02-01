@@ -3,6 +3,8 @@ import persona from "../../assets/dark/persona.png";
 import productMap from "../../assets/dark/product-map.png";
 import userTaskFlow from "../../assets/dark/user-task-flow.png";
 import huddleupWireframes from "../../assets/dark/huddleup-wireframes.png";
+import competitors from "../../assets/dark/competitors.png";
+import strategy from "../../assets/dark/strategy.png";
 
 export default function HuddleUp() {
   return (
@@ -244,7 +246,7 @@ export default function HuddleUp() {
             </div>
 
             <div>
-              <img alt="competitors" />
+              <img src={competitors} alt="competitors" />
             </div>
           </div>
         </div>
@@ -364,7 +366,7 @@ export default function HuddleUp() {
               </p>
             </div>
 
-            <img alt="product-goals" />
+            <img src={strategy} alt="product-goals" />
           </div>
         </div>
 
@@ -490,7 +492,7 @@ export default function HuddleUp() {
               }}
               width="auto"
               height="450"
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhWGqq6cTi2xWuueNhOtGT5%2Fpersonal-site-pt2%3Fpage-id%3D446%253A407%26type%3Ddesign%26node-id%3D393-2804%26viewport%3D-490%252C296%252C0.15%26t%3DOePoe1VMuBOkBg02-1%26scaling%3Dscale-down%26starting-point-node-id%3D393%253A2804%26mode%3Ddesign&hide-ui=1"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhWGqq6cTi2xWuueNhOtGT5%2Fpersonal-site-pt2%3Fpage-id%3D446%253A407%26type%3Ddesign%26node-id%3D1560-6527%26viewport%3D-834%252C757%252C0.23%26t%3DfbkL7hq0UgXKyvV8-1%26scaling%3Dscale-down%26starting-point-node-id%3D1560%253A6527%26show-proto-sidebar%3D1%26mode%3Ddesign&hide-ui=1"
             ></iframe>
           </div>
         </div>

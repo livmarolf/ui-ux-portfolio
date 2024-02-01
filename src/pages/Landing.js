@@ -1,4 +1,10 @@
-import olivia from "../assets/images/olivia.jpeg";
+// TODO : Create and style page for rpre
+// TODO : Add hero image to contact, about, design process
+// TODO : Decide if I want an about page >:(
+// TODO : Turn buttons that are navigating into links
+
+import { Link } from "react-router-dom";
+import olivia from "../assets/images/olivia-cropped.png";
 import curriculumPages from "../assets/images/curriuclum-pages.png";
 import processTablets from "../assets/prototypes/process-tablets.png";
 import huddleupPhones from "../assets/prototypes/huddleup-phones.png";
@@ -52,9 +58,12 @@ export default function Landing() {
               </div>
             </div>
 
-            <div className="image-container">
-              <img src={olivia} alt="personal" />
-            </div>
+            <Link className="link-wrapper" to="/about">
+              <div className="image-container">
+                <img src={olivia} alt="personal" />
+                <p>CLICK TO VIEW</p>
+              </div>
+            </Link>
           </div>
 
           <div className="case-row">
@@ -73,9 +82,12 @@ export default function Landing() {
               </div>
             </div>
 
-            <div className="image-container">
-              <img src={curriculumPages} alt="curriculum-pages" />
-            </div>
+            <Link className="link-wrapper" to="/curriculum-design">
+              <div className="image-container">
+                <img src={curriculumPages} alt="curriculum-pages" />
+                <p>CLICK TO VIEW</p>
+              </div>
+            </Link>
           </div>
 
           <div className="case-row">
@@ -94,9 +106,12 @@ export default function Landing() {
               </div>
             </div>
 
-            <div className="image-container">
-              <img src={processTablets} alt="process-tablets" />
-            </div>
+            <Link className="link-wrapper" to="/design-process">
+              <div className="image-container">
+                <img src={processTablets} alt="process-tablets" />
+                <p>CLICK TO VIEW</p>
+              </div>
+            </Link>
           </div>
 
           <div className="case-row">
@@ -115,9 +130,12 @@ export default function Landing() {
               </div>
             </div>
 
-            <div className="image-container">
-              <img src={huddleupPhones} alt="huddleup-phones" />
-            </div>
+            <Link className="link-wrapper" to="/huddleup">
+              <div className="image-container">
+                <img src={huddleupPhones} alt="huddleup-phones" />
+                <p>CLICK TO VIEW</p>
+              </div>
+            </Link>
           </div>
 
           <div className="case-row">
@@ -136,9 +154,12 @@ export default function Landing() {
               </div>
             </div>
 
-            <div className="image-container">
-              <img src={rprePrototypes} alt="rpre-prototypes" />
-            </div>
+            <Link className="link-wrapper" to="/rpre">
+              <div className="image-container">
+                <img src={rprePrototypes} alt="rpre-prototypes" />
+                <p>CLICK TO VIEW</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

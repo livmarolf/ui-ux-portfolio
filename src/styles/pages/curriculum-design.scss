@@ -7,15 +7,31 @@
   }
 
   .header-row {
-    @include layout(190px, 0 120px 45px 120px, $border: $thin-border);
+    position: relative;
+    top: -62px;
+    width: 100vw;
+    height: 60vh;
+    border-bottom: $thin-border;
 
-    h1 {
-      @include title-header($height: 30px);
+    .title-container {
+      background-image: url("../../assets/images/shortened-smoke.png");
+      background-size: cover;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+
+      .title {
+        @include layout(0, 0 120px 100px 120px);
+
+        h1 {
+          @include title-header($height: 30px);
+        }
+      }
     }
   }
 
   .section-one {
-    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include layout(150px, 0 120px 150px 120px, $border: $dark-border);
     @include columns(1fr 1fr, 6%);
 
     .intro-left {
@@ -33,7 +49,7 @@
   }
 
   .section-two {
-    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include layout(150px, 0 120px 150px 120px, $border: $dark-border);
     @include columns(1fr 1fr, 6%);
 
     p {
@@ -53,7 +69,7 @@
   }
 
   .section-three {
-    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include layout(150px, 0 120px 150px 120px, $border: $dark-border);
     @include rows(auto, 100px);
 
     h3 {
@@ -79,7 +95,7 @@
   }
 
   .section-four {
-    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include layout(150px, 0 120px 150px 120px, $border: $dark-border);
     @include columns(1fr 1fr, 6%);
 
     p {
@@ -99,7 +115,7 @@
   }
 
   .section-five {
-    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include layout(150px, 0 120px 150px 120px, $border: $dark-border);
     @include rows(auto, 100px);
 
     p {
@@ -119,7 +135,7 @@
   }
 
   .section-six {
-    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include layout(150px, 0 120px 150px 120px, $border: $dark-border);
     @include rows(auto, 100px);
 
     h3 {
@@ -151,7 +167,7 @@
   }
 
   .section-seven {
-    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
+    @include layout(150px, 0 120px 150px 120px, $border: $dark-border);
     @include rows(auto, 100px);
 
     p {
@@ -189,27 +205,17 @@
   }
 
   .section-eight {
-    @include layout(150px, 0 120px 150px 120px, $border: $thin-border);
-    @include columns(1fr 1fr, 6%);
+    @include layout(150px, 0 120px 150px 120px, $border: $dark-border);
+    @include rows(auto, 30px);
+    width: 35%;
 
     p {
-      font-size: $large-content;
+      font-size: $content;
       color: $header-white;
     }
 
-    .cta-right {
-      display: grid;
-      grid-template-rows: auto;
-      row-gap: 40px;
-
-      p {
-        font-size: $content;
-        color: $body-content;
-      }
-
-      button {
-        @include button-style;
-      }
+    button {
+      @include button-style;
     }
   }
 }

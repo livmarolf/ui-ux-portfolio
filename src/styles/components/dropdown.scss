@@ -20,12 +20,9 @@
       padding: 10px 20px;
       text-decoration: none;
       color: #000000;
-      // color: $header-white;
       transition: 0.4s ease-in-out all;
-      border-radius: 10px;
 
       &:hover {
-        border-radius: 10px;
         background: rgba(0, 0, 0, 0.6);
         color: $header-white;
       }
