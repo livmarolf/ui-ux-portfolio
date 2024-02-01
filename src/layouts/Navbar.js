@@ -1,6 +1,3 @@
-// TODO: make sure links are being used in the proper places not navlinks.
-// TODO: make a click outside hook
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Dropdown from "../components/Dropdown";
@@ -17,23 +14,29 @@ function Navbar() {
       <h6>{title}</h6>
       <div className="navlinks-wrapper">
         <div className="navlink">
-          <Link to="/">HOME</Link>
+          <Link className="main-link" to="/">
+            HOME
+          </Link>
         </div>
         <div
           className="navlink"
           onMouseEnter={() => setDropdown(true)}
           onMouseLeave={() => setDropdown(false)}
         >
-          <Link to="/contents">
+          <Link className="main-link" to="/contents">
             CONTENTS <ArrowDown />
           </Link>
           {dropdown && <Dropdown />}
         </div>
         <div className="navlink">
-          <Link to="/contact">CONTACT</Link>
+          <Link className="main-link" to="/contact">
+            CONTACT
+          </Link>
         </div>
         <div className="navlink">
-          <Link to="/about">ABOUT</Link>
+          <Link className="main-link" to="/about">
+            ABOUT
+          </Link>
         </div>
       </div>
     </nav>

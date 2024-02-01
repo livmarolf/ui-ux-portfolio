@@ -16,7 +16,7 @@ function Dropdown() {
     >
       {pages.map((item, id) => {
         return (
-          <div key={id} className="dropdown">
+          <div key={id} className="dropdown-item">
             <Link className={item.cName} to={item.path}>
               {item.title}
             </Link>

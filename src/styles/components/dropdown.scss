@@ -5,25 +5,29 @@
   grid-template-rows: auto;
   border-radius: 10px;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.4);
 
   &.clicked {
     display: none;
   }
 
-  .dropdown {
-    background: rgba(0, 0, 0, 0.1);
+  .dropdown-item {
     display: flex;
     align-items: center;
 
-    a {
-      padding: 10px 20px;
+    .dropdown-link {
       width: 100%;
+      padding: 10px 20px;
       text-decoration: none;
-      color: $body-content;
-      transition: background-color 0.3s ease-in-out;
+      color: #000000;
+      // color: $header-white;
+      transition: 0.4s ease-in-out all;
+      border-radius: 10px;
 
       &:hover {
-        background-color: #292929;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        color: $header-white;
       }
     }
   }

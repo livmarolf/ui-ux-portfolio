@@ -5,9 +5,9 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import CurriculumDesign from "./pages/CurriculumDesign";
 import DesignProcess from "./pages/DesignProcess";
-import "./styles/app.scss";
 import HuddleUp from "./pages/case-studies/HuddleUp";
 import Footer from "./layouts/Footer";
+import "./styles/app.scss";
 
 function App() {
   return (
