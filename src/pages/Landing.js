@@ -1,7 +1,8 @@
 // TODO : Create and style page for rpre
-// TODO : Add hero image to contact, about, design process
-// TODO : Decide if I want an about page >:(
-// TODO : Turn buttons that are navigating into links
+// TODO : Figure out the about page situation >:(
+// TODO : add handling/sanitization to form
+// TODO : add contents page or just make it not clickable
+// TODO : after update of resume create a qr code
 
 import { Link } from "react-router-dom";
 import olivia from "../assets/images/olivia-cropped.png";

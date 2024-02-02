@@ -214,8 +214,9 @@
       color: $header-white;
     }
 
-    button {
+    .link-button {
       @include button-style;
+      text-decoration: none;
     }
   }
 }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ReactComponent as Line } from "../assets/icons/line.svg";
 import curriculumVsWeb from "../assets/dark/curriculum-vs-web.png";
 import fillGapsWorkflow from "../assets/dark/fill-gaps-workflow.png";
@@ -314,7 +315,9 @@ export default function CurriculumDesign() {
         </p>
 
         <div>
-          <button>Let's Talk</button>
+          <Link className="link-button" to="/contact">
+            Let's Talk
+          </Link>
         </div>
       </div>
     </div>

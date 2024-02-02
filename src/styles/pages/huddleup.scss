@@ -20,8 +20,9 @@
     margin: 10px 0 20px 0;
   }
 
-  button {
+  .link-button {
     @include button-style;
+    text-decoration: none;
   }
 
   .grey-header {

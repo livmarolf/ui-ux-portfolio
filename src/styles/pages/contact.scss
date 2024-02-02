@@ -1,9 +1,25 @@
 .contact-content {
   .header-row {
-    @include layout(190px, 0 120px 45px 120px, $border: $thin-border);
+    position: relative;
+    top: -62px;
+    width: 100vw;
+    height: 60vh;
+    border-bottom: $thin-border;
 
-    h1 {
-      @include title-header($height: 30px);
+    .title-container {
+      background-image: url("../../assets/images/shortened-smoke.png");
+      background-size: cover;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+
+      .title {
+        @include layout(0, 0 120px 100px 120px);
+
+        h1 {
+          @include title-header($height: 30px);
+        }
+      }
     }
   }
 
@@ -45,7 +61,7 @@
     .right-column {
       form {
         display: grid;
-        grid-template-rows: auto;
+        grid-template-rows: 80px auto;
         row-gap: 36px;
 
         .top-inputs {
@@ -57,6 +73,16 @@
         .input {
           display: flex;
           flex-direction: column;
+
+          .message-len {
+            font-size: $content;
+            color: $header-grey;
+          }
+
+          .err-msg {
+            color: #bb2d3e;
+            font-size: 10px;
+          }
 
           label {
             font-size: $large-content;
@@ -99,6 +125,11 @@
 
           button {
             @include button-style;
+
+            &:disabled {
+              color: $header-grey;
+              border: 0.5px solid $header-grey;
+            }
           }
         }
       }

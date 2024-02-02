@@ -7,7 +7,11 @@ export default function DesignProcess() {
   return (
     <div className="process-page">
       <div className="header-row">
-        <h1>DESIGN PROCESS</h1>
+        <div className="title-container">
+          <div className="title">
+            <h1>DESIGN PROCESS</h1>
+          </div>
+        </div>
       </div>
       <div className="page-container">
         <div className="content-row">

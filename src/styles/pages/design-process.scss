@@ -1,11 +1,28 @@
 .process-page {
   .header-row {
-    @include layout(190px, 0 120px 45px 120px, $border: $thin-border);
+    position: relative;
+    top: -62px;
+    width: 100vw;
+    height: 60vh;
+    border-bottom: $thin-border;
 
-    h1 {
-      @include title-header($height: 30px);
+    .title-container {
+      background-image: url("../../assets/images/shortened-smoke.png");
+      background-size: cover;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+
+      .title {
+        @include layout(0, 0 120px 100px 120px);
+
+        h1 {
+          @include title-header($height: 30px);
+        }
+      }
     }
   }
+
   .page-container {
     margin-top: 90px;
     padding: 0 120px 0 120px;

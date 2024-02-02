@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import designProcess from "../../assets/dark/design-process.png";
 import persona from "../../assets/dark/persona.png";
 import productMap from "../../assets/dark/product-map.png";
@@ -123,7 +124,9 @@ export default function HuddleUp() {
 
           <div className="content">
             <div>
-              <button>Learn More</button>
+              <Link className="link-button" to="/design-process">
+                Learn More
+              </Link>
             </div>
 
             <img src={designProcess} alt="my-design-process" />
@@ -474,7 +477,8 @@ export default function HuddleUp() {
             <p>
               Wireframes are a fundamental tool in design, serving as a
               blueprint that guides the development of user-friendly and
-              efficient interfaces. Explore the HuddleUp wireframes below.
+              efficient interfaces. Explore some of the HuddleUp wireframes
+              below.
             </p>
 
             <img src={huddleupWireframes} alt="huddleup-wireframes" />
@@ -491,7 +495,7 @@ export default function HuddleUp() {
                 border: "1px solid rgba(0, 0, 0, 0.1)",
               }}
               width="auto"
-              height="450"
+              height="650"
               src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhWGqq6cTi2xWuueNhOtGT5%2Fpersonal-site-pt2%3Fpage-id%3D446%253A407%26type%3Ddesign%26node-id%3D1560-6527%26viewport%3D-834%252C757%252C0.23%26t%3DfbkL7hq0UgXKyvV8-1%26scaling%3Dscale-down%26starting-point-node-id%3D1560%253A6527%26show-proto-sidebar%3D1%26mode%3Ddesign&hide-ui=1"
             ></iframe>
           </div>
