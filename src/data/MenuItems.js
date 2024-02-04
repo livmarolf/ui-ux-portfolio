@@ -36,7 +36,7 @@ export const MenuItems = [
   },
   {
     id: 6,
-    title: "Real Estate",
+    title: "Real Patrea Real Estate",
     path: "/rpre",
     cName: "dropdown-link",
     subPage: true,

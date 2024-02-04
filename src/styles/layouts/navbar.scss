@@ -24,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    align-items: center;
 
     .navlink {
       .main-link {
@@ -34,9 +35,23 @@
         border-radius: 10px;
 
         &:hover {
-          border-radius: 10px;
           background: rgba(255, 255, 255, 0.4);
           color: #000000;
+        }
+      }
+
+      .dropdown-btn {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #000000;
+        font-size: $content;
+        transition: 0.4s ease-in-out all;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.4);
+        border: none;
+
+        &:hover {
+          cursor: pointer;
         }
       }
 

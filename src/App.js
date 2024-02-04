@@ -6,6 +6,7 @@ import About from "./pages/About";
 import CurriculumDesign from "./pages/CurriculumDesign";
 import DesignProcess from "./pages/DesignProcess";
 import HuddleUp from "./pages/case-studies/HuddleUp";
+import RPRE from "./pages/case-studies/RPRE";
 import Footer from "./layouts/Footer";
 import "./styles/app.scss";
 import ScrollToTop from "./components/ScrollToTop";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/design-process" component={DesignProcess} />
         <Route path="/curriculum-design" component={CurriculumDesign} />
         <Route path="/huddleup" component={HuddleUp} />
+        <Route path="/rpre" component={RPRE} />
       </Switch>
       <Footer />
     </BrowserRouter>
