@@ -115,14 +115,13 @@
             transition: all 0.4s ease-in-out;
 
             &:hover {
-              border: $dark-border;
-
               p {
-                opacity: 0.5;
+                opacity: 0.6;
               }
 
               img {
-                filter: blur(10px);
+                filter: blur(3px);
+                opacity: 0.6;
               }
             }
 
@@ -132,13 +131,15 @@
             }
 
             p {
+              margin-top: 0;
               transition: all 0.4s ease-in-out;
-              color: #000000;
+              color: #ffffff;
               position: absolute;
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
               opacity: 0;
+              font-weight: 400;
             }
           }
         }
@@ -199,14 +200,13 @@
             transition: all 0.4s ease-in-out;
 
             &:hover {
-              border: $dark-border;
-
               p {
-                opacity: 0.5;
+                opacity: 0.6;
               }
 
               img {
-                filter: blur(10px);
+                filter: blur(3px);
+                opacity: 0.6;
               }
             }
 
@@ -217,7 +217,7 @@
 
             p {
               transition: all 0.4s ease-in-out;
-              color: #000000;
+              color: #ffffff;
               position: absolute;
               top: 50%;
               left: 50%;

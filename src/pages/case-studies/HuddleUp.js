@@ -1,39 +1,57 @@
-import { Link } from "react-router-dom";
-import designProcess from "../../assets/dark/design-process.png";
-import persona from "../../assets/dark/persona.png";
-import productMap from "../../assets/dark/product-map.png";
-import userTaskFlow from "../../assets/dark/user-task-flow.png";
-import huddleupWireframes from "../../assets/dark/huddleup-wireframes.png";
-import competitors from "../../assets/dark/competitors.png";
-import strategy from "../../assets/dark/strategy.png";
+import huCursor from "../../assets/huddleup/hu-cursor.png";
+import huPrototype from "../../assets/huddleup/hu-prototype.png";
+import figma from "../../assets/huddleup/Figma.png";
+import illustrator from "../../assets/huddleup/Illustrator.png";
+import trello from "../../assets/huddleup/Trello.png";
+import designProcess from "../../assets/common/design-process.png";
+import competitors from "../../assets/huddleup/competitors.png";
+import persona from "../../assets/huddleup/hu-persona.png";
+import productGoals from "../../assets/huddleup/hu-product-goals.png";
+import roadmap from "../../assets/huddleup/hu-roadmap.png";
+import userFlow from "../../assets/huddleup/hu-user-flow.png";
+import taskFlow from "../../assets/huddleup/hu-task-flow.png";
+import signIn from "../../assets/huddleup/wireframes/sign-in.png";
+import logIn from "../../assets/huddleup/wireframes/log-in.png";
+import calendar from "../../assets/huddleup/wireframes/calendar.png";
+import classes from "../../assets/huddleup/wireframes/classes.png";
+import createEvent from "../../assets/huddleup/wireframes/create-event.png";
+import profile from "../../assets/huddleup/wireframes/profile.png";
+import dash from "../../assets/huddleup/wireframes/dash.png";
+import dashOpen from "../../assets/huddleup/wireframes/dash-open.png";
+import forgotPwd from "../../assets/huddleup/wireframes/forgot-pwd.png";
+import typography from "../../assets/huddleup/hu-typography.png";
 
 export default function HuddleUp() {
   return (
     <div className="page-content">
-      <div className="header-row">
-        <h1>CASE STUDY 01</h1>
-      </div>
-
       <div className="title-container">
-        <h1 className="large-header">HUDDLEUP</h1>
-      </div>
-
-      <div className="grey-header">
-        <h2>PROJECT OVERVIEW</h2>
-      </div>
-
-      <div className="overview-container">
-        <div className="content-section">
-          <h2>THE CHALLENGE</h2>
-
+        <div className="title">
+          <h1>HUDDLEUP</h1>
           <div>
-            <p>
-              This new app simplifies sports team management for coaches,
-              players, gym owners, and enthusiasts across various levels,
-              addressing common administrative challenges that can distract from
-              training and enjoying sports.
-            </p>
+            <p>A sports team management application</p>
+            <img src={huCursor} alt="cursor" />
+          </div>
+        </div>
 
+        <div className="image-wrapper">
+          <img src={huPrototype} alt="hu-prototypes" />
+        </div>
+      </div>
+
+      <div className="content-section">
+        <div className="header-title">
+          <h3>01</h3>
+          <h2>PRODUCT OVERVIEW</h2>
+        </div>
+
+        <div className="content-wrapper">
+          <div className="paragraph-container">
+            <p>
+              HuddleUp simplifies sports team management for coaches, players,
+              gym owners, and enthusiasts across various levels, addressing
+              common administrative challenges that can distract from training
+              and enjoying sports.
+            </p>
             <p>
               Streamlining sports team management is achieved by allowing
               coaches to effortlessly track attendance, practice hours, and
@@ -45,104 +63,124 @@ export default function HuddleUp() {
             </p>
           </div>
         </div>
+      </div>
 
-        <div className="content-section">
-          <h2>THE OBJECTIVE</h2>
+      <div className="content-section">
+        <div className="header-title">
+          <h3>02</h3>
+          <h2>RESPONSIBILITY</h2>
+        </div>
 
+        <div className="content-wrapper">
+          <ul className="unstyled-list">
+            <li>
+              UX Designer (Research, Visual Design, Interaction Design,
+              Usability Testing)
+            </li>
+            <li>User Interface (UI) Designer</li>
+            <li>Content Designer</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="content-section">
+        <div className="header-title">
+          <h3>03</h3>
+          <h2>TOOLS</h2>
+        </div>
+
+        <div className="content-wrapper">
+          <div className="tools">
+            <img src={figma} alt="figma" />
+            <img src={illustrator} alt="adobe-illustrator" />
+            <img src={trello} alt="trello" />
+          </div>
+        </div>
+      </div>
+
+      <div className="content-section">
+        <div className="header-title">
+          <h3>04</h3>
+          <h2>PROBLEM STATEMENT</h2>
+        </div>
+
+        <div className="content-wrapper">
           <p>
-            Design a mobile app that is user-friendly and easy to use with a
-            clean design.
+            HuddleUp simplifies sports team management by addressing various
+            administrative challenges. It offers intuitive solutions for
+            scheduling, roster management, and performance tracking, helping
+            coaches, players, and administrators streamline their tasks. With
+            its user-friendly interface and comprehensive features, HuddleUp
+            makes team management more efficient, allowing users to focus on the
+            game.
           </p>
         </div>
       </div>
 
-      <div className="grey-header">
-        <h2>PROJECT INFORMATION</h2>
-      </div>
-
-      <div className="information-container">
-        <div className="content-section">
+      <div className="content-section">
+        <div className="header-title">
+          <h3>05</h3>
           <h2>DELIVERABLES</h2>
-
-          <div className="content">
-            <div>
-              <h3>Interaction Design</h3>
-              <p>High-fidelity interactive prototypes for key tasks on iOS</p>
-            </div>
-
-            <div>
-              <h3>UI/UX Design</h3>
-              <ul>
-                <li>Competitive analysis</li>
-                <li>User surveys and one-on-one interviews</li>
-                <li>Personas</li>
-                <li>User journeys and task flows</li>
-                <li>Site Map</li>
-                <li>Low-fidelity wireframes</li>
-                <li>High-fidelity mockups and prototypes</li>
-                <li>Usability tests and findings</li>
-              </ul>
-            </div>
-          </div>
         </div>
 
-        <div className="content-section">
-          <h2>EXPERTISE</h2>
-
-          <div className="content">
+        <div className="content-wrapper">
+          <div className="deliverables-grid">
             <div>
-              <h3>Role</h3>
-              <ul>
-                <li>
-                  UX Designer (Research, Visual Design, Interaction Design,
-                  Usability Testing)
-                </li>
-                <li>User Interface (UI) Designer</li>
-                <li>Content Designer</li>
-              </ul>
+              <p>Site Map</p>
             </div>
 
             <div>
-              <h3>Tools</h3>
-              <ul>
-                <li>Figma</li>
-                <li>Adobe Illustrator</li>
-                <li>Trello</li>
-              </ul>
+              <p>Personas</p>
+            </div>
+
+            <div>
+              <p>Competitive analysis</p>
+            </div>
+
+            <div>
+              <p>Low-fidelity wireframes</p>
+            </div>
+
+            <div>
+              <p>Usability tests and findings</p>
+            </div>
+
+            <div>
+              <p>User journeys and task flows</p>
+            </div>
+
+            <div>
+              <p>High-fidelity prototypes</p>
+            </div>
+
+            <div>
+              <p>User surveys and interviews</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="grey-header">
-        <h2>DESIGN PROCESS</h2>
-      </div>
+      <div className="content-section">
+        <div className="header-title">
+          <h3>06</h3>
+          <h2>DESIGN PROCESS</h2>
+        </div>
 
-      <div className="process-container">
-        <div className="content-section">
-          <h2>MY DESIGN PROCESS</h2>
-
-          <div className="content">
-            <div>
-              <Link className="link-button" to="/design-process">
-                Learn More
-              </Link>
-            </div>
-
-            <img src={designProcess} alt="my-design-process" />
+        <div className="content-wrapper">
+          <div className="img-wrapper">
+            <img src={designProcess} alt="design-process" />
           </div>
         </div>
       </div>
 
-      <div className="grey-header">
-        <h2>RESEARCH</h2>
-      </div>
-
-      <div className="research-container">
-        <div className="content-section">
+      <div className="content-section">
+        <div className="header-title">
+          <h3>07</h3>
           <h2>RESEARCH PLAN</h2>
+        </div>
 
-          <div className="content">
+        <div className="content-wrapper">
+          <div>
             <p>
               Research explores user behaviors, motivations, challenges,
               aspirations, constraints, and objectives, providing essential
@@ -151,249 +189,300 @@ export default function HuddleUp() {
               is necessary, detailing research goals, inquiries, methods,
               participants, and a clear timeline.
             </p>
+          </div>
 
-            <div>
-              <h3>Research Goals</h3>
+          <div>
+            <h4>Research Goals</h4>
 
-              <ul>
-                <li>Understand the market of platforms related to Sports</li>
-                <li>Identify the target audience</li>
-                <li>
-                  Gather insights on how key competitors address customer needs
-                </li>
-                <li>Get to know how coaches are managing their teams</li>
-                <li>
-                  Uncover people's experience using team management platforms
-                </li>
-                <li>Assess competitor’s strengths and weaknesses</li>
-              </ul>
-            </div>
+            <ul className="styled-list">
+              <li>Identify the target audience</li>
+              <li>Assess competitor’s strengths and weaknesses</li>
+              <li>Get to know how coaches are managing their teams</li>
+              <li>Understand the market of platforms related to Sports </li>
+              <li>
+                Uncover people's experience using team management platforms
+              </li>
+              <li>
+                Gather insights on how key competitors address customer needs
+              </li>
+            </ul>
+          </div>
 
-            <div>
-              <h3>Methodologies</h3>
+          <div>
+            <h4>Methodologies</h4>
 
-              <ul>
-                <li>
-                  Secondary Research (Market Research, Competitive Analysis)
-                </li>
-                <li>Primary Research (User Interview)</li>
-              </ul>
-            </div>
+            <ul className="styled-list">
+              <li>
+                Primary Research (User Interview)Primary Research (User
+                Interview)
+              </li>
+              <li>
+                Secondary Research (Market Research, Competitive Analysis)
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        <div className="content-section">
-          <h2>SECONDARY RESEARCH</h2>
-
-          <div className="content">
-            <div>
-              <h3>Market Research</h3>
-
-              <p>
-                Market research important to grasp the broader market landscape,
-                including audience, knowledge gaps, recent trends, and news. The
-                insights gained will inform provisional personas and guide
-                meaningful questions for primary research.
-              </p>
-            </div>
-
-            <div>
-              <h3>Sports Industry & Platforms</h3>
-
-              <p>
-                Overall in the realm of sports, team management platforms have
-                emerged as highly influential tools, enjoying widespread
-                popularity for their role in optimizing team organization and
-                performance. It is expected that the global sports management
-                software market to exhibit a CAGR of 14.8% during 2023-2028
-                (imarc). The sports team management platform industry has
-                experienced a consistent increase in demand, driven by the need
-                for streamlined communication, scheduling, and data management
-                for sports teams of all levels
-              </p>
-            </div>
-
-            <div>
-              <h3>Demographics</h3>
-
-              <ul className="unstyled-list">
-                <li>
-                  A significant portion of the user demographic comprises youth
-                  and amateur sports teams, such as Little League baseball,
-                  local soccer clubs, and school athletics.
-                </li>
-
-                <li>
-                  Sports management platforms are commonly utilized by schools,
-                  colleges, and universities to coordinate sports activities,
-                  manage teams, and ensure compliance with regulations.
-                </li>
-
-                <li>
-                  Beyond competitive sports, recreational and community teams,
-                  often organized by community centers or local groups, use
-                  these platforms to facilitate sports participation and
-                  community engagement.
-                </li>
-              </ul>
-            </div>
-          </div>
+      <div className="content-section">
+        <div className="header-title">
+          <h3>08</h3>
+          <h2>TARGET AUDIENCE</h2>
         </div>
 
-        <div className="content-section">
-          <h2>COMPETITIVE RESEARCH</h2>
+        <div className="content-wrapper">
+          <p>
+            HuddleUp caters to a broad audience of sports enthusiasts, including
+            coaches, players, and team administrators at different levels of
+            expertise. Coaches use it for team management and performance
+            tracking, while players rely on it for schedules and communication.
+            Team administrators benefit from centralized control and reporting
+            features. Whether users are seasoned athletes or new to sports, the
+            app offers intuitive tools to enhance their experience.
+          </p>
+        </div>
+      </div>
 
-          <div className="content">
-            <div>
-              <p>Three examples of competitors</p>
-            </div>
-
-            <div>
-              <img src={competitors} alt="competitors" />
-            </div>
-          </div>
+      <div className="content-section">
+        <div className="header-title">
+          <h3>09</h3>
+          <h2>USER INTERVIEWS</h2>
+          <h2 className="sub-title">(PRIMARY RESEARCH)</h2>
         </div>
 
-        <div className="content-section">
-          <h2>PRIMARY RESEARCH</h2>
-
-          <div className="content">
+        <div className="content-wrapper">
+          <div>
             <p>
               I went beyond my basic market understanding and had more
               meaningful conversations with our user community, which helped me
               gather direct insights through primary research methods.
             </p>
+          </div>
 
-            <div>
-              <h3>Questions Asked While Interviewing</h3>
+          <div>
+            <h4>Questions Asked While Interviewing</h4>
+            <ul className="styled-list">
+              <li>What is your current approach to team management?</li>
+              <li>
+                How satisfied are you with the team's communication dynamics?
+              </li>
+              <li>
+                Do you believe you are sufficiently informed about any schedule
+                changes?
+              </li>
+              <li>
+                In terms of scheduling, how do you typically communicate changes
+                to your team?
+              </li>
+              <li>
+                Is it easy for you to track your training progress and the hours
+                you've dedicated to it?
+              </li>
+              <li>
+                Can you share some challenging experiences you've encountered
+                while overseeing your team?
+              </li>
+              <li>
+                Are you confident in your understanding of the team's
+                performance over the course of the season?
+              </li>
+              <li>
+                Where do you maintain your team's seasonal calendar, and what
+                methods do you use to keep it up-to-date?
+              </li>
+            </ul>
+          </div>
 
-              <ul>
-                <li>What is your current approach to team management?</li>
-                <li>
-                  Can you share some challenging experiences you've encountered
-                  while overseeing your team?
-                </li>
-                <li>
-                  In terms of scheduling, how do you typically communicate
-                  changes to your team?
-                </li>
-                <li>
-                  Where do you maintain your team's seasonal calendar, and what
-                  methods do you employ to keep it up-to-date?
-                </li>
-                <li>
-                  How satisfied are you with the team's communication dynamics?
-                </li>
-                <li>
-                  Do you believe you are sufficiently informed about any
-                  schedule changes?
-                </li>
-                <li>
-                  Are you confident in your understanding of the team's
-                  performance over the course of the season?
-                </li>
-                <li>
-                  Is it easy for you to track your training progress and the
-                  hours you've dedicated to it?
-                </li>
-              </ul>
-            </div>
+          <div>
+            <h4>User Interviews</h4>
+            <p>
+              A total of six participants were interviewed, comprising two
+              coaches, one team manager, and three teammates. Here are the key
+              takeaways:
+            </p>
+          </div>
 
-            <div>
-              <h3>User Interviews</h3>
-
-              <p>
-                A total of six participants were interviewed, comprising two
-                coaches, one team manager, and three teammates. Here are the key
-                takeaways:
-              </p>
-
-              <ul>
-                <li>
-                  6/6 participants communicated that transparency in
+          <div className="interview-cards">
+            <div className="card">
+              <div>
+                <h3>6/6</h3>
+                <p>
+                  All participants communicated that transparency in
                   communication, especially concerning schedule changes, is an
                   area where improvements are needed
-                </li>
-                <li>
-                  All teammates (3/6 interviewees) expressed interest in easily
-                  tracking their training progress and the hours dedicated to
-                  it, indicating a potential opportunity for better monitoring
-                  tools or methods
-                </li>
-                <li>
-                  It was stated by all interviewees (6/6) that the methods used
-                  for scheduling communication differ, with a combination of
-                  email, team meetings, messaging apps, and digital calendars
-                  being employed
-                </li>
-                <li>
-                  2/6 interviewees have faced challenges in team management,
-                  such as motivating players during losing streaks and handling
-                  tension within the team due to differing playing styles
-                </li>
-              </ul>
+                </p>
+              </div>
             </div>
 
-            <div>
-              <h3>User Persona</h3>
+            <div className="card">
+              <div>
+                <h3>3/6</h3>
+                <p>
+                  All teammates expressed interest in easily tracking their
+                  training progress and the hours dedicated to it, indicating a
+                  potential opportunity for better monitoring tools or methods
+                </p>
+              </div>
+            </div>
 
-              <p>
-                With a good understanding of the audience, including their
-                objectives and requirements, I use user personas to represent
-                important audience segments. This helps me focus on addressing
-                key challenges and meeting the primary needs of user groups.
-              </p>
+            <div className="card">
+              <div>
+                <h3>6/6</h3>
+                <p>
+                  All interviewees stated that the methods used for scheduling
+                  communication differ, with a combination of email, team
+                  meetings, messaging apps, and digital calendars being employed
+                </p>
+              </div>
+            </div>
 
-              <img src={persona} alt="persona" />
+            <div className="card">
+              <div>
+                <h3>2/6</h3>
+                <p>
+                  Both coaches have faced challenges in team management, such as
+                  motivating players during losing streaks and handling tension
+                  within the team due to differing playing styles
+                </p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="content-section">
-          <h2>STRATEGY</h2>
-
-          <div className="content">
-            <div>
-              <h3>Product Goals</h3>
-
-              <p>
-                I've chosen to compile project goals that will serve as a
-                roadmap for the future development of the product. These goals
-                will also act as criteria for deciding which features to
-                incorporate into the mobile application.
-              </p>
-
-              <p>
-                These objectives blend user goals from my user persona with
-                business goals based on all available information.
-              </p>
-            </div>
-
-            <img src={strategy} alt="product-goals" />
-          </div>
+      <div className="content-section">
+        <div className="header-title">
+          <h3>10</h3>
+          <h2>MARKET RESEARCH</h2>
+          <h2 className="sub-title">(SECONDARY RESEARCH)</h2>
         </div>
 
-        <div className="content-section">
-          <h2>PRIORITIZED ROADMAP</h2>
+        <div className="content-wrapper">
+          <div>
+            <p>
+              It is important to begin with market research to grasp the broader
+              market landscape, including audience, knowledge gaps, recent
+              trends, and news. The insights gained will inform provisional
+              personas and guide meaningful questions for primary research.
+            </p>
+          </div>
 
-          <div className="content">
-            <div>
-              <p>
-                Subsequently, I translated my brainstormed solutions into a
-                detailed list of product features to construct a product
-                roadmap. These features were categorized into four groups:
-                Must-have (P1), Nice-to-Have (P2), and Extra (P3) features. The
-                categorization was based on their alignment with both business
-                and user objectives.
-              </p>
+          <div>
+            <h4>Sports Industry & Platforms</h4>
+            <p>
+              Overall in the realm of sports, team management platforms have
+              emerged as highly influential tools, enjoying widespread
+              popularity for their role in optimizing team organization and
+              performance. It is expected that the global sports management
+              software market to exhibit a CAGR of 14.8% during 2023-2028
+              (imarc). The sports team management platform industry has
+              experienced a consistent increase in demand, driven by the need
+              for streamlined communication, scheduling, and data management for
+              sports teams of all levels
+            </p>
+          </div>
 
-              <p>
-                The product roadmap not only aligns project goals with the
-                product but also guarantees that we prioritize the most critical
-                features during the development phase.
-              </p>
-            </div>
+          <div>
+            <h4>Demographics</h4>
 
+            <ul className="styled-list">
+              <li>Youth and amateur sports teams</li>
+              <li>Schools, colleges, and universities</li>
+              <li>Recreational and community teams</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="content-section">
+        <div className="header-title">
+          <h3>11</h3>
+          <h2>COMPETITIVE RESEARCH</h2>
+        </div>
+
+        <div className="content-wrapper">
+          <div>
+            <p>Three examples of competitors</p>
+          </div>
+          <div className="img-wrapper">
+            <img src={competitors} alt="competitors" />
+          </div>
+        </div>
+      </div>
+
+      <div className="content-section">
+        <div className="header-title">
+          <h3>12</h3>
+          <h2>USER PERSONA</h2>
+        </div>
+
+        <div className="content-wrapper">
+          <div>
+            <p>
+              With a good understanding of the audience, including their
+              objectives and requirements, I use user personas to represent
+              important audience segments. This helps me focus on addressing key
+              challenges and meeting the primary needs of user groups.
+            </p>
+          </div>
+
+          <div className="img-wrapper">
+            <img src={persona} alt="hu-persona" />
+          </div>
+        </div>
+      </div>
+
+      <div className="content-section">
+        <div className="header-title">
+          <h3>13</h3>
+          <h2>PRODUCT GOALS</h2>
+        </div>
+
+        <div className="content-wrapper">
+          <div className="paragraph-container">
+            <p>
+              I've chosen to compile project goals that will serve as a roadmap
+              for the future development of the product. These goals will also
+              act as criteria for deciding which features to incorporate into
+              the mobile application.
+            </p>
+            <p>
+              These objectives are a synthesis of user goals derived from my
+              user persona and business goals grounded in all available
+              information.
+            </p>
+          </div>
+          <div className="img-wrapper">
+            <img src={productGoals} alt="product-goals" />
+          </div>
+        </div>
+      </div>
+
+      <div className="content-section">
+        <div className="header-title">
+          <h3>14</h3>
+          <h2>PRIORITISED ROADMAP</h2>
+        </div>
+
+        <div className="content-wrapper">
+          <div className="paragraph-container">
+            <p>
+              Subsequently, I translated my brainstormed solutions into a
+              detailed list of product features to construct a comprehensive
+              product roadmap. These features were categorized into four groups:
+              Must-have (P1), Nice-to-Have (P2), and Surprising and Delightful
+              (P3) features. The categorization was based on their alignment
+              with both business and user objectives.
+            </p>
+
+            <p>
+              The product roadmap not only aligns project goals with the product
+              but also guarantees that we prioritize the most critical features
+              during the development phase.
+            </p>
+          </div>
+
+          <div className="list-container">
             <div>
               <h3>P1</h3>
               <ul className="unstyled-list">
@@ -411,7 +500,6 @@ export default function HuddleUp() {
 
             <div>
               <h3>P2</h3>
-
               <ul className="unstyled-list">
                 <li>Team messaging</li>
                 <li>Team search</li>
@@ -426,7 +514,6 @@ export default function HuddleUp() {
 
             <div>
               <h3>P3</h3>
-
               <ul className="unstyled-list">
                 <li>Team dashboard</li>
                 <li>Statistic notifications</li>
@@ -436,89 +523,103 @@ export default function HuddleUp() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="content-section">
-          <h2>PRODUCT MAP</h2>
-
-          <div className="content">
-            <img
-              className="scaled-down-img"
-              src={productMap}
-              alt="product-map"
-            />
-          </div>
+      <div className="content-section">
+        <div className="header-title">
+          <h3>15</h3>
+          <h2>PRIORITISED ROADMAP</h2>
         </div>
 
-        <div className="content-section">
-          <h2>USER AND TASK FLOW</h2>
+        <div className="content-wrapper">
+          <div className="img-wrapper">
+            <img src={roadmap} alt="prioritized-roadmap" />
+          </div>
+        </div>
+      </div>
 
-          <div className="content">
+      <div className="content-section">
+        <div className="header-title">
+          <h3>16</h3>
+          <h2>USER AND TASK FLOW</h2>
+        </div>
+
+        <div className="content-wrapper">
+          <div>
             <p>
               I developed the user task flow for the class check-in process, a
               pivotal functionality within the website. This task flow is
               designed to accommodate guest visitors seeking to enroll in a
               class.
             </p>
+          </div>
 
-            <img src={userTaskFlow} alt="user-task-flow" />
+          <div>
+            <h4>User Flow</h4>
+            <div className="img-wrapper">
+              <img src={userFlow} alt="user-flow" />
+            </div>
+          </div>
+
+          <div>
+            <h4>Task Flow</h4>
+            <div className="img-wrapper">
+              <img src={taskFlow} alt="task-flow" />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="grey-header">
-        <h2>DESIGN</h2>
-      </div>
-
-      <div className="design-container">
-        <div className="content-section">
+      <div className="content-section">
+        <div className="header-title">
+          <h3>17</h3>
           <h2>WIREFRAMES</h2>
-
-          <div className="content">
-            <p>
-              Wireframes are a fundamental tool in design, serving as a
-              blueprint that guides the development of user-friendly and
-              efficient interfaces. Explore some of the HuddleUp wireframes
-              below.
-            </p>
-
-            <img src={huddleupWireframes} alt="huddleup-wireframes" />
-          </div>
         </div>
 
-        <div className="content-section">
-          <h2>HIGH FIDELITY PROTOTYPE</h2>
-
-          <div className="content">
-            <iframe
-              title="prototype"
-              style={{
-                border: "1px solid rgba(0, 0, 0, 0.1)",
-              }}
-              width="auto"
-              height="650"
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhWGqq6cTi2xWuueNhOtGT5%2Fpersonal-site-pt2%3Fpage-id%3D446%253A407%26type%3Ddesign%26node-id%3D1560-6527%26viewport%3D-834%252C757%252C0.23%26t%3DfbkL7hq0UgXKyvV8-1%26scaling%3Dscale-down%26starting-point-node-id%3D1560%253A6527%26show-proto-sidebar%3D1%26mode%3Ddesign&hide-ui=1"
-            ></iframe>
+        <div className="content-wrapper">
+          <div className="wireframes">
+            <img src={signIn} alt="hu-wireframe" />
+            <img src={logIn} alt="hu-wireframe" />
+            <img src={dashOpen} alt="hu-wireframe" />
+            <img src={dash} alt="hu-wireframe" />
+            <img src={classes} alt="hu-wireframe" />
+            <img src={calendar} alt="hu-wireframe" />
+            <img src={createEvent} alt="hu-wireframe" />
+            <img src={profile} alt="hu-wireframe" />
+            <img src={forgotPwd} alt="hu-wireframe" />
           </div>
         </div>
       </div>
 
-      <div className="grey-header">
-        <h2>CONCLUSION</h2>
+      <div className="content-section">
+        <div className="header-title">
+          <h3>18</h3>
+          <h2>TYPOGRAPHY</h2>
+        </div>
+
+        <div className="content-wrapper">
+          <div className="img-wrapper">
+            <img src={typography} alt="typography" />
+          </div>
+        </div>
       </div>
 
-      <div className="thoughts-container">
-        <div className="content-section">
-          <h2>FINAL THOUGHTS</h2>
-          <div className="content">
-            <p>
-              After finishing the final prototype, I believe the initial design
-              goals have been met. The mobile app prioritizes sports team
-              management and player engagement. If more time were available, I'd
-              work on adding extra features that, while not essential, could
-              enhance the app's qualities, adding more value to the business and
-              boosting its competitiveness.
-            </p>
-          </div>
+      <div className="content-section">
+        <div className="header-title">
+          <h3>19</h3>
+          <h2>Prototype</h2>
+        </div>
+
+        <div className="content-wrapper">
+          <iframe
+            title="prototype"
+            style={{
+              border: "1px solid rgba(0, 0, 0, 0.1)",
+            }}
+            width="auto"
+            height="650"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhWGqq6cTi2xWuueNhOtGT5%2Fpersonal-site-pt2%3Fpage-id%3D446%253A407%26type%3Ddesign%26node-id%3D1560-6527%26viewport%3D-834%252C757%252C0.23%26t%3DfbkL7hq0UgXKyvV8-1%26scaling%3Dscale-down%26starting-point-node-id%3D1560%253A6527%26show-proto-sidebar%3D1%26mode%3Ddesign&hide-ui=1"
+          ></iframe>
         </div>
       </div>
     </div>

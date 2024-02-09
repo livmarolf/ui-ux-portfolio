@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { ReactComponent as Line } from "../assets/icons/line.svg";
-import curriculumVsWeb from "../assets/dark/curriculum-vs-web.png";
-import fillGapsWorkflow from "../assets/dark/fill-gaps-workflow.png";
-import continuousImprovement from "../assets/dark/continuous-improvement.png";
-import feedbackLoop from "../assets/dark/feedback-loop.png";
+import curriculumVsWeb from "../assets/curriculum-design/curriculum-vs-web.png";
+import fillGapsWorkflow from "../assets/curriculum-design/fill-gaps-workflow.png";
+import continuousImprovement from "../assets/curriculum-design/continuous-improvement.png";
+import feedbackLoop from "../assets/curriculum-design/feedback-loop.png";
 
 export default function CurriculumDesign() {
   return (

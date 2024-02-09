@@ -1,4 +1,4 @@
-import designProcess from "../assets/dark/design-process.png";
+import designProcess from "../assets/common/design-process.png";
 import { ReactComponent as ChartSuccess } from "../assets/icons/chart-success.svg";
 import { ReactComponent as FatRows } from "../assets/icons/fatrows.svg";
 import { ReactComponent as Routing } from "../assets/icons/routing.svg";
