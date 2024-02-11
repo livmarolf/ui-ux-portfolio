@@ -1,15 +1,14 @@
 // TODO : Figure out the about page situation >:(
 // TODO : after update of resume create a qr code
 // TODO : add media queries
-// TODO : streamline image importing
 
 import { Link } from "react-router-dom";
-import olivia from "../assets/images/olivia-cropped.png";
-import curriculumPages from "../assets/images/curriuclum-pages.png";
-import processTablets from "../assets/prototypes/process-tablets.png";
-import huddleupPhones from "../assets/prototypes/huddleup-phones.png";
-import rprePrototypes from "../assets/prototypes/rpre-prototypes.png";
-import sLines from "../assets/dark/lines-s.png";
+import olivia from "../assets/landing/olivia-cropped.png";
+import curriculumPages from "../assets/landing/curriuclum-pages.png";
+import processTablets from "../assets/landing/process-tablets.png";
+import huddleupPhones from "../assets/landing/huddleup-phones.png";
+import rprePrototypes from "../assets/landing/rpre-screens.png";
+import sLines from "../assets/landing/lines-s.png";
 
 export default function Landing() {
   return (
@@ -69,54 +68,6 @@ export default function Landing() {
           <div className="case-row">
             <div className="case-desc">
               <div className="rotated-div">
-                <h3>CURRICULUM DESIGN</h3>
-              </div>
-
-              <div className="case-content">
-                <h4>WEB DEVELOPMENT CURRICULUM DESIGN</h4>
-
-                <p>
-                  Creating a curriculum through practical design and planning
-                  for effective learning outcomes.
-                </p>
-              </div>
-            </div>
-
-            <Link className="link-wrapper" to="/curriculum-design">
-              <div className="image-container">
-                <img src={curriculumPages} alt="curriculum-pages" />
-                <p>CLICK TO VIEW</p>
-              </div>
-            </Link>
-          </div>
-
-          <div className="case-row">
-            <div className="case-desc">
-              <div className="rotated-div">
-                <h3>DESIGN PROCESS</h3>
-              </div>
-
-              <div className="case-content">
-                <h4>THE CREATIVE JOURNEY</h4>
-
-                <p>
-                  Creating a curriculum through practical design and planning
-                  for effective learning outcomes.
-                </p>
-              </div>
-            </div>
-
-            <Link className="link-wrapper" to="/design-process">
-              <div className="image-container">
-                <img src={processTablets} alt="process-tablets" />
-                <p>CLICK TO VIEW</p>
-              </div>
-            </Link>
-          </div>
-
-          <div className="case-row">
-            <div className="case-desc">
-              <div className="rotated-div">
                 <h3>CASE STUDY 01</h3>
               </div>
 
@@ -157,6 +108,54 @@ export default function Landing() {
             <Link className="link-wrapper" to="/rpre">
               <div className="image-container">
                 <img src={rprePrototypes} alt="rpre-prototypes" />
+                <p>CLICK TO VIEW</p>
+              </div>
+            </Link>
+          </div>
+
+          <div className="case-row">
+            <div className="case-desc">
+              <div className="rotated-div">
+                <h3>CURRICULUM DESIGN</h3>
+              </div>
+
+              <div className="case-content">
+                <h4>WEB DEVELOPMENT CURRICULUM DESIGN</h4>
+
+                <p>
+                  Creating a curriculum through practical design and planning
+                  for effective learning outcomes.
+                </p>
+              </div>
+            </div>
+
+            <Link className="link-wrapper" to="/curriculum-design">
+              <div className="image-container">
+                <img src={curriculumPages} alt="curriculum-pages" />
+                <p>CLICK TO VIEW</p>
+              </div>
+            </Link>
+          </div>
+
+          <div className="case-row">
+            <div className="case-desc">
+              <div className="rotated-div">
+                <h3>DESIGN PROCESS</h3>
+              </div>
+
+              <div className="case-content">
+                <h4>THE CREATIVE JOURNEY</h4>
+
+                <p>
+                  Creating a curriculum through practical design and planning
+                  for effective learning outcomes.
+                </p>
+              </div>
+            </div>
+
+            <Link className="link-wrapper" to="/design-process">
+              <div className="image-container">
+                <img src={processTablets} alt="process-tablets" />
                 <p>CLICK TO VIEW</p>
               </div>
             </Link>

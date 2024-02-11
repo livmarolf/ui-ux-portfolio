@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { ReactComponent as Line } from "../assets/icons/line.svg";
-import curriculumVsWeb from "../assets/curriculum-design/curriculum-vs-web.png";
-import fillGapsWorkflow from "../assets/curriculum-design/fill-gaps-workflow.png";
-import continuousImprovement from "../assets/curriculum-design/continuous-improvement.png";
-import feedbackLoop from "../assets/curriculum-design/feedback-loop.png";
+import {
+  continuousImprovement,
+  curriculumVsWeb,
+  feedbackLoop,
+  fillGapsWorkflow,
+} from "../assets";
 
 export default function CurriculumDesign() {
   return (

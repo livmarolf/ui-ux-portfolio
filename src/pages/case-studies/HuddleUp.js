@@ -1,25 +1,18 @@
-import huCursor from "../../assets/huddleup/hu-cursor.png";
-import huPrototype from "../../assets/huddleup/hu-prototype.png";
-import figma from "../../assets/huddleup/Figma.png";
-import illustrator from "../../assets/huddleup/Illustrator.png";
-import trello from "../../assets/huddleup/Trello.png";
-import designProcess from "../../assets/common/design-process.png";
-import competitors from "../../assets/huddleup/competitors.png";
-import persona from "../../assets/huddleup/hu-persona.png";
-import productGoals from "../../assets/huddleup/hu-product-goals.png";
-import roadmap from "../../assets/huddleup/hu-roadmap.png";
-import userFlow from "../../assets/huddleup/hu-user-flow.png";
-import taskFlow from "../../assets/huddleup/hu-task-flow.png";
-import signIn from "../../assets/huddleup/wireframes/sign-in.png";
-import logIn from "../../assets/huddleup/wireframes/log-in.png";
-import calendar from "../../assets/huddleup/wireframes/calendar.png";
-import classes from "../../assets/huddleup/wireframes/classes.png";
-import createEvent from "../../assets/huddleup/wireframes/create-event.png";
-import profile from "../../assets/huddleup/wireframes/profile.png";
-import dash from "../../assets/huddleup/wireframes/dash.png";
-import dashOpen from "../../assets/huddleup/wireframes/dash-open.png";
-import forgotPwd from "../../assets/huddleup/wireframes/forgot-pwd.png";
-import typography from "../../assets/huddleup/hu-typography.png";
+import {
+  huPrototype,
+  figma,
+  illustrator,
+  trello,
+  designProcess,
+  competitors,
+  persona,
+  productGoals,
+  roadmap,
+  userFlow,
+  taskFlow,
+  typography,
+} from "../../assets";
+import HuWireframes from "../../components/HuWireframes";
 
 export default function HuddleUp() {
   return (
@@ -29,7 +22,6 @@ export default function HuddleUp() {
           <h1>HUDDLEUP</h1>
           <div>
             <p>A sports team management application</p>
-            <img src={huCursor} alt="cursor" />
           </div>
         </div>
 
@@ -484,7 +476,7 @@ export default function HuddleUp() {
 
           <div className="list-container">
             <div>
-              <h3>P1</h3>
+              <h4>P1</h4>
               <ul className="unstyled-list">
                 <li>Sign Up/Sign In/Sign Out</li>
                 <li>Create teams</li>
@@ -499,7 +491,7 @@ export default function HuddleUp() {
             </div>
 
             <div>
-              <h3>P2</h3>
+              <h4>P2</h4>
               <ul className="unstyled-list">
                 <li>Team messaging</li>
                 <li>Team search</li>
@@ -513,7 +505,7 @@ export default function HuddleUp() {
             </div>
 
             <div>
-              <h3>P3</h3>
+              <h4>P3</h4>
               <ul className="unstyled-list">
                 <li>Team dashboard</li>
                 <li>Statistic notifications</li>
@@ -577,17 +569,7 @@ export default function HuddleUp() {
         </div>
 
         <div className="content-wrapper">
-          <div className="wireframes">
-            <img src={signIn} alt="hu-wireframe" />
-            <img src={logIn} alt="hu-wireframe" />
-            <img src={dashOpen} alt="hu-wireframe" />
-            <img src={dash} alt="hu-wireframe" />
-            <img src={classes} alt="hu-wireframe" />
-            <img src={calendar} alt="hu-wireframe" />
-            <img src={createEvent} alt="hu-wireframe" />
-            <img src={profile} alt="hu-wireframe" />
-            <img src={forgotPwd} alt="hu-wireframe" />
-          </div>
+          <HuWireframes />
         </div>
       </div>
 
@@ -607,7 +589,7 @@ export default function HuddleUp() {
       <div className="content-section">
         <div className="header-title">
           <h3>19</h3>
-          <h2>Prototype</h2>
+          <h2>PROTOTYPE</h2>
         </div>
 
         <div className="content-wrapper">

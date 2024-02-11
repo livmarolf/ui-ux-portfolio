@@ -7,7 +7,7 @@
     border-bottom: $thin-border;
 
     .title-container {
-      background-image: url("../../assets/images/shortened-smoke.png");
+      background-image: url("../../assets/common/shortened-smoke.png");
       background-size: cover;
       height: 100%;
       display: flex;
@@ -28,7 +28,7 @@
     padding: 0 120px 0 120px;
 
     h2 {
-      font-size: $header;
+      font-size: 16px;
       color: $header-white;
       font-weight: $heavy-weight;
       font-family: $heading-font;
@@ -49,10 +49,6 @@
       font-weight: $light-weight;
       color: $header-white;
     }
-
-    // .header-row {
-    //   @include layout(190px, 0 0 45px 0, $border: $thin-border);
-    // }
 
     .content-row {
       @include columns(20% 60%, 20%);
@@ -96,7 +92,7 @@
           @include rows(auto 1fr, 12px);
 
           .header {
-            border-bottom: 0.5px solid $shadow-grey;
+            border-bottom: $dark-border;
 
             .sub-heading {
               color: $header-white;

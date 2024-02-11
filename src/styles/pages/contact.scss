@@ -7,7 +7,7 @@
     border-bottom: $thin-border;
 
     .title-container {
-      background-image: url("../../assets/images/shortened-smoke.png");
+      background-image: url("../../assets/common/shortened-smoke.png");
       background-size: cover;
       height: 100%;
       display: flex;
@@ -41,33 +41,25 @@
       }
 
       ul {
+        @include rows(auto, 10px);
         list-style-type: none;
         margin-left: 0;
         padding-left: 0;
-        display: grid;
-        grid-template-rows: auto;
-        row-gap: 10px;
 
         li {
+          @include columns(24px auto, 10px);
           font-size: $content;
-          display: grid;
-          grid-template-columns: 24px auto;
           align-items: center;
-          column-gap: 10px;
         }
       }
     }
 
     .right-column {
       form {
-        display: grid;
-        grid-template-rows: 80px auto;
-        row-gap: 36px;
+        @include rows(80px auto, 36px);
 
         .top-inputs {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          column-gap: 36px;
+          @include columns(1fr 1fr, 36px);
         }
 
         .input {
@@ -80,7 +72,7 @@
           }
 
           .err-msg {
-            color: #bb2d3e;
+            color: $red;
             font-size: 10px;
           }
 
@@ -107,7 +99,7 @@
             color: $header-grey;
 
             &::-webkit-input-placeholder {
-              color: $shadow-grey;
+              color: #373737;
             }
 
             &:focus {

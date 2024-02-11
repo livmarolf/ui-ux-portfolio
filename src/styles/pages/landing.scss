@@ -7,11 +7,10 @@
     border-bottom: $thin-border;
 
     .title-container {
-      background-image: url("../../assets/images/gray-cropped.png");
+      background-image: url("../../assets/landing/gray-cropped.png");
       background-size: cover;
       height: 100%;
-      display: grid;
-      grid-template-rows: 1fr 0.5fr;
+      @include rows(1fr 0.5fr);
       align-items: end;
 
       .title {
@@ -29,18 +28,17 @@
       }
 
       p {
-        font-size: 10px;
-        color: #7e7e7e;
+        @include layout(0, 20px);
         justify-self: end;
         margin: 0;
-        @include layout(0, 20px);
+        font-size: 10px;
+        color: $header-grey;
       }
     }
   }
 
   .landing-content {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    @include columns(1fr auto);
     align-items: center;
     margin-top: -52px;
 
@@ -51,40 +49,34 @@
     }
 
     .landing-rows {
-      display: grid;
-      grid-auto-rows: min-content;
-      row-gap: 250px;
+      @include autoRows(min-content, 250px);
       padding: 0 0 0 90px;
 
       .intro-row {
-        display: grid;
-        grid-template-columns: 0.8fr 1fr;
+        @include columns(0.8fr 1fr);
         align-items: center;
 
         .column-left {
-          display: grid;
-          grid-auto-rows: min-content;
-          row-gap: 30px;
+          @include autoRows(min-content, 30px);
 
           .info {
-            display: grid;
-            grid-template-columns: 40px auto;
+            @include columns(40px auto);
             align-items: center;
 
             .rotated-div {
-              height: fit-content;
               display: flex;
               justify-content: center;
               width: fit-content;
+              height: fit-content;
 
               h3 {
                 font-size: 10px;
-                color: #7e7e7e;
+                color: $header-grey;
+                font-weight: $light-weight;
                 position: relative;
                 writing-mode: vertical-lr;
                 transform: rotate(-180deg);
                 margin: 0;
-                font-weight: $light-weight;
               }
             }
 
@@ -146,14 +138,12 @@
       }
 
       .case-row {
-        display: grid;
-        grid-template-columns: 0.8fr 1fr;
+        @include columns(0.8fr 1fr);
         align-items: center;
         justify-content: center;
 
         .case-desc {
-          display: grid;
-          grid-template-columns: 40px auto;
+          @include columns(40px auto);
           align-items: center;
 
           .rotated-div {
@@ -164,7 +154,7 @@
 
             h3 {
               font-size: 10px;
-              color: #7e7e7e;
+              color: $header-grey;
               position: relative;
               writing-mode: vertical-lr;
               transform: rotate(-180deg);
@@ -217,7 +207,7 @@
 
             p {
               transition: all 0.4s ease-in-out;
-              color: #ffffff;
+              color: $header-white;
               position: absolute;
               top: 50%;
               left: 50%;

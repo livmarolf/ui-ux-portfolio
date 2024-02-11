@@ -2,7 +2,7 @@
   h2 {
     margin: 0;
     color: $header-grey;
-    font-size: $header;
+    font-size: 16px;
     font-weight: $light-weight;
   }
 
@@ -14,7 +14,7 @@
     border-bottom: $thin-border;
 
     .title-container {
-      background-image: url("../../assets/images/shortened-smoke.png");
+      background-image: url("../../assets/common/shortened-smoke.png");
       background-size: cover;
       height: 100%;
       display: flex;
@@ -159,9 +159,7 @@
     }
 
     .steps-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 55px;
+      @include columns(1fr 1fr 1fr, 55px);
       row-gap: 55px;
     }
   }

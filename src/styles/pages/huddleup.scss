@@ -1,43 +1,38 @@
 .page-content {
-  margin-top: 90px;
-  padding: 0 200px 45px 200px;
-  display: grid;
-  grid-auto-rows: min-content;
-  row-gap: 250px;
+  @include layout(90px, 0 200px 45px 200px);
+  @include autoRows(min-content, 250px);
+
+  h3 {
+    color: $teal;
+    font-family: $heading-font;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &.rpre {
+    h3 {
+      color: $yellow;
+    }
+  }
 
   .title-container {
-    display: grid;
-    grid-template-columns: 35% auto;
-    column-gap: 80px;
+    @include columns(35% auto, 80px);
     align-items: center;
 
     .title {
-      display: grid;
-      grid-auto-rows: min-content;
-
       div {
-        display: grid;
-
         p {
-          color: #bbb;
+          color: $body-content;
           font-family: $heading-font;
           font-size: 20px;
           font-weight: 400;
         }
-
-        img {
-          height: 60px;
-          width: auto;
-          justify-self: end;
-        }
       }
 
       h1 {
-        color: #fff;
-        font-family: $heading-font;
-        font-size: 48px;
+        @include title-header;
         font-weight: 800;
-        margin: 0;
       }
     }
 
@@ -49,79 +44,63 @@
   }
 
   .content-section {
-    display: grid;
-    grid-template-columns: 35% auto;
-    column-gap: 80px;
+    @include columns(35% auto, 80px);
 
     h4 {
-      color: #fff;
+      color: $header-white;
+      font-size: $content;
+      font-weight: $heavy-weight;
       font-family: Inter;
-      font-size: 12px;
-      font-weight: 700;
     }
 
     .header-title {
-      h3 {
-        color: #05ae85;
-        font-family: $heading-font;
-        font-size: 20px;
-        font-weight: 400;
-        margin: 0;
-      }
-
       h2 {
-        color: #e0e0e0;
+        color: $header-white;
         font-family: $heading-font;
+        font-weight: $heavy-weight;
         font-size: 32px;
-        font-weight: 700;
         margin-top: 16px;
         margin-bottom: 0;
       }
 
       .sub-title {
-        color: #313131;
+        color: $dark-grey;
         font-family: $heading-font;
+        font-weight: $heavy-weight;
         font-size: 32px;
-        font-weight: 700;
         margin: 0;
       }
     }
 
     .content-wrapper {
       padding-top: 41px;
-      display: grid;
-      grid-auto-rows: min-content;
-      row-gap: 48px;
+      @include autoRows(min-content, 48px);
 
       p {
+        font-size: $content;
+        color: $body-content;
         margin: 0;
-        font-size: 12px;
-        color: #bbbbbb;
         font-weight: 400;
       }
 
       .paragraph-container {
-        display: grid;
-        grid-auto-rows: auto;
-        row-gap: 12px;
+        @include autoRows(auto, 12px);
       }
 
       .unstyled-list {
+        font-size: $content;
         list-style-type: none;
         margin: 0;
         padding: 0;
-        font-size: 12px;
         display: flex;
         flex-direction: column;
         gap: 8px;
       }
 
       .styled-list {
-        font-size: 12px;
+        font-size: $content;
         padding: 10px;
-        display: grid;
-        grid-auto-rows: min-content;
-        row-gap: 16px;
+        @include autoRows(min-content, 16px);
 
         li {
           &::marker {
@@ -149,7 +128,7 @@
         div {
           height: 55px;
           width: 145px;
-          background-color: #0d0d0d;
+          background-color: $light-black;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -168,27 +147,14 @@
         }
       }
 
-      // .research-plan {
-      //   // display: grid;
-      //   // grid-auto-rows: min-content;
-      //   // row-gap: 48px;
-
-      //   // h4 {
-      //   //   color: #fff;
-      //   //   font-family: Inter;
-      //   //   font-size: 12px;
-      //   //   font-weight: 700;
-      //   // }
-      // }
-
       .interview-cards {
         display: grid;
-        grid-template-columns: 1fr 1fr; // Creates 2 columns with equal width
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 24px;
 
         .card {
-          background-color: #0d0d0d;
+          background-color: $light-black;
           border-radius: 10px;
           width: 306px;
           height: 162px;
@@ -198,30 +164,12 @@
 
           div {
             width: 80%;
-
-            h3 {
-              color: #05ae85;
-              font-family: $heading-font;
-              font-size: 16px;
-              font-weight: 700;
-              margin: 0;
-              margin-bottom: 10px;
-            }
           }
         }
       }
 
       .list-container {
-        display: grid;
-        grid-auto-rows: auto;
-        row-gap: 48px;
-
-        h3 {
-          color: #fff;
-          font-family: Inter;
-          font-size: 14px;
-          font-weight: 700;
-        }
+        @include autoRows(auto, 48px);
       }
 
       .wireframes {

@@ -1,7 +1,7 @@
-import designProcess from "../assets/common/design-process.png";
 import { ReactComponent as ChartSuccess } from "../assets/icons/chart-success.svg";
 import { ReactComponent as FatRows } from "../assets/icons/fatrows.svg";
 import { ReactComponent as Routing } from "../assets/icons/routing.svg";
+import { designProcess } from "../assets";
 
 export default function DesignProcess() {
   return (
