@@ -8,9 +8,19 @@
   padding: 0 120px;
   font-size: $content;
   color: $header-white;
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
   z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+  }
 
   h6 {
     margin: 0;
@@ -45,10 +55,13 @@
         text-decoration: none;
         color: #000000;
         font-size: $content;
-        transition: 0.4s ease-in-out all;
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.4);
         border: none;
+
+        &.clicked {
+          border-radius: 10px 10px 0 0;
+        }
 
         &:hover {
           cursor: pointer;

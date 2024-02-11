@@ -36,7 +36,10 @@ function Navbar() {
           onMouseEnter={() => setDropdown(true)}
           onMouseLeave={() => setDropdown(false)}
         >
-          <button className="dropdown-btn" to="/contents">
+          <button
+            className={dropdown ? "dropdown-btn clicked" : "dropdown-btn"}
+            to="/contents"
+          >
             CONTENTS <ArrowDown />
           </button>
           {dropdown && <Dropdown />}
