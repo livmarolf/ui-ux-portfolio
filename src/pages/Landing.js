@@ -1,6 +1,7 @@
-// TODO : Figure out the about page situation >:(
+// TODO : figure out the about page situation >:(
 // TODO : after update of resume create a qr code
 // TODO : add media queries
+// TODO : fix favicon
 
 import { Link } from "react-router-dom";
 import olivia from "../assets/landing/olivia-cropped.png";
@@ -8,7 +9,7 @@ import curriculumPages from "../assets/landing/curriuclum-pages.png";
 import processTablets from "../assets/landing/process-tablets.png";
 import huddleupPhones from "../assets/landing/huddleup-phones.png";
 import rprePrototypes from "../assets/landing/rpre-screens.png";
-// import sLines from "../assets/landing/lines-s.png";
+import lines from "../assets/landing/lines.png";
 
 export default function Landing() {
   return (
@@ -26,7 +27,7 @@ export default function Landing() {
 
       <div className="landing-content">
         <div className="left-lines">
-          {/* <img src={sLines} alt="small-lines" /> */}
+          <img src={lines} alt="small-lines" />
         </div>
 
         <div className="landing-rows">

@@ -1,19 +1,11 @@
-import { useState } from "react";
 import { MenuItems } from "../data/MenuItems";
 import { Link } from "react-router-dom";
 
-function Dropdown() {
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => setClick(!click);
-
+function Dropdown({ onClick }) {
   const pages = MenuItems.filter((item) => item.subPage === true);
 
   return (
-    <div
-      onClick={handleClick}
-      className={click ? "dropdown-menu clicked" : "dropdown-menu"}
-    >
+    <div onClick={onClick} className="dropdown-menu">
       {pages.map((item, id) => {
         return (
           <div key={id} className="dropdown-item">

@@ -1,10 +1,11 @@
 .navbar {
+  $nav-height: 62px;
   position: sticky;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 62px;
+  height: $nav-height;
   padding: 0 120px;
   font-size: $content;
   color: $header-white;
@@ -28,6 +29,10 @@
     font-size: $content;
     font-weight: 400;
     text-transform: uppercase;
+  }
+
+  svg {
+    display: none;
   }
 
   .navlinks-wrapper {
@@ -76,5 +81,64 @@
         }
       }
     }
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 0 60px;
+
+    .navlinks-wrapper {
+      display: none;
+      position: fixed;
+      top: $nav-height;
+      max-width: 50vw;
+      width: 200px;
+      bottom: 0;
+      right: 0;
+      height: calc(100vh - #{$nav-height});
+
+      &.open {
+        display: initial;
+        display: grid;
+        grid-auto-rows: min-content;
+        row-gap: 0px;
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+
+        .navlink {
+          width: 200px;
+          display: flex;
+
+          .contents-header {
+            border-bottom: $dark-border;
+            width: 100%;
+            padding: 10px 20px;
+            color: $body-content;
+          }
+
+          .main-link {
+            width: 100%;
+            transition: none;
+            border-radius: 0;
+
+            &:hover {
+              background: none;
+              color: none;
+            }
+          }
+        }
+      }
+    }
+
+    svg {
+      display: initial;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 0 20px;
   }
 }
