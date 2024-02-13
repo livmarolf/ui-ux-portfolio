@@ -39,4 +39,48 @@
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    position: absolute;
+    top: 138px;
+    // top: 0;
+    display: grid;
+    grid-template-rows: auto;
+    border-radius: none;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: none;
+      backdrop-filter: none;
+    }
+
+    // &.clicked {
+    //   display: none;
+    // }
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+
+      .dropdown-link {
+        width: 100%;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: $body-content;
+        transition: 0.4s ease-in-out all;
+
+        &:hover {
+          background: none;
+          color: none;
+        }
+      }
+    }
+  }
 }

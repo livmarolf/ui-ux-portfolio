@@ -1,5 +1,5 @@
 .footer {
-  @include layout(0, 100px 120px);
+  @include layout(0, 100px 20px);
   display: flex;
   justify-content: space-between;
   background-color: #000000;
@@ -47,5 +47,10 @@
         color: $header-white;
       }
     }
+  }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    gap: 20px;
   }
 }
