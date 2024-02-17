@@ -127,4 +127,51 @@
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .header-row {
+      height: 40vh;
+
+      .title-container {
+        .title {
+          @include layout(0, 0 60px 100px 60px);
+
+          h1 {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+
+    .contact-container {
+      padding: 0 60px 45px 60px;
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    .header-row {
+      .title-container {
+        .title {
+          @include layout(0, 0 20px 100px 20px);
+        }
+      }
+    }
+
+    .contact-container {
+      padding: 0 20px 45px 20px;
+      margin-top: 0;
+      grid-template-rows: auto;
+      grid-template-columns: none;
+      row-gap: 48px;
+      height: 100%;
+
+      .left-column {
+        ul {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
 }

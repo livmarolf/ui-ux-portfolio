@@ -83,6 +83,11 @@
         font-weight: 400;
       }
 
+      // img {
+      //   width: 100%;
+      //   height: auto;
+      // }
+
       .paragraph-container {
         @include autoRows(auto, 12px);
       }
@@ -179,6 +184,129 @@
 
         img {
           width: 30%;
+        }
+      }
+
+      .prototype-link-wrapper {
+        color: transparent;
+
+        .link-contents {
+          position: relative;
+          padding: 20px;
+          border-radius: 10px;
+          transition: all 0.4s ease-in-out;
+
+          &:hover {
+            p {
+              opacity: 0.6;
+            }
+
+            img {
+              filter: blur(3px);
+              opacity: 0.6;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+            transition: all 0.4s ease-in-out;
+          }
+
+          p {
+            transition: all 0.4s ease-in-out;
+            color: $header-white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            font-size: $large-content;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1290px) {
+    padding: 0 100px 45px 100px;
+  }
+
+  @media screen and (max-width: 1150px) {
+    .content-section {
+      .content-wrapper {
+        .deliverables-grid {
+          grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+          grid-template-rows: none;
+        }
+
+        .interview-cards {
+          grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
+          grid-template-rows: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .title-container {
+      grid-template-columns: none;
+      grid-template-rows: auto;
+      row-gap: 20px;
+      place-items: center;
+      text-align: center;
+
+      .title {
+        h1 {
+          font-size: 32px;
+        }
+
+        div {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .content-section {
+      grid-template-columns: none;
+      grid-template-rows: auto;
+      row-gap: 20px;
+
+      .header-title {
+        .sub-title {
+          font-size: 20px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 415px) {
+    padding: 0 20px 45px 20px;
+    row-gap: 100px;
+
+    .content-section {
+      .content-wrapper {
+        .prototype-link-wrapper {
+          .link-contents {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+            img {
+              filter: blur(3px);
+              opacity: 0.6;
+            }
+
+            p {
+              opacity: 0.6;
+            }
+          }
         }
       }
     }

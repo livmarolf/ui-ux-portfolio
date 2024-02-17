@@ -1,4 +1,6 @@
 import huPrototype from "../assets/huddleup/hu-prototype.png";
+import huPhone from "../assets/huddleup/hu-phone.png";
+import huPhones from "../assets/landing/huddleup-phones.png";
 import competitors from "../assets/huddleup/competitors.png";
 import persona from "../assets/huddleup/hu-persona.png";
 import productGoals from "../assets/huddleup/hu-product-goals.png";
@@ -34,6 +36,8 @@ import feedbackLoop from "../assets/curriculum-design/feedback-loop.png";
 
 export {
   huPrototype,
+  huPhone,
+  huPhones,
   figma,
   illustrator,
   trello,

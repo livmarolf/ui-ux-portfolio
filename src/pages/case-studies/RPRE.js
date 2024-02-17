@@ -590,15 +590,17 @@ export default function RPRE() {
         </div>
 
         <div className="content-wrapper">
-          <iframe
-            title="prototype"
-            style={{
-              border: "1px solid rgba(0, 0, 0, 0.1)",
-            }}
-            width="800"
-            height="450"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJ0DGhmBAEL8GhGYNnbBMB9%2FPatrea-Real-Estate%3Fpage-id%3D213%253A2%26type%3Ddesign%26node-id%3D213-383%26viewport%3D202%252C196%252C0.1%26t%3DtnqCeYUemcyrXViA-1%26scaling%3Dscale-down%26starting-point-node-id%3D213%253A383%26mode%3Ddesign&hide-ui=1"
-          ></iframe>
+          <a
+            className="prototype-link-wrapper"
+            href="https://www.figma.com/proto/J0DGhmBAEL8GhGYNnbBMB9/Real-Patrea-Real-Estate?page-id=213%3A2&type=design&node-id=213-383&viewport=193%2C209%2C0.24&t=TxSm6eGDrhBTEpjj-1&scaling=scale-down&starting-point-node-id=213%3A383&mode=design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="link-contents">
+              <img src={rprePrototype} alt="prototype" />
+              <p>CLICK TO VIEW PROTOTYPE</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>

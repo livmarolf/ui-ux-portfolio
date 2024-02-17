@@ -11,6 +11,8 @@ import {
   userFlow,
   taskFlow,
   typography,
+  huPhone,
+  huPhones,
 } from "../../assets";
 import HuWireframes from "../../components/HuWireframes";
 
@@ -593,15 +595,17 @@ export default function HuddleUp() {
         </div>
 
         <div className="content-wrapper">
-          <iframe
-            title="prototype"
-            style={{
-              border: "1px solid rgba(0, 0, 0, 0.1)",
-            }}
-            width="auto"
-            height="650"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhWGqq6cTi2xWuueNhOtGT5%2Fpersonal-site-pt2%3Fpage-id%3D446%253A407%26type%3Ddesign%26node-id%3D1560-6527%26viewport%3D-834%252C757%252C0.23%26t%3DfbkL7hq0UgXKyvV8-1%26scaling%3Dscale-down%26starting-point-node-id%3D1560%253A6527%26show-proto-sidebar%3D1%26mode%3Ddesign&hide-ui=1"
-          ></iframe>
+          <a
+            className="prototype-link-wrapper"
+            href="https://www.figma.com/proto/uvihyeI6mIAEy90es6flsk/HuddleUp?page-id=1%3A2&type=design&node-id=1-601&viewport=255%2C128%2C0.16&t=ApVsOOHBz1gUYM3S-1&scaling=scale-down&starting-point-node-id=1%3A601&mode=design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="link-contents">
+              <img src={huPhones} alt="prototype" />
+              <p>CLICK TO VIEW PROTOTYPE</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>

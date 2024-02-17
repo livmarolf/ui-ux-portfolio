@@ -337,10 +337,8 @@
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 415px) {
     .header-row {
-      width: 100%;
-
       .title-container {
         p {
           padding: 20px;
@@ -353,8 +351,16 @@
     }
 
     .landing-content {
+      .left-lines {
+        display: none;
+
+        img {
+          width: 10px;
+        }
+      }
+
       .landing-rows {
-        padding: 0 20px 0 10px;
+        padding: 0 10px 0 10px;
 
         .intro-row {
           row-gap: 48px;
