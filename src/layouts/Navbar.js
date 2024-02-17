@@ -19,7 +19,7 @@ function Navbar() {
 
       <div
         className={navOpen ? "navlinks-wrapper open" : "navlinks-wrapper"}
-        onClick={() => setNavOpen(!navOpen)}
+        onClick={() => setNavOpen(false)}
       >
         <div className="navlink">
           <Link className="main-link" to="/">
@@ -54,7 +54,6 @@ function Navbar() {
           >
             <button
               className={dropdown ? "dropdown-btn clicked" : "dropdown-btn"}
-              to="/contents"
             >
               CONTENTS <ArrowDown />
             </button>
