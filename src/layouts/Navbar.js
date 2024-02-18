@@ -15,7 +15,7 @@ function Navbar() {
     <nav className="navbar">
       <h6>{title}</h6>
 
-      <Bars onClick={() => setNavOpen(!navOpen)} />
+      <Bars className="bars" onClick={() => setNavOpen(!navOpen)} />
 
       <div
         className={navOpen ? "navlinks-wrapper open" : "navlinks-wrapper"}
@@ -24,12 +24,6 @@ function Navbar() {
         <div className="navlink">
           <Link className="main-link" to="/">
             HOME
-          </Link>
-        </div>
-
-        <div className="navlink">
-          <Link className="main-link" to="/about">
-            ABOUT
           </Link>
         </div>
 

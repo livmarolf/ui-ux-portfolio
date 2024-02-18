@@ -11,7 +11,6 @@ import {
   userFlow,
   taskFlow,
   typography,
-  huPhone,
   huPhones,
 } from "../../assets";
 import HuWireframes from "../../components/HuWireframes";

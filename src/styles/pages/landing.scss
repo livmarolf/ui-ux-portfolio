@@ -100,6 +100,10 @@
           justify-self: center;
           color: transparent;
 
+          svg {
+            display: none;
+          }
+
           .image-container {
             width: 367px;
             height: 256px;
@@ -183,6 +187,10 @@
         .link-wrapper {
           justify-self: center;
           color: transparent;
+
+          svg {
+            display: none;
+          }
 
           .image-container {
             width: 367px;
@@ -360,13 +368,24 @@
       }
 
       .landing-rows {
-        padding: 0 10px 0 10px;
+        padding: 0 20px 0 20px;
 
         .intro-row {
           row-gap: 48px;
 
           .link-wrapper {
             justify-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            svg {
+              transform: rotate(-90deg);
+              height: 10px;
+              width: auto;
+              display: initial;
+            }
           }
         }
 
@@ -375,6 +394,17 @@
 
           .link-wrapper {
             justify-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            svg {
+              transform: rotate(-90deg);
+              height: 10px;
+              width: auto;
+              display: initial;
+            }
           }
         }
       }
