@@ -42,8 +42,7 @@
 
   @media screen and (max-width: 800px) {
     position: absolute;
-    top: 138px;
-    // top: 0;
+    top: 108px;
     display: grid;
     grid-template-rows: auto;
     border-radius: none;
@@ -60,10 +59,6 @@
       background: none;
       backdrop-filter: none;
     }
-
-    // &.clicked {
-    //   display: none;
-    // }
 
     .dropdown-item {
       display: flex;

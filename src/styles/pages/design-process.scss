@@ -134,4 +134,85 @@
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .header-row {
+      height: 40vh;
+
+      .title-container {
+        .title {
+          @include layout(0, 0 60px 100px 60px);
+
+          h1 {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+
+    .page-container {
+      padding: 0 60px 0 60px;
+
+      .content-row {
+        grid-template-columns: 20% 70%;
+        column-gap: 10%;
+
+        .column-container {
+          gap: 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 660px) {
+    .header-row {
+      .title-container {
+        .title {
+          @include layout(0, 0 60px 100px 60px);
+        }
+      }
+    }
+
+    .page-container {
+      padding: 0 60px 0 60px;
+
+      .content-row {
+        grid-template-columns: none;
+        column-gap: 0;
+        grid-template-rows: 60px 1fr;
+
+        .column-container {
+          display: grid;
+          grid-template-rows: auto;
+        }
+
+        .row-container {
+          .strategize-items {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+          }
+        }
+
+        .test-items {
+          grid-template-columns: none;
+          grid-template-rows: auto;
+          row-gap: 48px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 415px) {
+    .header-row {
+      .title-container {
+        .title {
+          @include layout(0, 0 20px 100px 20px);
+        }
+      }
+    }
+
+    .page-container {
+      padding: 0 20px 0 20px;
+    }
+  }
 }

@@ -31,7 +31,7 @@
     text-transform: uppercase;
   }
 
-  svg {
+  .bars {
     display: none;
   }
 
@@ -129,7 +129,7 @@
       }
     }
 
-    svg {
+    .bars {
       display: initial;
 
       &:hover {
@@ -138,7 +138,14 @@
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 415px) {
     padding: 0 20px;
+    background: #000000;
+
+    .navlinks-wrapper {
+      &.open {
+        background: #000000;
+      }
+    }
   }
 }

@@ -1,8 +1,3 @@
-// TODO : figure out the about page situation >:(
-// TODO : after update of resume create a qr code
-// TODO : add media queries
-// TODO : fix favicon
-
 import { Link } from "react-router-dom";
 import olivia from "../assets/landing/olivia-cropped.png";
 import curriculumPages from "../assets/landing/curriuclum-pages.png";
@@ -10,6 +5,7 @@ import processTablets from "../assets/landing/process-tablets.png";
 import huddleupPhones from "../assets/landing/huddleup-phones.png";
 import rprePrototypes from "../assets/landing/rpre-screens.png";
 import lines from "../assets/landing/lines.png";
+import { ReactComponent as ArrowDown } from "../assets/icons/arrow-down.svg";
 
 export default function Landing() {
   return (
@@ -63,6 +59,7 @@ export default function Landing() {
                 <img src={olivia} alt="personal" />
                 <p>CLICK TO VIEW</p>
               </div>
+              <ArrowDown />
             </Link>
           </div>
 
@@ -87,6 +84,7 @@ export default function Landing() {
                 <img src={huddleupPhones} alt="huddleup-phones" />
                 <p>CLICK TO VIEW</p>
               </div>
+              <ArrowDown />
             </Link>
           </div>
 
@@ -111,6 +109,7 @@ export default function Landing() {
                 <img src={rprePrototypes} alt="rpre-prototypes" />
                 <p>CLICK TO VIEW</p>
               </div>
+              <ArrowDown />
             </Link>
           </div>
 
@@ -135,6 +134,7 @@ export default function Landing() {
                 <img src={curriculumPages} alt="curriculum-pages" />
                 <p>CLICK TO VIEW</p>
               </div>
+              <ArrowDown />
             </Link>
           </div>
 
@@ -159,6 +159,7 @@ export default function Landing() {
                 <img src={processTablets} alt="process-tablets" />
                 <p>CLICK TO VIEW</p>
               </div>
+              <ArrowDown />
             </Link>
           </div>
         </div>
