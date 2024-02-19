@@ -54,12 +54,12 @@ export default function Landing() {
               </div>
             </div>
 
-            <Link className="link-wrapper" to="/about">
+            <Link className="link-wrapper" to="/">
               <div className="image-container">
                 <img src={olivia} alt="personal" />
-                <p>CLICK TO VIEW</p>
+                {/* <p>CLICK TO VIEW</p> */}
               </div>
-              <ArrowDown />
+              {/* <ArrowDown /> */}
             </Link>
           </div>
 

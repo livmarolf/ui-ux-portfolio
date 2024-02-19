@@ -20,14 +20,23 @@ export default function Footer() {
                 HOME
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/about">ABOUT</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contents">CONTENTS</NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/contact">CONTACT</NavLink>
+            </li>
+            <li>
+              <NavLink to="/design-process">DESIGN PROCESS</NavLink>
+            </li>
+            <li>
+              <NavLink to="/curriculum-design">CURRICULUM DESIGN</NavLink>
+            </li>
+            <li>
+              <NavLink to="/huddleup">HUDDLEUP</NavLink>
+            </li>
+            <li>
+              <NavLink to="/rpre">REAL PATREA REAL ESTATE</NavLink>
             </li>
           </ul>
         </div>
@@ -39,10 +48,22 @@ export default function Footer() {
 
           <ul>
             <li>
-              <a href="https://github.com/livmarolf">GITHUB</a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/livmarolf"
+              >
+                GITHUB
+              </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/oliviamarolf/">LINKEDIN</a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/oliviamarolf/"
+              >
+                LINKEDIN
+              </a>
             </li>
           </ul>
         </div>
