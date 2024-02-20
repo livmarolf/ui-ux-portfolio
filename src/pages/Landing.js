@@ -55,8 +55,8 @@ export default function Landing() {
           </p>
 
           <div className="btn-container">
-            <button>learn more</button>
-            <Link>
+            {/* <button>learn more</button> */}
+            <Link to="/contact">
               <button>let's talk</button>
             </Link>
           </div>
@@ -71,47 +71,55 @@ export default function Landing() {
           </div>
         </div>
 
-        <div className="case-block">
-          <p>01</p>
-          <h2>HUDDLEUP</h2>
-          <img src={huddleupPhones} alt="huddleup-prototypes" />
-          <p className="description">
-            An application designed to enhance sports team management and
-            promote greater involvement.
-          </p>
-        </div>
+        <Link to="/huddleup">
+          <div className="case-block">
+            <p>01</p>
+            <h2>HUDDLEUP</h2>
+            <img src={huddleupPhones} alt="huddleup-prototypes" />
+            <p className="description">
+              An application designed to enhance sports team management and
+              promote greater involvement.
+            </p>
+          </div>
+        </Link>
 
-        <div className="case-block">
-          <p>02</p>
-          <h2>REAL PATREA REAL ESTATE</h2>
-          <img src={rprePrototypes} alt="rpre-prototypes" />
-          <p className="description">
-            A tailored adaptive website design created for a real estate
-            professional.
-          </p>
-        </div>
+        <Link to="/rpre">
+          <div className="case-block">
+            <p>02</p>
+            <h2>REAL PATREA REAL ESTATE</h2>
+            <img src={rprePrototypes} alt="rpre-prototypes" />
+            <p className="description">
+              A tailored adaptive website design created for a real estate
+              professional.
+            </p>
+          </div>
+        </Link>
       </div>
 
       <div className="columns mobile">
-        <div className="case-block">
-          <p>01</p>
-          <h2>DESIGN PROCESS</h2>
-          <img src={processTablets} alt="process-tablets" />
-          <p className="description">
-            The outline and in-depth walkthrough of my design process from start
-            to finish.
-          </p>
-        </div>
+        <Link to="/design-process">
+          <div className="case-block">
+            <p>01</p>
+            <h2>DESIGN PROCESS</h2>
+            <img src={processTablets} alt="process-tablets" />
+            <p className="description">
+              The outline and in-depth walkthrough of my design process from
+              start to finish.
+            </p>
+          </div>
+        </Link>
 
-        <div className="case-block">
-          <p>02</p>
-          <h2>CURRICULUM DESIGN</h2>
-          <img src={curriculumPages} alt="curriculum-pages" />
-          <p className="description">
-            Creating a curriculum through practical design and planning for
-            effective learning outcomes.
-          </p>
-        </div>
+        <Link to="curriculum-design">
+          <div className="case-block">
+            <p>02</p>
+            <h2>CURRICULUM DESIGN</h2>
+            <img src={curriculumPages} alt="curriculum-pages" />
+            <p className="description">
+              Creating a curriculum through practical design and planning for
+              effective learning outcomes.
+            </p>
+          </div>
+        </Link>
 
         <div className="bottom-title-block">
           <div>
