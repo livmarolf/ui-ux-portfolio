@@ -6,6 +6,7 @@ import huddleupPhones from "../assets/landing/huddleup-phones.png";
 import rprePrototypes from "../assets/landing/rpre-screens.png";
 import qrcode from "../assets/landing/pdf-qrcode.png";
 import { ReactComponent as Arrow } from "../assets/landing/arrow.svg";
+import AnimatedCharacter from "../components/AnimatedCharacter";
 
 export default function Landing() {
   return (
@@ -33,11 +34,8 @@ export default function Landing() {
         </div>
       </div>
 
-      <div className="scroll" style={{ "--time": "20s" }}>
-        <div>
-          <span>ui/ux designer</span>
-          <span>software developer</span>
-        </div>
+      <div className="large-banner">
+        <AnimatedCharacter text="ui/ux designer" />
       </div>
 
       <div className="intro-section">
