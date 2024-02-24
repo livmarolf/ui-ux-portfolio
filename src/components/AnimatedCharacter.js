@@ -7,7 +7,7 @@ const AnimatedCharacter = ({ text }) => {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.08, delayChildren: 0.08 * i },
     }),
   };
 

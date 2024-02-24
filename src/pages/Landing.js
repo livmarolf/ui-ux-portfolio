@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+import { ReactComponent as Arrow } from "../assets/landing/arrow.svg";
 import olivia from "../assets/landing/olivia-cropped.png";
 import curriculumPages from "../assets/landing/curriuclum-pages.png";
 import processTablets from "../assets/landing/process-tablets.png";
 import huddleupPhones from "../assets/landing/huddleup-phones.png";
 import rprePrototypes from "../assets/landing/rpre-screens.png";
 import qrcode from "../assets/landing/pdf-qrcode.png";
-import { ReactComponent as Arrow } from "../assets/landing/arrow.svg";
-import AnimatedCharacter from "../components/AnimatedCharacter";
+import ParallaxText from "../components/ParallaxText";
+import BounceElement from "../components/BounceElement";
 
 export default function Landing() {
   return (
@@ -34,8 +35,8 @@ export default function Landing() {
         </div>
       </div>
 
-      <div className="large-banner">
-        <AnimatedCharacter text="ui/ux designer" />
+      <div className="parallax">
+        <ParallaxText baseVelocity={-5}>ui/ux designer</ParallaxText>
       </div>
 
       <div className="intro-section">
@@ -70,7 +71,7 @@ export default function Landing() {
         </div>
 
         <Link to="/huddleup">
-          <div className="case-block">
+          <BounceElement type="div" className="case-block">
             <p>01</p>
             <h2>HUDDLEUP</h2>
             <img src={huddleupPhones} alt="huddleup-prototypes" />
@@ -78,11 +79,11 @@ export default function Landing() {
               An application designed to enhance sports team management and
               promote greater involvement.
             </p>
-          </div>
+          </BounceElement>
         </Link>
 
         <Link to="/rpre">
-          <div className="case-block">
+          <BounceElement type="div" className="case-block">
             <p>02</p>
             <h2>REAL PATREA REAL ESTATE</h2>
             <img src={rprePrototypes} alt="rpre-prototypes" />
@@ -90,13 +91,13 @@ export default function Landing() {
               A tailored adaptive website design created for a real estate
               professional.
             </p>
-          </div>
+          </BounceElement>
         </Link>
       </div>
 
       <div className="columns mobile">
         <Link to="/design-process">
-          <div className="case-block">
+          <BounceElement type="div" className="case-block">
             <p>01</p>
             <h2>DESIGN PROCESS</h2>
             <img src={processTablets} alt="process-tablets" />
@@ -104,11 +105,11 @@ export default function Landing() {
               The outline and in-depth walkthrough of my design process from
               start to finish.
             </p>
-          </div>
+          </BounceElement>
         </Link>
 
         <Link to="curriculum-design">
-          <div className="case-block">
+          <BounceElement type="div" className="case-block">
             <p>02</p>
             <h2>CURRICULUM DESIGN</h2>
             <img src={curriculumPages} alt="curriculum-pages" />
@@ -116,7 +117,7 @@ export default function Landing() {
               Creating a curriculum through practical design and planning for
               effective learning outcomes.
             </p>
-          </div>
+          </BounceElement>
         </Link>
 
         <div className="bottom-title-block">
