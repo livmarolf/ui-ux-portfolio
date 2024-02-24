@@ -11,7 +11,7 @@
   }
 
   .header-row {
-    @include layout(0, 0 120px 0 120px);
+    @include layout(0, 0 120px 100px 120px);
     min-height: 60vh;
     display: flex;
     align-items: center;
@@ -142,7 +142,7 @@
   }
 
   .columns {
-    @include layout(0, 300px 120px 0 120px);
+    @include layout(0, 200px 120px 0 120px);
     @include columns(1fr 1fr 1fr, 20px);
 
     .title-block {
@@ -196,7 +196,7 @@
       background-color: #090909;
       border-radius: 10px;
       padding: 40px 20px;
-      @include rows(30px 50px auto 40px, 20px);
+      @include rows(30px 50px 420px 40px, 20px);
       align-items: center;
 
       p {
