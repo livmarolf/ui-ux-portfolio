@@ -56,11 +56,11 @@
     }
   }
 
-  .section-one {
-    @include layout(0, 100px 120px 100px 120px);
+  .section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include layout(0, 100px 120px 100px 120px);
 
     .section-content {
       @include rows(auto, 36px);
@@ -140,33 +140,6 @@
           }
         }
       }
-    }
-  }
-
-  .section-two {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include layout(0, 100px 120px 100px 120px);
-
-    .section-content {
-      @include rows(auto, 36px);
-      width: 53%;
-
-      h1 {
-        font-family: $heading-font;
-        font-size: 40px;
-        font-weight: $heavy-weight;
-        color: $white;
-        margin: 0;
-      }
-
-      p {
-        color: $white;
-        font-size: 14px;
-        line-height: 180%;
-        margin: 0;
-      }
 
       .blocks-container {
         display: flex;
@@ -198,33 +171,6 @@
           }
         }
       }
-    }
-  }
-
-  .section-three {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include layout(0, 100px 120px 100px 120px);
-
-    .section-content {
-      @include rows(auto, 36px);
-      width: 53%;
-
-      h1 {
-        font-family: $heading-font;
-        font-size: 40px;
-        font-weight: $heavy-weight;
-        color: $white;
-        margin: 0;
-      }
-
-      p {
-        color: $white;
-        font-size: 14px;
-        line-height: 180%;
-        margin: 0;
-      }
 
       .squares-container {
         display: flex;
@@ -251,36 +197,8 @@
           p {
             color: $body-content;
             font-size: 12px;
-            // text-align: center;
           }
         }
-      }
-    }
-  }
-
-  .section-four {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include layout(0, 100px 120px 100px 120px);
-
-    .section-content {
-      @include rows(auto, 36px);
-      width: 53%;
-
-      h1 {
-        font-family: $heading-font;
-        font-size: 40px;
-        font-weight: $heavy-weight;
-        color: $white;
-        margin: 0;
-      }
-
-      p {
-        color: $white;
-        font-size: 14px;
-        line-height: 180%;
-        margin: 0;
       }
 
       .test-rows {
@@ -313,7 +231,6 @@
             margin: 0;
             color: $body-content;
             font-size: 12px;
-            // text-align: center;
           }
         }
       }

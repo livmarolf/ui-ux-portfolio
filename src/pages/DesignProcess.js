@@ -27,7 +27,7 @@ export default function DesignProcess() {
         </div>
       </div>
 
-      <div className="section-one">
+      <div className="section">
         <div className="section-content">
           <h1>RESEARCH</h1>
           <p>
@@ -91,7 +91,7 @@ export default function DesignProcess() {
         </div>
       </div>
 
-      <div className="section-two">
+      <div className="section">
         <div className="large-number">
           <p>02</p>
         </div>
@@ -151,7 +151,7 @@ export default function DesignProcess() {
         </div>
       </div>
 
-      <div className="section-three">
+      <div className="section">
         <div className="section-content">
           <h1>DESIGN</h1>
           <p>
@@ -187,7 +187,7 @@ export default function DesignProcess() {
         </div>
       </div>
 
-      <div className="section-four">
+      <div className="section">
         <div className="large-number">
           <p>04</p>
         </div>
