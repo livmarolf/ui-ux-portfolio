@@ -1,218 +1,335 @@
 .process-page {
-  .header-row {
-    position: relative;
-    top: -62px;
-    width: 100vw;
-    height: 60vh;
-    border-bottom: $dark-border;
+  .header {
+    @include layout(0, 100px 120px 100px 120px);
+    h1 {
+      font-family: $heading-font;
+      font-weight: $heaviest;
+      font-size: 60px;
+      color: $white;
+    }
+  }
 
-    .title-container {
-      background-image: url("../../assets/common/shortened-smoke.png");
-      background-size: cover;
-      height: 100%;
+  .tag-container {
+    @include layout(0, 0 0 100px 0);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .tag {
+      width: 60%;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
 
-      .title {
-        @include layout(0, 0 120px 100px 120px);
+      .circle-container {
+        z-index: 1;
 
-        h1 {
-          @include title-header($height: 30px);
+        .circle {
+          margin-right: -50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          background-color: $pink-red;
+
+          svg {
+            transform: rotate(-45deg);
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+
+      .text-container {
+        border-radius: 25px 0 0 25px;
+        background-color: $almost-black;
+        padding: 24px 100px;
+
+        p {
+          font-family: $heading-font;
+          color: $white;
+          font-size: 24px;
         }
       }
     }
   }
 
-  .page-container {
-    margin-top: 90px;
-    padding: 0 120px 0 120px;
+  .section-one {
+    @include layout(0, 100px 120px 100px 120px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    h2 {
-      font-size: 16px;
-      color: $header-white;
-      font-weight: $heavy-weight;
-      font-family: $heading-font;
-      margin: 0;
-    }
+    .section-content {
+      @include rows(auto, 36px);
+      width: 53%;
 
-    h3 {
-      margin-top: 0;
-      font-size: $large-content;
-      font-weight: $light-weight;
-      color: $header-grey;
-      font-family: $heading-font;
-    }
-
-    p {
-      font-size: $content;
-      color: $body-content;
-      font-weight: $light-weight;
-      color: $header-white;
-    }
-
-    .content-row {
-      @include columns(20% 60%, 20%);
-      margin-bottom: 220px;
-      height: 100%;
-
-      img {
-        width: 100%;
-      }
-
-      ul {
-        list-style-type: none;
-        margin-left: 0;
-        padding-left: 0;
-
-        li {
-          font-size: $content;
-          margin: 28px 0;
-          @include rows(auto, 8px);
-
-          h4 {
-            font-size: 12px;
-            color: $header-white;
-            font-weight: $heavy-weight;
-            margin: 0;
-          }
-        }
-      }
-
-      p {
-        color: $body-content;
-        font-weight: $light-weight;
-        font-size: $content;
+      h1 {
+        font-family: $heading-font;
+        font-size: 40px;
+        font-weight: $heavy-weight;
+        color: $white;
         margin: 0;
       }
 
-      .test-items {
-        @include columns(repeat(4, 1fr), 30px);
-
-        .item-container {
-          @include rows(auto 1fr, 12px);
-
-          .header {
-            border-bottom: $dark-border;
-
-            .sub-heading {
-              color: $header-white;
-              font-size: $content;
-              font-weight: $heavy-weight;
-              margin-bottom: 12px;
-            }
-          }
-        }
+      p {
+        color: $white;
+        font-size: 14px;
+        line-height: 180%;
+        margin: 0;
       }
 
-      .row-container {
-        @include rows(auto 1fr, 80px);
-        height: 100%;
-
-        .strategize-items {
-          @include columns(1fr 1fr 1fr, 20px);
-
-          h3 {
-            margin-top: 12px;
-          }
-        }
-
-        .design-items {
-          ul {
-            margin: 0;
-
-            li {
-              margin-top: 0;
-              margin-bottom: 28px;
-            }
-          }
-        }
-      }
-
-      .column-container {
+      .charts-container {
         display: flex;
         justify-content: space-between;
-      }
-    }
-  }
+        align-items: center;
+        gap: 20px;
 
-  @media screen and (max-width: 800px) {
-    .header-row {
-      height: 40vh;
+        .chart {
+          background-color: $almost-black;
+          border-radius: 25px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          height: 100%;
+          width: 50%;
 
-      .title-container {
-        .title {
-          @include layout(0, 0 60px 100px 60px);
+          .chart-header {
+            background-color: $pink-red;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
 
-          h1 {
-            font-size: 32px;
+            p {
+              margin: 0;
+            }
+          }
+
+          .list-container {
+            padding: 20px 30px;
+
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              flex-direction: column;
+              gap: 24px;
+
+              li {
+                color: $white;
+                display: grid;
+                grid-template-columns: auto;
+                column-gap: 12px;
+
+                .bolded {
+                  font-weight: $heavy-weight;
+                  color: $white;
+                }
+
+                p {
+                  font-weight: $light-weight;
+                  font-size: 12px;
+                  color: $body-content;
+                }
+              }
+            }
           }
         }
       }
     }
-
-    .page-container {
-      padding: 0 60px 0 60px;
-
-      .content-row {
-        grid-template-columns: 20% 70%;
-        column-gap: 10%;
-
-        .column-container {
-          gap: 20px;
-        }
-      }
-    }
   }
 
-  @media screen and (max-width: 660px) {
-    .header-row {
-      .title-container {
-        .title {
-          @include layout(0, 0 60px 100px 60px);
-        }
+  .section-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include layout(0, 100px 120px 100px 120px);
+
+    .section-content {
+      @include rows(auto, 36px);
+      width: 53%;
+
+      h1 {
+        font-family: $heading-font;
+        font-size: 40px;
+        font-weight: $heavy-weight;
+        color: $white;
+        margin: 0;
       }
-    }
 
-    .page-container {
-      padding: 0 60px 0 60px;
+      p {
+        color: $white;
+        font-size: 14px;
+        line-height: 180%;
+        margin: 0;
+      }
 
-      .content-row {
-        grid-template-columns: none;
-        column-gap: 0;
-        grid-template-rows: 60px 1fr;
+      .blocks-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
 
-        .column-container {
+        .block {
           display: grid;
-          grid-template-rows: auto;
-        }
+          grid-template-columns: 1fr 3fr;
+          align-items: center;
+          width: 328px;
+          background-color: $almost-black;
+          border-radius: 25px;
+          padding: 30px 20px;
 
-        .row-container {
-          .strategize-items {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
+          .block-text {
+            h2 {
+              color: $header-grey;
+              font-size: 14px;
+              font-weight: $light-weight;
+            }
+
+            p {
+              color: $body-content;
+              font-size: 12px;
+            }
           }
-        }
-
-        .test-items {
-          grid-template-columns: none;
-          grid-template-rows: auto;
-          row-gap: 48px;
         }
       }
     }
   }
 
-  @media screen and (max-width: 415px) {
-    .header-row {
-      .title-container {
-        .title {
-          @include layout(0, 0 20px 100px 20px);
+  .section-three {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include layout(0, 100px 120px 100px 120px);
+
+    .section-content {
+      @include rows(auto, 36px);
+      width: 53%;
+
+      h1 {
+        font-family: $heading-font;
+        font-size: 40px;
+        font-weight: $heavy-weight;
+        color: $white;
+        margin: 0;
+      }
+
+      p {
+        color: $white;
+        font-size: 14px;
+        line-height: 180%;
+        margin: 0;
+      }
+
+      .squares-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+
+        .square {
+          @include rows(1fr 3fr, 20px);
+          justify-content: center;
+          text-align: center;
+          width: 140px;
+          height: 140px;
+          background-color: $almost-black;
+          border-radius: 25px;
+          padding: 30px;
+
+          h2 {
+            color: $pink-red;
+            font-size: 14px;
+            font-weight: $light-weight;
+          }
+
+          p {
+            color: $body-content;
+            font-size: 12px;
+            // text-align: center;
+          }
         }
       }
     }
+  }
 
-    .page-container {
-      padding: 0 20px 0 20px;
+  .section-four {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include layout(0, 100px 120px 100px 120px);
+
+    .section-content {
+      @include rows(auto, 36px);
+      width: 53%;
+
+      h1 {
+        font-family: $heading-font;
+        font-size: 40px;
+        font-weight: $heavy-weight;
+        color: $white;
+        margin: 0;
+      }
+
+      p {
+        color: $white;
+        font-size: 14px;
+        line-height: 180%;
+        margin: 0;
+      }
+
+      .test-rows {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .test {
+          width: 600px;
+          background-color: $almost-black;
+          border-radius: 25px;
+          padding: 30px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .bolded {
+            font-weight: $heavy-weight;
+            color: $white;
+          }
+
+          h2 {
+            color: $pink-red;
+            font-size: 14px;
+            font-weight: $light-weight;
+            margin: 0;
+          }
+
+          p {
+            margin: 0;
+            color: $body-content;
+            font-size: 12px;
+            // text-align: center;
+          }
+        }
+      }
     }
+  }
+
+  .large-number {
+    p {
+      margin: 0;
+      font-size: 300px;
+      font-weight: 100;
+      font-family: $heading-font;
+      color: $pink-red;
+    }
+  }
+
+  @media screen and (max-width: 1030px) {
   }
 }

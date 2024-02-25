@@ -1,135 +1,146 @@
-import { ReactComponent as ChartSuccess } from "../assets/icons/chart-success.svg";
-import { ReactComponent as FatRows } from "../assets/icons/fatrows.svg";
+import { ReactComponent as Arrow } from "../assets/landing/arrow.svg";
+import { ReactComponent as Chart } from "../assets/icons/chart.svg";
 import { ReactComponent as Routing } from "../assets/icons/routing.svg";
-import { designProcess } from "../assets";
+import { ReactComponent as Rows } from "../assets/icons/rows.svg";
 
 export default function DesignProcess() {
   return (
     <div className="process-page">
-      <div className="header-row">
-        <div className="title-container">
-          <div className="title">
-            <h1>DESIGN PROCESS</h1>
+      <div className="header">
+        <h1>DESIGN PROCESS</h1>
+      </div>
+
+      <div className="tag-container">
+        <div className="tag">
+          <div className="circle-container">
+            <div className="circle">
+              <Arrow />
+            </div>
+          </div>
+          <div className="text-container">
+            <p>
+              My UX design process is based on my personal approach, developed
+              through experience and applied consistently to all my projects.
+              Click here to read more about my background.
+            </p>
           </div>
         </div>
       </div>
-      <div className="page-container">
-        <div className="content-row">
-          <div>
-            <h2>INTRODUCTION</h2>
-          </div>
 
-          <div className="row-container">
-            <div>
-              <h3>CONCEPT</h3>
-              <p>
-                The forthcoming process embodies my individual approach to UX
-                design, one that I consistently apply to each UX project I take
-                on. This design methodology has evolved and matured over time
-                through my experience in the field.
-              </p>
+      <div className="section-one">
+        <div className="section-content">
+          <h1>RESEARCH</h1>
+          <p>
+            In the design process, thorough research serves as a crucial initial
+            step. My research approach focuses on two primary perspectives:
+            understanding the business objectives and analyzing user needs. By
+            addressing both aspects, I ensure that the resulting product aligns
+            with the goals of both stakeholders and users.
+          </p>
+
+          <div className="charts-container">
+            <div className="chart">
+              <div className="chart-header">
+                <p>PEOPLE/USERS</p>
+              </div>
+
+              <div className="list-container">
+                <ul>
+                  <li>
+                    <p className="bolded">User Interviews</p>
+                    <p>Interview with the product’s users/audience</p>
+                  </li>
+
+                  <li>
+                    <p className="bolded">Surveys</p>
+                    <p>Questionnaires help gather qualitative data</p>
+                  </li>
+
+                  <li>
+                    <p className="bolded">Personas</p>
+                    <p>Fictional characters that represent subsets of users</p>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div>
-              <h3>IDEOLOGY</h3>
-              <p>
-                User experience (UX) design is far from a single-step task,
-                extending well beyond the act of simply opening a laptop and
-                creating wireframes!
-              </p>
-            </div>
-          </div>
-        </div>
+            <div className="chart">
+              <div className="chart-header">
+                <p>BUSINESS</p>
+              </div>
 
-        <div className="content-row">
-          <div>
-            <h2>DESIGN PROCESS OVERVIEW</h2>
-          </div>
+              <div className="list-container">
+                <ul>
+                  <li>
+                    <p className="bolded">Competitive Benchmarking</p>
+                    <p>Reviewing best practices from the competition</p>
+                  </li>
 
-          <div>
-            <img src={designProcess} alt="design-process" />
-          </div>
-        </div>
-
-        <div className="content-row">
-          <div>
-            <h2>RESEARCH</h2>
-          </div>
-
-          <div className="column-container">
-            <div>
-              <h3>PEOPLE/USERS</h3>
-
-              <ul>
-                <li>
-                  <h4>User Interviews</h4>
-                  <p>Interview with the product’s users/audience</p>
-                </li>
-
-                <li>
-                  <h4>Surveys</h4>
-                  <p>Questionnaires help gather qualitative data</p>
-                </li>
-
-                <li>
-                  <h4>Personas</h4>
-                  <p>Fictional characters that represent subsets of users</p>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3>BUSENESS</h3>
-
-              <ul>
-                <li>
-                  <h4>Stakeholder Interviews</h4>
-                  <p>Interviews with the client(s)</p>
-                </li>
-
-                <li>
-                  <h4>Competitive Benchmarking</h4>
-                  <p>Reviewing best practices from the competition</p>
-                </li>
-              </ul>
+                  <li>
+                    <p className="bolded">Stakeholder Interviews</p>
+                    <p>Interviews with the client(s)</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="content-row">
-          <div>
-            <h2>STRATEGIZE</h2>
-          </div>
+        <div className="large-number">
+          <p>01</p>
+        </div>
+      </div>
 
-          <div className="row-container">
-            <p>
-              Strategic design planning ensures efficiency by aligning tasks
-              with clear objectives, incorporating user feedback, and
-              maintaining consistency across design elements. This approach also
-              helps in risk mitigation.
-            </p>
+      <div className="section-two">
+        <div className="large-number">
+          <p>02</p>
+        </div>
 
-            <div className="strategize-items">
+        <div className="section-content">
+          <h1>STRATEGIZE</h1>
+
+          <p>
+            Strategic design planning ensures efficiency by aligning tasks with
+            clear objectives, incorporating user feedback, and maintaining
+            consistency across design elements. This approach also helps in risk
+            mitigation.
+          </p>
+
+          <div className="blocks-container">
+            <div className="block">
               <div>
-                <ChartSuccess />
-                <h3>PRODUCT GOALS</h3>
+                <Chart />
+              </div>
+
+              <div className="block-text">
+                <h2>PRODUCT GOALS</h2>
                 <p>
                   An outline defining specific objectives and targets of the
                   project
                 </p>
               </div>
+            </div>
 
+            <div className="block">
               <div>
                 <Routing />
-                <h3>PRODUCT ROADMAP</h3>
+              </div>
+
+              <div className="block-text">
+                <h2>PRODUCT ROADMAP</h2>
                 <p>
                   A visual plan outlining product goals, features, and timeline
                 </p>
               </div>
+            </div>
 
+            <div className="block">
               <div>
-                <FatRows />
-                <h3>SITE MAP</h3>
+                <Rows />
+              </div>
+
+              <div className="block-text">
+                <h2>SITE MAP</h2>
                 <p>
                   A visual depiction of the product's hierarchical content
                   structure
@@ -138,57 +149,63 @@ export default function DesignProcess() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="content-row">
-          <div>
-            <h2>DESIGN</h2>
-          </div>
+      <div className="section-three">
+        <div className="section-content">
+          <h1>DESIGN</h1>
+          <p>
+            This is when wireframes and prototypes are created, aiming for an
+            intuitive and visually pleasing interface. Testing and feedback help
+            refine the design for a user-friendly experience that meets project
+            goals.
+          </p>
 
-          <div className="row-container">
-            <div className="design-intro">
+          <div className="squares-container">
+            <div className="square">
+              <h2>USER FLOW</h2>
+              <p>A visual representation of a user's journey</p>
+            </div>
+
+            <div className="square">
+              <h2>PROTOTYPE</h2>
               <p>
-                This is when wireframes and prototypes are created, aiming for
-                an intuitive and visually pleasing interface. Testing and
-                feedback help refine the design for a user-friendly experience
-                that meets project goals.
+                An interactive model showing the user interface and
+                functionality of a product
               </p>
             </div>
 
-            <div className="design-items">
-              <ul>
-                <li>
-                  <h4>User Flow</h4>
-                  <p>A visual representation of a user's journey</p>
-                </li>
-
-                <li>
-                  <h4>Wireframes</h4>
-                  <p>Blueprints outlining a website or app's structure</p>
-                </li>
-
-                <li>
-                  <h4>Prototype</h4>
-                  <p>
-                    An interactive model showing the user interface and
-                    functionality of a product
-                  </p>
-                </li>
-              </ul>
+            <div className="square">
+              <h2>WIREFRAMES</h2>
+              <p>Blueprints outlining a website or app's structure</p>
             </div>
           </div>
         </div>
 
-        <div className="content-row">
-          <div>
-            <h2>TEST</h2>
-          </div>
+        <div className="large-number">
+          <p>03</p>
+        </div>
+      </div>
 
-          <div className="test-items">
-            <div className="item-container">
-              <div className="header">
-                <h3>PLAN</h3>
-                <p className="sub-heading">Create a test plan</p>
-              </div>
+      <div className="section-four">
+        <div className="large-number">
+          <p>04</p>
+        </div>
+
+        <div className="section-content">
+          <h1>TEST</h1>
+
+          <p>
+            After completing the previous steps, testing begins. This phase
+            involves a methodical approach to make sure testing is efficient and
+            effective. The goal of testing the product is to ensure that the
+            product meets all benchmarks.
+          </p>
+
+          <div className="test-rows">
+            <div className="test">
+              <h2>PLAN</h2>
+              <p className="bolded">Create a test plan</p>
               <p>
                 Creating a testing plan is essential for a practical evaluation
                 of a UI/UX design. It sets clear goals, metrics, and resource
@@ -200,11 +217,9 @@ export default function DesignProcess() {
               </p>
             </div>
 
-            <div className="item-container">
-              <div className="header">
-                <h3>CONDUCT</h3>
-                <p className="sub-heading">Carry out the test</p>
-              </div>
+            <div className="test">
+              <h2>CONDUCT</h2>
+              <p className="bolded">Carry out the test</p>
               <p>
                 Conducting user tests in user design means getting feedback from
                 users to understand how well a product or interface works.
@@ -215,11 +230,9 @@ export default function DesignProcess() {
               </p>
             </div>
 
-            <div className="item-container">
-              <div className="header">
-                <h3>REPORT</h3>
-                <p className="sub-heading">Analyze and record results</p>
-              </div>
+            <div className="test">
+              <h2>REPORT</h2>
+              <p className="bolded">Analyze and record results</p>
               <p>
                 Reporting user testing findings means summarizing what users did
                 and said to provide insights and recommendations for design
@@ -229,11 +242,9 @@ export default function DesignProcess() {
               </p>
             </div>
 
-            <div className="item-container">
-              <div className="header">
-                <h3>OPTOMIZE</h3>
-                <p className="sub-heading">Refine the designs</p>
-              </div>
+            <div className="test">
+              <h2>OPTOMIZE</h2>
+              <p className="bolded">Refine the designs</p>
               <p>
                 After user testing, we tweak designs based on user feedback to
                 make them more user-friendly and effective. This involves
