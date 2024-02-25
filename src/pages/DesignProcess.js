@@ -27,10 +27,10 @@ export default function DesignProcess() {
         </div>
       </div>
 
-      <div className="section">
+      <div className="section reverse">
         <div className="section-content">
           <h1>RESEARCH</h1>
-          <p>
+          <p className="centered">
             In the design process, thorough research serves as a crucial initial
             step. My research approach focuses on two primary perspectives:
             understanding the business objectives and analyzing user needs. By
@@ -99,7 +99,7 @@ export default function DesignProcess() {
         <div className="section-content">
           <h1>STRATEGIZE</h1>
 
-          <p>
+          <p className="centered">
             Strategic design planning ensures efficiency by aligning tasks with
             clear objectives, incorporating user feedback, and maintaining
             consistency across design elements. This approach also helps in risk
@@ -151,10 +151,10 @@ export default function DesignProcess() {
         </div>
       </div>
 
-      <div className="section">
+      <div className="section reverse">
         <div className="section-content">
           <h1>DESIGN</h1>
-          <p>
+          <p className="centered">
             This is when wireframes and prototypes are created, aiming for an
             intuitive and visually pleasing interface. Testing and feedback help
             refine the design for a user-friendly experience that meets project
@@ -195,7 +195,7 @@ export default function DesignProcess() {
         <div className="section-content">
           <h1>TEST</h1>
 
-          <p>
+          <p className="centered">
             After completing the previous steps, testing begins. This phase
             involves a methodical approach to make sure testing is efficient and
             effective. The goal of testing the product is to ensure that the

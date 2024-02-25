@@ -248,5 +248,142 @@
   }
 
   @media screen and (max-width: 1030px) {
+    .section {
+      flex-direction: column;
+      justify-content: center;
+
+      &.reverse {
+        flex-direction: column-reverse;
+      }
+
+      .section-content {
+        width: 100%;
+        row-gap: 60px;
+
+        h1 {
+          width: min-content;
+          justify-self: center;
+          margin: 0;
+        }
+
+        .centered {
+          text-align: center;
+          margin: 0;
+        }
+
+        .squares-container {
+          justify-self: center;
+        }
+
+        .test-rows {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .section {
+      .section-content {
+        .blocks-container {
+          justify-content: center;
+        }
+
+        .squares-container {
+          justify-content: center;
+        }
+
+        .test-rows {
+          .test {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      @include layout(0, 50px 20px 50px 20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+
+      h1 {
+        font-size: 32px;
+      }
+    }
+
+    .tag-container {
+      @include layout(0, 0 20px 0 20px);
+      justify-content: center;
+
+      .tag {
+        width: 80%;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .circle-container {
+          .circle {
+            width: 50px;
+            height: 50px;
+            margin-right: -25px;
+            margin-bottom: -25px;
+
+            svg {
+              height: 40%;
+              width: auto;
+            }
+          }
+        }
+
+        .text-container {
+          padding: 30px;
+          border-radius: 25px;
+
+          p {
+            font-size: 16px;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .section {
+      @include layout(0, 50px 20px 50px 20px);
+
+      .section-content {
+        .charts-container {
+          flex-direction: column;
+
+          .chart {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .blocks-container {
+          .block {
+            width: 100%;
+          }
+        }
+
+        .squares-container {
+          .square {
+            width: 100%;
+            height: 120px;
+
+            p {
+              font-size: 14px;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
