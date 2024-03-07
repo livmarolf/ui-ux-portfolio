@@ -1,3 +1,4 @@
+import { ReactComponent as Arrow } from "../assets/landing/arrow.svg";
 import {
   contentReadability,
   continuousImprovement,
@@ -143,6 +144,11 @@ export default function CurriculumDesign() {
           </div>
 
           <img src={userTesting} alt="user testing feedback" />
+
+          <div className="scroll-arrow">
+            <p>scroll</p>
+            <Arrow />
+          </div>
 
           <div className="scrollable-rows">
             <div>

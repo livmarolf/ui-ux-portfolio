@@ -85,7 +85,6 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          // align-self: end;
           position: relative;
           right: -190px;
 
@@ -199,6 +198,30 @@
         grid-row-start: 5;
         grid-column-start: 1;
 
+        .scroll-arrow {
+          display: none;
+          // display: flex;
+          // align-items: center;
+          // justify-content: flex-end;
+          // width: 100%;
+          // margin-bottom: -40px;
+
+          // p {
+          //   color: $grey;
+          //   font-size: 20px;
+          //   margin-right: 20px;
+          //   font-family: $heading-font;
+          // }
+
+          // svg {
+          //   justify-self: end;
+
+          //   path {
+          //     fill: $theme;
+          //   }
+          // }
+        }
+
         .scrollable-rows {
           display: grid;
           grid-template-rows: auto;
@@ -290,21 +313,43 @@
     .sections-grid {
       .section {
         &:nth-child(5) {
+          .scroll-arrow {
+            display: initial;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+            margin-bottom: -40px;
+
+            p {
+              color: $grey;
+              font-size: 20px;
+              margin-right: 20px;
+              font-family: $heading-font;
+            }
+
+            svg {
+              justify-self: end;
+
+              path {
+                fill: $theme;
+              }
+            }
+          }
+
           .scrollable-rows {
             grid-template-columns: repeat(6, min-content);
             grid-auto-flow: column;
             column-gap: 20px;
-            overflow-x: auto;
-            overflow-y: visible;
+            overflow-x: scroll;
+            overflow-y: auto;
             width: 100%;
             padding: 20px 0 20px 20px;
-            white-space: nowrap;
             height: min-content;
 
             div {
-              height: min-content;
-              width: 200px;
-              height: auto;
+              min-height: auto;
+              width: 300px;
               text-wrap: wrap;
             }
           }
