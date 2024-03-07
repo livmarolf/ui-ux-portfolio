@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-import { ReactComponent as Line } from "../assets/icons/line.svg";
 import {
+  contentReadability,
   continuousImprovement,
   curriculumVsWeb,
-  feedbackLoop,
-  fillGapsWorkflow,
+  feedbackMethod,
+  studentVsUser,
+  userTesting,
 } from "../assets";
 
 export default function CurriculumDesign() {
@@ -13,36 +13,44 @@ export default function CurriculumDesign() {
       <div className="header-row">
         <div className="title-container">
           <div className="title">
+            <p>Let's talk about:</p>
             <h1>CURRICULUM DESIGN</h1>
+            <p>
+              I started my design journey by working as a curriculum designer on
+              a team creating curriculum for a web development course. Our aim
+              was to give individuals the skills to navigate coding from basics
+              to full-stack development.
+            </p>
+          </div>
+
+          <div className="blue-diamonds">
+            <div className="small-diamond">
+              <div className="layer-4">
+                <div className="layer-3">
+                  <div className="layer-2">
+                    <div className="layer-1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="large-diamond">
+              <div className="layer-4">
+                <div className="layer-3">
+                  <div className="layer-2">
+                    <div className="layer-1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="section-one">
-        <div className="intro-left">
-          <p>
-            Crafting pathways, weaving user experiences. A foundation for UI/UX
-            design.
-          </p>
-        </div>
-
-        <div className="intro-right">
-          <p>
-            I started my design journey by working as a curriculum designer on a
-            team creating curriculum for a web development course. Our aim was
-            to give individuals the skills to navigate coding from basics to
-            full-stack development.
-          </p>
-        </div>
-      </div>
-
-      <div className="section-two">
-        <div className="column-left">
+      <div className="sections-grid">
+        <div className="section">
           <h2>CURRICULUM DESIGN VS WEB DESIGN</h2>
-        </div>
 
-        <div className="column-right">
-          <div>
+          <div className="paragraph-container">
             <p>
               Curriculum design and web design share key principles, focusing on
               user-friendly experiences and clear communication.
@@ -54,48 +62,26 @@ export default function CurriculumDesign() {
             </p>
           </div>
 
-          <img src={curriculumVsWeb} alt="curriculum-vs-web" />
+          <img src={curriculumVsWeb} alt="curriculum vs web" />
         </div>
-      </div>
 
-      <div className="section-three">
-        <div>
+        <div className="section">
           <h2>DESIGNING FOR STUDENTS VS USERS</h2>
+
+          <p>
+            In curriculum design, the "user" is essentially the student. Despite
+            being called by various titles, they share common fundamental
+            traits. As a designer, I adhere to the same principles, ensuring
+            that the design remains inherently "user-centered."
+          </p>
+
+          <img src={studentVsUser} alt="students vs users" />
         </div>
 
-        <div className="content-row">
-          <div>
-            <h3>Student</h3>
-            <p>
-              For students, design in curriculum means setting up a
-              user-friendly learning space. It involves organizing content and
-              using different teaching methods for effective learning. A
-              well-designed curriculum makes it easy for students to access
-              educational materials.
-            </p>
-          </div>
-
-          <Line />
-
-          <div>
-            <h3>User</h3>
-            <p>
-              In web design, it's about creating a site that's easy for users to
-              navigate. The design focuses on clear presentation and interactive
-              features, making it straightforward for users to find what they
-              need and engage with the website easily.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="section-four">
-        <div>
+        <div className="section">
           <h2>CONTENT READABILITY & COHERENCE</h2>
-        </div>
 
-        <div className="column-right">
-          <div>
+          <div className="paragraph-container">
             <p>
               In curriculum design, clear content is essential for
               straightforward learning. When information is presented clearly
@@ -112,114 +98,117 @@ export default function CurriculumDesign() {
             </p>
           </div>
 
-          <img src={fillGapsWorkflow} alt="fill-gaps-workflow" />
+          <img src={contentReadability} alt="content flow" />
         </div>
-      </div>
 
-      <div className="section-five">
-        <div className="content-row-top">
+        <div className="section">
           <h2>CONTINUOUS IMPROVEMENT</h2>
 
-          <p>
-            In curriculum design, it is important to prioritize continuous
-            improvement. I do this by utilizing user feedback and data-driven
-            decisions for effectiveness.
-          </p>
+          <div className="paragraph-container">
+            <p>
+              In curriculum design, it is important to prioritize continuous
+              improvement. I do this by utilizing user feedback and data-driven
+              decisions for effectiveness.
+            </p>
+
+            <p>
+              I start by creating the curriculum to meet goals, then test it in
+              real situations and gather feedback. Based on this feedback, I
+              make adjustments to strengthen the curriculum, ensuring it meets
+              evolving needs and leads to better learning outcomes.
+            </p>
+          </div>
+
+          <img src={continuousImprovement} alt="continuous improvement" />
         </div>
 
-        <div className="img-container">
-          <img src={continuousImprovement} alt="continuous-improvement" />
-        </div>
-      </div>
+        <div className="section">
+          <h2>USER TESTING AND FEEDBACK COLLECTION</h2>
 
-      <div className="section-six">
-        <h2>USER TESTING AND FEEDBACK COLLECTION</h2>
-
-        <div className="caption">
-          <p>
-            In the world of curriculum design, user feedback, often provided by
-            students, is invaluable for fine-tuning the educational content. It
-            offers insights into what works, what needs improvement, and what
-            might be missing.
-          </p>
-
-          <p>
-            Student feedback helps identify areas of confusion, gaps in
-            understanding, or topics that need further clarification. It guides
-            curriculum designers in adapting the content to better cater to the
-            needs of the learners, resulting in a more effective and engaging
-            learning experience.
-          </p>
-        </div>
-
-        <img src={feedbackLoop} alt="feedback-loop" />
-
-        <div className="steps-container">
-          <div>
-            <h3>01 - COLLECTION</h3>
+          <div className="paragraph-container">
             <p>
-              Collect user feedback through various channels, such as surveys
-              and feedback forms.
+              In the world of curriculum design, user feedback, often provided
+              by students, is invaluable for fine-tuning the educational
+              content. It offers insights into what works, what needs
+              improvement, and what might be missing.
+            </p>
+
+            <p>
+              Student feedback helps identify areas of confusion, gaps in
+              understanding, or topics that need further clarification. It
+              guides curriculum designers in adapting the content to better
+              cater to the needs of the learners, resulting in a more effective
+              and engaging learning experience.
             </p>
           </div>
 
-          <div>
-            <h3>02 - ANALYSIS</h3>
-            <p>
-              Analyze and review collected feedback, identifying recurring
-              patterns and common themes.
-            </p>
-          </div>
+          <img src={userTesting} alt="user testing feedback" />
 
-          <div>
-            <h3>03 - PRIORIZATION</h3>
-            <p>
-              Prioritize areas for improvement based on their impact on user
-              experience and business goals.
-            </p>
-          </div>
+          <div className="scrollable-rows">
+            <div>
+              <h2>01 - COLLECTION</h2>
+              <p>
+                Collect user feedback through various channels, such as surveys
+                and feedback forms.
+              </p>
+            </div>
 
-          <div>
-            <h3>04 - IMPLEMENTATION</h3>
-            <p>Implement proposed changes or updates to the design.</p>
-          </div>
+            <div>
+              <h2>02 - ANALYSIS</h2>
+              <p>
+                Analyze and review collected feedback, identifying recurring
+                patterns and common themes.
+              </p>
+            </div>
 
-          <div>
-            <h3>05 - COMMUNICATION</h3>
-            <p>
-              Communicate changes to users, emphasizing transparency and the
-              value of their feedback.
-            </p>
-          </div>
+            <div>
+              <h2>03 - PRIORIZATION</h2>
+              <p>
+                Prioritize areas for improvement based on their impact on user
+                experience and business goals.
+              </p>
+            </div>
 
-          <div>
-            <h3>06 - SOLICITATION</h3>
-            <p>
-              Continue to encourage users to provide feedback, especially
-              regarding implemented changes.
-            </p>
-          </div>
+            <div>
+              <h2>04 - IMPLEMENTATION</h2>
+              <p>Implement proposed changes or updates to the design.</p>
+            </div>
 
-          <div>
-            <h3>07 - MONITORING</h3>
-            <p>
-              Define and monitor key performance indicators related to user
-              experience, satisfaction, and business goals.
-            </p>
-          </div>
+            <div>
+              <h2>05 - COMMUNICATION</h2>
+              <p>
+                Communicate changes to users, emphasizing transparency and the
+                value of their feedback.
+              </p>
+            </div>
 
-          <div>
-            <h3>08 - ADAPTATION</h3>
-            <p>
-              Adapt the feedback loop process to changing user needs, market
-              dynamics, and emerging trends.
-            </p>
+            <div>
+              <h2>06 - SOLICITATION</h2>
+              <p>
+                Continue to encourage users to provide feedback, especially
+                regarding implemented changes.
+              </p>
+            </div>
+
+            <div>
+              <h2>07 - MONITORING</h2>
+              <p>
+                Define and monitor key performance indicators related to user
+                experience, satisfaction, and business goals.
+              </p>
+            </div>
+
+            <div>
+              <h2>08 - ADAPTATION</h2>
+              <p>
+                Adapt the feedback loop process to changing user needs, market
+                dynamics, and emerging trends.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="section-seven">
-        <div className="content-row-top">
+        <div className="section">
           <h2>CHOOSING A FEEDBACK METHOD</h2>
 
           <p>
@@ -227,99 +216,8 @@ export default function CurriculumDesign() {
             it directly impacts the quality and relevance of the insights
             gathered, ultimately influencing the success of the design process
           </p>
-        </div>
 
-        <div className="feedback-steps">
-          <div>
-            <div className="step-title">
-              <h6>01</h6>
-              <h5>DEFINE OBJECTIVES</h5>
-            </div>
-            <p>
-              Define the specific goals and objectives for collecting user
-              feedback. Clearly articulate what aspects of the design you need
-              to be evaluated and/or improved.
-            </p>
-          </div>
-
-          <div>
-            <div className="step-title">
-              <h6>02</h6>
-              <h5>UNDERSTAND USERS</h5>
-            </div>
-            <p>
-              Understand the target audience and create user personas to capture
-              key demographic information, behaviors, and preferences. By
-              defining the characteristics of the intended users, you can tailor
-              feedback methods to better suit their needs and expectations.
-            </p>
-          </div>
-
-          <div>
-            <div className="step-title">
-              <h6>03</h6>
-              <h5>ASSESS TIMING</h5>
-            </div>
-            <p>
-              Determine the most appropriate timing for collecting feedback in
-              the design process. Whether it's during the early concept phase,
-              mid-design iteration, or post-implementation, aligning feedback
-              methods with the specific stage ensures relevance and
-              effectiveness.
-            </p>
-          </div>
-
-          <div>
-            <div className="step-title">
-              <h6>04</h6>
-              <h5>CONSIDER DATA TYPE</h5>
-            </div>
-            <p>
-              Think about the data needed for evaluation, whether it's numbers
-              or opinions. Balancing metrics with insights gives a great
-              understanding of user experiences and preferences.
-            </p>
-          </div>
-
-          <div>
-            <div className="step-title">
-              <h6>05</h6>
-              <h5>EVALUATE RESOURCES</h5>
-            </div>
-            <p>
-              Evaluate available resources, including time, budget, and
-              personnel. Select feedback methods that fit within these
-              limitations, ensuring efficient implementation without
-              compromising data quality.
-            </p>
-          </div>
-
-          <div>
-            <div className="step-title">
-              <h6>06</h6>
-              <h5>SELECT METHOD</h5>
-            </div>
-            <p>
-              Based on the considerations outlined in the previous steps, select
-              the most appropriate feedback method for your design project.
-              Develop a plan for method implementation, including creating
-              feedback tools, conducting pilot tests, and rolling out the chosen
-              method to the wider user base.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="section-eight">
-        <p>
-          Enjoyed exploring the world of curriculum design? For questions or
-          comments, don't hesitate to reach out—I'm here to connect!
-        </p>
-
-        <div>
-          <Link className="link-button" to="/contact">
-            Let's Talk
-          </Link>
+          <img src={feedbackMethod} alt="feedback method" />
         </div>
       </div>
     </div>

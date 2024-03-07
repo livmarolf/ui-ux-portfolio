@@ -1,6 +1,6 @@
 /**
  * This code can be found here: https://www.framer.com/motion/scroll-animations/##scroll-velocity
- * It has been slightly altered for personal use
+ * It has been altered here for personal use
  */
 
 import { useRef } from "react";

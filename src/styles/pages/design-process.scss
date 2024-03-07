@@ -35,8 +35,9 @@
 
           svg {
             transform: rotate(-45deg);
+
             path {
-              fill: $white;
+              fill: $theme;
             }
           }
         }

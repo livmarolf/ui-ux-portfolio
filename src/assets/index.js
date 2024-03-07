@@ -29,10 +29,12 @@ import rpreTaskFlow from "../assets/rpre/rpre-task-flow.png";
 import rpreUserFlow from "../assets/rpre/rpre-user-flow.png";
 import rpreTypography from "../assets/rpre/rpre-typography.png";
 import rpreWireframes from "../assets/rpre/rpre-wireframes.png";
-import curriculumVsWeb from "../assets/curriculum-design/curriculum-vs-web.png";
-import fillGapsWorkflow from "../assets/curriculum-design/fill-gaps-workflow.png";
+import contentReadability from "../assets/curriculum-design/content-readability.png";
 import continuousImprovement from "../assets/curriculum-design/continuous-improvement.png";
-import feedbackLoop from "../assets/curriculum-design/feedback-loop.png";
+import curriculumVsWeb from "../assets/curriculum-design/curriculum-vs-web.png";
+import feedbackMethod from "../assets/curriculum-design/feedback-method.png";
+import studentVsUser from "../assets/curriculum-design/student-vs-user.png";
+import userTesting from "../assets/curriculum-design/user-testing.png";
 
 export {
   huPrototype,
@@ -66,8 +68,10 @@ export {
   rpreUserFlow,
   rpreTypography,
   rpreWireframes,
-  curriculumVsWeb,
-  fillGapsWorkflow,
+  contentReadability,
   continuousImprovement,
-  feedbackLoop,
+  curriculumVsWeb,
+  feedbackMethod,
+  studentVsUser,
+  userTesting,
 };
