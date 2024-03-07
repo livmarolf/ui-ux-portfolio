@@ -35,6 +35,7 @@ import curriculumVsWeb from "../assets/curriculum-design/curriculum-vs-web.png";
 import feedbackMethod from "../assets/curriculum-design/feedback-method.png";
 import studentVsUser from "../assets/curriculum-design/student-vs-user.png";
 import userTesting from "../assets/curriculum-design/user-testing.png";
+import designProcessBlue from "../assets/design-process/design-process-blue.png";
 
 export {
   huPrototype,
@@ -74,4 +75,5 @@ export {
   feedbackMethod,
   studentVsUser,
   userTesting,
+  designProcessBlue,
 };

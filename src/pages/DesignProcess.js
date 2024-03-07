@@ -1,7 +1,7 @@
-import { ReactComponent as Arrow } from "../assets/landing/arrow.svg";
 import { ReactComponent as Chart } from "../assets/icons/chart.svg";
 import { ReactComponent as Routing } from "../assets/icons/routing.svg";
 import { ReactComponent as Rows } from "../assets/icons/rows.svg";
+import { designProcessBlue } from "../assets";
 
 export default function DesignProcess() {
   return (
@@ -10,24 +10,11 @@ export default function DesignProcess() {
         <h1>DESIGN PROCESS</h1>
       </div>
 
-      <div className="tag-container">
-        <div className="tag">
-          <div className="circle-container">
-            <div className="circle">
-              <Arrow />
-            </div>
-          </div>
-          <div className="text-container">
-            <p>
-              My UX design process is based on my personal approach, developed
-              through experience and applied consistently to all my projects.
-              Click here to read more about my background.
-            </p>
-          </div>
-        </div>
+      <div className="image-container">
+        <img src={designProcessBlue} alt="design-process" />
       </div>
 
-      <div className="section reverse">
+      <div className="section">
         <div className="section-content">
           <h1>RESEARCH</h1>
           <p className="centered">
@@ -85,17 +72,9 @@ export default function DesignProcess() {
             </div>
           </div>
         </div>
-
-        <div className="large-number">
-          <p>01</p>
-        </div>
       </div>
 
       <div className="section">
-        <div className="large-number">
-          <p>02</p>
-        </div>
-
         <div className="section-content">
           <h1>STRATEGIZE</h1>
 
@@ -151,7 +130,7 @@ export default function DesignProcess() {
         </div>
       </div>
 
-      <div className="section reverse">
+      <div className="section">
         <div className="section-content">
           <h1>DESIGN</h1>
           <p className="centered">
@@ -181,17 +160,9 @@ export default function DesignProcess() {
             </div>
           </div>
         </div>
-
-        <div className="large-number">
-          <p>03</p>
-        </div>
       </div>
 
       <div className="section">
-        <div className="large-number">
-          <p>04</p>
-        </div>
-
         <div className="section-content">
           <h1>TEST</h1>
 

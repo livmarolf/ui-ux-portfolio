@@ -1,176 +1,204 @@
 .contact-content {
-  .header-row {
-    position: relative;
-    top: -62px;
-    width: 100vw;
-    height: 60vh;
-    border-bottom: $dark-border;
+  @include layout(0, 0 120px 100px 120px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15%;
 
-    .title-container {
-      background-image: url("../../assets/common/shortened-smoke.png");
-      background-size: cover;
-      height: 100%;
-      display: flex;
-      align-items: flex-end;
+  .left-column {
+    display: flex;
+    flex-direction: column;
 
-      .title {
-        @include layout(0, 0 120px 100px 120px);
+    .title {
+      h1 {
+        font-family: $heading-font;
+        font-weight: $heaviest;
+        font-size: 60px;
+        color: $white;
+      }
+    }
 
-        h1 {
-          @include title-header($height: 30px);
+    .sub-text {
+      font-family: $heading-font;
+      font-size: 22px;
+      color: $body-content;
+      margin-bottom: 50px;
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-rows: auto;
+      row-gap: 20px;
+
+      .contact-method {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .circle {
+          height: 43px;
+          width: 43px;
+          border-radius: 50%;
+          background-color: $theme;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .method-txt {
+          background-color: $theme;
+          border-radius: 10px;
+          padding: 12px 17px;
+          height: 20px;
+
+          a {
+            text-decoration: none;
+            color: $light-black;
+            font-size: 18px;
+            margin: 0;
+          }
         }
       }
     }
   }
 
-  .contact-container {
-    @include layout(90px, 0 120px 45px 120px);
-    @include columns(30% 60%, 10%);
-    height: 60vh;
-
-    .left-column {
+  .right-column {
+    .dark-title {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
+      justify-content: center;
 
-      p {
-        font-size: $content;
-        color: $body-content;
-        font-weight: $light-weight;
-        margin-top: 0;
+      h1 {
+        font-family: $heading-font;
+        font-weight: $heaviest;
+        font-size: 60px;
+        color: $almost-black;
+      }
+    }
+
+    form {
+      @include rows(80px auto, 36px);
+
+      .top-inputs {
+        @include columns(1fr 1fr, 36px);
       }
 
-      ul {
-        @include rows(auto, 10px);
-        list-style-type: none;
-        margin-left: 0;
-        padding-left: 0;
+      .input {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
 
-        li {
-          @include columns(24px auto, 10px);
+        .message-len {
           font-size: $content;
-          align-items: center;
+          color: $theme;
+          align-self: flex-end;
         }
+
+        .err-msg {
+          color: $red;
+          font-size: 10px;
+        }
+
+        label {
+          font-size: 18px;
+          font-family: $heading-font;
+          color: $body-content;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus {
+          -webkit-text-fill-color: $header-grey;
+          -webkit-box-shadow: none;
+        }
+
+        input {
+          background-color: $almost-black;
+          border: 0;
+          padding: 16px 20px;
+          border-radius: 10px;
+          color: $header-grey;
+          min-width: 232px;
+
+          &::-webkit-input-placeholder {
+            color: #373737;
+          }
+
+          &:focus {
+            outline: 3px solid $theme;
+            color: $header-grey;
+          }
+        }
+      }
+
+      .btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          height: 40px;
+          padding: 0 20px;
+          background-color: $theme;
+          border: none;
+          border-radius: 10px;
+          font-family: $heading-font;
+          font-size: 16px;
+          color: $almost-black;
+          cursor: pointer;
+
+          &:disabled {
+            background-color: #50545d;
+            cursor: initial;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+
+    .left-column {
+      .contact-methods {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 60px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+
+    .left-column {
+      .title {
+        display: flex;
+        justify-content: center;
+      }
+
+      .sub-text {
+        text-align: center;
+      }
+
+      .contact-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
     }
 
     .right-column {
+      margin-top: 50px;
+
       form {
-        @include rows(80px auto, 36px);
-
+        grid-template-rows: auto;
         .top-inputs {
-          @include columns(1fr 1fr, 36px);
-        }
-
-        .input {
-          display: flex;
-          flex-direction: column;
-
-          .message-len {
-            font-size: $content;
-            color: $header-grey;
-          }
-
-          .err-msg {
-            color: $red;
-            font-size: 10px;
-          }
-
-          label {
-            font-size: $large-content;
-            color: $header-white;
-            font-weight: $light-weight;
-            margin: 0;
-          }
-
-          input:-webkit-autofill,
-          input:-webkit-autofill:hover,
-          input:-webkit-autofill:focus {
-            -webkit-text-fill-color: $header-grey;
-            -webkit-box-shadow: none;
-            transition: background-color 5000s ease-in-out 0s;
-          }
-
-          input {
-            background-color: transparent;
-            border: none;
-            border-bottom: $thin-border;
-            padding: 12px 0;
-            color: $header-grey;
-            border-radius: 0;
-
-            &::-webkit-input-placeholder {
-              color: #373737;
-            }
-
-            &:focus {
-              outline: none;
-              color: $header-grey;
-              background-color: transparent;
-            }
-          }
-        }
-
-        .btn-container {
-          width: 100%;
-          display: flex;
-          justify-content: flex-end;
-
-          button {
-            @include button-style;
-
-            &:disabled {
-              color: $header-grey;
-              border: 0.5px solid $header-grey;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    .header-row {
-      height: 40vh;
-
-      .title-container {
-        .title {
-          @include layout(0, 0 60px 100px 60px);
-
-          h1 {
-            font-size: 32px;
-          }
-        }
-      }
-    }
-
-    .contact-container {
-      padding: 0 60px 45px 60px;
-    }
-  }
-
-  @media screen and (max-width: 570px) {
-    .header-row {
-      .title-container {
-        .title {
-          @include layout(0, 0 20px 100px 20px);
-        }
-      }
-    }
-
-    .contact-container {
-      padding: 0 20px 45px 20px;
-      margin-top: 0;
-      grid-template-rows: auto;
-      grid-template-columns: none;
-      row-gap: 48px;
-      height: 100%;
-
-      .left-column {
-        ul {
-          display: grid;
-          grid-template-rows: 1fr 1fr;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: none;
+          grid-template-rows: auto;
+          column-gap: 0;
+          row-gap: 36px;
         }
       }
     }

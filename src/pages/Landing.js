@@ -27,7 +27,17 @@ export default function Landing() {
           </div>
 
           <div className="qrcode-container">
-            <p>Scan to download my resume.</p>
+            <p>
+              Scan to download my{" "}
+              <a
+                target="blank"
+                href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:3a2fadb8-ab94-48b9-aa6f-1b8669e3a0af"
+              >
+                resume
+              </a>
+              .
+            </p>
+
             <div className="qrcode">
               <img src={qrcode} alt="qrcode" />
             </div>

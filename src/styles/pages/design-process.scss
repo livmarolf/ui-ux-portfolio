@@ -9,57 +9,17 @@
     }
   }
 
-  .tag-container {
-    @include layout(0, 0 0 100px 0);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  .image-container {
+    @include layout(0, 0px 120px 0px 120px);
 
-    .tag {
-      width: 60%;
-      display: flex;
-      align-items: center;
-
-      .circle-container {
-        z-index: 1;
-
-        .circle {
-          margin-right: -50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100px;
-          width: 100px;
-          border-radius: 50%;
-          background-color: $pink-red;
-
-          svg {
-            transform: rotate(-45deg);
-
-            path {
-              fill: $theme;
-            }
-          }
-        }
-      }
-
-      .text-container {
-        border-radius: 25px 0 0 25px;
-        background-color: $almost-black;
-        padding: 24px 100px;
-
-        p {
-          font-family: $heading-font;
-          color: $white;
-          font-size: 24px;
-        }
-      }
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 
   .section {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     @include layout(0, 100px 120px 100px 120px);
 
@@ -98,7 +58,7 @@
           width: 50%;
 
           .chart-header {
-            background-color: $pink-red;
+            background-color: $theme;
             height: 55px;
             display: flex;
             align-items: center;
@@ -158,6 +118,12 @@
           border-radius: 25px;
           padding: 30px 20px;
 
+          svg {
+            path {
+              stroke: $theme;
+            }
+          }
+
           .block-text {
             h2 {
               color: $header-grey;
@@ -190,7 +156,7 @@
           padding: 30px;
 
           h2 {
-            color: $pink-red;
+            color: $theme;
             font-size: 14px;
             font-weight: $light-weight;
           }
@@ -222,7 +188,7 @@
           }
 
           h2 {
-            color: $pink-red;
+            color: $theme;
             font-size: 14px;
             font-weight: $light-weight;
             margin: 0;
@@ -238,24 +204,10 @@
     }
   }
 
-  .large-number {
-    p {
-      margin: 0;
-      font-size: 300px;
-      font-weight: 100;
-      font-family: $heading-font;
-      color: $pink-red;
-    }
-  }
-
   @media screen and (max-width: 1030px) {
     .section {
       flex-direction: column;
       justify-content: center;
-
-      &.reverse {
-        flex-direction: column-reverse;
-      }
 
       .section-content {
         width: 100%;
@@ -317,6 +269,10 @@
       h1 {
         font-size: 32px;
       }
+    }
+
+    .image-container {
+      @include layout(0, 0px 20px 0px 20px);
     }
 
     .tag-container {

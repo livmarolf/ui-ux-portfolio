@@ -44,6 +44,11 @@
           font-size: $content;
         }
 
+        a {
+          color: $theme;
+          font-size: $content;
+        }
+
         .qrcode {
           height: 260px;
           width: 260px;
@@ -142,7 +147,7 @@
   }
 
   .columns {
-    @include layout(0, 200px 120px 0 120px);
+    @include layout(0, 200px 120px 100px 120px);
     @include columns(1fr 1fr 1fr, 20px);
 
     .title-block {
@@ -201,7 +206,7 @@
 
     .case-block {
       height: 580px;
-      background-color: #090909;
+      background-color: $almost-black;
       border-radius: 10px;
       padding: 40px 20px;
       @include rows(30px 50px 420px 40px, 20px);
