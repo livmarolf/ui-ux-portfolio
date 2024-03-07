@@ -147,7 +147,7 @@
   }
 
   .columns {
-    @include layout(0, 200px 120px 0 120px);
+    @include layout(0, 200px 120px 100px 120px);
     @include columns(1fr 1fr 1fr, 20px);
 
     .title-block {
