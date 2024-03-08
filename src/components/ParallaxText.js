@@ -28,7 +28,6 @@ export default function ParallaxText({ children, baseVelocity = 1 }) {
   });
 
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
-  console.log(x);
 
   const directionFactor = useRef(1);
   useAnimationFrame((t, delta) => {
