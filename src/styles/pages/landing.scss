@@ -24,6 +24,7 @@
           font-family: $heading-font;
           font-size: 22px;
           color: $body-content;
+          max-width: 800px;
         }
 
         h1 {
@@ -40,7 +41,7 @@
 
       .qrcode-container {
         p {
-          color: $grey;
+          color: $body-content;
           font-size: $content;
         }
 
@@ -138,8 +139,10 @@
         }
 
         a {
+          margin-left: 10px;
+
           button {
-            margin-left: 10px;
+            cursor: pointer;
           }
         }
       }
@@ -154,6 +157,7 @@
       display: flex;
       align-items: center;
       height: 580px;
+      max-width: 435px;
 
       div {
         width: min-content;
@@ -181,6 +185,7 @@
       align-items: center;
       height: 580px;
       justify-content: flex-end;
+      max-width: 435px;
 
       div {
         display: grid;
@@ -211,6 +216,7 @@
       padding: 40px 20px;
       @include rows(30px 50px 420px 40px, 20px);
       align-items: center;
+      max-width: 435px;
 
       p {
         font-family: $heading-font;

@@ -146,9 +146,8 @@ export default function Contact() {
 
           <div className="input">
             <label>Message</label>
-            <input
+            <textarea
               required
-              type="text"
               placeholder="Hi there..."
               name="message"
               maxLength="400"

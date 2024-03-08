@@ -115,16 +115,38 @@
           border: 0;
           padding: 16px 20px;
           border-radius: 10px;
-          color: $header-grey;
+          color: $body-content;
           min-width: 232px;
 
           &::-webkit-input-placeholder {
-            color: #373737;
+            color: $grey;
           }
 
           &:focus {
             outline: 3px solid $theme;
-            color: $header-grey;
+            color: $body-content;
+          }
+        }
+
+        textarea {
+          background-color: $almost-black;
+          border: 0;
+          padding: 16px 20px;
+          border-radius: 10px;
+          color: $body-content;
+          min-width: 232px;
+          font-family: "Inter", sans-serif;
+          resize: none;
+          max-height: 80px;
+          overflow-y: auto;
+
+          &::placeholder {
+            color: $grey;
+          }
+
+          &:focus {
+            outline: 3px solid $theme;
+            color: $body-content;
           }
         }
       }
@@ -147,7 +169,7 @@
 
           &:disabled {
             background-color: #50545d;
-            cursor: initial;
+            cursor: default;
           }
         }
       }
