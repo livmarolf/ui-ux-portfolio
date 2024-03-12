@@ -596,7 +596,7 @@ export default function HuddleUp() {
         <div className="content-wrapper">
           <a
             className="prototype-link-wrapper"
-            href="https://www.figma.com/proto/uvihyeI6mIAEy90es6flsk/HuddleUp?page-id=1%3A2&type=design&node-id=1-601&viewport=255%2C128%2C0.16&t=ApVsOOHBz1gUYM3S-1&scaling=scale-down&starting-point-node-id=1%3A601&mode=design"
+            href="https://www.figma.com/proto/Wosz9hKXRLbQF0hsPrnZM8/HuddleUp?page-id=1%3A2&type=design&node-id=1-84&viewport=318%2C165%2C0.18&t=FOA6ZHyZ63grt7Hr-1&scaling=scale-down&starting-point-node-id=1%3A72&mode=design"
             target="_blank"
             rel="noopener noreferrer"
           >
