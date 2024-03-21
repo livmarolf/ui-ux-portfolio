@@ -31,7 +31,7 @@ export default function Landing() {
               Scan to download my{" "}
               <a
                 target="blank"
-                href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:3ce121b0-1d8e-4383-918e-1d541df28522"
+                href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:a4674cc5-7015-4734-a90a-b1d619e4f935"
               >
                 resume
               </a>
