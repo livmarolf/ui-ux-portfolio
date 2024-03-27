@@ -67,7 +67,7 @@ export default function Contact() {
             <div className="method-txt">
               <a
                 target="blank"
-                href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:a4674cc5-7015-4734-a90a-b1d619e4f935"
+                href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
               >
                 download resume
               </a>
