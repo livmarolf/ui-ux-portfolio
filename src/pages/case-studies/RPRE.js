@@ -1,22 +1,7 @@
-import {
-  designProcess,
-  figma,
-  trello,
-  illustrator,
-  rprePersona,
-  rprePrioritiedRoadmap,
-  rpreProductGoals,
-  rprePrototype,
-  rpreTaskFlow,
-  rpreTypography,
-  rpreUserFlow,
-  rpreWireframes,
-} from "../../assets";
-
 export default function RPRE() {
   return (
     <div className="page-content rpre">
-      <div className="title-container">
+      {/* <div className="title-container">
         <div className="title">
           <h1>REAL PATREA REAL ESTATE</h1>
           <div>
@@ -602,7 +587,7 @@ export default function RPRE() {
             </div>
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,59 +1,132 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import Dropdown from "../components/Dropdown";
-import { ReactComponent as ArrowDown } from "../assets/icons/arrow-down.svg";
-import { ReactComponent as Bars } from "../assets/icons/bars.svg";
-import { MenuItems } from "../data/MenuItems";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  const location = useLocation();
-  const [dropdown, setDropdown] = useState(false);
-  const [navOpen, setNavOpen] = useState(false);
-  const title = MenuItems.find((el) => el.path === location.pathname)?.title;
-
   return (
     <nav className="navbar">
-      <h6>{title}</h6>
-
-      <Bars className="bars" onClick={() => setNavOpen(!navOpen)} />
-
-      <div
-        className={navOpen ? "navlinks-wrapper open" : "navlinks-wrapper"}
-        onClick={() => setNavOpen(false)}
-      >
-        <div className="navlink">
-          <Link className="main-link" to="/">
-            HOME
-          </Link>
-        </div>
-
-        <div className="navlink">
-          <Link className="main-link" to="/contact">
-            CONTACT
-          </Link>
-        </div>
-
-        {navOpen ? (
-          <div className="navlink">
-            <div className="contents-header">
-              CONTENTS <ArrowDown />
-            </div>
-            <Dropdown />
-          </div>
-        ) : (
-          <div
-            className="navlink"
-            onMouseEnter={() => setDropdown(true)}
-            onMouseLeave={() => setDropdown(false)}
+      <div className="nav-left">
+        <div>
+          <Link>GITHUB</Link>
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <button
-              className={dropdown ? "dropdown-btn clicked" : "dropdown-btn"}
-            >
-              CONTENTS <ArrowDown />
-            </button>
-            {dropdown && <Dropdown onClick={() => setDropdown(false)} />}
-          </div>
-        )}
+            <path
+              d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+              stroke="white"
+              stroke-width="0.8"
+              stroke-miterlimit="10"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10.8319 22.1626L21.0703 9.96094"
+              stroke="white"
+              stroke-width="0.8"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+        <div>
+          <Link>LINKEDIN</Link>
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+              stroke="white"
+              stroke-width="0.8"
+              stroke-miterlimit="10"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10.8319 22.1626L21.0703 9.96094"
+              stroke="white"
+              stroke-width="0.8"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+        <div>
+          <Link>RESUME</Link>
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+              stroke="white"
+              stroke-width="0.8"
+              stroke-miterlimit="10"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10.8319 22.1626L21.0703 9.96094"
+              stroke="white"
+              stroke-width="0.8"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+        <div>
+          <Link>EMAIL</Link>
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+              stroke="white"
+              stroke-width="0.8"
+              stroke-miterlimit="10"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10.8319 22.1626L21.0703 9.96094"
+              stroke="white"
+              stroke-width="0.8"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div className="nav-right">
+        <div className="bio">
+          <p>OLIVIA MAROLF</p>
+          <p>UI/UX DESIGNER & SOFTWARE DEVELOPER</p>
+          <p>BASED IN SALT LAKE CITY, UT</p>
+        </div>
+
+        <div className="btn-container">
+          <button>CONTACT ME</button>
+        </div>
       </div>
     </nav>
   );
