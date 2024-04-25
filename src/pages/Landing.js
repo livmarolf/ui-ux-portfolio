@@ -30,6 +30,7 @@ export default function Landing() {
     <div className="landing-container">
       <ProgressCircle />
       <Navbar />
+
       <div className="title-container">
         <div className="left">
           <div className="name-block">
@@ -272,6 +273,234 @@ export default function Landing() {
         </div>
         <div className="right">
           <p>DESIGN & DEVELOPMENT</p>
+        </div>
+      </div>
+
+      <div className="skills">
+        <div className="left">
+          <div className="heading">
+            <h1>UI/UX DESIGN</h1>
+            <p>01</p>
+          </div>
+
+          <div className="skills-grid">
+            <div>
+              <p>USER TESTING</p>•
+            </div>
+            <div>
+              <p>PROTOTYPING</p>•
+            </div>
+            <div>
+              <p>RESEARCH</p>•
+            </div>
+            <div>
+              <p>WIREFRAMING</p>•
+            </div>
+            <div>
+              <p>FIGMA</p>•
+            </div>
+            <div>
+              <p>FRAMER</p>•
+            </div>
+            <div>
+              <p>ADOBE XD</p>•
+            </div>
+            <div>
+              <p>ADOBE ILLUSTRATOR</p>•
+            </div>
+          </div>
+        </div>
+        <div className="right">
+          <div className="heading">
+            <h1>SOFTWARE DEVELOPMENT</h1>
+            <p>02</p>
+          </div>
+
+          <div className="skills-grid">
+            <div>
+              <p>HTML</p>•
+            </div>
+            <div>
+              <p>CSS</p>•
+            </div>
+            <div>
+              <p>SCSS</p>•
+            </div>
+            <div>
+              <p>REACT</p>•
+            </div>
+            <div>
+              <p>JAVASCRIPT</p>•
+            </div>
+            <div>
+              <p>FRAMER MOTION</p>•
+            </div>
+            <div>
+              <p>PYTHON</p>•
+            </div>
+            <div>
+              <p>SQL</p>•
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="cta">
+        <div className="heading">
+          <h1>LET'S TALK</h1>
+          <div className="btn-container">
+            <button>CONTACT ME</button>
+          </div>
+        </div>
+
+        <div className="columns">
+          <div className="left">
+            <div>
+              <p>LINKEDIN</p>
+              <p>@OLIVIAMAROLF</p>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.8319 22.1626L21.0703 9.96094"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <div>
+              <p>GITHUB</p>
+              <p>/OLIVIAMAROLF</p>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.8319 22.1626L21.0703 9.96094"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <div>
+              <p>EMAIL</p>
+              <p>LIVMAROLF@GMAIL.COM</p>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.8319 22.1626L21.0703 9.96094"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div className="right">
+            <div>
+              <p>RESUME</p>
+              <p>DOWNLOAD</p>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.8319 22.1626L21.0703 9.96094"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <div>
+              <p>MOBILE</p>
+              <p>(801) 885-8122</p>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.8319 22.1626L21.0703 9.96094"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </div>

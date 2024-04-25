@@ -1,5 +1,4 @@
 .navbar {
-  // margin-top: -80px;
   display: grid;
   grid-template-columns: 50% 40%;
   column-gap: 10%;
@@ -11,13 +10,13 @@
     div {
       display: flex;
       align-items: center;
-      font-weight: 300;
       height: min-content;
 
       a {
         text-decoration: none;
         color: #d9d9d9;
         font-size: 14px;
+        font-family: "PP Supply Mono Light", sans-serif;
       }
     }
   }
@@ -29,7 +28,7 @@
 
     .bio {
       font-size: 14px;
-      font-weight: 500;
+      font-family: "PP Supply Mono Regular", sans-serif;
       display: grid;
       grid-template-rows: auto;
       row-gap: 12px;
