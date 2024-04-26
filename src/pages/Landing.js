@@ -1,31 +1,14 @@
-import { motion, useScroll, useSpring } from "framer-motion";
 import Navbar from "../layouts/Navbar";
-import ParallaxText from "../components/ParallaxText";
-
-function ProgressCircle() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
-  return (
-    <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
-      <motion.circle
-        cx="50"
-        cy="50"
-        r="30"
-        pathLength="1"
-        className="indicator"
-        style={{ pathLength: scaleX }}
-      />
-    </svg>
-  );
-}
+import ParallaxText from "../components/motion/ParallaxText";
+import ProgressCircle from "../components/motion/ProgressCircle";
+import Paragraph from "../components/motion/Paragraph";
+import SlideCard from "../components/motion/SlideCard";
 
 export default function Landing() {
+  const paragraph = `
+With over four years of experience in software development and UI/UX design, I bring a passion for blending technology and design seamlessly. From crafting intuitive user interfaces to architecting robust software systems, my diverse skill set allows me to create engaging digital experiences that prioritize both form and function.
+`;
+
   return (
     <div className="landing-container">
       <ProgressCircle />
@@ -107,66 +90,33 @@ export default function Landing() {
         </div>
       </div>
 
-      <div className="case-card">
-        <div className="left">
-          <div className="image-container"></div>
-          <div className="description">
-            <h1>ZERO</h1>
-            <p>WEB DESIGN • DEVELOPMENT</p>
-          </div>
-        </div>
-        <div className="right"></div>
-      </div>
+      <SlideCard
+        title={"HUDDLEUP"}
+        description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
+        direction={50}
+      />
 
-      <div className="case-card">
-        <div className="left">
-          <div className="image-container"></div>
-          <div className="description">
-            <h1>ZERO</h1>
-            <p>WEB DESIGN • DEVELOPMENT</p>
-          </div>
-        </div>
-        <div className="right"></div>
-      </div>
+      <SlideCard
+        title={"ZERO"}
+        description={"WEB DESIGN • DEVELOPMENT"}
+        direction={-50}
+      />
 
-      <div className="case-card">
-        <div className="left">
-          <div className="image-container"></div>
-          <div className="description">
-            <h1>ZERO</h1>
-            <p>WEB DESIGN • DEVELOPMENT</p>
-          </div>
-        </div>
-        <div className="right"></div>
-      </div>
-
-      <div className="case-card">
-        <div className="left">
-          <div className="image-container"></div>
-          <div className="description">
-            <h1>ZERO</h1>
-            <p>WEB DESIGN • DEVELOPMENT</p>
-          </div>
-        </div>
-        <div className="right"></div>
-      </div>
+      <SlideCard
+        title={"REAL PATREA REAL ESTATE"}
+        description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
+        direction={50}
+      />
 
       <div className="about-container">
         <div className="left">
-          <p>ABOUT OLIVIA</p>
+          <p className="header">ABOUT OLIVIA</p>
 
-          <p className="large-text">
-            Product designer, specializing in crafting user-friendly products
-            and brands with expertise in 3D Rendering, Motion Design, Product
-            design, Prototyping and Front-end
-          </p>
-          <p className="large-text">
-            Crafting seamless user and brand experiences, adeptly collaborating
-            with development teams and stakeholders to tackle design challenges
-            and maintain consistency across platforms.
-          </p>
+          <div>
+            <Paragraph paragraph={paragraph} />
+          </div>
 
-          <p>2024</p>
+          <p className="header">2024</p>
         </div>
 
         <div className="right">
@@ -199,7 +149,7 @@ export default function Landing() {
                   stroke-linejoin="round"
                 />
               </svg>
-              <div>2022-2024</div>
+              <p className="date">2022-2024</p>
             </div>
             <div className="row">
               <p>DEVPIPELINE</p>
@@ -227,7 +177,7 @@ export default function Landing() {
                   stroke-linejoin="round"
                 />
               </svg>
-              <div>2022-2024</div>
+              <p className="date">2022-2024</p>
             </div>
             <div className="row">
               <p>KELLER WILLIAMS</p>
@@ -255,24 +205,22 @@ export default function Landing() {
                   stroke-linejoin="round"
                 />
               </svg>
-              <div>2022-2024</div>
+              <p className="date">2022-2024</p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="tools">
-        <div className="left">
+        <div className="headings">
           <p>TOOLS AND TECHNOLOGIES</p>
-
-          <div className="parallax">
-            <ParallaxText baseVelocity={-1}>
-              REACT.JS FRAMER FIGMA SKETCH ADOBE
-            </ParallaxText>
-          </div>
-        </div>
-        <div className="right">
           <p>DESIGN & DEVELOPMENT</p>
+        </div>
+
+        <div className="parallax">
+          <ParallaxText baseVelocity={-1} whitespace={5}>
+            REACT FRAMER FIGMA SKETCH ADOBE
+          </ParallaxText>
         </div>
       </div>
 
@@ -347,7 +295,7 @@ export default function Landing() {
 
       <div className="cta">
         <div className="heading">
-          <h1>LET'S TALK</h1>
+          <h1>DROP ME A LINE</h1>
           <div className="btn-container">
             <button>CONTACT ME</button>
           </div>
@@ -475,6 +423,35 @@ export default function Landing() {
             <div>
               <p>MOBILE</p>
               <p>(801) 885-8122</p>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.8319 22.1626L21.0703 9.96094"
+                  stroke="white"
+                  stroke-width="0.8"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <div>
+              <p>FIGMA</p>
+              <p>/OLIVIA</p>
               <svg
                 width="32"
                 height="32"

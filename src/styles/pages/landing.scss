@@ -2,10 +2,9 @@
   position: relative;
   margin: 0px 35px 0 120px;
   padding-top: 120px;
-  border-right: 1px solid #212121;
-  border-left: 1px solid #212121;
+  border-right: 1px solid $dark-grey;
+  border-left: 1px solid $dark-grey;
   max-width: 100%;
-  // overflow-x: hidden;
 
   &::before,
   &::after {
@@ -14,7 +13,7 @@
     top: 0;
     bottom: 0;
     width: 1px;
-    background-color: #212121;
+    background-color: $dark-grey;
     z-index: -1;
   }
 
@@ -39,12 +38,12 @@
     }
 
     .bg {
-      stroke: #dadada;
+      stroke: $content;
       opacity: 0.3;
     }
 
     .indicator {
-      stroke: #dadada;
+      stroke: $content;
     }
   }
 
@@ -58,14 +57,14 @@
       display: flex;
 
       h1 {
-        font-family: "Rubik", sans-serif;
+        font-family: $main-font;
         font-style: normal;
         margin: 0px;
         padding-left: 0;
         padding-right: 4px;
         line-height: 0.7;
         font-weight: 600;
-        color: #d9d9d9;
+        color: $content;
       }
     }
 
@@ -86,8 +85,8 @@
           margin: 0;
           align-self: flex-end;
           margin-left: auto;
-          color: #d9d9d9ad;
-          font-family: "PP Supply Mono Regular", sans-serif;
+          color: $light-grey;
+          font-family: $accent-font;
         }
       }
     }
@@ -104,6 +103,7 @@
     display: grid;
     grid-template-columns: 50% auto;
     column-gap: 10%;
+    margin-bottom: 150px;
 
     .left {
       .image-container {
@@ -131,8 +131,8 @@
         p {
           font-size: 14px;
           margin: 0;
-          color: #d9d9d9ad;
-          font-family: "PP Supply Mono Light", sans-serif;
+          color: $light-grey;
+          font-family: $light-accent-font;
         }
       }
     }
@@ -142,44 +142,49 @@
     display: grid;
     grid-template-columns: 50% 40%;
     column-gap: 10%;
+    margin-bottom: 150px;
 
     .left {
-      p {
+      display: grid;
+      grid-template-rows: auto;
+      row-gap: 50px;
+
+      .header {
         font-size: 14px;
         margin: 0;
-        color: #d9d9d9ad;
-        font-family: "PP Supply Mono Regular", sans-serif;
-      }
-
-      .large-text {
-        font-family: "Rubik", sans-serif;
-        font-size: 30px;
+        color: $light-grey;
+        font-family: $accent-font;
       }
     }
 
     .right {
+      display: grid;
+      grid-template-rows: min-content;
+      row-gap: 50px;
+
       p {
         font-size: 14px;
         margin: 0;
-        color: #d9d9d9ad;
-        font-family: "PP Supply Mono Regular", sans-serif;
+        color: $light-grey;
+        font-family: $accent-font;
       }
 
       .experience-grid {
-        display: grid;
-        grid-template-rows: auto;
-
         .row {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          border-bottom: 1px solid #212121;
+          border-bottom: 1px solid $dark-grey;
 
           p {
             min-width: 150px;
-            font-family: "PP Supply Mono Light", sans-serif;
-            color: #d9d9d9;
+            font-family: $light-accent-font;
+            color: $content;
+          }
+
+          .date {
+            text-align: right;
           }
         }
       }
@@ -187,46 +192,49 @@
   }
 
   .tools {
+    margin-bottom: 50px;
     display: grid;
-    grid-template-columns: 50% 40%;
-    column-gap: 10%;
+    grid-template-rows: min-content;
+    row-gap: 25px;
 
-    .left {
-      width: 100vw;
+    .headings {
+      display: grid;
+      grid-template-columns: 50% 40%;
+      column-gap: 10%;
 
       p {
         font-size: 14px;
         margin: 0;
-        color: #d9d9d9ad;
-        font-family: "PP Supply Mono Regular", sans-serif;
+        color: $light-grey;
+        font-family: $accent-font;
       }
+    }
 
-      .parallax {
-        overflow: hidden;
-        letter-spacing: -2px;
-        line-height: 0.8;
-        margin: 0;
+    .parallax {
+      overflow: hidden;
+      letter-spacing: -2px;
+      line-height: 0.8;
+      margin: 0;
+      white-space: nowrap;
+      display: flex;
+      flex-wrap: nowrap;
+      margin-right: -35px;
+      margin-left: -120px;
+
+      .motion-container {
+        padding: 30px 0;
+        display: flex;
         white-space: nowrap;
         display: flex;
         flex-wrap: nowrap;
-        margin-right: -35px;
-        margin-left: -120px;
 
-        .motion-container {
-          padding: 30px 0;
-          display: flex;
-          white-space: nowrap;
-          display: flex;
-          flex-wrap: nowrap;
-
-          span {
-            font-family: "Rubik", sans-serif;
-            font-weight: 600;
-            color: #d9d9d9;
-            font-size: 9vw;
-            display: block;
-            margin-right: 30px;
-          }
+        span {
+          font-family: $main-font;
+          font-weight: 600;
+          color: $content;
+          font-size: 9vw;
+          display: block;
+          margin-right: 30px;
         }
       }
     }
@@ -235,8 +243,8 @@
       p {
         font-size: 14px;
         margin: 0;
-        color: #d9d9d9ad;
-        font-family: "PP Supply Mono Regular", sans-serif;
+        color: $light-grey;
+        font-family: $accent-font;
       }
     }
   }
@@ -245,6 +253,7 @@
     display: grid;
     grid-template-columns: 50% 40%;
     column-gap: 10%;
+    margin-bottom: 150px;
 
     .left {
       .heading {
@@ -253,15 +262,15 @@
         align-items: center;
 
         h1 {
-          font-family: "Rubik", sans-serif;
+          font-family: $main-font;
           font-weight: 400;
         }
 
         p {
           font-size: 14px;
           margin: 0;
-          color: #d9d9d9ad;
-          font-family: "PP Supply Mono Regular", sans-serif;
+          color: $light-grey;
+          font-family: $accent-font;
         }
       }
 
@@ -272,16 +281,16 @@
 
         div {
           min-width: 180px;
-          border-bottom: 1px solid #212121;
+          border-bottom: 1px solid $dark-grey;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          color: #212121;
+          color: $dark-grey;
 
           p {
-            color: #d9d9d9;
+            color: $content;
             font-size: 14px;
-            font-family: "PP Supply Mono Light", sans-serif;
+            font-family: $light-accent-font;
           }
         }
       }
@@ -294,15 +303,15 @@
         align-items: center;
 
         h1 {
-          font-family: "Rubik", sans-serif;
+          font-family: $main-font;
           font-weight: 400;
         }
 
         p {
           font-size: 14px;
           margin: 0;
-          color: #d9d9d9ad;
-          font-family: "PP Supply Mono Regular", sans-serif;
+          color: $light-grey;
+          font-family: $accent-font;
         }
       }
 
@@ -313,16 +322,16 @@
 
         div {
           min-width: 180px;
-          border-bottom: 1px solid #212121;
+          border-bottom: 1px solid $dark-grey;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          color: #212121;
+          color: $dark-grey;
 
           p {
-            color: #d9d9d9;
+            color: $content;
             font-size: 14px;
-            font-family: "PP Supply Mono Light", sans-serif;
+            font-family: $light-accent-font;
           }
         }
       }
@@ -330,15 +339,20 @@
   }
 
   .cta {
+    padding-bottom: 150px;
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 100px;
+
     .heading {
       width: 89vw;
       display: flex;
       justify-content: space-between;
 
       h1 {
-        font-family: "Rubik", sans-serif;
+        font-family: $main-font;
         font-weight: 600;
-        color: #d9d9d9;
+        color: $content;
         font-size: 116px;
         margin: 0;
         line-height: 0.7;
@@ -351,7 +365,7 @@
           padding: 10px 20px;
           width: max-content;
           border: none;
-          background-color: #d9d9d9;
+          background-color: $content;
         }
       }
     }
@@ -366,12 +380,13 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          border-bottom: 1px solid #212121;
+          border-bottom: 1px solid $dark-grey;
 
           p {
-            color: #d9d9d9;
+            color: $content;
             font-size: 14px;
-            font-family: "PP Supply Mono Light", sans-serif;
+            font-family: $light-accent-font;
+            min-width: 150px;
           }
         }
       }
@@ -381,12 +396,13 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          border-bottom: 1px solid #212121;
+          border-bottom: 1px solid $dark-grey;
 
           p {
-            color: #d9d9d9;
+            color: $content;
             font-size: 14px;
-            font-family: "PP Supply Mono Light", sans-serif;
+            font-family: $light-accent-font;
+            min-width: 150px;
           }
         }
       }

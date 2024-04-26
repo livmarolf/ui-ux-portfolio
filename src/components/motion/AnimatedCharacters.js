@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const AnimatedCharacter = ({ text }) => {
+const AnimatedCharacters = ({ text }) => {
   const letters = Array.from(text);
 
   const container = {
@@ -53,4 +53,4 @@ const AnimatedCharacter = ({ text }) => {
   );
 };
 
-export default AnimatedCharacter;
+export default AnimatedCharacters;

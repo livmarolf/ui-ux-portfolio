@@ -1,8 +1,3 @@
-/**
- * This code can be found here: https://www.framer.com/motion/scroll-animations/##scroll-velocity
- * It has been altered here for personal use
- */
-
 import { useRef } from "react";
 import {
   motion,
@@ -15,7 +10,15 @@ import {
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 
-export default function ParallaxText({ children, baseVelocity = 1 }) {
+export default function ParallaxText({
+  children,
+  whitespace,
+  baseVelocity = 1,
+}) {
+  const words = children.split(" ");
+  const wordsWithSpaces =
+    words.join("\xa0".repeat(whitespace)) + "\xa0".repeat(whitespace);
+
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -30,6 +33,7 @@ export default function ParallaxText({ children, baseVelocity = 1 }) {
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
   const directionFactor = useRef(1);
+
   useAnimationFrame((t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
@@ -47,10 +51,10 @@ export default function ParallaxText({ children, baseVelocity = 1 }) {
   return (
     <>
       <motion.div className="motion-container" style={{ x }}>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
+        <span>{wordsWithSpaces}</span>
+        <span>{wordsWithSpaces}</span>
+        <span>{wordsWithSpaces}</span>
+        <span>{wordsWithSpaces}</span>
       </motion.div>
     </>
   );
