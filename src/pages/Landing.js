@@ -5,6 +5,7 @@ import Paragraph from "../components/motion/Paragraph";
 import SlideCard from "../components/motion/SlideCard";
 import { pageData } from "../data/CaseStudies";
 import AnimatedCharacters from "../components/motion/AnimatedCharacters";
+import CaseCard from "../components/CaseCard";
 
 export default function Landing() {
   const paragraph = `
@@ -95,10 +96,15 @@ With over four years of experience in software development and UI/UX design, I b
         </div>
       </div>
 
-      <SlideCard
+      {/* <SlideCard
         title={"HUDDLEUP"}
         description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
         direction={50}
+        imgPath={pageData.huddleup.cover}
+      /> */}
+      <CaseCard
+        title={"HUDDLEUP"}
+        description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
         imgPath={pageData.huddleup.cover}
       />
 

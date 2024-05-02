@@ -560,9 +560,7 @@ const Page = ({ content }) => {
 
 const CaseStudy = () => {
   const { slug } = useParams();
-  // console.log("slug", slug);
   const content = pageData[slug];
-  // console.log("content", content);
 
   return content ? <Page content={content} /> : <div>Page not found</div>;
 };
