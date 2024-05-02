@@ -1,3 +1,6 @@
+//TODO : cleanup flow for case studies
+//TODO : split slidecard styles out of landing styles
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 // import Contact from "./pages/Contact";

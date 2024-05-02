@@ -8,8 +8,8 @@ export default function Paragraph({ paragraph }) {
     target: container,
     offset: ["start .5", "start 0"],
   });
-
   const words = paragraph.split(" ");
+
   return (
     <p ref={container} className={styles.paragraph}>
       {words.map((word, i) => {

@@ -3,6 +3,7 @@ import ParallaxText from "../components/motion/ParallaxText";
 import ProgressCircle from "../components/motion/ProgressCircle";
 import Paragraph from "../components/motion/Paragraph";
 import SlideCard from "../components/motion/SlideCard";
+import { pageData } from "../data/CaseStudies";
 
 export default function Landing() {
   const paragraph = `
@@ -94,6 +95,7 @@ With over four years of experience in software development and UI/UX design, I b
         title={"HUDDLEUP"}
         description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
         direction={50}
+        imgPath={pageData.huddleup.cover}
       />
 
       <SlideCard

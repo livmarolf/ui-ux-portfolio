@@ -65,6 +65,7 @@
         line-height: 0.7;
         font-weight: 600;
         color: $content;
+        font-size: 2em;
       }
     }
 
@@ -107,13 +108,17 @@
 
     .left {
       .image-container {
-        height: 100%;
         width: 89vw;
-        background-image: url("../../assets/macbook.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+          max-width: 100%;
+          max-height: auto;
+        }
       }
 
       .description {
@@ -124,10 +129,26 @@
         gap: 15px;
         padding-top: 15px;
 
-        h1 {
-          font-size: 30px;
-          margin: 0;
+        .title-link {
+          display: flex;
+          justify-content: space-between;
+          gap: 30px;
+
+          h1 {
+            font-size: 30px;
+            margin: 0;
+          }
+
+          a {
+            border: 3px solid #767676;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+          }
         }
+
         p {
           font-size: 14px;
           margin: 0;

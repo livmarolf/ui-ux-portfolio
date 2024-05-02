@@ -1,7 +1,8 @@
 export const pageData = {
   huddleup: {
     slug: "huddleup",
-    title: "HuddleUp",
+    title: "HUDDLEUP",
+    cover: "/assets/case-study/hu-cover.jpg",
     description: "A sports team management application",
     mainImage: "path",
     prototypeLink: "",
@@ -14,7 +15,11 @@ export const pageData = {
       "User Interface (UI) Designer",
       "Content Designer",
     ],
-    tools: ["path", "path", "path"],
+    tools: [
+      "/assets/icons/Figma.png",
+      "/assets/icons/Illustrator.png",
+      "/assets/icons/Trello.png",
+    ],
     problemStatement:
       "HuddleUp simplifies sports team management by addressing various administrative challenges. It offers intuitive solutions for scheduling, roster management, and performance tracking, helping coaches, players, and administrators streamline their tasks. With its user-friendly interface and comprehensive features, HuddleUp makes team management more efficient, allowing users to focus on the game.",
     deliverables: [
@@ -29,28 +34,28 @@ export const pageData = {
     ],
     designProcess: [
       {
-        listTitle: "01 RESEARCH",
+        listTitle: "RESEARCH",
         listItems: [
           {
             subTitle: "BUSINESS",
             listContent: ["Market Research", "Competitive Analysis"],
           },
           {
-            subtitle: "USER",
+            subTitle: "USER",
             listContent: ["User Interviews", "User Personas", "Surveys"],
           },
         ],
       },
       {
-        listTitle: "02 STRATEGIZE",
+        listTitle: "STRATEGIZE",
         listItems: ["Product Goals", "Product Roadmap", "Site Map"],
       },
       {
-        listTitle: "03 DESIGN",
+        listTitle: "DESIGN",
         listItems: ["User Flow", "Wireframes", "Prototype"],
       },
       {
-        listTitle: "04 TEST",
+        listTitle: "TEST",
         listItems: ["Plan", "Conduct", "Report", "Optimize"],
       },
     ],
@@ -89,6 +94,8 @@ export const pageData = {
         "Are you confident in your understanding of the team's performance over the course of the season?",
         "Where do you maintain your team's seasonal calendar, and what methods do you use to keep it up-to-date?",
       ],
+      userInterviewParagraph:
+        "A total of six participants were interviewed, comprising two coaches, one team manager, and three teammates. Here are the key takeaways:",
       userInterviewsTiles: [
         {
           fraction: "6/6",
@@ -125,7 +132,7 @@ export const pageData = {
       ],
     },
     competitiveResearch: {
-      titleParagraph: ["Three examples of competitors"],
+      titleParagraph: "Three examples of competitors",
       researchTable: [
         {
           columnTitle: "LeagueApps",
@@ -168,17 +175,17 @@ export const pageData = {
       ],
     },
     userPersona: {
-      titleParagraph: [
+      titleParagraph:
         "With a good understanding of the audience, including their objectives and requirements, I use user personas to represent important audience segments. This helps me focus on addressing key challenges and meeting the primary needs of user groups.",
-      ],
-      personaImage: "path",
+
+      personaImage: "/assets/case-study/hu-persona.png",
     },
     productGoals: {
       titleParagraph: [
         "I've chosen to compile project goals that will serve as a roadmap for the future development of the product. These goals will also act as criteria for deciding which features to incorporate into the mobile application.",
         "These objectives are a synthesis of user goals derived from my user persona and business goals grounded in all available information.",
       ],
-      goalsImage: "path",
+      goalsImage: "/assets/case-study/hu-product-goals.png",
     },
     prioritizedRoadmap: {
       titleParagraph: [
@@ -214,26 +221,28 @@ export const pageData = {
       ],
     },
     siteMap: {
-      siteMapImage: "path",
+      siteMapImage: "/assets/case-study/hu-roadmap.png",
     },
     userAndTaskFlow: {
       titleParagraph: [
         "I developed the user task flow for the class check-in process, a pivotal functionality within the website. This task flow is designed to accommodate guest visitors seeking to enroll in a class.",
       ],
-      userFlowImage: "path",
-      taskFlowImage: "path",
+      userFlowImage: "/assets/case-study/hu-user-flow.png",
+      taskFlowImage: "/assets/case-study/hu-task-flow.png",
     },
     wireframes: [
-      "path",
-      "path",
-      "path",
-      "path",
-      "path",
-      "path",
-      "path",
-      "path",
-      "path",
+      "/assets/case-study/wireframes/Sketch 3.png",
+      "/assets/case-study/wireframes/Sketch 4.png",
+      "/assets/case-study/wireframes/Sketch 5.png",
+      "/assets/case-study/wireframes/Sketch 6.png",
+      "/assets/case-study/wireframes/Sketch 7.png",
+      "/assets/case-study/wireframes/Sketch 8.png",
+      "/assets/case-study/wireframes/Sketch 9.png",
+      "/assets/case-study/wireframes/Sketch 10.png",
+      "/assets/case-study/wireframes/Sketch 11.png",
     ],
-    typographyImage: "path",
+    typographyImage: "/assets/case-study/hu-typography.png",
+    highFidelityImage: "/assets/case-study/hu-high-fidelity.png",
+    figmaLink: "",
   },
 };

@@ -5,7 +5,13 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-left">
         <div>
-          <Link>GITHUB</Link>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/livmarolf"
+          >
+            GITHUB
+          </a>
           <svg
             width="32"
             height="32"
@@ -33,7 +39,13 @@ function Navbar() {
         </div>
 
         <div>
-          <Link>LINKEDIN</Link>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/oliviamarolf/"
+          >
+            LINKEDIN
+          </a>
           <svg
             width="32"
             height="32"
