@@ -4,6 +4,7 @@ import ProgressCircle from "../components/motion/ProgressCircle";
 import Paragraph from "../components/motion/Paragraph";
 import SlideCard from "../components/motion/SlideCard";
 import { pageData } from "../data/CaseStudies";
+import AnimatedCharacters from "../components/motion/AnimatedCharacters";
 
 export default function Landing() {
   const paragraph = `
@@ -18,7 +19,8 @@ With over four years of experience in software development and UI/UX design, I b
       <div className="title-container">
         <div className="left">
           <div className="name-block">
-            <h1>OLIVIA</h1>
+            <AnimatedCharacters text={"OLIVIA"} delayFactor={0} />
+
             <svg
               width="21"
               height="21"
@@ -41,7 +43,8 @@ With over four years of experience in software development and UI/UX design, I b
           </div>
 
           <div className="name-block">
-            <h1>UI/UX DESIGNER</h1>
+            <AnimatedCharacters text={"UI/UX DESIGNER"} delayFactor={0.96} />
+
             <svg
               width="21"
               height="21"
@@ -67,7 +70,8 @@ With over four years of experience in software development and UI/UX design, I b
 
         <div className="right">
           <div className="name-block">
-            <h1>MAROLF</h1>
+            <AnimatedCharacters text={"MAROLF"} delayFactor={0.48} />
+
             <svg
               width="21"
               height="21"

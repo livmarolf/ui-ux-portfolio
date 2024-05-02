@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
 
-const AnimatedCharacters = ({ text }) => {
+const AnimatedCharacters = ({ text, delayFactor = 0 }) => {
   const letters = Array.from(text);
 
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.08, delayChildren: 0.08 * i },
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.08 * i + delayFactor,
+      },
     }),
   };
 
