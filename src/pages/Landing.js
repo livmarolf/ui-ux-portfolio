@@ -96,28 +96,22 @@ With over four years of experience in software development and UI/UX design, I b
         </div>
       </div>
 
-      {/* <SlideCard
-        title={"HUDDLEUP"}
-        description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
-        direction={50}
-        imgPath={pageData.huddleup.cover}
-      /> */}
       <CaseCard
         title={"HUDDLEUP"}
         description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
         imgPath={pageData.huddleup.cover}
       />
 
-      <SlideCard
-        title={"ZERO"}
-        description={"WEB DESIGN • DEVELOPMENT"}
-        direction={-50}
+      <CaseCard
+        title={"HUDDLEUP"}
+        description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
+        imgPath={pageData.huddleup.cover}
       />
 
-      <SlideCard
-        title={"REAL PATREA REAL ESTATE"}
+      <CaseCard
+        title={"HUDDLEUP"}
         description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
-        direction={50}
+        imgPath={pageData.huddleup.cover}
       />
 
       <div className="about-container">

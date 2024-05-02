@@ -2,7 +2,7 @@ export const pageData = {
   huddleup: {
     slug: "huddleup",
     title: "HUDDLEUP",
-    cover: "/assets/case-study/hu-cover.jpg",
+    cover: "/assets/case-study/hu-cover.jpeg",
     description: "A sports team management application",
     mainImage: "path",
     prototypeLink: "",

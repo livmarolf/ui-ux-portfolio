@@ -18,11 +18,11 @@
   }
 
   &::before {
-    left: 50%;
+    left: 46%;
   }
 
   &::after {
-    right: 40%;
+    right: 46%;
   }
 
   #progress {
@@ -50,11 +50,12 @@
   .title-container {
     font-size: 58px;
     display: grid;
-    grid-template-columns: 50% 40%;
-    column-gap: 10%;
+    grid-template-columns: 46% 46%;
+    column-gap: 8%;
 
     .name-block {
       display: flex;
+      margin-left: -6px;
 
       span {
         font-family: $main-font;
@@ -78,7 +79,7 @@
       gap: 100px;
 
       .name-block:nth-child(2) {
-        width: 89vw;
+        width: 89.5vw;
         display: flex;
 
         p {
@@ -88,6 +89,7 @@
           margin-left: auto;
           color: $light-grey;
           font-family: $accent-font;
+          padding-bottom: 10px;
         }
       }
     }
@@ -102,8 +104,8 @@
 
   .about-container {
     display: grid;
-    grid-template-columns: 50% 40%;
-    column-gap: 10%;
+    grid-template-columns: 46% 46%;
+    column-gap: 8%;
     margin-bottom: 150px;
 
     .left {
@@ -161,8 +163,8 @@
 
     .headings {
       display: grid;
-      grid-template-columns: 50% 40%;
-      column-gap: 10%;
+      grid-template-columns: 46% 46%;
+      column-gap: 8%;
 
       p {
         font-size: 14px;
@@ -213,8 +215,8 @@
 
   .skills {
     display: grid;
-    grid-template-columns: 50% 40%;
-    column-gap: 10%;
+    grid-template-columns: 46% 46%;
+    column-gap: 8%;
     margin-bottom: 150px;
 
     .left {
@@ -334,8 +336,8 @@
 
     .columns {
       display: grid;
-      grid-template-columns: 50% 40%;
-      column-gap: 10%;
+      grid-template-columns: 46% 46%;
+      column-gap: 8%;
 
       .left {
         div {
