@@ -11,12 +11,20 @@
     .links-container {
       display: flex;
       gap: 10px;
+      height: min-content;
+
+      a {
+        text-decoration: none;
+        color: $content;
+        font-size: 14px;
+        font-family: "PP Supply Mono Light", sans-serif;
+      }
 
       .link {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: min-content;
+        height: 30px;
         padding: 0 5px 0 10px;
         border-radius: 50px;
         overflow: hidden;
@@ -50,13 +58,6 @@
           &:before {
             transform: scaleX(1);
           }
-        }
-
-        a {
-          text-decoration: none;
-          color: $content;
-          font-size: 14px;
-          font-family: "PP Supply Mono Light", sans-serif;
         }
 
         svg {

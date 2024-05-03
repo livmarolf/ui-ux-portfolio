@@ -189,7 +189,7 @@ With over four years of experience in software development and UI/UX design, I b
                   stroke-linejoin="round"
                 />
               </svg>
-              <p className="date">2022-2024</p>
+              <p className="date">2022-2023</p>
             </div>
             <div className="row">
               <p>KELLER WILLIAMS</p>
@@ -217,7 +217,7 @@ With over four years of experience in software development and UI/UX design, I b
                   stroke-linejoin="round"
                 />
               </svg>
-              <p className="date">2022-2024</p>
+              <p className="date">2021-2022</p>
             </div>
           </div>
         </div>
@@ -315,180 +315,213 @@ With over four years of experience in software development and UI/UX design, I b
 
         <div className="columns">
           <div className="left">
-            <div>
-              <p>LINKEDIN</p>
-              <p>@OLIVIAMAROLF</p>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+            <a
+              href="https://www.linkedin.com/in/oliviamarolf/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div>
+                <p>LINKEDIN</p>
+                <p>/IN/OLIVIAMAROLF</p>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.8319 22.1626L21.0703 9.96094"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
 
-            <div>
-              <p>GITHUB</p>
-              <p>/OLIVIAMAROLF</p>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+            <a
+              href="https://github.com/livmarolf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div>
+                <p>GITHUB</p>
+                <p>/LIVMAROLF</p>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.8319 22.1626L21.0703 9.96094"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
 
-            <div>
-              <p>EMAIL</p>
-              <p>LIVMAROLF@GMAIL.COM</p>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+            <a
+              href="mailto:livmarolf@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div>
+                <p>EMAIL</p>
+                <p>LIVMAROLF@GMAIL.COM</p>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.8319 22.1626L21.0703 9.96094"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
           </div>
+
           <div className="right">
-            <div>
-              <p>RESUME</p>
-              <p>DOWNLOAD</p>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+            <a
+              href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div>
+                <p>RESUME</p>
+                <p>VIEW/DOWNLOAD</p>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.8319 22.1626L21.0703 9.96094"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
 
-            <div>
-              <p>MOBILE</p>
-              <p>(801) 885-8122</p>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+            <a href="tel:+8018858122" target="_blank" rel="noreferrer">
+              <div>
+                <p>MOBILE</p>
+                <p>(801) 885-8122</p>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.8319 22.1626L21.0703 9.96094"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
 
-            <div>
-              <p>FIGMA</p>
-              <p>/OLIVIA</p>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+            <a
+              href="https://www.figma.com/@livmarolf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div>
+                <p>FIGMA</p>
+                <p>@LIVMAROLF</p>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.8319 22.1626L21.0703 9.96094"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
           </div>
         </div>
       </div>
