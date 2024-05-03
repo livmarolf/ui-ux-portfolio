@@ -2,61 +2,71 @@
   display: grid;
   grid-template-columns: 46% 46%;
   column-gap: 8%;
+
   .nav-left {
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 10px;
 
-    div {
+    .links-container {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      height: min-content;
-      padding: 0 5px 0 10px;
-      border-radius: 50px;
-      overflow: hidden;
-      color: $content;
+      gap: 10px;
 
-      transform: perspective(1px) translateZ(0);
-      transition: color 0.3s;
-
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background: $content;
-        transform: scaleX(0);
-        transform-origin: 0 50%;
-        transition: transform 0.3s ease-out;
-      }
-
-      &:hover {
-        color: #000000;
-
-        a,
-        svg path {
-          color: #000000;
-          stroke: #000000;
-        }
+      .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: min-content;
+        padding: 0 5px 0 10px;
+        border-radius: 50px;
+        overflow: hidden;
+        color: $content;
+        transform: perspective(1px) translateZ(0);
+        transition: color 0.3s;
 
         &:before {
-          transform: scaleX(1);
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+          background: $content;
+          transform: scaleX(0);
+          transform-origin: 0 50%;
+          transition: transform 0.3s ease-out;
         }
-      }
 
-      a {
-        text-decoration: none;
-        color: $content;
-        font-size: 14px;
-        font-family: "PP Supply Mono Light", sans-serif;
-      }
+        &:hover {
+          color: #000000;
 
-      svg {
-        path {
-          stroke: $content;
+          a,
+          svg path {
+            color: #000000;
+            stroke: #000000;
+          }
+
+          &:before {
+            transform: scaleX(1);
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: $content;
+          font-size: 14px;
+          font-family: "PP Supply Mono Light", sans-serif;
+        }
+
+        svg {
+          width: auto;
+          height: 2.5vw;
+          min-width: 2vw;
+
+          path {
+            stroke: $content;
+          }
         }
       }
     }
@@ -88,6 +98,7 @@
         width: max-content;
         border: none;
         background-color: #d9d9d9;
+        color: $page-background;
       }
     }
   }
@@ -95,6 +106,41 @@
   @media screen and (max-width: 800px) {
   }
 
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 445px) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+
+    .nav-left {
+      justify-content: space-between;
+      gap: 0px;
+
+      .links-container {
+        gap: 10px;
+
+        .link {
+          padding: 0;
+
+          a {
+            font-size: 14px;
+            font-family: $accent-font;
+          }
+
+          svg {
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    .nav-right {
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 14px;
+
+      .bio {
+        display: none;
+      }
+    }
   }
 }

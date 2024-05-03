@@ -1,7 +1,7 @@
 .landing-container {
   position: relative;
   margin: 0px 35px 0 120px;
-  padding-top: 120px;
+  padding-top: 140px;
   border-right: 1px solid $dark-grey;
   border-left: 1px solid $dark-grey;
   max-width: 100%;
@@ -48,10 +48,28 @@
   }
 
   .title-container {
-    font-size: 58px;
-    display: grid;
-    grid-template-columns: 46% 46%;
-    column-gap: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    .first-last {
+      display: grid;
+      grid-template-columns: 46% 46%;
+      column-gap: 8%;
+    }
+
+    .profession {
+      .name-block {
+        display: flex;
+        gap: 30px;
+
+        .couple {
+          display: flex;
+        }
+      }
+    }
 
     .name-block {
       display: flex;
@@ -66,39 +84,23 @@
         line-height: 0.7;
         font-weight: 600;
         color: $content;
-        font-size: 2em;
+        font-size: 120px;
       }
-    }
 
-    .left {
-      padding-top: 150px;
-      padding-bottom: 150px;
-
-      display: flex;
-      flex-direction: column;
-      gap: 100px;
-
-      .name-block:nth-child(2) {
-        width: 89.5vw;
-        display: flex;
-
-        p {
-          font-size: 14px;
-          margin: 0;
-          align-self: flex-end;
-          margin-left: auto;
-          color: $light-grey;
-          font-family: $accent-font;
-          padding-bottom: 10px;
-        }
+      p {
+        font-size: 1vw;
+        margin: 0;
+        align-self: flex-end;
+        margin-left: auto;
+        color: $light-grey;
+        font-family: $accent-font;
       }
-    }
 
-    .right {
-      padding-top: 150px;
-      padding-bottom: 150px;
-      display: grid;
-      grid-template-rows: 1fr 1fr;
+      svg {
+        width: auto;
+        height: 1.5vw;
+        min-width: 1.5vw;
+      }
     }
   }
 
@@ -196,7 +198,7 @@
           font-family: $main-font;
           font-weight: 600;
           color: $content;
-          font-size: 9vw;
+          font-size: 120px;
           display: block;
           margin-right: 30px;
         }
@@ -309,7 +311,6 @@
     row-gap: 100px;
 
     .heading {
-      width: 89vw;
       display: flex;
       justify-content: space-between;
 
@@ -319,7 +320,8 @@
         color: $content;
         font-size: 116px;
         margin: 0;
-        line-height: 0.7;
+        line-height: 0.8;
+        margin-bottom: 10px;
       }
 
       .btn-container {
@@ -330,6 +332,7 @@
           width: max-content;
           border: none;
           background-color: $content;
+          color: $page-background;
         }
       }
     }
@@ -350,7 +353,7 @@
             color: $content;
             font-size: 14px;
             font-family: $light-accent-font;
-            min-width: 150px;
+            min-width: 100px;
           }
         }
       }
@@ -366,9 +369,202 @@
             color: $content;
             font-size: 14px;
             font-family: $light-accent-font;
-            min-width: 150px;
+            min-width: 100px;
           }
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1370px) {
+    .title-container {
+      .name-block {
+        span {
+          font-size: 8vw;
+        }
+
+        p {
+          padding-bottom: 0px;
+          min-width: max-content;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+  }
+
+  @media screen and (max-width: 445px) {
+    position: relative;
+    margin: 0px 10px 0 60px;
+    padding-top: 0px;
+    border-right: 1px solid $dark-grey;
+    border-left: 1px solid $dark-grey;
+    max-width: 100%;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: $dark-grey;
+      z-index: -1;
+    }
+
+    &::before {
+      left: 50%;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    #progress {
+      width: 40px;
+      height: 40px;
+    }
+
+    .title-container {
+      gap: 10px;
+      padding: 150px 0;
+
+      .first-last {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        div:nth-child(2) {
+          align-self: flex-end;
+        }
+      }
+
+      .profession {
+        .name-block {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-left: -3px;
+
+          span {
+            color: $dark-grey;
+            font-family: $light-accent-font;
+          }
+
+          .couple {
+            display: flex;
+            align-self: flex-end;
+          }
+        }
+      }
+
+      .name-block {
+        margin-left: 0;
+
+        span {
+          font-size: 50px;
+        }
+
+        p {
+          display: none;
+        }
+
+        svg {
+          width: auto;
+          height: 10px;
+          min-width: 10px;
+
+          circle {
+            stroke: $dark-grey;
+          }
+
+          path {
+            stroke: $dark-grey;
+            fill: $dark-grey;
+          }
+        }
+      }
+    }
+
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      margin-bottom: 100px;
+
+      .left {
+        row-gap: 20px;
+
+        p {
+          font-size: 24px;
+        }
+      }
+
+      .right {
+        row-gap: 20px;
+
+        .experience-grid {
+          .row {
+            p {
+              min-width: 120px;
+            }
+
+            .date {
+              min-width: 100px;
+            }
+          }
+        }
+      }
+    }
+
+    .tools {
+      .parallax {
+        margin-right: -10px;
+        margin-left: -60px;
+
+        .motion-container {
+          span {
+            font-size: 80px;
+          }
+        }
+      }
+    }
+
+    .skills {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+
+      .left {
+        .skills-grid {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .right {
+        .skills-grid {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .cta {
+      .heading {
+        flex-direction: column-reverse;
+        gap: 20px;
+
+        h1 {
+          font-size: 56px;
+          line-height: 1;
+        }
+      }
+
+      .columns {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
