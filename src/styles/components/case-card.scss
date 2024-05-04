@@ -1,0 +1,82 @@
+.case-card {
+  margin-bottom: 150px;
+
+  .image-container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      max-height: auto;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 15px;
+
+    .title-link {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+
+      h1 {
+        font-size: 30px;
+        margin: 0;
+      }
+
+      a {
+        border: 3px solid #767676;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0;
+      color: $light-grey;
+      font-family: $light-accent-font;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .image-container {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        max-height: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 445px) {
+    margin-bottom: 100px;
+
+    .description {
+      .title-link {
+        a {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+  }
+}

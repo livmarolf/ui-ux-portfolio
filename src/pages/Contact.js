@@ -1,9 +1,5 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
-import { ReactComponent as File } from "../assets/icons/document-text.svg";
-import { ReactComponent as Phone } from "../assets/icons/phone.svg";
-import { ReactComponent as Envelope } from "../assets/icons/envelope.svg";
-import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
 import validateEmail from "../utils/validateEmail";
 
 export default function Contact() {
@@ -60,9 +56,7 @@ export default function Contact() {
 
         <div className="contact-methods">
           <div className="contact-method">
-            <div className="circle">
-              <File />
-            </div>
+            <div className="circle"></div>
 
             <div className="method-txt">
               <a
@@ -75,9 +69,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-method">
-            <div className="circle">
-              <Envelope />
-            </div>
+            <div className="circle"></div>
 
             <div className="method-txt">
               <a href="mailto:livmarolf@gmail.com">livmarolf@gmail.com</a>
@@ -85,9 +77,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-method">
-            <div className="circle">
-              <Phone />
-            </div>
+            <div className="circle"></div>
 
             <div className="method-txt">
               <a href="tel:+18018858122">(801) 885-8122</a>
@@ -95,9 +85,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-method">
-            <div className="circle">
-              <Linkedin />
-            </div>
+            <div className="circle"></div>
 
             <div className="method-txt">
               <a
