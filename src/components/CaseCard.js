@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function CaseCard({ title, description, imgPath }) {
-  const slug = title.toLowerCase();
-
+export default function CaseCard({ title, description, imgPath, slug }) {
   return (
     <div className="case-card">
       <div className="image-container">

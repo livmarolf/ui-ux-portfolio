@@ -545,7 +545,8 @@ const Page = ({ content }) => {
 
           <div>
             <div className="prototype">
-              <a target="_blank" rel="noreferrer" href={content.figmaLink}>
+              <p>CLICK TO VIEW</p>
+              <a target="_blank" rel="noreferrer" href={content.prototypeLink}>
                 <div className="image-container">
                   <img src={content.highFidelityImage} alt="high-fi" />
                 </div>

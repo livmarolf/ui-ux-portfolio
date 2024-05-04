@@ -2,6 +2,7 @@
   position: relative;
   margin: 0px 35px 0 120px;
   padding-top: 120px;
+  padding-bottom: 150px;
   border-right: 1px solid $dark-grey;
   max-width: 100%;
 
@@ -567,6 +568,13 @@
       .prototype {
         display: flex;
         flex-direction: column;
+        gap: 40px;
+        padding-top: 35px;
+
+        p {
+          font-family: $accent-font;
+          color: $light-grey;
+        }
 
         .image-container {
           display: flex;

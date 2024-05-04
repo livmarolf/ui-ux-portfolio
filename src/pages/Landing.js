@@ -104,21 +104,23 @@ With over four years of experience in software development and UI/UX design, I b
 
       <CaseCard
         title={"HUDDLEUP"}
-        description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
+        description={"WEB DESIGN • CASE STUDY"}
         imgPath={pageData.huddleup.cover}
+        slug={pageData.huddleup.slug}
       />
 
       <CaseCard
-        title={"HUDDLEUP"}
-        description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
-        imgPath={pageData.huddleup.cover}
+        title={"REAL PATREA REAL ESTATE"}
+        description={"WEB DESIGN • CASE STUDY"}
+        imgPath={pageData.rpre.cover}
+        slug={pageData.rpre.slug}
       />
 
-      <CaseCard
+      {/* <CaseCard
         title={"HUDDLEUP"}
         description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
         imgPath={pageData.huddleup.cover}
-      />
+      /> */}
 
       <div className="about-container">
         <div className="left">
@@ -137,86 +139,104 @@ With over four years of experience in software development and UI/UX design, I b
           <div className="experience-grid">
             <div className="row">
               <p>FREELANCE</p>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <a
+                href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
+                target="_blank"
+                rel="noreferrer"
               >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.8319 22.1626L21.0703 9.96094"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
               <p className="date">2022-2024</p>
             </div>
             <div className="row">
               <p>DEVPIPELINE</p>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <a
+                href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
+                target="_blank"
+                rel="noreferrer"
               >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.8319 22.1626L21.0703 9.96094"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
               <p className="date">2022-2023</p>
             </div>
             <div className="row">
               <p>KELLER WILLIAMS</p>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <a
+                href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
+                target="_blank"
+                rel="noreferrer"
               >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.8319 22.1626L21.0703 9.96094"
+                    stroke="white"
+                    stroke-width="0.8"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
               <p className="date">2021-2022</p>
             </div>
           </div>
@@ -322,7 +342,7 @@ With over four years of experience in software development and UI/UX design, I b
             >
               <div>
                 <p>LINKEDIN</p>
-                <p>/IN/OLIVIAMAROLF</p>
+                <p className="handle">/IN/OLIVIAMAROLF</p>
                 <svg
                   width="32"
                   height="32"
@@ -357,7 +377,7 @@ With over four years of experience in software development and UI/UX design, I b
             >
               <div>
                 <p>GITHUB</p>
-                <p>/LIVMAROLF</p>
+                <p className="handle">/LIVMAROLF</p>
                 <svg
                   width="32"
                   height="32"
@@ -392,7 +412,7 @@ With over four years of experience in software development and UI/UX design, I b
             >
               <div>
                 <p>EMAIL</p>
-                <p>LIVMAROLF@GMAIL.COM</p>
+                <p className="handle">LIVMAROLF@GMAIL.COM</p>
                 <svg
                   width="32"
                   height="32"
@@ -429,7 +449,7 @@ With over four years of experience in software development and UI/UX design, I b
             >
               <div>
                 <p>RESUME</p>
-                <p>VIEW/DOWNLOAD</p>
+                <p className="handle">VIEW/DOWNLOAD</p>
                 <svg
                   width="32"
                   height="32"
@@ -460,7 +480,7 @@ With over four years of experience in software development and UI/UX design, I b
             <a href="tel:+8018858122" target="_blank" rel="noreferrer">
               <div>
                 <p>MOBILE</p>
-                <p>(801) 885-8122</p>
+                <p className="handle">(801) 885-8122</p>
                 <svg
                   width="32"
                   height="32"
@@ -495,7 +515,7 @@ With over four years of experience in software development and UI/UX design, I b
             >
               <div>
                 <p>FIGMA</p>
-                <p>@LIVMAROLF</p>
+                <p className="handle">@LIVMAROLF</p>
                 <svg
                   width="32"
                   height="32"

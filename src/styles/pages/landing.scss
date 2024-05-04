@@ -359,6 +359,10 @@
               font-family: $light-accent-font;
               min-width: 100px;
             }
+
+            .handle {
+              min-width: 150px;
+            }
           }
         }
       }
@@ -379,6 +383,10 @@
               font-size: 14px;
               font-family: $light-accent-font;
               min-width: 100px;
+            }
+
+            .handle {
+              min-width: 150px;
             }
           }
         }

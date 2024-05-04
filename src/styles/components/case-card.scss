@@ -69,5 +69,14 @@
 
   @media screen and (max-width: 445px) {
     margin-bottom: 100px;
+
+    .description {
+      .title-link {
+        a {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
   }
 }
