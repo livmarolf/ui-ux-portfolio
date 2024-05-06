@@ -4,7 +4,6 @@ import { useRef, useState } from "react";
 import validateEmail from "../utils/validateEmail";
 import ProgressCircle from "../components/motion/ProgressCircle";
 import Navbar from "../layouts/Navbar";
-import { ReactComponent as Arrow } from "../assets/arrow.svg";
 
 export default function Contact() {
   const form = useRef();

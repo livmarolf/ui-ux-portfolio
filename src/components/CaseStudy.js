@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { pageData } from "../data/CaseStudies";
 import { useParams } from "react-router-dom";
 import Navbar from "../layouts/Navbar";
