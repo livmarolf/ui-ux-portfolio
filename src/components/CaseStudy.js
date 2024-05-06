@@ -15,6 +15,7 @@ const Page = ({ content }) => {
       <div className="title">
         <Link to={"/"}>
           <svg
+            className="back-arrow"
             width="60"
             height="60"
             viewBox="0 0 60 60"
@@ -83,92 +84,144 @@ const Page = ({ content }) => {
       </div>
 
       <div className="content-container">
-        <div className="section">
+        <section className="right">
+          <div className="content">
+            <p className="header-number">[ 01 ]</p>
+
+            <p>{content.overview}</p>
+          </div>
+
           <div className="header">
-            <p>01</p>
             <h1>PRODUCT OVERVIEW</h1>
           </div>
+        </section>
 
-          <div>
-            <div className="overview">
-              <p>{content.overview}</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="section">
-          <div className="header">
-            <p>02</p>
+        <section className="long">
+          <div className="long-header">
             <h1>RESPONSIBILITIES</h1>
+            <p className="header-number">[ 02 ]</p>
           </div>
 
-          <div>
-            <div className="responsibilities">
-              <ul>
-                {content.responsibilities.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
+          <div className="content">
+            <ul className="unstyled-list">
+              {content.responsibilities.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
           </div>
-        </div>
+        </section>
 
-        <div className="section">
+        <section className="right">
+          <div className="content">
+            <p className="header-number">[ 03 ]</p>
+
+            <ul className="unstyled-list">
+              {content.tools.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
           <div className="header">
-            <p>03</p>
             <h1>TOOLS</h1>
           </div>
+        </section>
 
+        <section className="left">
           <div>
-            <div className="tools-container">
-              {content.tools.map((path, index) => (
-                <img key={index} src={path} alt={`number ${index + 1}`} />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="section">
-          <div className="header">
-            <p>04</p>
             <h1>PROBLEM STATEMENT</h1>
           </div>
 
-          <div>
-            <div className="problem-statement">
-              <p>{content.problemStatement}</p>
-            </div>
-          </div>
-        </div>
+          <div className="content">
+            <p className="header-number">[ 04 ]</p>
 
-        <div className="section">
-          <div className="header">
-            <p>05</p>
+            <p>{content.problemStatement}</p>
+          </div>
+        </section>
+
+        <section className="long">
+          <div className="long-header">
+            <p className="header-number">[ 05 ]</p>
             <h1>DELIVERABLES</h1>
           </div>
 
-          <div>
-            <div className="deliverables">
-              {content.deliverables.map((item, index) => (
-                <p key={index}>{item}</p>
+          <div className="content">
+            <div className="bordered-list">
+              {content.deliverables.slice(0, 4).map((item, index) => (
+                <div key={index} className="list-row">
+                  <p>{item}</p>
+                  <p className="bullet">[{index + 1}]</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="bordered-list">
+              {content.deliverables.slice(4).map((item, index) => (
+                <div key={index} className="list-row">
+                  <p>{item}</p>
+                  <p className="bullet">[{index + 5}]</p>
+                </div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="section">
-          <div className="header">
-            <p>06</p>
+        <section className="long">
+          <div className="long-header">
             <h1>DESIGN PROCESS</h1>
+            <p className="header-number">[ 06 ]</p>
           </div>
 
-          <div>
-            <div className="process-container">
-              {content.designProcess.map((process, index) => (
+          <div className="content">
+            <div className="design-process">
+              {content.designProcess.slice(0, 2).map((process, index) => (
                 <div key={index} className="process">
-                  <div className="process-title">
-                    <p>0{index + 1}</p>
-                    <h1>{process.listTitle}</h1>
+                  <div className="step-header">
+                    <div className="process-title">
+                      <h1>{process.listTitle}</h1>
+                      <p>0{index + 1}</p>
+                    </div>
+                    <div className="divider"></div>
+                    <div className="underline"></div>
+                    <div className="line"></div>
+                  </div>
+
+                  {process.listItems &&
+                  typeof process.listItems[0] === "object" ? (
+                    process.listItems.map((item, subIndex) => (
+                      <div key={subIndex} className="list-items">
+                        <h2>{item.subTitle}</h2>
+                        <ul>
+                          {item.listContent.map((contentItem, contentIndex) => (
+                            <li key={contentIndex}>{contentItem}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="list-items">
+                      <ul>
+                        {process.listItems.map((item, itemIndex) => (
+                          <li key={itemIndex}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="design-process">
+              {content.designProcess.slice(2).map((process, index) => (
+                <div key={index} className="process">
+                  <div className="step-header">
+                    <div className="process-title">
+                      <h1>{process.listTitle}</h1>
+                      <p>0{index + 3}</p>
+                    </div>
+                    <div className="divider"></div>
+                    <div className="underline"></div>
+                    <div className="line"></div>
                   </div>
 
                   {process.listItems &&
@@ -196,279 +249,419 @@ const Page = ({ content }) => {
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="section">
-          <div className="header">
-            <p>07</p>
-            <h1>RESEARCH PLAN</h1>
-          </div>
+        <section className="right">
+          <div className="content">
+            <p className="header-number">[ 07 ]</p>
 
-          <div>
-            <div className="research">
+            <div className="content-wrapper">
               <p>{content.researchPlan.titleParagraph}</p>
 
-              <div className="lists">
-                <div>
-                  <p>RESEARCH GOALS</p>
-                  <ul title="Research Goals">
-                    {content.researchPlan.researchGoals.map((goal, index) => (
-                      <li key={index}>{goal}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <p>METHODOLOGIES</p>
-                  <ul title="Methodologies">
-                    {content.researchPlan.methodologies.map((method, index) => (
-                      <li key={index}>{method}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="section">
-          <div className="header">
-            <p>08</p>
-            <h1>TARGET AUDIENCE</h1>
-          </div>
-
-          <div>
-            <div className="target">
-              <p>{content.targetAudience}</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="section">
-          <div className="header">
-            <p>09</p>
-            <h1>USER INTERVIEWS</h1>
-            <h2>(PRIMARY RESEARCH)</h2>
-          </div>
-
-          <div>
-            <div className="interviews">
-              <p>{content.userInterviews.titleParagraph}</p>
-
-              <div className="questions">
-                <p>Questions Asked While Interviewing</p>
-                <ul>
-                  {content.userInterviews.questions.map((question, index) => (
-                    <li key={index}>{question}</li>
+              <div className="">
+                <p className="sub-header">[ RESEARCH PLAN ]</p>
+                <ul className="bordered-list">
+                  {content.researchPlan.researchGoals.map((item, i) => (
+                    <div className="list-row">
+                      <li key={i}>{item}</li>
+                      <p className="bullet">[•]</p>
+                    </div>
                   ))}
                 </ul>
               </div>
 
-              <div className="results">
-                <p className="accent">User Interviews</p>
-                <p>{content.userInterviews.userInterviewParagraph}</p>
-
-                <div className="results-tiles">
-                  {content.userInterviews.userInterviewsTiles.map(
-                    (tile, index) => (
-                      <div key={index}>
-                        <p className="accent">{tile.fraction}</p>
-                        <p>{tile.content}</p>
-                      </div>
-                    )
-                  )}
-                </div>
+              <div>
+                <p className="sub-header">[ METHODOLOGIES ]</p>
+                <ul className="bordered-list">
+                  {content.researchPlan.methodologies.map((item, i) => (
+                    <div className="list-row">
+                      <li key={i}>{item}</li>
+                      <p className="bullet">[•]</p>
+                    </div>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="section">
           <div className="header">
-            <p>10</p>
-            <h1>MARKET RESEARCH</h1>
-            <h2>(SECONDARY RESEARCH)</h2>
+            <h1>RESEARCH PLAN</h1>
+          </div>
+        </section>
+
+        <section className="left">
+          <div>
+            <h1>TARGET AUDIENCE</h1>
           </div>
 
-          <div>
-            <div className="market">
-              <p>{content.marketResearch.titleParagraph}</p>
+          <div className="content">
+            <p className="header-number">[ 08 ]</p>
+
+            <p>{content.problemStatement}</p>
+          </div>
+        </section>
+
+        <section className="long">
+          <div className="long-header">
+            <p className="header-number">[ 09 ]</p>
+            <h1>USER INTERVIEWS</h1>
+          </div>
+
+          <div className="content">
+            <p>{content.userInterviews.titleParagraph}</p>
+          </div>
+
+          <div className="sub-section">
+            <p className="sub-header">[ QUESTIONS ASKED WHILE INTERVIEWING ]</p>
+
+            <div className="content padded">
+              <div className="bordered-list">
+                {content.userInterviews.questions.map(
+                  (item, index, { length }) =>
+                    index < Math.ceil(length / 2) && (
+                      <div key={index} className="list-row centered">
+                        <p className="item">{item}</p>
+                        <p className="bullet">[•]</p>
+                      </div>
+                    )
+                )}
+              </div>
+
+              <div className="bordered-list">
+                {content.userInterviews.questions.map(
+                  (item, index, { length }) =>
+                    index >= Math.ceil(length / 2) && (
+                      <div key={index} className="list-row centered">
+                        <p>{item}</p>
+                        <p className="bullet">[•]</p>
+                      </div>
+                    )
+                )}
+              </div>
+            </div>
+          </div>
+
+          <div className="sub-section">
+            <p className="sub-header">[ INTERVIEW RESULTS ]</p>
+
+            <div className="content">
+              <div>
+                {content.userInterviews.userInterviewsTiles
+                  .slice(0, 2)
+                  .map((tile, index) => (
+                    <div key={index}>
+                      <p className="accent">{tile.fraction}</p>
+                      <p>{tile.content}</p>
+                    </div>
+                  ))}
+              </div>
 
               <div>
-                <p className="accent">Industry and Platforms</p>
+                {content.userInterviews.userInterviewsTiles
+                  .slice(2, 4)
+                  .map((tile, index) => (
+                    <div key={index}>
+                      <p className="accent">{tile.fraction}</p>
+                      <p>{tile.content}</p>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="content"></div>
+        </section>
+
+        <section className="left">
+          <div>
+            <h1>MARKET RESEARCH</h1>
+          </div>
+
+          <div className="content">
+            <p className="header-number">[ 10 ]</p>
+
+            <p>{content.marketResearch.titleParagraph}</p>
+
+            <div className="content-wrapper">
+              <div>
+                <p className="sub-header">[ INDUSTRY AND PLATFORMS ]</p>
                 <p>{content.marketResearch.researchContext}</p>
               </div>
 
               <div>
-                <p className="accent">Demographics</p>
-                <div className="demographics">
-                  {content.marketResearch.demographics.map((demo, index) => (
-                    <p key={index}>{demo}</p>
+                <p className="sub-header">[ DEMOGRAPHICS ]</p>
+                <div>
+                  <ul className="bordered-list">
+                    {content.marketResearch.demographics.map((item, i) => (
+                      <div className="list-row">
+                        <li key={i}>{item}</li>
+                        <p className="bullet">[•]</p>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {content.competitiveResearch && (
+          <section className="long">
+            <div className="long-header">
+              <h1>COMPETITIVE ANALYSIS</h1>
+              <p className="header-number">[ 11 ]</p>
+            </div>
+
+            <p>{content.competitiveResearch.titleParagraph}</p>
+
+            <div className="content">
+              {content.competitiveResearch.researchTable.map(
+                (column, index) => (
+                  <div key={index} className="column">
+                    <p className="sub-header">[ {column.columnTitle} ]</p>
+
+                    <div className="strengths">
+                      <p className="list-header">STRENGTHS</p>
+                      <ul className="bordered-list">
+                        {column.strengths.map((strength, index) => (
+                          <div className="list-row">
+                            <li key={index}>{strength}</li>
+                            <p className="bullet">[•]</p>
+                          </div>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <p className="list-header">WEAKNESSES</p>
+                      <ul className="bordered-list">
+                        {column.weaknesses.map((weakness, index) => (
+                          <div className="list-row">
+                            <li key={index}>{weakness}</li>
+                            <p className="bullet">[•]</p>
+                          </div>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          </section>
+        )}
+
+        <section className="right">
+          <div className="content">
+            <p className="header-number">[ 12 ]</p>
+
+            <div className="content-wrapper">
+              <p>{content.userPersona.titleParagraph}</p>
+
+              <div className="image-container persona">
+                <img src={content.userPersona.personaImage} alt="persona" />
+              </div>
+
+              <ul className="bordered-list">
+                {Object.entries(content.userPersona.bio).map(([key, value]) => (
+                  <div className="list-row">
+                    <li key={key} className="spaced">
+                      <p>{key}</p>
+                      <p>{value}</p>
+                    </li>
+                    <p className="bullet">[•]</p>
+                  </div>
+                ))}
+              </ul>
+
+              <div>
+                <p className="sub-header">[ QUOTE ]</p>
+                <p>{content.userPersona.quote}</p>
+              </div>
+
+              <div>
+                <p className="sub-header">[ BACKGROUND ]</p>
+                <p>{content.userPersona.background}</p>
+              </div>
+
+              <div>
+                <p className="sub-header">[ GOALS ]</p>
+                <ul className="bordered-list">
+                  {content.userPersona.goals.map((goal, index) => (
+                    <div className="list-row">
+                      <li key={index}>
+                        <p>{goal}</p>
+                      </li>
+                      <p className="bullet">[•]</p>
+                    </div>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <p className="sub-header">[ FRUSTRATIONS ]</p>
+                <ul className="bordered-list">
+                  {content.userPersona.frustrations.map(
+                    (frustration, index) => (
+                      <div className="list-row">
+                        <li key={index}>
+                          <p>{frustration}</p>
+                        </li>
+                        <p className="bullet">[•]</p>
+                      </div>
+                    )
+                  )}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="header">
+            <h1>USER PERSONA</h1>
+          </div>
+        </section>
+
+        <section className="left">
+          <div>
+            <h1>PRODUCT GOALS</h1>
+          </div>
+
+          <div className="content">
+            <p className="header-number">[ 13 ]</p>
+
+            <div className="content-wrapper">
+              <div>
+                <p>{content.productGoals.titleParagraph[0]}</p>
+                <p>{content.productGoals.titleParagraph[1]}</p>
+              </div>
+
+              <div>
+                <p className="sub-header">[ BUSINESS GOALS ]</p>
+                <div>
+                  <ul className="bordered-list">
+                    {content.productGoals.businessGoals.map((item, i) => (
+                      <div className="list-row">
+                        <li key={i}>{item}</li>
+                        <p className="bullet">[•]</p>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <p className="sub-header">[ BOTH ]</p>
+                <div>
+                  <ul className="bordered-list">
+                    {content.productGoals.both.map((item, i) => (
+                      <div className="list-row">
+                        <li key={i}>{item}</li>
+                        <p className="bullet">[•]</p>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <p className="sub-header">[ USER GOALS ]</p>
+                <div>
+                  <ul className="bordered-list">
+                    {content.productGoals.userGoals.map((item, i) => (
+                      <div className="list-row">
+                        <li key={i}>{item}</li>
+                        <p className="bullet">[•]</p>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="long">
+          <div className="long-header">
+            <p className="header-number">[ 14 ]</p>
+            <h1>PRIORITIZED ROADMAP</h1>
+          </div>
+
+          <div className="content">
+            <p>{content.prioritizedRoadmap.titleParagraph}</p>
+
+            <div className="content-wrapper">
+              <div>
+                <p className="sub-header">[ P1 ]</p>
+                <div className="bordered-list">
+                  {content.prioritizedRoadmap.phaseOne.map((item, index) => (
+                    <div key={index} className="list-row">
+                      <p>{item}</p>
+                      <p className="bullet">[•]</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <p className="sub-header">[ P2 ]</p>
+                <div className="bordered-list">
+                  {content.prioritizedRoadmap.phaseTwo.map((item, index) => (
+                    <div key={index} className="list-row">
+                      <p>{item}</p>
+                      <p className="bullet">[•]</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <p className="sub-header">[ P3 ]</p>
+                <div className="bordered-list">
+                  {content.prioritizedRoadmap.phaseThree.map((item, index) => (
+                    <div key={index} className="list-row">
+                      <p>{item}</p>
+                      <p className="bullet">[•]</p>
+                    </div>
                   ))}
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="section">
-          <div className="header">
-            <p>11</p>
-            <h1>COMPETITIVE RESEARCH</h1>
-          </div>
-
+        <section className="left">
           <div>
-            <div className="competitive-research">
-              <p>{content.competitiveResearch.titleParagraph}</p>
-
-              <div className="research-table">
-                {content.competitiveResearch.researchTable.map(
-                  (column, index) => (
-                    <div key={index} className="column">
-                      <h1 className="column-title">{column.columnTitle}</h1>
-
-                      <h2>STRENGTHS</h2>
-                      <ul>
-                        {column.strengths.map((strength, index) => (
-                          <li key={index}>{strength}</li>
-                        ))}
-                      </ul>
-
-                      <h2>WEAKNESSES</h2>
-                      <ul>
-                        {column.weaknesses.map((weakness, index) => (
-                          <li key={index}>{weakness}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="section">
-          <div className="header">
-            <p>12</p>
-            <h1>USER PERSONA</h1>
-          </div>
-
-          <div>
-            <div className="persona">
-              <p>{content.userPersona.titleParagraph}</p>
-
-              <div className="image-container">
-                <img src={content.userPersona.personaImage} alt="persona" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="section">
-          <div className="header">
-            <p>13</p>
-            <h1>PRODUCT GOALS</h1>
-          </div>
-
-          <div>
-            <div className="product-goals">
-              {content.productGoals.titleParagraph.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-
-              <div className="image-container">
-                <img
-                  src={content.productGoals.goalsImage}
-                  alt="product-goals"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="section">
-          <div className="header">
-            <p>14</p>
-            <h1>PRIORITIZED ROADMAP</h1>
-          </div>
-
-          <div>
-            <div className="roadmap">
-              {content.prioritizedRoadmap.titleParagraph.map(
-                (paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                )
-              )}
-
-              <div className="roadmap-list">
-                <div>
-                  <p className="list-title">P1</p>
-                  <ul>
-                    {content.prioritizedRoadmap.phaseOne.map((step, index) => (
-                      <li key={index}>{step}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <p className="list-title">P2</p>
-                  <ul>
-                    {content.prioritizedRoadmap.phaseTwo.map((step, index) => (
-                      <li key={index}>{step}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <p className="list-title">P3</p>
-                  <ul>
-                    {content.prioritizedRoadmap.phaseThree.map(
-                      (step, index) => (
-                        <li key={index}>{step}</li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="section">
-          <div className="header">
-            <p>15</p>
             <h1>SITEMAP</h1>
           </div>
 
-          <div>
-            <div className="sitemap">
-              <div className="image-container">
-                <img src={content.siteMap.siteMapImage} alt="site-map" />
-              </div>
+          <div className="content">
+            <p className="header-number">[ 15 ]</p>
+
+            <div className="image-container">
+              <img src={content.siteMap.siteMapImage} alt="sitemap" />
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="section">
-          <div className="header">
-            <p>16</p>
-            <h1>USER AND TASK FLOW</h1>
+        <section className="long">
+          <div className="long-header">
+            <p className="header-number">[ 16 ]</p>
+            <h1>USER AND TASK FLOWS</h1>
           </div>
 
-          <div>
-            <div className="flows">
-              {content.userAndTaskFlow.titleParagraph.map(
-                (paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                )
-              )}
-
+          <p className="half-width">{content.userAndTaskFlow.titleParagraph}</p>
+          <div className="content">
+            <div>
+              <p className="sub-header">[ USER FLOW ]</p>
               <div className="image-container">
                 <img
                   src={content.userAndTaskFlow.userFlowImage}
                   alt="user-flow"
                 />
               </div>
+            </div>
+
+            <div>
+              <p className="sub-header">[ TASK FLOW ]</p>
 
               <div className="image-container">
                 <img
@@ -478,82 +671,54 @@ const Page = ({ content }) => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="section">
-          <div className="header">
-            <p>17</p>
-            <h1>LOW FIDELITY DESIGN</h1>
+        <section className="left">
+          <div>
+            <h1>PRODUCT GOALS</h1>
           </div>
 
-          <div className="low-fi">
-            <div className="scroll-indicator">
-              <p>scroll</p>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div className="wireframes">
-              {content.wireframes.map((frame, index) => (
-                <img key={index} src={frame} alt="wireframe" />
+          <div className="content">
+            <p className="header-number">[ 17 ]</p>
+
+            <div className="image-grid">
+              {content.wireframes.map((src, index) => (
+                <img key={index} src={src} alt={`Wireframe ${index + 1}`} />
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="section">
+        <section className="right">
+          <div className="content">
+            <p className="header-number">[ 18 ]</p>
+
+            <p className="sub-header">[ COLOR PALLETE ]</p>
+
+            <div className="image-container">
+              <img src={content.typographyImage} alt="typography" />
+            </div>
+          </div>
+
           <div className="header">
-            <p>18</p>
             <h1>TYPOGRAPHY</h1>
           </div>
+        </section>
 
+        <section className="left">
           <div>
-            <div className="typography">
-              <div className="image-container">
-                <img src={content.typographyImage} alt="typography" />
-              </div>
+            <h1>LOW FIDELITY DESIGN</h1>
+          </div>
+
+          <div className="content">
+            <p className="header-number">[ 15 ]</p>
+            <p className="sub-header">[ CLICK TO VIEW ]</p>
+
+            <div className="image-container prototype">
+              <img src={content.highFidelityImage} alt="high-fi" />
             </div>
           </div>
-        </div>
-
-        <div className="section">
-          <div className="header">
-            <p>19</p>
-            <h1>HIGH FIDELITY PROTOTYPE</h1>
-          </div>
-
-          <div>
-            <div className="prototype">
-              <p>CLICK TO VIEW</p>
-              <a target="_blank" rel="noreferrer" href={content.prototypeLink}>
-                <div className="image-container">
-                  <img src={content.highFidelityImage} alt="high-fi" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   );
