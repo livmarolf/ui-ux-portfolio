@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
 import Navbar from "../layouts/Navbar";
 import ParallaxText from "../components/motion/ParallaxText";
@@ -300,7 +301,9 @@ With over four years of experience in software development and UI/UX design, I b
         <div className="heading">
           <h1>DROP ME A LINE</h1>
           <div className="btn-container">
-            <button>CONTACT ME</button>
+            <Link to="/contact">
+              <button>CONTACT ME</button>
+            </Link>
           </div>
         </div>
 
@@ -345,7 +348,7 @@ With over four years of experience in software development and UI/UX design, I b
 
           <div className="right">
             <a
-              href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
+              href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:6110b9a5-ab4f-4ff7-a53a-de8e139c19a0"
               target="_blank"
               rel="noreferrer"
             >
