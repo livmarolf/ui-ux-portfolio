@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { pageData } from "../data/CaseStudies";
 import { useParams } from "react-router-dom";
 import Navbar from "../layouts/Navbar";
@@ -13,44 +12,6 @@ const Page = ({ content }) => {
       <Navbar />
 
       <div className="title">
-        <Link to={"/"}>
-          <svg
-            className="back-arrow"
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              x="58.5"
-              y="58.5"
-              width="57"
-              height="57"
-              rx="28.5"
-              transform="rotate(180 58.5 58.5)"
-              stroke="#767676"
-              stroke-width="3"
-            />
-            <path
-              d="M25.7824 19.4635L15.2461 29.9998L25.7824 40.5361"
-              stroke="#767676"
-              stroke-width="3"
-              stroke-miterlimit="10"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M44.7564 30L15.543 30"
-              stroke="#767676"
-              stroke-width="3"
-              stroke-miterlimit="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </Link>
-
         <div className="heading">
           <div className="title-text">
             <h1>{content.title}</h1>
