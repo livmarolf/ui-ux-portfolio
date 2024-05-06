@@ -1,8 +1,18 @@
+import { ReactComponent as Arrow } from "../assets/arrow.svg";
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-left">
         <div className="links-container">
+          <Link to="/">
+            <div className="link">
+              HOME
+              <Arrow />
+            </div>
+          </Link>
+
           <a
             target="_blank"
             rel="noreferrer"
@@ -10,30 +20,7 @@ function Navbar() {
           >
             <div className="link">
               GITHUB
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <Arrow />
             </div>
           </a>
 
@@ -44,96 +31,18 @@ function Navbar() {
           >
             <div className="link">
               LINKEDIN
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <Arrow />
             </div>
           </a>
-        </div>
 
-        <div className="links-container">
           <a
-            href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
+            href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:6110b9a5-ab4f-4ff7-a53a-de8e139c19a0"
             target="_blank"
             rel="noreferrer"
           >
             <div className="link">
               RESUME
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </a>
-
-          <a href="mailto:livmarolf@gmail.com" target="_blank" rel="noreferrer">
-            <div className="link">
-              EMAIL
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <Arrow />
             </div>
           </a>
         </div>
@@ -147,7 +56,9 @@ function Navbar() {
         </div>
 
         <div className="btn-container">
-          <button>CONTACT ME</button>
+          <Link to="/contact">
+            <button>CONTACT ME</button>
+          </Link>
         </div>
       </div>
     </nav>

@@ -17,9 +17,10 @@ export const pageData = {
       "Content Designer",
     ],
     tools: [
-      "/assets/icons/Figma.png",
-      "/assets/icons/Illustrator.png",
-      "/assets/icons/Trello.png",
+      "ADOBE ILLUSTRATOR - BRANDING, LOGOS",
+      "FIGMA - WIREFRAMES, DESIGNS",
+      "TRELLO - TASK MANAGEMENT",
+      "LUCIDCHART - USER AND TASK FLOWS",
     ],
     problemStatement:
       "HuddleUp simplifies sports team management by addressing various administrative challenges. It offers intuitive solutions for scheduling, roster management, and performance tracking, helping coaches, players, and administrators streamline their tasks. With its user-friendly interface and comprehensive features, HuddleUp makes team management more efficient, allowing users to focus on the game.",
@@ -64,7 +65,6 @@ export const pageData = {
       titleParagraph: [
         "Research explores user behaviors, motivations, challenges, aspirations, constraints, and objectives, providing essential insights for later project phases. To ensure effective guidance for responsive website design, a carefully crafted research plan is necessary, detailing research goals, inquiries, methods, participants, and a clear timeline.",
       ],
-
       researchGoals: [
         "Identify the target audience",
         "Assess competitor’s strengths and weaknesses",
@@ -122,14 +122,14 @@ export const pageData = {
     },
     marketResearch: {
       titleParagraph: [
-        "It is important to begin with market research to grasp the broader market landscape, including audience, knowledge gaps, recent trends, and news. The insights gained will inform provisional personas and guide meaningful questions for primary research.",
+        "It's important to begin with market research to grasp the broader market landscape, including audience, knowledge gaps, recent trends, and news. The insights gained will inform provisional personas and guide meaningful questions for primary research.",
       ],
       researchContext:
         "Overall in the realm of sports, team management platforms have emerged as highly influential tools, enjoying widespread popularity for their role in optimizing team organization and performance. It is expected that the global sports management software market to exhibit a CAGR of 14.8% during 2023-2028 (imarc). The sports team management platform industry has experienced a consistent increase in demand, driven by the need for streamlined communication, scheduling, and data management for sports teams of all levels",
       demographics: [
-        "A significant portion of the user demographic comprises youth and amateur sports teams, such as Little League baseball, local soccer clubs, and school athletics.",
-        "Sports management platforms are commonly utilized by schools, colleges, and universities to coordinate sports activities, manage teams, and ensure compliance with regulations.",
-        "Beyond competitive sports, recreational and community teams, often organized by community centers or local groups, use these platforms to facilitate sports participation and community engagement.",
+        "YOUTH AND AMATUR SPORTS TEAMS",
+        "SCHOOLS, COLLEGES, AND UNIVERSITIES",
+        "RECREATIONAL AND COMMUNITY TEAMS",
       ],
     },
     competitiveResearch: {
@@ -179,14 +179,52 @@ export const pageData = {
       titleParagraph:
         "With a good understanding of the audience, including their objectives and requirements, I use user personas to represent important audience segments. This helps me focus on addressing key challenges and meeting the primary needs of user groups.",
 
-      personaImage: "/assets/case-study/hu-persona.png",
+      personaImage: "/assets/case-study/hu-persona.jpg",
+      bio: {
+        name: "simon jones",
+        age: "35",
+        loaction: "los angeles, ca",
+        occupation: "team manager",
+      },
+      quote:
+        "“ORGANIZATION BREEDS EXCELLENCE, AND MY TEAM’S SUCCESS IS MY HEART’S ANTHEM.”",
+      background:
+        "Simon, a devoted 35-year-old sports team manager, exemplifies unwavering commitment to his team's triumph. With a profound dedication to their success, he tirelessly refines his management techniques, leaving no stone unturned in his pursuit of excellence, ensuring his team is well-prepared for every challenge on their path to victory.",
+      goals: [
+        "Support individual growth",
+        "Incorporate innovative management tools",
+        "Leverage data for informed decisions",
+        "Establish efficient communication channels",
+      ],
+      frustrations: [
+        "Challenging to balance individual growth",
+        "Schedule conflicts disrupt practice sessions",
+        "Limited access to training data",
+        "Inconsistent player motivation",
+      ],
     },
     productGoals: {
       titleParagraph: [
         "I've chosen to compile project goals that will serve as a roadmap for the future development of the product. These goals will also act as criteria for deciding which features to incorporate into the mobile application.",
         "These objectives are a synthesis of user goals derived from my user persona and business goals grounded in all available information.",
       ],
-      goalsImage: "/assets/case-study/hu-product-goals.png",
+      businessGoals: [
+        "Develop the Mobile App",
+        "Efficient Management",
+        "Accessible team and individual data",
+        "Team Cohesion",
+      ],
+      both: [
+        "Smooth communication",
+        "Easy-to-access team and individual data",
+        "Open schedule sharing platform",
+      ],
+      userGoals: [
+        "View individual progress",
+        "Accumulate knowledge",
+        "Communicate with team members",
+        "Limit miscommunication",
+      ],
     },
     prioritizedRoadmap: {
       titleParagraph: [
@@ -264,9 +302,10 @@ export const pageData = {
       "Content Designer",
     ],
     tools: [
-      "/assets/icons/Figma.png",
-      "/assets/icons/Illustrator.png",
-      "/assets/icons/Trello.png",
+      "ADOBE ILLUSTRATOR - BRANDING, LOGOS",
+      "FIGMA - WIREFRAMES, DESIGNS",
+      "TRELLO - TASK MANAGEMENT",
+      "LUCIDCHART - USER AND TASK FLOWS",
     ],
     problemStatement:
       "This website should help agents manage properties, communicate with clients, and handle transactions smoothly. It should also simplify administrative tasks like scheduling appointments and tracking leads with an easy-to-use interface. Overall, the goal is to create a user-friendly app that boosts productivity and improves the efficiency of real estate agents' workflows.",
@@ -316,8 +355,8 @@ export const pageData = {
         "Understand the market of platforms related to real estate",
         "Identify the target audience",
         "Gather insights on how key competitors address customer needs",
-        "Get to know how real estate agents are streamlining their client’s experience",
-        "Uncover people's experience interacting with real estate platforms",
+        "Find out how real estate agents are streamlining their process",
+        "Understand user's typical experiene",
         "Assess competitor’s strengths and weaknesses",
       ],
       methodologies: [
@@ -333,14 +372,14 @@ export const pageData = {
       ],
 
       questions: [
-        "What factors influence your decision to choose a particular real estate agent?",
-        "When researching properties online, what features or information are most important to you?",
-        "In what ways do you typically utilize technology or online platforms in your home-buying process?",
-        "Have you ever abandoned a real estate website during your search? If so, what led to that decision?",
-        "Can you describe a positive experience you've had with a real estate website? What made it stand out to you?",
-        "How do you prefer to communicate with real estate agents during your property search? (Email, phone calls, live chat, etc.)",
-        "Can you share your recent experiences in searching for a real estate agent or property? What challenges did you face during this process?",
-        "What criteria do you consider when evaluating real estate agents online? Have you encountered any difficulties in navigating real estate websites? If so, what specific issues did you face?",
+        "What makes you choose one real estate agent over another?",
+        "What do you look for in a property when you search online?",
+        "How do you use technology when buying a home?",
+        "Have you ever left a real estate website before finishing? Why?",
+        "Tell me about a good experience you’ve had with a real estate website.",
+        "What’s your preferred way to talk to real estate agents when looking for a property?",
+        "What issues have you faced in your recent agent or property search?",
+        "What’s important to you in an agent, and any web navigation problems?",
       ],
       userInterviewParagraph:
         "Nine participants were interviewed, comprising both potential home buyers (5/9) and potential commercial buyers (4/9). Here are the key takeaways:",
@@ -374,67 +413,60 @@ export const pageData = {
       researchContext:
         "In real estate, digital tools play a big role. Almost all homebuyers (97%) use the internet for their property search. It's interesting that only 69% of agents have a website, showing there's room for more agents to go digital. Having an online presence is crucial, considering how many homebuyers rely on the internet to find their next home.",
       demographics: [
-        "A lot of home buyers fall into the Gen X category (1965-1979), with the group of Younger Boomers (1955-1964) right behind them.",
-        "The majority of home buyers in 2023 fell within the age range of 50 to 63 years old.",
-        "The primary source of information for 86% of home buyers during their search for a new property was a real estate agent.",
-      ],
-    },
-    // take competitive research out
-    competitiveResearch: {
-      titleParagraph: "Three examples of competitors",
-      researchTable: [
-        {
-          columnTitle: "LeagueApps",
-          strengths: [
-            "Customization",
-            "Comprehensive Sports Management",
-            "Diverse Sports Support",
-            "User Community",
-          ],
-          weaknesses: ["Cost", "Learning Curve", "Integration Challenges"],
-        },
-        {
-          columnTitle: "TeamSnap",
-          strengths: [
-            "User-Friendly Interface",
-            "Mobile Accessibility",
-            "Integration Capability",
-            "Global User Base",
-          ],
-          weaknesses: [
-            "Pricing",
-            "Limited Reporting",
-            "Customer Support Variability",
-          ],
-        },
-        {
-          columnTitle: "Jersey Watch",
-          strengths: [
-            "Affordable Solution",
-            "Youth Sports Focus",
-            "User-Friendly Interface",
-            "Communication Tools",
-          ],
-          weaknesses: [
-            "Limited Features",
-            "Scalability",
-            "Integration Challenges",
-          ],
-        },
+        "People born between (1965-1979)",
+        "Age range of 50 to 63 years old.",
+        "86% look for the help of an agent",
       ],
     },
     userPersona: {
       titleParagraph:
-        "With a solid understanding of our audience, including their goals and needs, I use user personas to represent important audience segments. This helps me focus on tackling the main challenges and meeting the primary needs of key user groups.",
+        "With a good understanding of the audience, including their objectives and requirements, I use user personas to represent important audience segments. This helps me focus on addressing key challenges and meeting the primary needs of user groups.",
 
-      personaImage: "/assets/case-study/rpre-persona.png",
+      personaImage: "/assets/case-study/rpre-persona.jpg",
+      bio: {
+        name: "Carrie Smith",
+        age: "53",
+        loaction: "salt lake city, ut",
+        occupation: "Anesthesiologist",
+      },
+      quote: "'Finding my dream home—balancing work and life seamlessly.'",
+      background:
+        "Meet Carrie, a 53-year-old anesthesiologist juggling a demanding career and the quest for a new home. She's navigating the real estate scene, hoping to find a place that feels just right—somewhere to kick back after long workdays. With a practical approach and a caring mindset, Sarah's on the lookout for a real estate experience that makes the process smooth and stress-free.",
+      goals: [
+        "Balance work and home life",
+        "Maintain financial security",
+        "Create a welcoming space",
+        "Ease of commute",
+      ],
+      frustrations: [
+        "Limited time",
+        "Information overload",
+        "Uncertainty in decision-making",
+        "Communication barriers",
+      ],
     },
     productGoals: {
       titleParagraph: [
         "I've chosen to compile project goals that will serve as a roadmap for the future development of the product. These goals will also act as criteria for deciding which features to incorporate into the mobile application.",
         "These objectives are a synthesis of user goals derived from my user persona and business goals grounded in all available information.",
       ],
-      goalsImage: "/assets/case-study/rpre-product-goals.png",
+      businessGoals: [
+        "Enhance visibility",
+        "Assist clients with personalized care",
+        "Improve property accessibility",
+        "Expand clientele",
+      ],
+      both: [
+        "Effortless access to information",
+        "Enjoy a personalized experience",
+        "Swift and smooth interaction",
+      ],
+      userGoals: [
+        "Easy property search",
+        "Learn more about agent experience",
+        "Fast communication with agents",
+        "Reduce decision stress",
+      ],
     },
     prioritizedRoadmap: {
       titleParagraph: [

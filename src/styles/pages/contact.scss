@@ -1,0 +1,257 @@
+.contact-container {
+  position: relative;
+  margin: 0px 35px 0 120px;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  border-right: 1px solid $dark-grey;
+  border-left: 1px solid $dark-grey;
+  max-width: 100%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: $dark-grey;
+    z-index: -1;
+  }
+
+  &::before {
+    left: 46%;
+  }
+
+  &::after {
+    right: 46%;
+  }
+
+  #progress {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    transform: rotate(-90deg);
+
+    circle {
+      stroke-dashoffset: 0;
+      stroke-width: 15%;
+      fill: none;
+    }
+
+    .bg {
+      stroke: $content;
+      opacity: 0.3;
+    }
+
+    .indicator {
+      stroke: $content;
+    }
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 46% 46%;
+    gap: 8%;
+    padding-top: 150px;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .title {
+        display: flex;
+        margin-left: -6px;
+        gap: 4px;
+        width: 46%;
+
+        h1 {
+          font-size: 100px;
+          margin: 0;
+          line-height: 0.8;
+          color: $content;
+        }
+
+        svg {
+          width: auto;
+          height: 1.5vw;
+          min-width: 1.5vw;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+
+      .input {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        min-height: 165px;
+
+        .err-msg {
+          font-family: $accent-font;
+          color: $content;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: #d92f25;
+          margin: 0;
+        }
+
+        label {
+          font-size: 60px;
+          font-family: $main-font;
+          font-weight: 600;
+          color: $content;
+          text-transform: uppercase;
+        }
+
+        input {
+          all: unset;
+          border-bottom: 0.5px solid $light-grey;
+          font-family: $accent-font;
+          color: $light-grey;
+          font-size: 16px;
+          text-transform: uppercase;
+          padding-bottom: 10px;
+
+          &::placeholder {
+            font-family: $accent-font;
+            color: #555555;
+            font-size: 16px;
+            text-transform: uppercase;
+          }
+        }
+
+        textarea {
+          border: 0;
+          border-bottom: 0.5px solid $light-grey;
+          padding-bottom: 10px;
+          background-color: transparent;
+          outline: none;
+          resize: none;
+          font-family: $accent-font;
+          color: $light-grey;
+          font-size: 16px;
+          text-transform: uppercase;
+
+          &::placeholder {
+            font-family: $accent-font;
+            color: #555555;
+            font-size: 16px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .message-len {
+        font-size: 14px;
+        font-family: $accent-font;
+        color: $light-grey;
+        margin: 0;
+      }
+
+      .btn-container {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          border: 0;
+          background-color: transparent;
+          color: $content;
+          font-size: 50px;
+          font-weight: 600;
+
+          svg {
+            height: 50%;
+            path {
+              fill: $content;
+            }
+          }
+
+          &:disabled {
+            color: #555555;
+
+            svg {
+              path {
+                fill: #555555;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 445px) {
+    position: relative;
+    margin: 0px 10px 0 60px;
+    padding-top: 0px;
+    border-right: 1px solid $dark-grey;
+    border-left: 1px solid $dark-grey;
+    max-width: 100%;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: $dark-grey;
+      z-index: -1;
+    }
+
+    &::before {
+      left: 50%;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    #progress {
+      width: 40px;
+      height: 40px;
+    }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+
+      .header {
+        .title {
+          width: 100%;
+
+          h1 {
+            font-size: 50px;
+          }
+        }
+      }
+
+      form {
+        gap: 45px;
+
+        .input {
+          label {
+            font-size: 30px;
+          }
+        }
+
+        .btn-container {
+          height: min-content;
+          button {
+            font-size: 30px;
+
+            svg {
+              height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

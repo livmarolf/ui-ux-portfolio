@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { ReactComponent as Arrow } from "../assets/arrow.svg";
 import Navbar from "../layouts/Navbar";
 import ParallaxText from "../components/motion/ParallaxText";
 import ProgressCircle from "../components/motion/ProgressCircle";
@@ -116,12 +118,6 @@ With over four years of experience in software development and UI/UX design, I b
         slug={pageData.rpre.slug}
       />
 
-      {/* <CaseCard
-        title={"HUDDLEUP"}
-        description={"WEB DESIGN • DEVELOPMENT • CASE STUDY"}
-        imgPath={pageData.huddleup.cover}
-      /> */}
-
       <div className="about-container">
         <div className="left">
           <p className="header">ABOUT OLIVIA</p>
@@ -144,35 +140,34 @@ With over four years of experience in software development and UI/UX design, I b
                 target="_blank"
                 rel="noreferrer"
               >
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.8319 22.1626L21.0703 9.96094"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <Arrow />
               </a>
-              <p className="date">2022-2024</p>
+              <p className="date">FREELANCE</p>
             </div>
             <div className="row">
-              <p>DEVPIPELINE</p>
+              <p>UI/UX DESIGNER</p>
+              <a
+                href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Arrow />
+              </a>
+              <p className="date">DEVPIPELINE</p>
+            </div>
+            <div className="row">
+              <p>WEB DEVELOPER</p>
+              <a
+                href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Arrow />
+              </a>
+              <p className="date">DEVPIPELINE</p>
+            </div>
+            <div className="row">
+              <p>EDUCATOR</p>
               <a
                 href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
                 target="_blank"
@@ -203,41 +198,18 @@ With over four years of experience in software development and UI/UX design, I b
                   />
                 </svg>
               </a>
-              <p className="date">2022-2023</p>
+              <p className="date">DEVPIPELINE</p>
             </div>
             <div className="row">
-              <p>KELLER WILLIAMS</p>
+              <p>UI/UX DESIGNER</p>
               <a
                 href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
                 target="_blank"
                 rel="noreferrer"
               >
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.8319 22.1626L21.0703 9.96094"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <Arrow />
               </a>
-              <p className="date">2021-2022</p>
+              <p className="date">KW REALTY</p>
             </div>
           </div>
         </div>
@@ -329,7 +301,9 @@ With over four years of experience in software development and UI/UX design, I b
         <div className="heading">
           <h1>DROP ME A LINE</h1>
           <div className="btn-container">
-            <button>CONTACT ME</button>
+            <Link to="/contact">
+              <button>CONTACT ME</button>
+            </Link>
           </div>
         </div>
 
@@ -343,30 +317,7 @@ With over four years of experience in software development and UI/UX design, I b
               <div>
                 <p>LINKEDIN</p>
                 <p className="handle">/IN/OLIVIAMAROLF</p>
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.8319 22.1626L21.0703 9.96094"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <Arrow />
               </div>
             </a>
 
@@ -378,30 +329,7 @@ With over four years of experience in software development and UI/UX design, I b
               <div>
                 <p>GITHUB</p>
                 <p className="handle">/LIVMAROLF</p>
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.8319 22.1626L21.0703 9.96094"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <Arrow />
               </div>
             </a>
 
@@ -413,67 +341,21 @@ With over four years of experience in software development and UI/UX design, I b
               <div>
                 <p>EMAIL</p>
                 <p className="handle">LIVMAROLF@GMAIL.COM</p>
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.8319 22.1626L21.0703 9.96094"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <Arrow />
               </div>
             </a>
           </div>
 
           <div className="right">
             <a
-              href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:4c292ec3-b859-4668-b4d3-17b346f4e3d5"
+              href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:6110b9a5-ab4f-4ff7-a53a-de8e139c19a0"
               target="_blank"
               rel="noreferrer"
             >
               <div>
                 <p>RESUME</p>
                 <p className="handle">VIEW/DOWNLOAD</p>
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.8319 22.1626L21.0703 9.96094"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <Arrow />
               </div>
             </a>
 
@@ -481,30 +363,7 @@ With over four years of experience in software development and UI/UX design, I b
               <div>
                 <p>MOBILE</p>
                 <p className="handle">(801) 885-8122</p>
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.8319 22.1626L21.0703 9.96094"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <Arrow />
               </div>
             </a>
 
@@ -516,30 +375,7 @@ With over four years of experience in software development and UI/UX design, I b
               <div>
                 <p>FIGMA</p>
                 <p className="handle">@LIVMAROLF</p>
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.8319 22.1626L21.0703 9.96094"
-                    stroke="white"
-                    stroke-width="0.8"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <Arrow />
               </div>
             </a>
           </div>
