@@ -1,10 +1,18 @@
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-left">
         <div className="links-container">
+          <Link to="/">
+            <div className="link">
+              HOME
+              <Arrow />
+            </div>
+          </Link>
+
           <a
             target="_blank"
             rel="noreferrer"
@@ -26,9 +34,7 @@ function Navbar() {
               <Arrow />
             </div>
           </a>
-        </div>
 
-        <div className="links-container">
           <a
             href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:6110b9a5-ab4f-4ff7-a53a-de8e139c19a0"
             target="_blank"
@@ -36,13 +42,6 @@ function Navbar() {
           >
             <div className="link">
               RESUME
-              <Arrow />
-            </div>
-          </a>
-
-          <a href="mailto:livmarolf@gmail.com" target="_blank" rel="noreferrer">
-            <div className="link">
-              EMAIL
               <Arrow />
             </div>
           </a>
@@ -57,7 +56,9 @@ function Navbar() {
         </div>
 
         <div className="btn-container">
-          <button>CONTACT ME</button>
+          <Link to="/contact">
+            <button>CONTACT ME</button>
+          </Link>
         </div>
       </div>
     </nav>

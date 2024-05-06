@@ -56,11 +56,6 @@
     margin-bottom: 50px;
     padding-top: 150px;
 
-    .back-arrow {
-      height: 90px;
-      width: auto;
-    }
-
     .heading {
       display: flex;
       flex-direction: column;
@@ -475,9 +470,6 @@
     }
 
     .title {
-      .back-arrow {
-        height: 50px;
-      }
       .heading {
         h1 {
           font-size: 50px;
