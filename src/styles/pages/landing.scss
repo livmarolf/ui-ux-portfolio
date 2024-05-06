@@ -409,6 +409,36 @@
     }
   }
 
+  @media screen and (max-width: 1060px) {
+    .skills {
+      .left {
+        .heading {
+          h1 {
+            font-size: 30px;
+          }
+        }
+
+        .skills-grid {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .right {
+        .heading {
+          h1 {
+            font-size: 30px;
+          }
+        }
+
+        .skills-grid {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: 900px) {
   }
 
@@ -466,8 +496,8 @@
           margin-left: -3px;
 
           span {
-            color: $dark-grey;
-            font-family: $light-accent-font;
+            color: #d9d9d9;
+            font-family: $accent-font;
           }
 
           .couple {

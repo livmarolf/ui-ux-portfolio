@@ -1,3 +1,5 @@
+import { ReactComponent as Arrow } from "../assets/arrow.svg";
+
 function Navbar() {
   return (
     <nav className="navbar">
@@ -10,30 +12,7 @@ function Navbar() {
           >
             <div className="link">
               GITHUB
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <Arrow />
             </div>
           </a>
 
@@ -44,30 +23,7 @@ function Navbar() {
           >
             <div className="link">
               LINKEDIN
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <Arrow />
             </div>
           </a>
         </div>
@@ -80,60 +36,14 @@ function Navbar() {
           >
             <div className="link">
               RESUME
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <Arrow />
             </div>
           </a>
 
           <a href="mailto:livmarolf@gmail.com" target="_blank" rel="noreferrer">
             <div className="link">
               EMAIL
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8783 17.931L21.1702 9.83765L13.0769 10.5457"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10.8319 22.1626L21.0703 9.96094"
-                  stroke="white"
-                  stroke-width="0.8"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <Arrow />
             </div>
           </a>
         </div>

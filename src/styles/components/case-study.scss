@@ -434,6 +434,14 @@
     }
   }
 
+  @media screen and (max-width: 1160px) {
+    .content-container {
+      h1 {
+        font-size: 60px;
+      }
+    }
+  }
+
   @media screen and (max-width: 445px) {
     position: relative;
     margin: 0px 10px 0 60px;
@@ -485,6 +493,7 @@
 
     .content-container {
       gap: 100px;
+
       h1 {
         font-size: 30px;
       }
