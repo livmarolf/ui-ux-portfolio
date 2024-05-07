@@ -676,7 +676,9 @@ const Page = ({ content }) => {
             <p className="sub-header">[ CLICK TO VIEW ]</p>
 
             <div className="image-container prototype">
-              <img src={content.highFidelityImage} alt="high-fi" />
+              <a href={content.prototypeLink} target="_blank" rel="noreferrer">
+                <img src={content.highFidelityImage} alt="high-fi" />
+              </a>
             </div>
           </div>
         </section>

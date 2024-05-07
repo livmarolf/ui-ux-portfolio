@@ -418,6 +418,14 @@
   }
 
   @media screen and (max-width: 1060px) {
+    .title-container {
+      .name-block {
+        p {
+          display: none;
+        }
+      }
+    }
+
     .skills {
       .left {
         .heading {

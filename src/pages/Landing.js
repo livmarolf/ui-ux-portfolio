@@ -10,7 +10,7 @@ import CaseCard from "../components/CaseCard";
 
 export default function Landing() {
   const paragraph = `
-With over four years of experience in software development and UI/UX design, I bring a passion for blending technology and design seamlessly. From crafting intuitive user interfaces to architecting robust software systems, my diverse skill set allows me to create engaging digital experiences that prioritize both form and function.
+With experience in software development and a focus on UI/UX design, I bring a passion for blending technology and design seamlessly. From crafting intuitive user interfaces to architecting robust software systems, my diverse skill set allows me to create engaging digital experiences that prioritize both form and function.
 `;
 
   return (
