@@ -5,13 +5,18 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <div className="links-container">
+        <div className="btn-container home">
           <Link to="/">
-            <div className="link">
-              HOME
-              <Arrow />
-            </div>
+            <button>HOME</button>
           </Link>
+        </div>
+
+        <div className="links-container">
+          {/* <div className="btn-container">
+            <Link to="/">
+              <button>HOME</button>
+            </Link>
+          </div> */}
 
           <a
             target="_blank"
@@ -51,7 +56,7 @@ function Navbar() {
       <div className="nav-right">
         <div className="bio">
           <p>OLIVIA MAROLF</p>
-          <p>UI/UX DESIGNER & SOFTWARE DEVELOPER</p>
+          <p>MULTIDISCIPLINARY DESIGNER</p>
           <p>BASED IN SALT LAKE CITY, UT</p>
         </div>
 
