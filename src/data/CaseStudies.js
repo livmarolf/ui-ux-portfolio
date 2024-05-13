@@ -6,7 +6,7 @@ export const pageData = {
     description: "A sports team management application",
     mainImage: "path",
     prototypeLink:
-      "https://www.figma.com/proto/Wosz9hKXRLbQF0hsPrnZM8/HuddleUp?page-id=1%3A2&type=design&node-id=1-72&viewport=227%2C316%2C0.24&t=KY9QDoCMec6krxa2-1&scaling=scale-down&starting-point-node-id=1%3A72&mode=design",
+      "https://www.figma.com/proto/YsCPMtctJFAs1IKpmpxU83/HUDDLEUP-2024?page-id=0%3A1&type=design&node-id=1-1168&viewport=191%2C102%2C0.2&t=i3S3r0iLq10G2Pbv-1&scaling=scale-down&starting-point-node-id=1%3A1168",
     overview: [
       "HuddleUp simplifies sports team management for coaches, players, gym owners, and enthusiasts across various levels, addressing common administrative challenges that can distract from training and enjoying sports. ",
       "Streamlining sports team management is achieved by allowing coaches to effortlessly track attendance, practice hours, and promotions. It also offers user-friendly team calendars to enhance communication and coordination. In essence, this app streamlines the sports experience, reducing administrative hassles and enabling a more focused pursuit of athletic excellence for everyone involved.",
