@@ -636,7 +636,7 @@ const Page = ({ content }) => {
 
         <section className="left">
           <div>
-            <h1>PRODUCT GOALS</h1>
+            <h1>WIREFRAMES</h1>
           </div>
 
           <div className="content">
@@ -650,7 +650,7 @@ const Page = ({ content }) => {
           </div>
         </section>
 
-        <section className="right">
+        {/* <section className="right">
           <div className="content">
             <p className="header-number">[ 18 ]</p>
 
@@ -664,15 +664,15 @@ const Page = ({ content }) => {
           <div className="header">
             <h1>TYPOGRAPHY</h1>
           </div>
-        </section>
+        </section> */}
 
         <section className="left">
           <div>
-            <h1>LOW FIDELITY DESIGN</h1>
+            <h1>PROTOTYPE</h1>
           </div>
 
           <div className="content">
-            <p className="header-number">[ 15 ]</p>
+            <p className="header-number">[ 18 ]</p>
             <p className="sub-header">[ CLICK TO VIEW ]</p>
 
             <div className="image-container prototype">
