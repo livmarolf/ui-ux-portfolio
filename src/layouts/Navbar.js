@@ -12,12 +12,6 @@ function Navbar() {
         </div>
 
         <div className="links-container">
-          {/* <div className="btn-container">
-            <Link to="/">
-              <button>HOME</button>
-            </Link>
-          </div> */}
-
           <a
             target="_blank"
             rel="noreferrer"
@@ -41,7 +35,7 @@ function Navbar() {
           </a>
 
           <a
-            href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:6110b9a5-ab4f-4ff7-a53a-de8e139c19a0"
+            href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:d5780d4d-5ebf-4a50-a406-6da40a111ff3"
             target="_blank"
             rel="noreferrer"
           >
