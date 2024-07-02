@@ -5,13 +5,32 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <div className="btn-container home">
+        <div className="btn-container">
           <Link to="/">
             <button>HOME</button>
           </Link>
         </div>
 
+        <div className="btn-container">
+          <Link to="/contact">
+            <button>CONTACT ME</button>
+          </Link>
+        </div>
+      </div>
+
+      <div className="nav-right">
         <div className="links-container">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.figma.com/@livmarolf"
+          >
+            <div className="link">
+              FIGMA
+              <Arrow />
+            </div>
+          </a>
+
           <a
             target="_blank"
             rel="noreferrer"
@@ -44,20 +63,6 @@ function Navbar() {
               <Arrow />
             </div>
           </a>
-        </div>
-      </div>
-
-      <div className="nav-right">
-        <div className="bio">
-          <p>OLIVIA MAROLF</p>
-          <p>MULTIDISCIPLINARY DESIGNER</p>
-          <p>BASED IN SALT LAKE CITY, UT</p>
-        </div>
-
-        <div className="btn-container">
-          <Link to="/contact">
-            <button>CONTACT ME</button>
-          </Link>
         </div>
       </div>
     </nav>
