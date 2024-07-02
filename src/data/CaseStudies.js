@@ -513,4 +513,11 @@ export const pageData = {
     highFidelityImage: "/assets/case-study/rpre-high-fidelity.png",
     figmaLink: "",
   },
+  zero: {
+    slug: "zero",
+    title: "ZERO",
+    cover: "/assets/case-study/cover-zero.png",
+    description: "An application for a cardboard recycling service",
+    mainImage: "path",
+  },
 };
