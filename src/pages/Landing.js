@@ -108,13 +108,6 @@ With experience in software development and a focus on UI/UX design, I bring a p
       <div className="case-card-container">
         <div className="columns">
           <CaseCard
-            title={"HUDDLEUP"}
-            description={"WEB DESIGN • CASE STUDY"}
-            imgPath={pageData.huddleup.cover}
-            slug={pageData.huddleup.slug}
-          />
-
-          <CaseCard
             title={"REAL PATREA"}
             description={"WEB DESIGN • CASE STUDY"}
             imgPath={pageData.rpre.cover}
@@ -122,9 +115,17 @@ With experience in software development and a focus on UI/UX design, I bring a p
           />
 
           <CaseCard
+            title={"HUDDLEUP"}
+            description={"WEB DESIGN • CASE STUDY"}
+            imgPath={pageData.huddleup.cover}
+            slug={pageData.huddleup.slug}
+          />
+
+          <CaseCard
             title={"ZERO"}
             description={"WEB DESIGN • CASE STUDY"}
             imgPath={pageData.zero.cover}
+            slug={pageData.zero.slug}
           />
         </div>
 
@@ -132,7 +133,8 @@ With experience in software development and a focus on UI/UX design, I bring a p
           <CaseCard
             title={"DISNEY PLUS"}
             description={"RE-DESIGN • CASE STUDY"}
-            imgPath={pageData.huddleup.cover}
+            imgPath={pageData.disneyPlus.cover}
+            slug={pageData.disneyPlus.slug}
           />
         </div>
       </div>
