@@ -2,8 +2,6 @@ import emailjs from "@emailjs/browser";
 import TextareaAutosize from "react-textarea-autosize";
 import { useRef, useState } from "react";
 import validateEmail from "../utils/validateEmail";
-import ProgressCircle from "../components/motion/ProgressCircle";
-import Navbar from "../layouts/Navbar";
 
 export default function Contact() {
   const form = useRef();
@@ -47,9 +45,6 @@ export default function Contact() {
 
   return (
     <div className="contact-container">
-      <ProgressCircle />
-      <Navbar />
-
       <div className="contact-content">
         <div className="header">
           <div className="title">

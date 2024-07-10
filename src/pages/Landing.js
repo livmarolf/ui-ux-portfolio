@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
-import Navbar from "../layouts/Navbar";
 import ParallaxText from "../components/motion/ParallaxText";
 import ProgressCircle from "../components/motion/ProgressCircle";
 import Paragraph from "../components/motion/Paragraph";
@@ -15,8 +14,7 @@ With experience in software development and a focus on UI/UX design, I bring a p
 
   return (
     <div className="landing-container">
-      <ProgressCircle />
-      <Navbar />
+      {/* <ProgressCircle /> */}
 
       <div className="title-container">
         <div className="first-last">
@@ -76,6 +74,7 @@ With experience in software development and a focus on UI/UX design, I bring a p
         <div className="profession">
           <div className="name-block">
             <AnimatedCharacters text={"UI/UX"} delayFactor={0.96} />
+
             <div className="couple">
               <AnimatedCharacters text={"DESIGNER"} delayFactor={1.44} />
 
@@ -99,24 +98,44 @@ With experience in software development and a focus on UI/UX design, I bring a p
                 />
               </svg>
             </div>
-            <p>© OLIVIA MAROLF</p>
+            <p>©2024</p>
           </div>
         </div>
       </div>
 
-      <CaseCard
-        title={"HUDDLEUP"}
-        description={"WEB DESIGN • CASE STUDY"}
-        imgPath={pageData.huddleup.cover}
-        slug={pageData.huddleup.slug}
-      />
+      <div className="case-card-container">
+        <div className="columns">
+          <CaseCard
+            title={"REAL PATREA"}
+            description={"WEB DESIGN • CASE STUDY"}
+            imgPath={pageData.rpre.cover}
+            slug={pageData.rpre.slug}
+          />
 
-      <CaseCard
-        title={"REAL PATREA REAL ESTATE"}
-        description={"WEB DESIGN • CASE STUDY"}
-        imgPath={pageData.rpre.cover}
-        slug={pageData.rpre.slug}
-      />
+          <CaseCard
+            title={"HUDDLEUP"}
+            description={"WEB DESIGN • CASE STUDY"}
+            imgPath={pageData.huddleup.cover}
+            slug={pageData.huddleup.slug}
+          />
+
+          <CaseCard
+            title={"ZERO"}
+            description={"WEB DESIGN • CASE STUDY"}
+            imgPath={pageData.zero.cover}
+            slug={pageData.zero.slug}
+          />
+        </div>
+
+        <div className="redesign-container">
+          <CaseCard
+            title={"DISNEY PLUS"}
+            description={"RE-DESIGN • CASE STUDY"}
+            imgPath={pageData.disneyPlus.cover}
+            slug={pageData.disneyPlus.slug}
+          />
+        </div>
+      </div>
 
       <div className="about-container">
         <div className="left">

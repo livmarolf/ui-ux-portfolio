@@ -1,7 +1,7 @@
 .landing-container {
   position: relative;
   margin: 0px 35px 0 120px;
-  padding-top: 140px;
+  padding-top: 80px;
   border-right: 1px solid $dark-grey;
   border-left: 1px solid $dark-grey;
   max-width: 100%;
@@ -23,28 +23,6 @@
 
   &::after {
     right: 46%;
-  }
-
-  #progress {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    transform: rotate(-90deg);
-
-    circle {
-      stroke-dashoffset: 0;
-      stroke-width: 15%;
-      fill: none;
-    }
-
-    .bg {
-      stroke: $content;
-      opacity: 0.3;
-    }
-
-    .indicator {
-      stroke: $content;
-    }
   }
 
   .title-container {
@@ -101,6 +79,23 @@
         height: 1.5vw;
         min-width: 1.5vw;
       }
+    }
+  }
+
+  .case-card-container {
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 150px;
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .redesign-container {
+      width: 100%;
     }
   }
 
@@ -513,7 +508,6 @@
 
           span {
             color: #d9d9d9;
-            font-family: $accent-font;
           }
 
           .couple {
