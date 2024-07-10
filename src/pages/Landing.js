@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
 import ParallaxText from "../components/motion/ParallaxText";
-import ProgressCircle from "../components/motion/ProgressCircle";
 import Paragraph from "../components/motion/Paragraph";
 import { pageData } from "../data/CaseStudies";
 import AnimatedCharacters from "../components/motion/AnimatedCharacters";
