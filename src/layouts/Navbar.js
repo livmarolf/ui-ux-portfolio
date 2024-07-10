@@ -1,10 +1,13 @@
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
 import { Link } from "react-router-dom";
+import ProgressCircle from "../components/motion/ProgressCircle";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-left">
+        <ProgressCircle />
+
         <div className="btn-container">
           <Link to="/">
             <button>HOME</button>

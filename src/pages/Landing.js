@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
-import Navbar from "../layouts/Navbar";
 import ParallaxText from "../components/motion/ParallaxText";
 import ProgressCircle from "../components/motion/ProgressCircle";
 import Paragraph from "../components/motion/Paragraph";
@@ -15,8 +14,7 @@ With experience in software development and a focus on UI/UX design, I bring a p
 
   return (
     <div className="landing-container">
-      <ProgressCircle />
-      <Navbar />
+      {/* <ProgressCircle /> */}
 
       <div className="title-container">
         <div className="first-last">

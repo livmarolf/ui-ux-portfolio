@@ -1,16 +1,9 @@
 import { pageData } from "../data/CaseStudies";
 import { useParams } from "react-router-dom";
-import Navbar from "../layouts/Navbar";
-import ProgressCircle from "./motion/ProgressCircle";
 
 const Page = ({ content }) => {
-  console.log(content);
-
   return (
     <div className="page-container">
-      <ProgressCircle />
-      <Navbar />
-
       <div className="title">
         <div className="heading">
           <div className="title-text">
