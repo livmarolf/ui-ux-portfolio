@@ -81,10 +81,12 @@
     margin-bottom: 100px;
 
     .description {
+      gap: 20px;
+
       .title-link {
         a {
           height: 25px;
-          width: 25px;
+          width: auto;
         }
       }
     }

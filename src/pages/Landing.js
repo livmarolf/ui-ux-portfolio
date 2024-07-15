@@ -13,8 +13,6 @@ With experience in software development and a focus on UI/UX design, I bring a p
 
   return (
     <div className="landing-container">
-      {/* <ProgressCircle /> */}
-
       <div className="title-container">
         <div className="first-last">
           <div>
@@ -118,15 +116,6 @@ With experience in software development and a focus on UI/UX design, I bring a p
             slug={pageData.huddleup.slug}
           />
 
-          <CaseCard
-            title={"ZERO"}
-            description={"WEB DESIGN • CASE STUDY"}
-            imgPath={pageData.zero.cover}
-            slug={pageData.zero.slug}
-          />
-        </div>
-
-        <div className="redesign-container">
           <CaseCard
             title={"DISNEY PLUS"}
             description={"RE-DESIGN • CASE STUDY"}

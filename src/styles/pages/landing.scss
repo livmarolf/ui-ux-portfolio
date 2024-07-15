@@ -84,18 +84,11 @@
 
   .case-card-container {
     margin-bottom: 150px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 150px;
 
     .columns {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
-    }
-
-    .redesign-container {
-      width: 100%;
     }
   }
 
@@ -545,6 +538,13 @@
       }
     }
 
+    .case-card-container {
+      .columns {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
     .about-container {
       display: flex;
       flex-direction: column;
@@ -611,7 +611,7 @@
 
     .cta {
       .heading {
-        flex-direction: column-reverse;
+        flex-direction: column;
         gap: 20px;
 
         h1 {
