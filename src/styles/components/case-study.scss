@@ -85,6 +85,38 @@
         font-size: 14px;
         font-family: $accent-font;
       }
+
+      .link-container {
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 90px;
+        background-color: $content;
+        margin-top: 15px;
+
+        a {
+          text-decoration: none;
+
+          div {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: $page-background;
+            font-weight: 300;
+            padding: 8px 0;
+
+            svg {
+              width: auto;
+              height: 26px;
+
+              path {
+                stroke: $page-background;
+              }
+            }
+          }
+        }
+      }
     }
   }
 

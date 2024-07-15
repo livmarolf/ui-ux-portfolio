@@ -3,6 +3,7 @@ export const pageData = {
     slug: "huddleup",
     title: "HUDDLEUP",
     cover: "/assets/case-study/cover-huddleup.png",
+    banner: "/assets/case-study/hu-banner.png",
     description: "A sports team management application",
     mainImage: "path",
     prototypeLink:
@@ -288,6 +289,7 @@ export const pageData = {
     slug: "rpre",
     title: "REAL PATREA REAL ESTATE",
     cover: "/assets/case-study/cover-2.png",
+    banner: "/assets/case-study/rpre-banner.png",
     description: "A real estate agent's custom application",
     mainImage: "path",
     prototypeLink:
