@@ -1,5 +1,6 @@
 import { pageData } from "../data/CaseStudies";
 import { useParams } from "react-router-dom";
+import { ReactComponent as Arrow } from "../assets/arrow.svg";
 
 const Page = ({ content }) => {
   return (
@@ -30,11 +31,19 @@ const Page = ({ content }) => {
           </div>
 
           <p>{content.description}</p>
+
+          <div className="link-container">
+            <a target="_blank" rel="noreferrer" href={content.prototypeLink}>
+              <div>
+                VIEW PROTOTYPE <Arrow />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
 
       <div className="cover-container">
-        <img src={content.cover} alt="cover" />
+        <img src={content.banner} alt="cover" />
       </div>
 
       <div className="content-container">
