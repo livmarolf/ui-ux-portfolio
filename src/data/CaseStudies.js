@@ -2,8 +2,8 @@ export const pageData = {
   huddleup: {
     slug: "huddleup",
     title: "HUDDLEUP",
-    cover: "/assets/case-study/cover-huddleup.png",
-    banner: "/assets/case-study/hu-banner.png",
+    cover: "/assets/case-study/cover-huddleup.webp",
+    banner: "/assets/case-study/hu-banner.webp",
     description: "A sports team management application",
     mainImage: "path",
     prototypeLink:
@@ -288,7 +288,7 @@ export const pageData = {
   rpre: {
     slug: "rpre",
     title: "REAL PATREA REAL ESTATE",
-    cover: "/assets/case-study/cover-2.png",
+    cover: "/assets/case-study/cover-2.webp",
     banner: "/assets/case-study/rpre-banner.png",
     description: "A real estate agent's custom application",
     mainImage: "path",
@@ -525,7 +525,7 @@ export const pageData = {
   disneyPlus: {
     slug: "disney-plus",
     title: "DISNEY PLUS",
-    cover: "/assets/case-study/cover-disney-plus.png",
+    cover: "/assets/case-study/cover-disney-plus.webp",
     description: "A re-design of the Disney Plus movies filter",
     mainImage: "path",
   },

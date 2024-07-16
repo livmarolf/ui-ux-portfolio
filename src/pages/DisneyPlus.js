@@ -1,5 +1,5 @@
-import tvSolution from "../assets/images/tv-solution.png";
-import desktopSolution from "../assets/images/desktop-solution.png";
+import tvSolution from "../assets/images/tv-solution.webp";
+import desktopSolution from "../assets/images/desktop-solution.webp";
 import disneyHero from "../assets/images/disney-hero.png";
 import Accordion from "../components/Accordion";
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
