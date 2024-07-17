@@ -107,6 +107,7 @@ With experience in software development and a focus on UI/UX design, I bring a p
             description={"WEB DESIGN • CASE STUDY"}
             imgPath={pageData.rpre.cover}
             slug={pageData.rpre.slug}
+            count={"01"}
           />
 
           <CaseCard
@@ -114,6 +115,7 @@ With experience in software development and a focus on UI/UX design, I bring a p
             description={"WEB DESIGN • CASE STUDY"}
             imgPath={pageData.huddleup.cover}
             slug={pageData.huddleup.slug}
+            count={"02"}
           />
 
           <CaseCard
@@ -121,6 +123,7 @@ With experience in software development and a focus on UI/UX design, I bring a p
             description={"RE-DESIGN • CASE STUDY"}
             imgPath={pageData.disneyPlus.cover}
             slug={pageData.disneyPlus.slug}
+            count={"03"}
           />
         </div>
       </div>
