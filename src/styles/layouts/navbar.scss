@@ -10,6 +10,7 @@
   padding-left: 120px;
   padding-right: 37px;
   background-color: $page-background;
+  border-bottom: 1px solid $dark-grey;
 
   #progress {
     position: fixed;
@@ -39,8 +40,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    border-left: 1px solid $dark-grey;
-    border-right: 1px solid $dark-grey;
+
     height: 100%;
     margin-right: -2px;
 
@@ -71,10 +71,8 @@
   .nav-right {
     display: flex;
     align-items: center;
-    width: 100%;
     height: 100%;
-    border-left: 1px solid $dark-grey;
-    border-right: 1px solid $dark-grey;
+    justify-self: end;
 
     .links-container {
       display: flex;

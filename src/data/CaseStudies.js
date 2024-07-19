@@ -12,17 +12,8 @@ export const pageData = {
       "HuddleUp simplifies sports team management for coaches, players, gym owners, and enthusiasts across various levels, addressing common administrative challenges that can distract from training and enjoying sports. ",
       "Streamlining sports team management is achieved by allowing coaches to effortlessly track attendance, practice hours, and promotions. It also offers user-friendly team calendars to enhance communication and coordination. In essence, this app streamlines the sports experience, reducing administrative hassles and enabling a more focused pursuit of athletic excellence for everyone involved.",
     ],
-    responsibilities: [
-      "UX Designer (Research, Visual Design, Interaction Design, Usability Testing)",
-      "User Interface (UI) Designer",
-      "Content Designer",
-    ],
-    tools: [
-      "ADOBE ILLUSTRATOR - BRANDING, LOGOS",
-      "FIGMA - WIREFRAMES, DESIGNS",
-      "TRELLO - TASK MANAGEMENT",
-      "LUCIDCHART - USER AND TASK FLOWS",
-    ],
+    responsibilities: ["UX Designer", "UI Designer", "Content Designer"],
+    tools: ["ADOBE ILLUSTRATOR", "FIGMA", "TRELLO", "LUCIDCHART"],
     problemStatement:
       "HuddleUp simplifies sports team management by addressing various administrative challenges. It offers intuitive solutions for scheduling, roster management, and performance tracking, helping coaches, players, and administrators streamline their tasks. With its user-friendly interface and comprehensive features, HuddleUp makes team management more efficient, allowing users to focus on the game.",
     deliverables: [
@@ -188,7 +179,7 @@ export const pageData = {
         occupation: "team manager",
       },
       quote:
-        "“ORGANIZATION BREEDS EXCELLENCE, AND MY TEAM’S SUCCESS IS MY HEART’S ANTHEM.”",
+        "“Organization breeds excellence, and my team’s success is my heart’s anthem.”",
       background:
         "Simon, a devoted 35-year-old sports team manager, exemplifies unwavering commitment to his team's triumph. With a profound dedication to their success, he tirelessly refines his management techniques, leaving no stone unturned in his pursuit of excellence, ensuring his team is well-prepared for every challenge on their path to victory.",
       goals: [
@@ -287,7 +278,7 @@ export const pageData = {
   },
   rpre: {
     slug: "rpre",
-    title: "REAL PATREA REAL ESTATE",
+    title: "REAL PATREA",
     cover: "/assets/case-study/cover-2.webp",
     banner: "/assets/case-study/rpre-banner.png",
     description: "A real estate agent's custom application",
