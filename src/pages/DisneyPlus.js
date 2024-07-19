@@ -1,11 +1,11 @@
-import tvSolution from "../assets/images/tv-solution.webp";
-import desktopSolution from "../assets/images/desktop-solution.webp";
-import disneyHero from "../assets/images/disney-hero.png";
 import Accordion from "../components/Accordion";
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
-import { Link } from "react-router-dom";
+import ReactCompareImage from "react-compare-image";
+import disneyBefore from "../assets/images/disney-before.png";
+import disneyAfter from "../assets/images/disney-after.png";
+import tvSolution from "../assets/images/tv-solution.png";
 
-const tvAccordionData = [
+const tvImplementation = [
   {
     id: 0,
     label: "IDENTIFY BUTTON PRESS",
@@ -45,7 +45,7 @@ const tvAccordionData = [
   },
 ];
 
-const desktopAccordionData = [
+const webImplementation = [
   {
     id: 0,
     label: "CSS STYLING",
@@ -60,7 +60,7 @@ const desktopAccordionData = [
   },
   {
     id: 1,
-    label: "USER EXPERIENCE",
+    label: "USER TESTING",
     renderContent: () => {
       return (
         <>
@@ -78,398 +78,805 @@ export default function DisneyPlus() {
   return (
     <div className="case-container">
       <div className="title">
-        <h1>Improving Disney Plus Movie Filters</h1>
-      </div>
+        <h1>DISNEY PLUS FILTER REDESIGN</h1>
 
-      <div className="intro-container">
-        <div className="intro">
-          <div className="header">
-            <h1>Introduction</h1>
-            <p>01</p>
-          </div>
-          <div>
-            <p>
-              Disney Plus offers a vast library of movies, but users encounter a
-              significant usability issue on the "Movies" page. The filter
-              option, essential for refining movie choices, is positioned at the
-              top of the page and disappears as users scroll down. This
-              necessitates scrolling back up to access the filter, creating a
-              frustrating experience, especially on TV where navigation requires
-              multiple clicks.
-            </p>
+        <div className="links">
+          <a target="_blank" rel="noreferrer" href="/">
+            <button>
+              VIEW FIGMA <Arrow />
+            </button>
+          </a>
+
+          <div className="icons">
+            <svg
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.4957 2.75H11.9582C9.3457 2.75 7.2832 4.8125 7.2832 7.2875C7.2832 9.7625 9.3457 11.825 11.8207 11.825H16.4957V2.75Z"
+                stroke="#7E7E7E"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M16.4979 11.9628H11.9604C9.48535 11.9628 7.42285 14.0253 7.42285 16.5003C7.42285 18.9753 9.48535 21.0378 11.9604 21.0378H16.4979V11.9628Z"
+                stroke="#7E7E7E"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M16.4979 21.0372H11.9604C9.48535 21.0372 7.42285 23.0997 7.42285 25.5747C7.42285 28.0497 9.48535 30.1122 11.9604 30.1122C14.4354 30.1122 16.4979 28.0497 16.4979 25.5747V21.0372Z"
+                stroke="#7E7E7E"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M16.5 2.75H21.0375C23.5125 2.75 25.575 4.8125 25.575 7.2875C25.575 9.7625 23.5125 11.825 21.0375 11.825H16.5V2.75Z"
+                stroke="#7E7E7E"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M21.0375 11.9628C23.5125 11.9628 25.575 14.0253 25.575 16.5003C25.575 18.9753 23.5125 21.0378 21.0375 21.0378C18.5625 21.0378 16.5 18.9753 16.5 16.5003C16.5 14.0253 18.5625 11.9628 21.0375 11.9628Z"
+                stroke="#7E7E7E"
+                stroke-miterlimit="10"
+              />
+            </svg>
+
+            <svg
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.625 30.25H12.375C5.5 30.25 2.75 27.5 2.75 20.625V12.375C2.75 5.5 5.5 2.75 12.375 2.75H20.625C27.5 2.75 30.25 5.5 30.25 12.375V20.625C30.25 27.5 27.5 30.25 20.625 30.25Z"
+                stroke="#7E7E7E"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.1312 24.365H9.76246C8.84121 24.365 8.08496 23.6087 8.08496 22.6875V10.3262C8.08496 9.40499 8.84121 8.64874 9.76246 8.64874H13.1312C14.0525 8.64874 14.8087 9.40499 14.8087 10.3262V22.6737C14.8087 23.6087 14.0525 24.365 13.1312 24.365Z"
+                stroke="#7E7E7E"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M23.5675 18.7412H19.525C18.7825 18.7412 18.1775 18.1362 18.1775 17.3937V9.99624C18.1775 9.25374 18.7825 8.64874 19.525 8.64874H23.5675C24.31 8.64874 24.915 9.25374 24.915 9.99624V17.4075C24.9287 18.1362 24.31 18.7412 23.5675 18.7412Z"
+                stroke="#7E7E7E"
+                stroke-miterlimit="10"
+              />
+            </svg>
+
+            <svg
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.2124 22L14.0249 11L18.9749 22"
+                stroke="#7E7E7E"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10.3125 18.2875H17.7375"
+                stroke="#7E7E7E"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M22.4126 22V14.7125"
+                stroke="#7E7E7E"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20.625 30.25H12.375C5.5 30.25 2.75 27.5 2.75 20.625V12.375C2.75 5.5 5.5 2.75 12.375 2.75H20.625C27.5 2.75 30.25 5.5 30.25 12.375V20.625C30.25 27.5 27.5 30.25 20.625 30.25Z"
+                stroke="#7E7E7E"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M22.4675 11.0469V11.0469"
+                stroke="#7E7E7E"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </div>
         </div>
-        <div className="intro">
-          <div className="header">
-            <h1>Problem Statement</h1>
-            <p>02</p>
-          </div>
-          <div>
-            <p>
-              The movies filter at the top of the page disappears when
-              scrolling, making it inconvenient for users to change filter
-              preferences. When using the desktop version, users must scroll
-              back to the top, potentially scrolling through numerous movies.
-              When on the TV users need to click the up arrow multiple times,
-              proportional to the number of rows, to reach the filter. This is
-              particularly cumbersome and interrupts the viewing experience.
-            </p>
-          </div>
-        </div>
       </div>
 
-      <div className="problem-statement-img">
-        <div className="img-container">
-          <img src={disneyHero} alt="disney-hero" />
-
-          <div className="overlay-text">
-            <p>
-              The image shows the current desktop design where users, once they
-              start scrolling through movies, lose access to the filter. This
-              illustrates the difficulty they face in adjusting their
-              preferences later on
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="solution">
+      <div className="before-after">
         <div className="header">
-          <h1>TV Solution</h1>
-          <button>View Desktop Solution</button>
-        </div>
-
-        <div className="img-container">
-          <img src={tvSolution} alt="tv-solution" />
-
-          <div className="overlay-text">
-            <p>
-              The image depicts the functionality where a single press of the
-              back button automatically scrolls the user to the top of the page.
-              From there, another press of the back button routes the user to
-              the previous page
-            </p>
-          </div>
-        </div>
-
-        <div className="implementation-container">
-          <div>
-            <p className="sm-header">IMPLEMENTATION DETAILS</p>
-            <p className="large-font">
-              To enhance navigation on Disney Plus for TV users, I propose using
-              the remote's back button to quickly return to the top of the page,
-              making the filter options easily accessible without excessive
-              scrolling.
-            </p>
-          </div>
-
-          <div>
-            <p className="sm-header">IMPLEMENTATION STEPS</p>
-            <Accordion items={tvAccordionData} keepOthersOpen={true} />
-          </div>
-        </div>
-
-        <div className="user-flow-container">
-          <h1>USER FLOW</h1>
-
-          <div className="flow-lists">
-            <div className="flow-list">
-              <div className="list-header">
-                <p>Initial Navigation</p>
-                <p>01</p>
-              </div>
-              <div className="list">
-                <div className="row">
-                  <p>Identify the target audience</p>
-                  <p>[•]</p>
-                </div>
-
-                <div className="row">
-                  <p>Filters are visible and available at the top</p>
-                  <p>[•]</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flow-list">
-              <div className="list-header">
-                <p>Scrolling Down</p>
-                <p>02</p>
-              </div>
-              <div className="list">
-                <div className="row">
-                  <p>User scrolls through the list of movies</p>
-                  <p>[•]</p>
-                </div>
-
-                <div className="row">
-                  <p>User needs to change filter preferences</p>
-                  <p>[•]</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flow-list">
-              <div className="list-header">
-                <p>Accessing Filters</p>
-                <p>03</p>
-              </div>
-              <div className="list">
-                <div className="row">
-                  <p>User presses the back button once</p>
-                  <p>[•]</p>
-                </div>
-
-                <div className="row">
-                  <p>Page scrolls to the top, making filters visible again</p>
-                  <p>[•]</p>
-                </div>
-
-                <div className="row">
-                  <p>User adjusts filter preferences</p>
-                  <p>[•]</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flow-list">
-              <div className="list-header">
-                <p>Previous Page</p>
-                <p>04</p>
-              </div>
-              <div className="list">
-                <div className="row">
-                  <p>User presses back button again (from the top)</p>
-                  <p>[•]</p>
-                </div>
-
-                <div className="row">
-                  <p>user is navigated to the previous page</p>
-                  <p>[•]</p>
-                </div>
-
-                <div className="row">
-                  <p>User can now view previous page</p>
-                  <p>[•]</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="solution">
-        <div className="header">
-          <h1>Desktop Solution</h1>
-          <button>View TV Solution</button>
-        </div>
-
-        <div className="img-container">
-          <img src={desktopSolution} alt="tv-solution" />
-
-          <div className="overlay-text">
-            <p>
-              The image depicts the functionality where the filter bar remains
-              visible at the top of the screen as the user scrolls down the
-              page. This ensures that users can access filter options at any
-              time without needing to scroll back to the top
-            </p>
-          </div>
-        </div>
-
-        <div className="implementation-container">
-          <div>
-            <p className="sm-header">IMPLEMENTATION DETAILS</p>
-            <p className="large-font">
-              For the Disney Plus desktop platform, I propose a sticky filter
-              bar that remains visible as users scroll, ensuring filter options
-              are always accessible for a smoother browsing experience.
-            </p>
-          </div>
-
-          <div>
-            <p className="sm-header">IMPLEMENTATION STEPS</p>
-            <Accordion items={desktopAccordionData} keepOthersOpen={true} />
-          </div>
-        </div>
-
-        <div className="user-flow-container">
-          <h1>USER FLOW</h1>
-
-          <div className="flow-lists">
-            <div className="flow-list">
-              <div className="list-header">
-                <p>Initial Navigation</p>
-                <p>01</p>
-              </div>
-              <div className="list">
-                <div className="row">
-                  <p>User navigates to the "Movies" page</p>
-                  <p>[•]</p>
-                </div>
-
-                <div className="row">
-                  <p>Filters are visible and available below the navbar</p>
-                  <p>[•]</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flow-list">
-              <div className="list-header">
-                <p>Scrolling Down</p>
-                <p>02</p>
-              </div>
-              <div className="list">
-                <div className="row">
-                  <p>User scrolls through the list of movies</p>
-                  <p>[•]</p>
-                </div>
-
-                <div className="row">
-                  <p>The filter remains visible below the navbar</p>
-                  <p>[•]</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flow-list">
-              <div className="list-header">
-                <p>Accessing Filters</p>
-                <p>03</p>
-              </div>
-              <div className="list">
-                <div className="row">
-                  <p>User can adjust filter preferences at any point</p>
-                  <p>[•]</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="conclusion-container">
-        <div className="intro">
-          <div className="header">
-            <h1>Benefits</h1>
-            <p>01</p>
-          </div>
-          <div>
-            <p>
-              Improved usability allows users to quickly access filters without
-              excessive scrolling. Enhanced navigation simplifies interaction on
-              TV by reducing the number of clicks needed, while consistency
-              maintains the expected functionality of the back button for
-              navigation. Persistent access ensures filters are always
-              accessible on desktop, improving the overall browsing experience.
-            </p>
-          </div>
-        </div>
-        <div className="intro">
-          <div className="header">
-            <h1>Conclusion</h1>
-            <p>02</p>
-          </div>
-          <div>
-            <p>
-              By modifying the functionality of the back button on TV to serve
-              dual purposes and implementing a sticky filter on desktop, Disney
-              Plus can significantly enhance the user experience. These
-              solutions provide a more intuitive and efficient way to navigate
-              and interact with the movies page, aligning with user expectations
-              and improving overall satisfaction.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="cta">
-        <div className="heading">
-          <h1>THANKS FOR READING</h1>
-
-          <div className="btn-container">
-            <Link to="/contact">
-              <button>CONTACT ME</button>
-            </Link>
-            <Link to="/">
-              <button>CASE STUDIES</button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="columns">
           <div className="left">
-            <a
-              href="https://www.linkedin.com/in/oliviamarolf/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <p>LINKEDIN</p>
-                <p className="handle">/IN/OLIVIAMAROLF</p>
-                <Arrow />
-              </div>
-            </a>
+            <h1>BEFORE</h1>
 
-            <a
-              href="https://github.com/livmarolf"
-              target="_blank"
-              rel="noreferrer"
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div>
-                <p>GITHUB</p>
-                <p className="handle">/LIVMAROLF</p>
-                <Arrow />
-              </div>
-            </a>
-
-            <a
-              href="mailto:livmarolf@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <p>EMAIL</p>
-                <p className="handle">LIVMAROLF@GMAIL.COM</p>
-                <Arrow />
-              </div>
-            </a>
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.2602 15.53L9.74023 12L13.2602 8.46997"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </div>
 
           <div className="right">
-            <a
-              href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:d43b8060-d87c-42d6-b97d-6e0b8a6d30bf"
-              target="_blank"
-              rel="noreferrer"
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div>
-                <p>RESUME</p>
-                <p className="handle">VIEW/DOWNLOAD</p>
-                <Arrow />
-              </div>
-            </a>
-
-            <a href="tel:+8018858122" target="_blank" rel="noreferrer">
-              <div>
-                <p>MOBILE</p>
-                <p className="handle">(801) 885-8122</p>
-                <Arrow />
-              </div>
-            </a>
-
-            <a
-              href="https://www.figma.com/@livmarolf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div>
-                <p>FIGMA</p>
-                <p className="handle">@LIVMAROLF</p>
-                <Arrow />
-              </div>
-            </a>
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.2602 15.53L9.74023 12L13.2602 8.46997"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <h1>AFTER</h1>
           </div>
+        </div>
+
+        <div className="indicator">
+          <p>INACCESSIBLE FILTER</p>
+
+          <p>ACCESSIBLE FILTER</p>
+        </div>
+
+        <div className="comparison">
+          <ReactCompareImage
+            leftImage={disneyBefore}
+            rightImage={disneyAfter}
+          />
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="half-header">
+          <div className="info">
+            <svg
+              width="22"
+              height="21"
+              viewBox="0 0 22 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.872 8.46835H19.1812C18.791 8.46649 18.4894 8.3216 18.2665 8.09685C18.0457 7.87116 17.9162 7.5619 17.9172 7.25263C17.9192 6.95635 18.0262 6.66658 18.2899 6.41396L18.7783 5.94773C19.1928 5.55208 19.402 5.02919 19.402 4.51188C19.402 3.99364 19.1938 3.47075 18.7783 3.0751C18.3638 2.67946 17.817 2.47976 17.274 2.48069C16.7311 2.48069 16.1833 2.67946 15.7688 3.0751L15.2803 3.54134C15.0156 3.7921 14.7111 3.89518 14.4007 3.89704C14.0777 3.89704 13.7527 3.77446 13.5172 3.56363C13.2817 3.35094 13.1299 3.06302 13.128 2.69059V2.03119C13.128 0.909258 12.1754 0 11 0C9.82458 0 8.872 0.909258 8.872 2.03119V2.69059C8.87006 3.06302 8.71826 3.35094 8.48279 3.56363C8.24732 3.77446 7.92233 3.89704 7.59831 3.89704C7.28889 3.89518 6.98433 3.7921 6.71869 3.54134L6.23024 3.0751C5.81573 2.67946 5.26889 2.47976 4.72595 2.48069C4.183 2.48069 3.63519 2.67946 3.22166 3.0751C2.80715 3.47075 2.59796 3.99271 2.59796 4.51188C2.59796 5.03012 2.80618 5.55208 3.22166 5.94773L3.71012 6.41396C3.97283 6.66751 4.08085 6.95728 4.08279 7.25355C4.08279 7.5619 3.95532 7.87209 3.73347 8.09685C3.51065 8.3216 3.20902 8.46649 2.81884 8.46835H2.12799C0.952576 8.46835 0 9.3776 0 10.4995C0 11.6215 0.952576 12.5307 2.12799 12.5307H2.81884C3.20902 12.5326 3.51065 12.6774 3.73347 12.9022C3.95435 13.127 4.08279 13.4372 4.08279 13.7455C4.08085 14.0409 3.97381 14.3316 3.71012 14.5851L3.22166 15.0513C2.80715 15.447 2.59796 15.9689 2.59796 16.4881C2.59796 17.0064 2.80618 17.5283 3.22166 17.924C3.63617 18.3196 4.183 18.5193 4.72595 18.5193C5.26889 18.5193 5.8167 18.3196 6.23121 17.924L6.71967 17.4577C6.9853 17.206 7.28889 17.1039 7.59928 17.102C7.92233 17.102 8.24732 17.2246 8.48279 17.4354C8.71826 17.6481 8.87006 17.9361 8.872 18.3094V18.9688C8.872 20.0907 9.82458 21 11 21C12.1754 21 13.128 20.0907 13.128 18.9688V18.3094C13.1299 17.9361 13.2817 17.6491 13.5172 17.4364C13.7527 17.2255 14.0777 17.102 14.4007 17.1029C14.7111 17.1048 15.0147 17.207 15.2793 17.4587L15.7678 17.9249C16.1823 18.3205 16.7292 18.5202 17.2731 18.5202C17.816 18.5202 18.3638 18.3205 18.7783 17.9249C19.1928 17.5292 19.402 17.0073 19.402 16.489C19.402 15.9708 19.1938 15.4479 18.7783 15.0523L18.2899 14.586C18.0272 14.3325 17.9192 14.0427 17.9172 13.7464C17.9172 13.4381 18.0447 13.1279 18.2665 12.9031C18.4894 12.6784 18.791 12.5335 19.1812 12.5316H19.872C21.0474 12.5316 22 11.6224 22 10.5005C22 9.37853 21.0474 8.46928 19.872 8.46928V8.46835ZM19.872 11.7032H19.1812C18.5506 11.7013 18.0028 11.9558 17.6321 12.3375C17.2594 12.7193 17.0503 13.2236 17.0493 13.7464C17.0473 14.2452 17.2487 14.7653 17.6759 15.1712L18.1644 15.6374C18.4115 15.8733 18.5331 16.1788 18.5331 16.4881C18.5331 16.7974 18.4105 17.1029 18.1644 17.3388C17.9172 17.5748 17.5971 17.6908 17.2731 17.6918C16.9491 17.6918 16.6289 17.5748 16.3818 17.3388L15.8933 16.8726C15.4681 16.4649 14.9232 16.2726 14.4007 16.2745C13.8529 16.2745 13.3245 16.4751 12.9246 16.8308C12.5247 17.1847 12.2591 17.7076 12.2601 18.3094V18.9688C12.2591 19.6329 11.6957 20.1706 10.999 20.1725C10.3033 20.1715 9.73993 19.6338 9.73896 18.9688V18.3094C9.7409 17.7076 9.47431 17.1847 9.0744 16.8308C8.67449 16.4751 8.14612 16.2754 7.59831 16.2745C7.0758 16.2726 6.53092 16.4649 6.10571 16.8726L5.61725 17.3388C5.3701 17.5748 5.04996 17.6908 4.72595 17.6918C4.40193 17.6918 4.08182 17.5748 3.83467 17.3388C3.58752 17.1029 3.46589 16.7974 3.46589 16.4881C3.46589 16.1788 3.58849 15.8733 3.83467 15.6374L4.32313 15.1712C4.75028 14.7653 4.95169 14.2452 4.94975 13.7464C4.94975 13.2236 4.73958 12.7193 4.36691 12.3375C3.99619 11.9558 3.44838 11.7023 2.81787 11.7032H2.12701C1.4313 11.7023 0.867926 11.1645 0.86598 10.5005C0.866953 9.83548 1.43033 9.29774 2.12701 9.29681H2.81787C3.44838 9.29867 3.99619 9.04418 4.36691 8.66246C4.73958 8.28075 4.94877 7.77644 4.94975 7.25355C4.95169 6.75482 4.75028 6.23471 4.32313 5.82884L3.83467 5.36261C3.58752 5.12671 3.46589 4.82115 3.46589 4.51188C3.46589 4.20261 3.58849 3.89703 3.83467 3.66113C4.08182 3.42523 4.40193 3.30915 4.72595 3.30915C5.04996 3.30915 5.3701 3.42616 5.61725 3.66113L6.10571 4.12736C6.53092 4.53509 7.0758 4.72643 7.59831 4.7255C8.14612 4.7255 8.67449 4.52489 9.0744 4.16918C9.47431 3.81532 9.73993 3.29242 9.73896 2.69059V2.03119C9.73993 1.3662 10.3033 0.828438 10.999 0.827509C11.6947 0.828438 12.2581 1.3662 12.2601 2.03119V2.69059C12.2581 3.29242 12.5247 3.81439 12.9246 4.16825C13.3245 4.52396 13.8529 4.72364 14.4007 4.72457C14.9232 4.72643 15.4681 4.53416 15.8933 4.12643L16.3818 3.6602C16.6289 3.4243 16.9491 3.30822 17.2731 3.30822C17.5971 3.30822 17.9172 3.42523 18.1644 3.6602C18.4115 3.8961 18.5331 4.20168 18.5331 4.51095C18.5331 4.82022 18.4105 5.12578 18.1644 5.36168L17.6759 5.82791C17.2487 6.23378 17.0473 6.75296 17.0493 7.25263C17.0493 7.77551 17.2594 8.27982 17.6321 8.66153C18.0028 9.04325 18.5506 9.29774 19.1812 9.29588H19.872C20.5677 9.29681 21.1311 9.83455 21.133 10.4995C21.1321 11.1636 20.5687 11.7013 19.872 11.7023V11.7032Z"
+                fill="white"
+              />
+            </svg>
+
+            <p>001</p>
+          </div>
+
+          <h1>INTRODUCTION</h1>
+        </div>
+
+        <div className="content">
+          <p>
+            Disney Plus offers a vast library of movies, but users encounter a
+            significant usability issue on the "Movies" page. The filter option,
+            essential for refining movie choices, is positioned at the top of
+            the page and disappears as users scroll down. This necessitates
+            scrolling back up to access the filter, creating a frustrating
+            experience, especially on TV where navigation requires multiple
+            clicks.
+          </p>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="half-header">
+          <div className="info">
+            <svg
+              width="22"
+              height="21"
+              viewBox="0 0 22 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.872 8.46835H19.1812C18.791 8.46649 18.4894 8.3216 18.2665 8.09685C18.0457 7.87116 17.9162 7.5619 17.9172 7.25263C17.9192 6.95635 18.0262 6.66658 18.2899 6.41396L18.7783 5.94773C19.1928 5.55208 19.402 5.02919 19.402 4.51188C19.402 3.99364 19.1938 3.47075 18.7783 3.0751C18.3638 2.67946 17.817 2.47976 17.274 2.48069C16.7311 2.48069 16.1833 2.67946 15.7688 3.0751L15.2803 3.54134C15.0156 3.7921 14.7111 3.89518 14.4007 3.89704C14.0777 3.89704 13.7527 3.77446 13.5172 3.56363C13.2817 3.35094 13.1299 3.06302 13.128 2.69059V2.03119C13.128 0.909258 12.1754 0 11 0C9.82458 0 8.872 0.909258 8.872 2.03119V2.69059C8.87006 3.06302 8.71826 3.35094 8.48279 3.56363C8.24732 3.77446 7.92233 3.89704 7.59831 3.89704C7.28889 3.89518 6.98433 3.7921 6.71869 3.54134L6.23024 3.0751C5.81573 2.67946 5.26889 2.47976 4.72595 2.48069C4.183 2.48069 3.63519 2.67946 3.22166 3.0751C2.80715 3.47075 2.59796 3.99271 2.59796 4.51188C2.59796 5.03012 2.80618 5.55208 3.22166 5.94773L3.71012 6.41396C3.97283 6.66751 4.08085 6.95728 4.08279 7.25355C4.08279 7.5619 3.95532 7.87209 3.73347 8.09685C3.51065 8.3216 3.20902 8.46649 2.81884 8.46835H2.12799C0.952576 8.46835 0 9.3776 0 10.4995C0 11.6215 0.952576 12.5307 2.12799 12.5307H2.81884C3.20902 12.5326 3.51065 12.6774 3.73347 12.9022C3.95435 13.127 4.08279 13.4372 4.08279 13.7455C4.08085 14.0409 3.97381 14.3316 3.71012 14.5851L3.22166 15.0513C2.80715 15.447 2.59796 15.9689 2.59796 16.4881C2.59796 17.0064 2.80618 17.5283 3.22166 17.924C3.63617 18.3196 4.183 18.5193 4.72595 18.5193C5.26889 18.5193 5.8167 18.3196 6.23121 17.924L6.71967 17.4577C6.9853 17.206 7.28889 17.1039 7.59928 17.102C7.92233 17.102 8.24732 17.2246 8.48279 17.4354C8.71826 17.6481 8.87006 17.9361 8.872 18.3094V18.9688C8.872 20.0907 9.82458 21 11 21C12.1754 21 13.128 20.0907 13.128 18.9688V18.3094C13.1299 17.9361 13.2817 17.6491 13.5172 17.4364C13.7527 17.2255 14.0777 17.102 14.4007 17.1029C14.7111 17.1048 15.0147 17.207 15.2793 17.4587L15.7678 17.9249C16.1823 18.3205 16.7292 18.5202 17.2731 18.5202C17.816 18.5202 18.3638 18.3205 18.7783 17.9249C19.1928 17.5292 19.402 17.0073 19.402 16.489C19.402 15.9708 19.1938 15.4479 18.7783 15.0523L18.2899 14.586C18.0272 14.3325 17.9192 14.0427 17.9172 13.7464C17.9172 13.4381 18.0447 13.1279 18.2665 12.9031C18.4894 12.6784 18.791 12.5335 19.1812 12.5316H19.872C21.0474 12.5316 22 11.6224 22 10.5005C22 9.37853 21.0474 8.46928 19.872 8.46928V8.46835ZM19.872 11.7032H19.1812C18.5506 11.7013 18.0028 11.9558 17.6321 12.3375C17.2594 12.7193 17.0503 13.2236 17.0493 13.7464C17.0473 14.2452 17.2487 14.7653 17.6759 15.1712L18.1644 15.6374C18.4115 15.8733 18.5331 16.1788 18.5331 16.4881C18.5331 16.7974 18.4105 17.1029 18.1644 17.3388C17.9172 17.5748 17.5971 17.6908 17.2731 17.6918C16.9491 17.6918 16.6289 17.5748 16.3818 17.3388L15.8933 16.8726C15.4681 16.4649 14.9232 16.2726 14.4007 16.2745C13.8529 16.2745 13.3245 16.4751 12.9246 16.8308C12.5247 17.1847 12.2591 17.7076 12.2601 18.3094V18.9688C12.2591 19.6329 11.6957 20.1706 10.999 20.1725C10.3033 20.1715 9.73993 19.6338 9.73896 18.9688V18.3094C9.7409 17.7076 9.47431 17.1847 9.0744 16.8308C8.67449 16.4751 8.14612 16.2754 7.59831 16.2745C7.0758 16.2726 6.53092 16.4649 6.10571 16.8726L5.61725 17.3388C5.3701 17.5748 5.04996 17.6908 4.72595 17.6918C4.40193 17.6918 4.08182 17.5748 3.83467 17.3388C3.58752 17.1029 3.46589 16.7974 3.46589 16.4881C3.46589 16.1788 3.58849 15.8733 3.83467 15.6374L4.32313 15.1712C4.75028 14.7653 4.95169 14.2452 4.94975 13.7464C4.94975 13.2236 4.73958 12.7193 4.36691 12.3375C3.99619 11.9558 3.44838 11.7023 2.81787 11.7032H2.12701C1.4313 11.7023 0.867926 11.1645 0.86598 10.5005C0.866953 9.83548 1.43033 9.29774 2.12701 9.29681H2.81787C3.44838 9.29867 3.99619 9.04418 4.36691 8.66246C4.73958 8.28075 4.94877 7.77644 4.94975 7.25355C4.95169 6.75482 4.75028 6.23471 4.32313 5.82884L3.83467 5.36261C3.58752 5.12671 3.46589 4.82115 3.46589 4.51188C3.46589 4.20261 3.58849 3.89703 3.83467 3.66113C4.08182 3.42523 4.40193 3.30915 4.72595 3.30915C5.04996 3.30915 5.3701 3.42616 5.61725 3.66113L6.10571 4.12736C6.53092 4.53509 7.0758 4.72643 7.59831 4.7255C8.14612 4.7255 8.67449 4.52489 9.0744 4.16918C9.47431 3.81532 9.73993 3.29242 9.73896 2.69059V2.03119C9.73993 1.3662 10.3033 0.828438 10.999 0.827509C11.6947 0.828438 12.2581 1.3662 12.2601 2.03119V2.69059C12.2581 3.29242 12.5247 3.81439 12.9246 4.16825C13.3245 4.52396 13.8529 4.72364 14.4007 4.72457C14.9232 4.72643 15.4681 4.53416 15.8933 4.12643L16.3818 3.6602C16.6289 3.4243 16.9491 3.30822 17.2731 3.30822C17.5971 3.30822 17.9172 3.42523 18.1644 3.6602C18.4115 3.8961 18.5331 4.20168 18.5331 4.51095C18.5331 4.82022 18.4105 5.12578 18.1644 5.36168L17.6759 5.82791C17.2487 6.23378 17.0473 6.75296 17.0493 7.25263C17.0493 7.77551 17.2594 8.27982 17.6321 8.66153C18.0028 9.04325 18.5506 9.29774 19.1812 9.29588H19.872C20.5677 9.29681 21.1311 9.83455 21.133 10.4995C21.1321 11.1636 20.5687 11.7013 19.872 11.7023V11.7032Z"
+                fill="white"
+              />
+            </svg>
+
+            <p>002</p>
+          </div>
+
+          <h1>PROBLEM STATEMENT</h1>
+        </div>
+
+        <div className="content">
+          <p>
+            The movies filter at the top of the page disappears when scrolling,
+            making it inconvenient for users to change filter preferences. When
+            using the desktop version, users must scroll back to the top,
+            potentially scrolling through numerous movies. When on the TV users
+            need to click the up arrow multiple times, proportional to the
+            number of rows, to reach the filter.
+          </p>
+        </div>
+      </div>
+
+      <div className="solution">
+        <div className="full-header">
+          <div className="info">
+            <svg
+              width="22"
+              height="21"
+              viewBox="0 0 22 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.872 8.46835H19.1812C18.791 8.46649 18.4894 8.3216 18.2665 8.09685C18.0457 7.87116 17.9162 7.5619 17.9172 7.25263C17.9192 6.95635 18.0262 6.66658 18.2899 6.41396L18.7783 5.94773C19.1928 5.55208 19.402 5.02919 19.402 4.51188C19.402 3.99364 19.1938 3.47075 18.7783 3.0751C18.3638 2.67946 17.817 2.47976 17.274 2.48069C16.7311 2.48069 16.1833 2.67946 15.7688 3.0751L15.2803 3.54134C15.0156 3.7921 14.7111 3.89518 14.4007 3.89704C14.0777 3.89704 13.7527 3.77446 13.5172 3.56363C13.2817 3.35094 13.1299 3.06302 13.128 2.69059V2.03119C13.128 0.909258 12.1754 0 11 0C9.82458 0 8.872 0.909258 8.872 2.03119V2.69059C8.87006 3.06302 8.71826 3.35094 8.48279 3.56363C8.24732 3.77446 7.92233 3.89704 7.59831 3.89704C7.28889 3.89518 6.98433 3.7921 6.71869 3.54134L6.23024 3.0751C5.81573 2.67946 5.26889 2.47976 4.72595 2.48069C4.183 2.48069 3.63519 2.67946 3.22166 3.0751C2.80715 3.47075 2.59796 3.99271 2.59796 4.51188C2.59796 5.03012 2.80618 5.55208 3.22166 5.94773L3.71012 6.41396C3.97283 6.66751 4.08085 6.95728 4.08279 7.25355C4.08279 7.5619 3.95532 7.87209 3.73347 8.09685C3.51065 8.3216 3.20902 8.46649 2.81884 8.46835H2.12799C0.952576 8.46835 0 9.3776 0 10.4995C0 11.6215 0.952576 12.5307 2.12799 12.5307H2.81884C3.20902 12.5326 3.51065 12.6774 3.73347 12.9022C3.95435 13.127 4.08279 13.4372 4.08279 13.7455C4.08085 14.0409 3.97381 14.3316 3.71012 14.5851L3.22166 15.0513C2.80715 15.447 2.59796 15.9689 2.59796 16.4881C2.59796 17.0064 2.80618 17.5283 3.22166 17.924C3.63617 18.3196 4.183 18.5193 4.72595 18.5193C5.26889 18.5193 5.8167 18.3196 6.23121 17.924L6.71967 17.4577C6.9853 17.206 7.28889 17.1039 7.59928 17.102C7.92233 17.102 8.24732 17.2246 8.48279 17.4354C8.71826 17.6481 8.87006 17.9361 8.872 18.3094V18.9688C8.872 20.0907 9.82458 21 11 21C12.1754 21 13.128 20.0907 13.128 18.9688V18.3094C13.1299 17.9361 13.2817 17.6491 13.5172 17.4364C13.7527 17.2255 14.0777 17.102 14.4007 17.1029C14.7111 17.1048 15.0147 17.207 15.2793 17.4587L15.7678 17.9249C16.1823 18.3205 16.7292 18.5202 17.2731 18.5202C17.816 18.5202 18.3638 18.3205 18.7783 17.9249C19.1928 17.5292 19.402 17.0073 19.402 16.489C19.402 15.9708 19.1938 15.4479 18.7783 15.0523L18.2899 14.586C18.0272 14.3325 17.9192 14.0427 17.9172 13.7464C17.9172 13.4381 18.0447 13.1279 18.2665 12.9031C18.4894 12.6784 18.791 12.5335 19.1812 12.5316H19.872C21.0474 12.5316 22 11.6224 22 10.5005C22 9.37853 21.0474 8.46928 19.872 8.46928V8.46835ZM19.872 11.7032H19.1812C18.5506 11.7013 18.0028 11.9558 17.6321 12.3375C17.2594 12.7193 17.0503 13.2236 17.0493 13.7464C17.0473 14.2452 17.2487 14.7653 17.6759 15.1712L18.1644 15.6374C18.4115 15.8733 18.5331 16.1788 18.5331 16.4881C18.5331 16.7974 18.4105 17.1029 18.1644 17.3388C17.9172 17.5748 17.5971 17.6908 17.2731 17.6918C16.9491 17.6918 16.6289 17.5748 16.3818 17.3388L15.8933 16.8726C15.4681 16.4649 14.9232 16.2726 14.4007 16.2745C13.8529 16.2745 13.3245 16.4751 12.9246 16.8308C12.5247 17.1847 12.2591 17.7076 12.2601 18.3094V18.9688C12.2591 19.6329 11.6957 20.1706 10.999 20.1725C10.3033 20.1715 9.73993 19.6338 9.73896 18.9688V18.3094C9.7409 17.7076 9.47431 17.1847 9.0744 16.8308C8.67449 16.4751 8.14612 16.2754 7.59831 16.2745C7.0758 16.2726 6.53092 16.4649 6.10571 16.8726L5.61725 17.3388C5.3701 17.5748 5.04996 17.6908 4.72595 17.6918C4.40193 17.6918 4.08182 17.5748 3.83467 17.3388C3.58752 17.1029 3.46589 16.7974 3.46589 16.4881C3.46589 16.1788 3.58849 15.8733 3.83467 15.6374L4.32313 15.1712C4.75028 14.7653 4.95169 14.2452 4.94975 13.7464C4.94975 13.2236 4.73958 12.7193 4.36691 12.3375C3.99619 11.9558 3.44838 11.7023 2.81787 11.7032H2.12701C1.4313 11.7023 0.867926 11.1645 0.86598 10.5005C0.866953 9.83548 1.43033 9.29774 2.12701 9.29681H2.81787C3.44838 9.29867 3.99619 9.04418 4.36691 8.66246C4.73958 8.28075 4.94877 7.77644 4.94975 7.25355C4.95169 6.75482 4.75028 6.23471 4.32313 5.82884L3.83467 5.36261C3.58752 5.12671 3.46589 4.82115 3.46589 4.51188C3.46589 4.20261 3.58849 3.89703 3.83467 3.66113C4.08182 3.42523 4.40193 3.30915 4.72595 3.30915C5.04996 3.30915 5.3701 3.42616 5.61725 3.66113L6.10571 4.12736C6.53092 4.53509 7.0758 4.72643 7.59831 4.7255C8.14612 4.7255 8.67449 4.52489 9.0744 4.16918C9.47431 3.81532 9.73993 3.29242 9.73896 2.69059V2.03119C9.73993 1.3662 10.3033 0.828438 10.999 0.827509C11.6947 0.828438 12.2581 1.3662 12.2601 2.03119V2.69059C12.2581 3.29242 12.5247 3.81439 12.9246 4.16825C13.3245 4.52396 13.8529 4.72364 14.4007 4.72457C14.9232 4.72643 15.4681 4.53416 15.8933 4.12643L16.3818 3.6602C16.6289 3.4243 16.9491 3.30822 17.2731 3.30822C17.5971 3.30822 17.9172 3.42523 18.1644 3.6602C18.4115 3.8961 18.5331 4.20168 18.5331 4.51095C18.5331 4.82022 18.4105 5.12578 18.1644 5.36168L17.6759 5.82791C17.2487 6.23378 17.0473 6.75296 17.0493 7.25263C17.0493 7.77551 17.2594 8.27982 17.6321 8.66153C18.0028 9.04325 18.5506 9.29774 19.1812 9.29588H19.872C20.5677 9.29681 21.1311 9.83455 21.133 10.4995C21.1321 11.1636 20.5687 11.7013 19.872 11.7023V11.7032Z"
+                fill="white"
+              />
+            </svg>
+
+            <p>003</p>
+          </div>
+
+          <h1>WEB SOLUTION</h1>
+
+          <div className="info">
+            <p>003</p>
+
+            <svg
+              width="22"
+              height="21"
+              viewBox="0 0 22 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.872 8.46835H19.1812C18.791 8.46649 18.4894 8.3216 18.2665 8.09685C18.0457 7.87116 17.9162 7.5619 17.9172 7.25263C17.9192 6.95635 18.0262 6.66658 18.2899 6.41396L18.7783 5.94773C19.1928 5.55208 19.402 5.02919 19.402 4.51188C19.402 3.99364 19.1938 3.47075 18.7783 3.0751C18.3638 2.67946 17.817 2.47976 17.274 2.48069C16.7311 2.48069 16.1833 2.67946 15.7688 3.0751L15.2803 3.54134C15.0156 3.7921 14.7111 3.89518 14.4007 3.89704C14.0777 3.89704 13.7527 3.77446 13.5172 3.56363C13.2817 3.35094 13.1299 3.06302 13.128 2.69059V2.03119C13.128 0.909258 12.1754 0 11 0C9.82458 0 8.872 0.909258 8.872 2.03119V2.69059C8.87006 3.06302 8.71826 3.35094 8.48279 3.56363C8.24732 3.77446 7.92233 3.89704 7.59831 3.89704C7.28889 3.89518 6.98433 3.7921 6.71869 3.54134L6.23024 3.0751C5.81573 2.67946 5.26889 2.47976 4.72595 2.48069C4.183 2.48069 3.63519 2.67946 3.22166 3.0751C2.80715 3.47075 2.59796 3.99271 2.59796 4.51188C2.59796 5.03012 2.80618 5.55208 3.22166 5.94773L3.71012 6.41396C3.97283 6.66751 4.08085 6.95728 4.08279 7.25355C4.08279 7.5619 3.95532 7.87209 3.73347 8.09685C3.51065 8.3216 3.20902 8.46649 2.81884 8.46835H2.12799C0.952576 8.46835 0 9.3776 0 10.4995C0 11.6215 0.952576 12.5307 2.12799 12.5307H2.81884C3.20902 12.5326 3.51065 12.6774 3.73347 12.9022C3.95435 13.127 4.08279 13.4372 4.08279 13.7455C4.08085 14.0409 3.97381 14.3316 3.71012 14.5851L3.22166 15.0513C2.80715 15.447 2.59796 15.9689 2.59796 16.4881C2.59796 17.0064 2.80618 17.5283 3.22166 17.924C3.63617 18.3196 4.183 18.5193 4.72595 18.5193C5.26889 18.5193 5.8167 18.3196 6.23121 17.924L6.71967 17.4577C6.9853 17.206 7.28889 17.1039 7.59928 17.102C7.92233 17.102 8.24732 17.2246 8.48279 17.4354C8.71826 17.6481 8.87006 17.9361 8.872 18.3094V18.9688C8.872 20.0907 9.82458 21 11 21C12.1754 21 13.128 20.0907 13.128 18.9688V18.3094C13.1299 17.9361 13.2817 17.6491 13.5172 17.4364C13.7527 17.2255 14.0777 17.102 14.4007 17.1029C14.7111 17.1048 15.0147 17.207 15.2793 17.4587L15.7678 17.9249C16.1823 18.3205 16.7292 18.5202 17.2731 18.5202C17.816 18.5202 18.3638 18.3205 18.7783 17.9249C19.1928 17.5292 19.402 17.0073 19.402 16.489C19.402 15.9708 19.1938 15.4479 18.7783 15.0523L18.2899 14.586C18.0272 14.3325 17.9192 14.0427 17.9172 13.7464C17.9172 13.4381 18.0447 13.1279 18.2665 12.9031C18.4894 12.6784 18.791 12.5335 19.1812 12.5316H19.872C21.0474 12.5316 22 11.6224 22 10.5005C22 9.37853 21.0474 8.46928 19.872 8.46928V8.46835ZM19.872 11.7032H19.1812C18.5506 11.7013 18.0028 11.9558 17.6321 12.3375C17.2594 12.7193 17.0503 13.2236 17.0493 13.7464C17.0473 14.2452 17.2487 14.7653 17.6759 15.1712L18.1644 15.6374C18.4115 15.8733 18.5331 16.1788 18.5331 16.4881C18.5331 16.7974 18.4105 17.1029 18.1644 17.3388C17.9172 17.5748 17.5971 17.6908 17.2731 17.6918C16.9491 17.6918 16.6289 17.5748 16.3818 17.3388L15.8933 16.8726C15.4681 16.4649 14.9232 16.2726 14.4007 16.2745C13.8529 16.2745 13.3245 16.4751 12.9246 16.8308C12.5247 17.1847 12.2591 17.7076 12.2601 18.3094V18.9688C12.2591 19.6329 11.6957 20.1706 10.999 20.1725C10.3033 20.1715 9.73993 19.6338 9.73896 18.9688V18.3094C9.7409 17.7076 9.47431 17.1847 9.0744 16.8308C8.67449 16.4751 8.14612 16.2754 7.59831 16.2745C7.0758 16.2726 6.53092 16.4649 6.10571 16.8726L5.61725 17.3388C5.3701 17.5748 5.04996 17.6908 4.72595 17.6918C4.40193 17.6918 4.08182 17.5748 3.83467 17.3388C3.58752 17.1029 3.46589 16.7974 3.46589 16.4881C3.46589 16.1788 3.58849 15.8733 3.83467 15.6374L4.32313 15.1712C4.75028 14.7653 4.95169 14.2452 4.94975 13.7464C4.94975 13.2236 4.73958 12.7193 4.36691 12.3375C3.99619 11.9558 3.44838 11.7023 2.81787 11.7032H2.12701C1.4313 11.7023 0.867926 11.1645 0.86598 10.5005C0.866953 9.83548 1.43033 9.29774 2.12701 9.29681H2.81787C3.44838 9.29867 3.99619 9.04418 4.36691 8.66246C4.73958 8.28075 4.94877 7.77644 4.94975 7.25355C4.95169 6.75482 4.75028 6.23471 4.32313 5.82884L3.83467 5.36261C3.58752 5.12671 3.46589 4.82115 3.46589 4.51188C3.46589 4.20261 3.58849 3.89703 3.83467 3.66113C4.08182 3.42523 4.40193 3.30915 4.72595 3.30915C5.04996 3.30915 5.3701 3.42616 5.61725 3.66113L6.10571 4.12736C6.53092 4.53509 7.0758 4.72643 7.59831 4.7255C8.14612 4.7255 8.67449 4.52489 9.0744 4.16918C9.47431 3.81532 9.73993 3.29242 9.73896 2.69059V2.03119C9.73993 1.3662 10.3033 0.828438 10.999 0.827509C11.6947 0.828438 12.2581 1.3662 12.2601 2.03119V2.69059C12.2581 3.29242 12.5247 3.81439 12.9246 4.16825C13.3245 4.52396 13.8529 4.72364 14.4007 4.72457C14.9232 4.72643 15.4681 4.53416 15.8933 4.12643L16.3818 3.6602C16.6289 3.4243 16.9491 3.30822 17.2731 3.30822C17.5971 3.30822 17.9172 3.42523 18.1644 3.6602C18.4115 3.8961 18.5331 4.20168 18.5331 4.51095C18.5331 4.82022 18.4105 5.12578 18.1644 5.36168L17.6759 5.82791C17.2487 6.23378 17.0473 6.75296 17.0493 7.25263C17.0493 7.77551 17.2594 8.27982 17.6321 8.66153C18.0028 9.04325 18.5506 9.29774 19.1812 9.29588H19.872C20.5677 9.29681 21.1311 9.83455 21.133 10.4995C21.1321 11.1636 20.5687 11.7013 19.872 11.7023V11.7032Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div className="content">
+          <img src={disneyAfter} alt="disney-after" />
+
+          <div className="sub-section">
+            <div className="header">
+              <p>IMPLEMENTATION DETAILS</p>
+            </div>
+
+            <div className="description">
+              <p className="large-text">
+                For the Disney Plus desktop platform, I propose a sticky filter
+                bar that remains visible as users scroll, ensuring filter
+                options are always accessible for a smoother browsing
+                experience.
+              </p>
+            </div>
+          </div>
+
+          <div className="sub-section">
+            <div className="header">
+              <p>IMPLEMENTATION STEPS</p>
+            </div>
+
+            <div className="description">
+              <Accordion items={webImplementation} keepOthersOpen={true} />
+            </div>
+          </div>
+
+          <div className="sub-section">
+            <div className="header">
+              <p>USER FLOW</p>
+            </div>
+
+            <div className="description">
+              <div className="flow-grid">
+                <div className="flow-row">
+                  <div className="flow-title">
+                    <p>INITIAL NAVIGATION</p>
+                    <svg
+                      width="49"
+                      height="49"
+                      viewBox="0 0 49 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24.5002 44.9168C35.776 44.9168 44.9168 35.776 44.9168 24.5002C44.9168 13.2243 35.776 4.0835 24.5002 4.0835C13.2243 4.0835 4.0835 13.2243 4.0835 24.5002C4.0835 35.776 13.2243 44.9168 24.5002 44.9168Z"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.3334 6.125H18.3751C14.3938 18.0483 14.3938 30.9517 18.3751 42.875H16.3334"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M30.625 6.125C34.6062 18.0483 34.6062 30.9517 30.625 42.875"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.125 32.6667V30.625C18.0483 34.6062 30.9517 34.6062 42.875 30.625V32.6667"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.125 18.3751C18.0483 14.3938 30.9517 14.3938 42.875 18.3751"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div className="list">
+                    <div className="item">
+                      <p>USER NAVIGATES TO THE "MOVIES" PAGE</p>
+                      <p>•</p>
+                    </div>
+
+                    <div className="item">
+                      <p>FILTERS ARE VISIBLE AND AVAILABLE BELOW THE NAVBAR</p>
+                      <p>•</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flow-row">
+                  <div className="flow-title">
+                    <p>SCROLLING DOWN</p>
+                    <svg
+                      width="49"
+                      height="49"
+                      viewBox="0 0 49 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24.5 44.9168C32.9321 44.9168 39.8125 38.0364 39.8125 29.6043V19.396C39.8125 10.9639 32.9321 4.0835 24.5 4.0835C16.0679 4.0835 9.1875 10.9639 9.1875 19.396V29.6043C9.1875 38.0364 16.0679 44.9168 24.5 44.9168Z"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M24.5 22.4583C22.8054 22.4583 21.4375 21.0904 21.4375 19.3958V15.3125C21.4375 13.6179 22.8054 12.25 24.5 12.25C26.1742 12.25 27.5625 13.6179 27.5625 15.3125V19.3958C27.5625 21.0904 26.1742 22.4583 24.5 22.4583Z"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M24.5 12.2502V4.0835"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div className="list">
+                    <div className="item">
+                      <p>USER SCROLLS THROUGH THE LIST OF MOVIES</p>
+                      <p>•</p>
+                    </div>
+
+                    <div className="item">
+                      <p>THE FILTER REMAINS VISIBLE BELOW THE NAVBAR</p>
+                      <p>•</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flow-row">
+                  <div className="flow-title">
+                    <p>ACCESSING FILTER</p>
+                    <svg
+                      width="48"
+                      height="49"
+                      viewBox="0 0 48 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.32 13.5771H31.66C32.94 13.5771 33.98 14.6388 33.98 15.9455V18.5588C33.98 19.5184 33.4 20.7026 32.82 21.2946L27.82 25.8067C27.12 26.3988 26.66 27.583 26.66 28.5426V33.6467C26.66 34.3613 26.2 35.3005 25.62 35.668L24 36.7092C22.48 37.6688 20.4 36.5867 20.4 34.688V28.3996C20.4 27.5626 19.94 26.5009 19.46 25.9088L15.04 21.1517C14.46 20.5801 14 19.498 14 18.7834V16.068C14 14.6388 15.04 13.5771 16.32 13.5771Z"
+                        stroke="#7E7E7E"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18 44.9168H30C40 44.9168 44 40.8335 44 30.6252V18.3752C44 8.16683 40 4.0835 30 4.0835H18C8 4.0835 4 8.16683 4 18.3752V30.6252C4 40.8335 8 44.9168 18 44.9168Z"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div className="list">
+                    <div className="item">
+                      <p>USER CAN ADJUST FILTER PREFERENCES AT ANY POINT</p>
+                      <p>•</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="solution">
+        <div className="full-header">
+          <div className="info">
+            <svg
+              width="22"
+              height="21"
+              viewBox="0 0 22 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.872 8.46835H19.1812C18.791 8.46649 18.4894 8.3216 18.2665 8.09685C18.0457 7.87116 17.9162 7.5619 17.9172 7.25263C17.9192 6.95635 18.0262 6.66658 18.2899 6.41396L18.7783 5.94773C19.1928 5.55208 19.402 5.02919 19.402 4.51188C19.402 3.99364 19.1938 3.47075 18.7783 3.0751C18.3638 2.67946 17.817 2.47976 17.274 2.48069C16.7311 2.48069 16.1833 2.67946 15.7688 3.0751L15.2803 3.54134C15.0156 3.7921 14.7111 3.89518 14.4007 3.89704C14.0777 3.89704 13.7527 3.77446 13.5172 3.56363C13.2817 3.35094 13.1299 3.06302 13.128 2.69059V2.03119C13.128 0.909258 12.1754 0 11 0C9.82458 0 8.872 0.909258 8.872 2.03119V2.69059C8.87006 3.06302 8.71826 3.35094 8.48279 3.56363C8.24732 3.77446 7.92233 3.89704 7.59831 3.89704C7.28889 3.89518 6.98433 3.7921 6.71869 3.54134L6.23024 3.0751C5.81573 2.67946 5.26889 2.47976 4.72595 2.48069C4.183 2.48069 3.63519 2.67946 3.22166 3.0751C2.80715 3.47075 2.59796 3.99271 2.59796 4.51188C2.59796 5.03012 2.80618 5.55208 3.22166 5.94773L3.71012 6.41396C3.97283 6.66751 4.08085 6.95728 4.08279 7.25355C4.08279 7.5619 3.95532 7.87209 3.73347 8.09685C3.51065 8.3216 3.20902 8.46649 2.81884 8.46835H2.12799C0.952576 8.46835 0 9.3776 0 10.4995C0 11.6215 0.952576 12.5307 2.12799 12.5307H2.81884C3.20902 12.5326 3.51065 12.6774 3.73347 12.9022C3.95435 13.127 4.08279 13.4372 4.08279 13.7455C4.08085 14.0409 3.97381 14.3316 3.71012 14.5851L3.22166 15.0513C2.80715 15.447 2.59796 15.9689 2.59796 16.4881C2.59796 17.0064 2.80618 17.5283 3.22166 17.924C3.63617 18.3196 4.183 18.5193 4.72595 18.5193C5.26889 18.5193 5.8167 18.3196 6.23121 17.924L6.71967 17.4577C6.9853 17.206 7.28889 17.1039 7.59928 17.102C7.92233 17.102 8.24732 17.2246 8.48279 17.4354C8.71826 17.6481 8.87006 17.9361 8.872 18.3094V18.9688C8.872 20.0907 9.82458 21 11 21C12.1754 21 13.128 20.0907 13.128 18.9688V18.3094C13.1299 17.9361 13.2817 17.6491 13.5172 17.4364C13.7527 17.2255 14.0777 17.102 14.4007 17.1029C14.7111 17.1048 15.0147 17.207 15.2793 17.4587L15.7678 17.9249C16.1823 18.3205 16.7292 18.5202 17.2731 18.5202C17.816 18.5202 18.3638 18.3205 18.7783 17.9249C19.1928 17.5292 19.402 17.0073 19.402 16.489C19.402 15.9708 19.1938 15.4479 18.7783 15.0523L18.2899 14.586C18.0272 14.3325 17.9192 14.0427 17.9172 13.7464C17.9172 13.4381 18.0447 13.1279 18.2665 12.9031C18.4894 12.6784 18.791 12.5335 19.1812 12.5316H19.872C21.0474 12.5316 22 11.6224 22 10.5005C22 9.37853 21.0474 8.46928 19.872 8.46928V8.46835ZM19.872 11.7032H19.1812C18.5506 11.7013 18.0028 11.9558 17.6321 12.3375C17.2594 12.7193 17.0503 13.2236 17.0493 13.7464C17.0473 14.2452 17.2487 14.7653 17.6759 15.1712L18.1644 15.6374C18.4115 15.8733 18.5331 16.1788 18.5331 16.4881C18.5331 16.7974 18.4105 17.1029 18.1644 17.3388C17.9172 17.5748 17.5971 17.6908 17.2731 17.6918C16.9491 17.6918 16.6289 17.5748 16.3818 17.3388L15.8933 16.8726C15.4681 16.4649 14.9232 16.2726 14.4007 16.2745C13.8529 16.2745 13.3245 16.4751 12.9246 16.8308C12.5247 17.1847 12.2591 17.7076 12.2601 18.3094V18.9688C12.2591 19.6329 11.6957 20.1706 10.999 20.1725C10.3033 20.1715 9.73993 19.6338 9.73896 18.9688V18.3094C9.7409 17.7076 9.47431 17.1847 9.0744 16.8308C8.67449 16.4751 8.14612 16.2754 7.59831 16.2745C7.0758 16.2726 6.53092 16.4649 6.10571 16.8726L5.61725 17.3388C5.3701 17.5748 5.04996 17.6908 4.72595 17.6918C4.40193 17.6918 4.08182 17.5748 3.83467 17.3388C3.58752 17.1029 3.46589 16.7974 3.46589 16.4881C3.46589 16.1788 3.58849 15.8733 3.83467 15.6374L4.32313 15.1712C4.75028 14.7653 4.95169 14.2452 4.94975 13.7464C4.94975 13.2236 4.73958 12.7193 4.36691 12.3375C3.99619 11.9558 3.44838 11.7023 2.81787 11.7032H2.12701C1.4313 11.7023 0.867926 11.1645 0.86598 10.5005C0.866953 9.83548 1.43033 9.29774 2.12701 9.29681H2.81787C3.44838 9.29867 3.99619 9.04418 4.36691 8.66246C4.73958 8.28075 4.94877 7.77644 4.94975 7.25355C4.95169 6.75482 4.75028 6.23471 4.32313 5.82884L3.83467 5.36261C3.58752 5.12671 3.46589 4.82115 3.46589 4.51188C3.46589 4.20261 3.58849 3.89703 3.83467 3.66113C4.08182 3.42523 4.40193 3.30915 4.72595 3.30915C5.04996 3.30915 5.3701 3.42616 5.61725 3.66113L6.10571 4.12736C6.53092 4.53509 7.0758 4.72643 7.59831 4.7255C8.14612 4.7255 8.67449 4.52489 9.0744 4.16918C9.47431 3.81532 9.73993 3.29242 9.73896 2.69059V2.03119C9.73993 1.3662 10.3033 0.828438 10.999 0.827509C11.6947 0.828438 12.2581 1.3662 12.2601 2.03119V2.69059C12.2581 3.29242 12.5247 3.81439 12.9246 4.16825C13.3245 4.52396 13.8529 4.72364 14.4007 4.72457C14.9232 4.72643 15.4681 4.53416 15.8933 4.12643L16.3818 3.6602C16.6289 3.4243 16.9491 3.30822 17.2731 3.30822C17.5971 3.30822 17.9172 3.42523 18.1644 3.6602C18.4115 3.8961 18.5331 4.20168 18.5331 4.51095C18.5331 4.82022 18.4105 5.12578 18.1644 5.36168L17.6759 5.82791C17.2487 6.23378 17.0473 6.75296 17.0493 7.25263C17.0493 7.77551 17.2594 8.27982 17.6321 8.66153C18.0028 9.04325 18.5506 9.29774 19.1812 9.29588H19.872C20.5677 9.29681 21.1311 9.83455 21.133 10.4995C21.1321 11.1636 20.5687 11.7013 19.872 11.7023V11.7032Z"
+                fill="white"
+              />
+            </svg>
+
+            <p>003</p>
+          </div>
+
+          <h1>TV SOLUTION</h1>
+
+          <div className="info">
+            <p>003</p>
+
+            <svg
+              width="22"
+              height="21"
+              viewBox="0 0 22 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.872 8.46835H19.1812C18.791 8.46649 18.4894 8.3216 18.2665 8.09685C18.0457 7.87116 17.9162 7.5619 17.9172 7.25263C17.9192 6.95635 18.0262 6.66658 18.2899 6.41396L18.7783 5.94773C19.1928 5.55208 19.402 5.02919 19.402 4.51188C19.402 3.99364 19.1938 3.47075 18.7783 3.0751C18.3638 2.67946 17.817 2.47976 17.274 2.48069C16.7311 2.48069 16.1833 2.67946 15.7688 3.0751L15.2803 3.54134C15.0156 3.7921 14.7111 3.89518 14.4007 3.89704C14.0777 3.89704 13.7527 3.77446 13.5172 3.56363C13.2817 3.35094 13.1299 3.06302 13.128 2.69059V2.03119C13.128 0.909258 12.1754 0 11 0C9.82458 0 8.872 0.909258 8.872 2.03119V2.69059C8.87006 3.06302 8.71826 3.35094 8.48279 3.56363C8.24732 3.77446 7.92233 3.89704 7.59831 3.89704C7.28889 3.89518 6.98433 3.7921 6.71869 3.54134L6.23024 3.0751C5.81573 2.67946 5.26889 2.47976 4.72595 2.48069C4.183 2.48069 3.63519 2.67946 3.22166 3.0751C2.80715 3.47075 2.59796 3.99271 2.59796 4.51188C2.59796 5.03012 2.80618 5.55208 3.22166 5.94773L3.71012 6.41396C3.97283 6.66751 4.08085 6.95728 4.08279 7.25355C4.08279 7.5619 3.95532 7.87209 3.73347 8.09685C3.51065 8.3216 3.20902 8.46649 2.81884 8.46835H2.12799C0.952576 8.46835 0 9.3776 0 10.4995C0 11.6215 0.952576 12.5307 2.12799 12.5307H2.81884C3.20902 12.5326 3.51065 12.6774 3.73347 12.9022C3.95435 13.127 4.08279 13.4372 4.08279 13.7455C4.08085 14.0409 3.97381 14.3316 3.71012 14.5851L3.22166 15.0513C2.80715 15.447 2.59796 15.9689 2.59796 16.4881C2.59796 17.0064 2.80618 17.5283 3.22166 17.924C3.63617 18.3196 4.183 18.5193 4.72595 18.5193C5.26889 18.5193 5.8167 18.3196 6.23121 17.924L6.71967 17.4577C6.9853 17.206 7.28889 17.1039 7.59928 17.102C7.92233 17.102 8.24732 17.2246 8.48279 17.4354C8.71826 17.6481 8.87006 17.9361 8.872 18.3094V18.9688C8.872 20.0907 9.82458 21 11 21C12.1754 21 13.128 20.0907 13.128 18.9688V18.3094C13.1299 17.9361 13.2817 17.6491 13.5172 17.4364C13.7527 17.2255 14.0777 17.102 14.4007 17.1029C14.7111 17.1048 15.0147 17.207 15.2793 17.4587L15.7678 17.9249C16.1823 18.3205 16.7292 18.5202 17.2731 18.5202C17.816 18.5202 18.3638 18.3205 18.7783 17.9249C19.1928 17.5292 19.402 17.0073 19.402 16.489C19.402 15.9708 19.1938 15.4479 18.7783 15.0523L18.2899 14.586C18.0272 14.3325 17.9192 14.0427 17.9172 13.7464C17.9172 13.4381 18.0447 13.1279 18.2665 12.9031C18.4894 12.6784 18.791 12.5335 19.1812 12.5316H19.872C21.0474 12.5316 22 11.6224 22 10.5005C22 9.37853 21.0474 8.46928 19.872 8.46928V8.46835ZM19.872 11.7032H19.1812C18.5506 11.7013 18.0028 11.9558 17.6321 12.3375C17.2594 12.7193 17.0503 13.2236 17.0493 13.7464C17.0473 14.2452 17.2487 14.7653 17.6759 15.1712L18.1644 15.6374C18.4115 15.8733 18.5331 16.1788 18.5331 16.4881C18.5331 16.7974 18.4105 17.1029 18.1644 17.3388C17.9172 17.5748 17.5971 17.6908 17.2731 17.6918C16.9491 17.6918 16.6289 17.5748 16.3818 17.3388L15.8933 16.8726C15.4681 16.4649 14.9232 16.2726 14.4007 16.2745C13.8529 16.2745 13.3245 16.4751 12.9246 16.8308C12.5247 17.1847 12.2591 17.7076 12.2601 18.3094V18.9688C12.2591 19.6329 11.6957 20.1706 10.999 20.1725C10.3033 20.1715 9.73993 19.6338 9.73896 18.9688V18.3094C9.7409 17.7076 9.47431 17.1847 9.0744 16.8308C8.67449 16.4751 8.14612 16.2754 7.59831 16.2745C7.0758 16.2726 6.53092 16.4649 6.10571 16.8726L5.61725 17.3388C5.3701 17.5748 5.04996 17.6908 4.72595 17.6918C4.40193 17.6918 4.08182 17.5748 3.83467 17.3388C3.58752 17.1029 3.46589 16.7974 3.46589 16.4881C3.46589 16.1788 3.58849 15.8733 3.83467 15.6374L4.32313 15.1712C4.75028 14.7653 4.95169 14.2452 4.94975 13.7464C4.94975 13.2236 4.73958 12.7193 4.36691 12.3375C3.99619 11.9558 3.44838 11.7023 2.81787 11.7032H2.12701C1.4313 11.7023 0.867926 11.1645 0.86598 10.5005C0.866953 9.83548 1.43033 9.29774 2.12701 9.29681H2.81787C3.44838 9.29867 3.99619 9.04418 4.36691 8.66246C4.73958 8.28075 4.94877 7.77644 4.94975 7.25355C4.95169 6.75482 4.75028 6.23471 4.32313 5.82884L3.83467 5.36261C3.58752 5.12671 3.46589 4.82115 3.46589 4.51188C3.46589 4.20261 3.58849 3.89703 3.83467 3.66113C4.08182 3.42523 4.40193 3.30915 4.72595 3.30915C5.04996 3.30915 5.3701 3.42616 5.61725 3.66113L6.10571 4.12736C6.53092 4.53509 7.0758 4.72643 7.59831 4.7255C8.14612 4.7255 8.67449 4.52489 9.0744 4.16918C9.47431 3.81532 9.73993 3.29242 9.73896 2.69059V2.03119C9.73993 1.3662 10.3033 0.828438 10.999 0.827509C11.6947 0.828438 12.2581 1.3662 12.2601 2.03119V2.69059C12.2581 3.29242 12.5247 3.81439 12.9246 4.16825C13.3245 4.52396 13.8529 4.72364 14.4007 4.72457C14.9232 4.72643 15.4681 4.53416 15.8933 4.12643L16.3818 3.6602C16.6289 3.4243 16.9491 3.30822 17.2731 3.30822C17.5971 3.30822 17.9172 3.42523 18.1644 3.6602C18.4115 3.8961 18.5331 4.20168 18.5331 4.51095C18.5331 4.82022 18.4105 5.12578 18.1644 5.36168L17.6759 5.82791C17.2487 6.23378 17.0473 6.75296 17.0493 7.25263C17.0493 7.77551 17.2594 8.27982 17.6321 8.66153C18.0028 9.04325 18.5506 9.29774 19.1812 9.29588H19.872C20.5677 9.29681 21.1311 9.83455 21.133 10.4995C21.1321 11.1636 20.5687 11.7013 19.872 11.7023V11.7032Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div className="content">
+          <img src={tvSolution} alt="tv-solution" />
+
+          <div className="sub-section">
+            <div className="header">
+              <p>IMPLEMENTATION DETAILS</p>
+            </div>
+
+            <div className="description">
+              <p className="large-text">
+                To enhance navigation on Disney Plus for TV users, I propose
+                using the remote's back button to quickly return to the top of
+                the page, making the filter options easily accessible without
+                excessive scrolling.
+              </p>
+            </div>
+          </div>
+
+          <div className="sub-section">
+            <div className="header">
+              <p>IMPLEMENTATION STEPS</p>
+            </div>
+
+            <div className="description">
+              <Accordion items={tvImplementation} keepOthersOpen={true} />
+            </div>
+          </div>
+
+          <div className="sub-section">
+            <div className="header">
+              <p>USER FLOW</p>
+            </div>
+
+            <div className="description">
+              <div className="flow-grid">
+                <div className="flow-row">
+                  <div className="flow-title">
+                    <p>INITIAL NAVIGATION</p>
+                    <svg
+                      width="49"
+                      height="49"
+                      viewBox="0 0 49 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24.5002 44.9168C35.776 44.9168 44.9168 35.776 44.9168 24.5002C44.9168 13.2243 35.776 4.0835 24.5002 4.0835C13.2243 4.0835 4.0835 13.2243 4.0835 24.5002C4.0835 35.776 13.2243 44.9168 24.5002 44.9168Z"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.3334 6.125H18.3751C14.3938 18.0483 14.3938 30.9517 18.3751 42.875H16.3334"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M30.625 6.125C34.6062 18.0483 34.6062 30.9517 30.625 42.875"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.125 32.6667V30.625C18.0483 34.6062 30.9517 34.6062 42.875 30.625V32.6667"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.125 18.3751C18.0483 14.3938 30.9517 14.3938 42.875 18.3751"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div className="list">
+                    <div className="item">
+                      <p>USER NAVIGATES TO THE "MOVIES" PAGE</p>
+                      <p>•</p>
+                    </div>
+
+                    <div className="item">
+                      <p>FILTERS ARE VISIBLE AND AVAILABLE AT THE TOP</p>
+                      <p>•</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flow-row">
+                  <div className="flow-title">
+                    <p>SCROLLING DOWN</p>
+                    <svg
+                      width="49"
+                      height="49"
+                      viewBox="0 0 49 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24.5 44.9168C32.9321 44.9168 39.8125 38.0364 39.8125 29.6043V19.396C39.8125 10.9639 32.9321 4.0835 24.5 4.0835C16.0679 4.0835 9.1875 10.9639 9.1875 19.396V29.6043C9.1875 38.0364 16.0679 44.9168 24.5 44.9168Z"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M24.5 22.4583C22.8054 22.4583 21.4375 21.0904 21.4375 19.3958V15.3125C21.4375 13.6179 22.8054 12.25 24.5 12.25C26.1742 12.25 27.5625 13.6179 27.5625 15.3125V19.3958C27.5625 21.0904 26.1742 22.4583 24.5 22.4583Z"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M24.5 12.2502V4.0835"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div className="list">
+                    <div className="item">
+                      <p>USER SCROLLS THROUGH THE LIST OF MOVIES</p>
+                      <p>•</p>
+                    </div>
+
+                    <div className="item">
+                      <p>USER NEEDS TO CHANGE FILTER PREFERENCES</p>
+                      <p>•</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flow-row">
+                  <div className="flow-title">
+                    <p>ACCESSING FILTER</p>
+                    <svg
+                      width="48"
+                      height="49"
+                      viewBox="0 0 48 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.32 13.5771H31.66C32.94 13.5771 33.98 14.6388 33.98 15.9455V18.5588C33.98 19.5184 33.4 20.7026 32.82 21.2946L27.82 25.8067C27.12 26.3988 26.66 27.583 26.66 28.5426V33.6467C26.66 34.3613 26.2 35.3005 25.62 35.668L24 36.7092C22.48 37.6688 20.4 36.5867 20.4 34.688V28.3996C20.4 27.5626 19.94 26.5009 19.46 25.9088L15.04 21.1517C14.46 20.5801 14 19.498 14 18.7834V16.068C14 14.6388 15.04 13.5771 16.32 13.5771Z"
+                        stroke="#7E7E7E"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18 44.9168H30C40 44.9168 44 40.8335 44 30.6252V18.3752C44 8.16683 40 4.0835 30 4.0835H18C8 4.0835 4 8.16683 4 18.3752V30.6252C4 40.8335 8 44.9168 18 44.9168Z"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div className="list">
+                    <div className="item">
+                      <p>USER PRESSES THE BACK BUTTON ONCE</p>
+                      <p>•</p>
+                    </div>
+
+                    <div className="item">
+                      <p>
+                        PAGE SCROLLS TO THE TOP, MAKING FILTERS VISIBLE AGAIN
+                      </p>
+                      <p>•</p>
+                    </div>
+
+                    <div className="item">
+                      <p>USER ADJUSTS FILTER PREFERENCES</p>
+                      <p>•</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flow-row">
+                  <div className="flow-title">
+                    <p>PREVIOUS PAGE</p>
+                    <svg
+                      width="48"
+                      height="49"
+                      viewBox="0 0 48 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M32 26.3377V34.9127C32 42.0585 29.2 44.9168 22.2 44.9168H13.8C6.8 44.9168 4 42.0585 4 34.9127V26.3377C4 19.1918 6.8 16.3335 13.8 16.3335H22.2C29.2 16.3335 32 19.1918 32 26.3377Z"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M44 14.0877V22.6627C44 29.8085 41.2 32.6668 34.2 32.6668H32V26.3377C32 19.1918 29.2 16.3335 22.2 16.3335H16V14.0877C16 6.94183 18.8 4.0835 25.8 4.0835H34.2C41.2 4.0835 44 6.94183 44 14.0877Z"
+                        stroke="#7E7E7E"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div className="list">
+                    <div className="item">
+                      <p>USER PRESSES BACK BUTTON AGAIN (FROM THE TOP)</p>
+                      <p>•</p>
+                    </div>
+
+                    <div className="item">
+                      <p>USER IS NAVIGATED TO THE PREVIOUS PAGE</p>
+                      <p>•</p>
+                    </div>
+
+                    <div className="item">
+                      <p>USER CAN NOW VIEW PREVIOUS PAGE</p>
+                      <p>•</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="half-header">
+          <div className="info">
+            <svg
+              width="22"
+              height="21"
+              viewBox="0 0 22 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.872 8.46835H19.1812C18.791 8.46649 18.4894 8.3216 18.2665 8.09685C18.0457 7.87116 17.9162 7.5619 17.9172 7.25263C17.9192 6.95635 18.0262 6.66658 18.2899 6.41396L18.7783 5.94773C19.1928 5.55208 19.402 5.02919 19.402 4.51188C19.402 3.99364 19.1938 3.47075 18.7783 3.0751C18.3638 2.67946 17.817 2.47976 17.274 2.48069C16.7311 2.48069 16.1833 2.67946 15.7688 3.0751L15.2803 3.54134C15.0156 3.7921 14.7111 3.89518 14.4007 3.89704C14.0777 3.89704 13.7527 3.77446 13.5172 3.56363C13.2817 3.35094 13.1299 3.06302 13.128 2.69059V2.03119C13.128 0.909258 12.1754 0 11 0C9.82458 0 8.872 0.909258 8.872 2.03119V2.69059C8.87006 3.06302 8.71826 3.35094 8.48279 3.56363C8.24732 3.77446 7.92233 3.89704 7.59831 3.89704C7.28889 3.89518 6.98433 3.7921 6.71869 3.54134L6.23024 3.0751C5.81573 2.67946 5.26889 2.47976 4.72595 2.48069C4.183 2.48069 3.63519 2.67946 3.22166 3.0751C2.80715 3.47075 2.59796 3.99271 2.59796 4.51188C2.59796 5.03012 2.80618 5.55208 3.22166 5.94773L3.71012 6.41396C3.97283 6.66751 4.08085 6.95728 4.08279 7.25355C4.08279 7.5619 3.95532 7.87209 3.73347 8.09685C3.51065 8.3216 3.20902 8.46649 2.81884 8.46835H2.12799C0.952576 8.46835 0 9.3776 0 10.4995C0 11.6215 0.952576 12.5307 2.12799 12.5307H2.81884C3.20902 12.5326 3.51065 12.6774 3.73347 12.9022C3.95435 13.127 4.08279 13.4372 4.08279 13.7455C4.08085 14.0409 3.97381 14.3316 3.71012 14.5851L3.22166 15.0513C2.80715 15.447 2.59796 15.9689 2.59796 16.4881C2.59796 17.0064 2.80618 17.5283 3.22166 17.924C3.63617 18.3196 4.183 18.5193 4.72595 18.5193C5.26889 18.5193 5.8167 18.3196 6.23121 17.924L6.71967 17.4577C6.9853 17.206 7.28889 17.1039 7.59928 17.102C7.92233 17.102 8.24732 17.2246 8.48279 17.4354C8.71826 17.6481 8.87006 17.9361 8.872 18.3094V18.9688C8.872 20.0907 9.82458 21 11 21C12.1754 21 13.128 20.0907 13.128 18.9688V18.3094C13.1299 17.9361 13.2817 17.6491 13.5172 17.4364C13.7527 17.2255 14.0777 17.102 14.4007 17.1029C14.7111 17.1048 15.0147 17.207 15.2793 17.4587L15.7678 17.9249C16.1823 18.3205 16.7292 18.5202 17.2731 18.5202C17.816 18.5202 18.3638 18.3205 18.7783 17.9249C19.1928 17.5292 19.402 17.0073 19.402 16.489C19.402 15.9708 19.1938 15.4479 18.7783 15.0523L18.2899 14.586C18.0272 14.3325 17.9192 14.0427 17.9172 13.7464C17.9172 13.4381 18.0447 13.1279 18.2665 12.9031C18.4894 12.6784 18.791 12.5335 19.1812 12.5316H19.872C21.0474 12.5316 22 11.6224 22 10.5005C22 9.37853 21.0474 8.46928 19.872 8.46928V8.46835ZM19.872 11.7032H19.1812C18.5506 11.7013 18.0028 11.9558 17.6321 12.3375C17.2594 12.7193 17.0503 13.2236 17.0493 13.7464C17.0473 14.2452 17.2487 14.7653 17.6759 15.1712L18.1644 15.6374C18.4115 15.8733 18.5331 16.1788 18.5331 16.4881C18.5331 16.7974 18.4105 17.1029 18.1644 17.3388C17.9172 17.5748 17.5971 17.6908 17.2731 17.6918C16.9491 17.6918 16.6289 17.5748 16.3818 17.3388L15.8933 16.8726C15.4681 16.4649 14.9232 16.2726 14.4007 16.2745C13.8529 16.2745 13.3245 16.4751 12.9246 16.8308C12.5247 17.1847 12.2591 17.7076 12.2601 18.3094V18.9688C12.2591 19.6329 11.6957 20.1706 10.999 20.1725C10.3033 20.1715 9.73993 19.6338 9.73896 18.9688V18.3094C9.7409 17.7076 9.47431 17.1847 9.0744 16.8308C8.67449 16.4751 8.14612 16.2754 7.59831 16.2745C7.0758 16.2726 6.53092 16.4649 6.10571 16.8726L5.61725 17.3388C5.3701 17.5748 5.04996 17.6908 4.72595 17.6918C4.40193 17.6918 4.08182 17.5748 3.83467 17.3388C3.58752 17.1029 3.46589 16.7974 3.46589 16.4881C3.46589 16.1788 3.58849 15.8733 3.83467 15.6374L4.32313 15.1712C4.75028 14.7653 4.95169 14.2452 4.94975 13.7464C4.94975 13.2236 4.73958 12.7193 4.36691 12.3375C3.99619 11.9558 3.44838 11.7023 2.81787 11.7032H2.12701C1.4313 11.7023 0.867926 11.1645 0.86598 10.5005C0.866953 9.83548 1.43033 9.29774 2.12701 9.29681H2.81787C3.44838 9.29867 3.99619 9.04418 4.36691 8.66246C4.73958 8.28075 4.94877 7.77644 4.94975 7.25355C4.95169 6.75482 4.75028 6.23471 4.32313 5.82884L3.83467 5.36261C3.58752 5.12671 3.46589 4.82115 3.46589 4.51188C3.46589 4.20261 3.58849 3.89703 3.83467 3.66113C4.08182 3.42523 4.40193 3.30915 4.72595 3.30915C5.04996 3.30915 5.3701 3.42616 5.61725 3.66113L6.10571 4.12736C6.53092 4.53509 7.0758 4.72643 7.59831 4.7255C8.14612 4.7255 8.67449 4.52489 9.0744 4.16918C9.47431 3.81532 9.73993 3.29242 9.73896 2.69059V2.03119C9.73993 1.3662 10.3033 0.828438 10.999 0.827509C11.6947 0.828438 12.2581 1.3662 12.2601 2.03119V2.69059C12.2581 3.29242 12.5247 3.81439 12.9246 4.16825C13.3245 4.52396 13.8529 4.72364 14.4007 4.72457C14.9232 4.72643 15.4681 4.53416 15.8933 4.12643L16.3818 3.6602C16.6289 3.4243 16.9491 3.30822 17.2731 3.30822C17.5971 3.30822 17.9172 3.42523 18.1644 3.6602C18.4115 3.8961 18.5331 4.20168 18.5331 4.51095C18.5331 4.82022 18.4105 5.12578 18.1644 5.36168L17.6759 5.82791C17.2487 6.23378 17.0473 6.75296 17.0493 7.25263C17.0493 7.77551 17.2594 8.27982 17.6321 8.66153C18.0028 9.04325 18.5506 9.29774 19.1812 9.29588H19.872C20.5677 9.29681 21.1311 9.83455 21.133 10.4995C21.1321 11.1636 20.5687 11.7013 19.872 11.7023V11.7032Z"
+                fill="white"
+              />
+            </svg>
+
+            <p>001</p>
+          </div>
+
+          <h1>BENEFITS</h1>
+        </div>
+
+        <div className="content">
+          <p>
+            Improved usability allows users to quickly access filters without
+            excessive scrolling. Enhanced navigation simplifies interaction on
+            TV by reducing the number of clicks needed, while consistency
+            maintains the expected functionality of the back button for
+            navigation. Persistent access ensures filters are always accessible
+            on desktop, improving the overall browsing experience.
+          </p>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="half-header">
+          <div className="info">
+            <svg
+              width="22"
+              height="21"
+              viewBox="0 0 22 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.872 8.46835H19.1812C18.791 8.46649 18.4894 8.3216 18.2665 8.09685C18.0457 7.87116 17.9162 7.5619 17.9172 7.25263C17.9192 6.95635 18.0262 6.66658 18.2899 6.41396L18.7783 5.94773C19.1928 5.55208 19.402 5.02919 19.402 4.51188C19.402 3.99364 19.1938 3.47075 18.7783 3.0751C18.3638 2.67946 17.817 2.47976 17.274 2.48069C16.7311 2.48069 16.1833 2.67946 15.7688 3.0751L15.2803 3.54134C15.0156 3.7921 14.7111 3.89518 14.4007 3.89704C14.0777 3.89704 13.7527 3.77446 13.5172 3.56363C13.2817 3.35094 13.1299 3.06302 13.128 2.69059V2.03119C13.128 0.909258 12.1754 0 11 0C9.82458 0 8.872 0.909258 8.872 2.03119V2.69059C8.87006 3.06302 8.71826 3.35094 8.48279 3.56363C8.24732 3.77446 7.92233 3.89704 7.59831 3.89704C7.28889 3.89518 6.98433 3.7921 6.71869 3.54134L6.23024 3.0751C5.81573 2.67946 5.26889 2.47976 4.72595 2.48069C4.183 2.48069 3.63519 2.67946 3.22166 3.0751C2.80715 3.47075 2.59796 3.99271 2.59796 4.51188C2.59796 5.03012 2.80618 5.55208 3.22166 5.94773L3.71012 6.41396C3.97283 6.66751 4.08085 6.95728 4.08279 7.25355C4.08279 7.5619 3.95532 7.87209 3.73347 8.09685C3.51065 8.3216 3.20902 8.46649 2.81884 8.46835H2.12799C0.952576 8.46835 0 9.3776 0 10.4995C0 11.6215 0.952576 12.5307 2.12799 12.5307H2.81884C3.20902 12.5326 3.51065 12.6774 3.73347 12.9022C3.95435 13.127 4.08279 13.4372 4.08279 13.7455C4.08085 14.0409 3.97381 14.3316 3.71012 14.5851L3.22166 15.0513C2.80715 15.447 2.59796 15.9689 2.59796 16.4881C2.59796 17.0064 2.80618 17.5283 3.22166 17.924C3.63617 18.3196 4.183 18.5193 4.72595 18.5193C5.26889 18.5193 5.8167 18.3196 6.23121 17.924L6.71967 17.4577C6.9853 17.206 7.28889 17.1039 7.59928 17.102C7.92233 17.102 8.24732 17.2246 8.48279 17.4354C8.71826 17.6481 8.87006 17.9361 8.872 18.3094V18.9688C8.872 20.0907 9.82458 21 11 21C12.1754 21 13.128 20.0907 13.128 18.9688V18.3094C13.1299 17.9361 13.2817 17.6491 13.5172 17.4364C13.7527 17.2255 14.0777 17.102 14.4007 17.1029C14.7111 17.1048 15.0147 17.207 15.2793 17.4587L15.7678 17.9249C16.1823 18.3205 16.7292 18.5202 17.2731 18.5202C17.816 18.5202 18.3638 18.3205 18.7783 17.9249C19.1928 17.5292 19.402 17.0073 19.402 16.489C19.402 15.9708 19.1938 15.4479 18.7783 15.0523L18.2899 14.586C18.0272 14.3325 17.9192 14.0427 17.9172 13.7464C17.9172 13.4381 18.0447 13.1279 18.2665 12.9031C18.4894 12.6784 18.791 12.5335 19.1812 12.5316H19.872C21.0474 12.5316 22 11.6224 22 10.5005C22 9.37853 21.0474 8.46928 19.872 8.46928V8.46835ZM19.872 11.7032H19.1812C18.5506 11.7013 18.0028 11.9558 17.6321 12.3375C17.2594 12.7193 17.0503 13.2236 17.0493 13.7464C17.0473 14.2452 17.2487 14.7653 17.6759 15.1712L18.1644 15.6374C18.4115 15.8733 18.5331 16.1788 18.5331 16.4881C18.5331 16.7974 18.4105 17.1029 18.1644 17.3388C17.9172 17.5748 17.5971 17.6908 17.2731 17.6918C16.9491 17.6918 16.6289 17.5748 16.3818 17.3388L15.8933 16.8726C15.4681 16.4649 14.9232 16.2726 14.4007 16.2745C13.8529 16.2745 13.3245 16.4751 12.9246 16.8308C12.5247 17.1847 12.2591 17.7076 12.2601 18.3094V18.9688C12.2591 19.6329 11.6957 20.1706 10.999 20.1725C10.3033 20.1715 9.73993 19.6338 9.73896 18.9688V18.3094C9.7409 17.7076 9.47431 17.1847 9.0744 16.8308C8.67449 16.4751 8.14612 16.2754 7.59831 16.2745C7.0758 16.2726 6.53092 16.4649 6.10571 16.8726L5.61725 17.3388C5.3701 17.5748 5.04996 17.6908 4.72595 17.6918C4.40193 17.6918 4.08182 17.5748 3.83467 17.3388C3.58752 17.1029 3.46589 16.7974 3.46589 16.4881C3.46589 16.1788 3.58849 15.8733 3.83467 15.6374L4.32313 15.1712C4.75028 14.7653 4.95169 14.2452 4.94975 13.7464C4.94975 13.2236 4.73958 12.7193 4.36691 12.3375C3.99619 11.9558 3.44838 11.7023 2.81787 11.7032H2.12701C1.4313 11.7023 0.867926 11.1645 0.86598 10.5005C0.866953 9.83548 1.43033 9.29774 2.12701 9.29681H2.81787C3.44838 9.29867 3.99619 9.04418 4.36691 8.66246C4.73958 8.28075 4.94877 7.77644 4.94975 7.25355C4.95169 6.75482 4.75028 6.23471 4.32313 5.82884L3.83467 5.36261C3.58752 5.12671 3.46589 4.82115 3.46589 4.51188C3.46589 4.20261 3.58849 3.89703 3.83467 3.66113C4.08182 3.42523 4.40193 3.30915 4.72595 3.30915C5.04996 3.30915 5.3701 3.42616 5.61725 3.66113L6.10571 4.12736C6.53092 4.53509 7.0758 4.72643 7.59831 4.7255C8.14612 4.7255 8.67449 4.52489 9.0744 4.16918C9.47431 3.81532 9.73993 3.29242 9.73896 2.69059V2.03119C9.73993 1.3662 10.3033 0.828438 10.999 0.827509C11.6947 0.828438 12.2581 1.3662 12.2601 2.03119V2.69059C12.2581 3.29242 12.5247 3.81439 12.9246 4.16825C13.3245 4.52396 13.8529 4.72364 14.4007 4.72457C14.9232 4.72643 15.4681 4.53416 15.8933 4.12643L16.3818 3.6602C16.6289 3.4243 16.9491 3.30822 17.2731 3.30822C17.5971 3.30822 17.9172 3.42523 18.1644 3.6602C18.4115 3.8961 18.5331 4.20168 18.5331 4.51095C18.5331 4.82022 18.4105 5.12578 18.1644 5.36168L17.6759 5.82791C17.2487 6.23378 17.0473 6.75296 17.0493 7.25263C17.0493 7.77551 17.2594 8.27982 17.6321 8.66153C18.0028 9.04325 18.5506 9.29774 19.1812 9.29588H19.872C20.5677 9.29681 21.1311 9.83455 21.133 10.4995C21.1321 11.1636 20.5687 11.7013 19.872 11.7023V11.7032Z"
+                fill="white"
+              />
+            </svg>
+
+            <p>002</p>
+          </div>
+
+          <h1>CONCLUSION</h1>
+        </div>
+
+        <div className="content">
+          <p>
+            By modifying the functionality of the back button on TV to serve
+            dual purposes and implementing a sticky filter on desktop, Disney
+            Plus can significantly enhance the user experience. These solutions
+            provide a more intuitive and efficient way to navigate and interact
+            with the movies page, aligning with user expectations and improving
+            overall satisfaction.
+          </p>
         </div>
       </div>
     </div>
