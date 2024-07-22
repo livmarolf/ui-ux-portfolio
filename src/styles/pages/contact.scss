@@ -7,177 +7,169 @@
   border-left: 1px solid $dark-grey;
   max-width: 100%;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background-color: $dark-grey;
-    z-index: -1;
-  }
-
-  &::before {
-    left: 46%;
-  }
-
-  &::after {
-    right: 46%;
-  }
-
-  #progress {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    transform: rotate(-90deg);
-
-    circle {
-      stroke-dashoffset: 0;
-      stroke-width: 15%;
-      fill: none;
-    }
-
-    .bg {
-      stroke: $content;
-      opacity: 0.3;
-    }
-
-    .indicator {
-      stroke: $content;
-    }
-  }
-
   .contact-content {
     display: grid;
     grid-template-columns: 46% 46%;
-    gap: 8%;
-    padding-top: 150px;
+    column-gap: 8%;
 
     .header {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+      font-size: 40px;
+      margin: 0;
 
-      .title {
-        display: flex;
-        margin-left: -6px;
-        gap: 4px;
-        width: 46%;
-
-        h1 {
-          font-size: 100px;
-          margin: 0;
-          line-height: 0.8;
-          color: $content;
-        }
-
-        svg {
-          width: auto;
-          height: 1.5vw;
-          min-width: 1.5vw;
-        }
+      h1 {
+        margin: 0;
       }
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 100px;
+      gap: 60px;
 
-      .input {
-        display: flex;
-        flex-direction: column;
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
-        min-height: 165px;
 
-        .err-msg {
-          font-family: $accent-font;
-          color: $content;
-          font-size: 16px;
-          text-transform: uppercase;
-          color: #d92f25;
-          margin: 0;
-        }
+        .input {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          height: 60px;
 
-        label {
-          font-size: 60px;
-          font-family: $main-font;
-          font-weight: 600;
-          color: $content;
-          text-transform: uppercase;
-        }
-
-        input {
-          all: unset;
-          border-bottom: 0.5px solid $light-grey;
-          font-family: $accent-font;
-          color: $light-grey;
-          font-size: 16px;
-          text-transform: uppercase;
-          padding-bottom: 10px;
-
-          &::placeholder {
-            font-family: $accent-font;
-            color: #555555;
-            font-size: 16px;
+          label {
             text-transform: uppercase;
+            font-family: $light-accent-font;
           }
-        }
 
-        textarea {
-          border: 0;
-          border-bottom: 0.5px solid $light-grey;
-          padding-bottom: 10px;
-          background-color: transparent;
-          outline: none;
-          resize: none;
-          font-family: $accent-font;
-          color: $light-grey;
-          font-size: 16px;
-          text-transform: uppercase;
-
-          &::placeholder {
-            font-family: $accent-font;
-            color: #555555;
+          input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $light-grey;
+            padding: 10px 0;
+            font-family: $light-accent-font;
             font-size: 16px;
-            text-transform: uppercase;
+            color: #ffffff;
+            outline: none;
           }
         }
       }
 
-      .message-len {
-        font-size: 14px;
-        font-family: $accent-font;
-        color: $light-grey;
-        margin: 0;
+      .input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .err-msg {
+          font-family: $accent-font;
+          color: $content;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #d92f25;
+          margin: 0;
+          padding-top: 10px;
+        }
+
+        label {
+          text-transform: uppercase;
+          font-family: $light-accent-font;
+        }
+
+        textarea {
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid $light-grey;
+          padding: 10px 0;
+          color: #ffffff;
+          outline: none;
+          resize: none;
+        }
+
+        .message-len {
+          align-self: flex-end;
+          font-size: 14px;
+          font-family: $accent-font;
+        }
       }
 
       .btn-container {
         display: flex;
         justify-content: flex-end;
+        width: 100%;
 
         button {
           border: 0;
           background-color: transparent;
-          color: $content;
-          font-size: 50px;
-          font-weight: 600;
-
-          svg {
-            height: 50%;
-            path {
-              fill: $content;
-            }
-          }
+          color: #ffffff;
+          font-size: 10px;
+          font-weight: 300;
+          border: 1px solid #ffffff;
+          border-radius: 50px;
+          padding: 8px 20px;
 
           &:disabled {
-            color: #555555;
+            color: $light-grey;
+            border: 1px solid $light-grey;
+            background-color: $dark-grey;
+          }
+        }
+      }
+    }
+  }
 
-            svg {
-              path {
-                fill: #555555;
-              }
+  .contact-links {
+    margin-top: 90px;
+
+    .columns {
+      display: grid;
+      grid-template-columns: 46% 46%;
+      column-gap: 8%;
+
+      .left {
+        a {
+          text-decoration: none;
+          color: $content;
+
+          div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $dark-grey;
+
+            p {
+              color: $content;
+              font-size: 14px;
+              font-family: $light-accent-font;
+              min-width: 100px;
+            }
+
+            .handle {
+              min-width: 150px;
+            }
+          }
+        }
+      }
+
+      .right {
+        a {
+          text-decoration: none;
+          color: $content;
+
+          div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $dark-grey;
+
+            p {
+              color: $content;
+              font-size: 14px;
+              font-family: $light-accent-font;
+              min-width: 100px;
+            }
+
+            .handle {
+              min-width: 150px;
             }
           }
         }
@@ -186,71 +178,31 @@
   }
 
   @media screen and (max-width: 445px) {
-    position: relative;
     margin: 0px 10px 0 60px;
-    padding-top: 0px;
-    border-right: 1px solid $dark-grey;
-    border-left: 1px solid $dark-grey;
-    max-width: 100%;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background-color: $dark-grey;
-      z-index: -1;
-    }
-
-    &::before {
-      left: 50%;
-    }
-
-    &::after {
-      display: none;
-    }
-
-    #progress {
-      width: 40px;
-      height: 40px;
-    }
+    padding-top: 100px;
 
     .contact-content {
-      display: flex;
-      flex-direction: column;
-      gap: 100px;
+      grid-template-columns: none;
+      grid-template-rows: auto;
+      gap: 90px;
 
       .header {
-        .title {
-          width: 100%;
-
-          h1 {
-            font-size: 50px;
-          }
-        }
+        font-size: 28px;
       }
 
       form {
-        gap: 45px;
-
-        .input {
-          label {
-            font-size: 30px;
-          }
+        .row {
+          grid-template-columns: none;
+          grid-template-rows: auto;
+          gap: 60px;
         }
+      }
+    }
 
-        .btn-container {
-          height: min-content;
-          button {
-            font-size: 30px;
-
-            svg {
-              height: 22px;
-            }
-          }
-        }
+    .contact-links {
+      .columns {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
